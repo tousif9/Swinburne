@@ -32,10 +32,24 @@ body {
 
 /* ===== Header / banner ===== */
 #site-header {
-  padding: 1.5em 5%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 5%;
   color: #123D2E;
-  text-align: center;
+  text-align: left;
   background-color: #5BCBA7;
+}
+
+/* Tree logo on the far left, shown inside a white circle */
+#site-logo {
+  display: block;
+  width: 70px;
+  height: 70px;
+  padding: 4px;
+  background-color: #ffffff;
+  border: 3px solid #123D2E;
+  border-radius: 50%;
 }
 
 #logo {
@@ -356,6 +370,11 @@ footer a:hover {
 @media screen and (max-width: 700px) {
   #logo {
     font-size: 1.5em;
+  }
+
+  #site-logo {
+    width: 50px;
+    height: 50px;
   }
 
   /* Stack menu items vertically */
