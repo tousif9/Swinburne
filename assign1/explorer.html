@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        explorer.html
+  Author:      [Your Name]
+  Student ID:  [Your Student ID]
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     23 September 2026
+  Description: Explorer landing page linking to the Families, Genera and Species pages.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Malaysian plants by family, genus and species with Flora Malaysiana.">
+  <meta name="keywords" content="plant explorer, Dipterocarpaceae, Myristicaceae, families, genera, species">
+  <meta name="author" content="[Your Name]">
+  <title>Flora Malaysiana | Explorer</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <p id="logo"><a href="index.html">Flora Malaysiana</a></p>
+    <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html" class="current" aria-current="page">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Plant Explorer</h1>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Why Scientific Names?</h2>
+      <p>
+        Common names change from place to place. One tree can have a Malay name, an English name and
+        a local Iban name. A <strong>scientific name</strong> is the same everywhere, so scientists
+        around the world know they are talking about exactly the same plant.
+      </p>
+      <p>
+        Scientific names are written in <em>italics</em>, with the genus first and the species second,
+        for example <em>Vatica borneensis</em>.
+      </p>
+    </aside>
+
+    <!-- ===== Introduction ===== -->
+    <section id="intro">
+      <h2>Discover Malaysia's Forest Plants</h2>
+      <p>
+        The Explorer works like a small plant encyclopedia. Scientists sort every living plant into
+        groups, from very broad to very specific. On this site we focus on three of those levels:
+        <strong>families</strong>, <strong>genera</strong> and <strong>species</strong>. Each level is
+        linked to the others, so you can start with a family and move down to its genera and species,
+        or start with a species and work your way back up.
+      </p>
+      <p>
+        We have chosen two plant families that are important in Malaysian forests. The
+        <em>Dipterocarpaceae</em> family includes many of the giant trees that form the rainforest
+        canopy and supply valuable timber. The <em>Myristicaceae</em> family, also called the nutmeg
+        family, contains aromatic trees whose seeds are covered in a bright red layer. Several members
+        of both families are now considered endangered, rare or threatened.
+      </p>
+    </section>
+
+    <!-- ===== Links to the three classification pages ===== -->
+    <section id="categories">
+      <h2>Browse by Classification</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Families</h3>
+          <p>The broadest group on this site. Meet Dipterocarpaceae and Myristicaceae.</p>
+          <a href="explore1.html" class="button">View families</a>
+        </article>
+        <article class="card">
+          <h3>Genera</h3>
+          <p>Two genera from each family, including <em>Vatica</em>, <em>Hopea</em>, <em>Myristica</em> and <em>Knema</em>.</p>
+          <a href="explore2.html" class="button">View genera</a>
+        </article>
+        <article class="card">
+          <h3>Species</h3>
+          <p>Two species from each genus, with photos, origins and key features.</p>
+          <a href="explore3.html" class="button">View species</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Featured image ===== -->
+    <figure class="feature-figure">
+      <img src="images/dipterocarp-fruit.jpg" alt="Winged fruits of a dipterocarp tree lying on the forest floor">
+      <figcaption>
+        The two-winged fruit that gives Dipterocarpaceae its name (from Greek <em>di</em> = two,
+        <em>pteron</em> = wing, <em>karpos</em> = fruit).
+        <span class="source">Source: <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></span>
+      </figcaption>
+    </figure>
+
+    <!-- ===== How to use the explorer ===== -->
+    <section id="how-to">
+      <h2>How to Use the Explorer</h2>
+      <ol>
+        <li>Choose a classification level from the cards above or the Explorer drop-down menu.</li>
+        <li>Read about the group, its photos and where it is found.</li>
+        <li>Follow the links to move up or down to related families, genera or species.</li>
+        <li>Found the plant in the wild? Confirm it on the <a href="identify.html">Identify</a> page.</li>
+      </ol>
+    </section>
+
+    <!-- ===== Key terms ===== -->
+    <section id="terms">
+      <h2>Key Terms</h2>
+      <dl>
+        <dt>Family</dt>
+        <dd>A large group of related genera that share important features, such as the shape of their flowers or fruit.</dd>
+        <dt>Genus (plural: genera)</dt>
+        <dd>A group of closely related species. The genus name is always written first in a scientific name.</dd>
+        <dt>Species</dt>
+        <dd>A single kind of plant whose members can breed with each other. It is the most specific level used here.</dd>
+        <dt>ERT</dt>
+        <dd>Short for Endangered, Rare and Threatened, the plants this project most wants to monitor.</dd>
+      </dl>
+    </section>
+
+    <!-- ===== Summary table of featured plants ===== -->
+    <section id="featured-plants">
+      <h2>Plants Featured in the Explorer</h2>
+      <table>
+        <caption>Families, genera and species covered on this site</caption>
+        <thead>
+          <tr>
+            <th scope="col">Family</th>
+            <th scope="col">Genus</th>
+            <th scope="col">Species</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Dipterocarpaceae</th>
+            <td><em>Vatica</em></td>
+            <td><em>Vatica borneensis</em>, <em>Vatica flavida</em></td>
+          </tr>
+          <tr>
+            <td><em>Hopea</em></td>
+            <td><em>Hopea odorata</em>, <em>Hopea nervosa</em></td>
+          </tr>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Myristicaceae</th>
+            <td><em>Myristica</em></td>
+            <td><em>Myristica fragrans</em>, <em>Myristica iners</em></td>
+          </tr>
+          <tr>
+            <td><em>Knema</em></td>
+            <td><em>Knema latericia</em>, <em>Knema laurina</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- ===== Links to related pages ===== -->
+    <section id="next-steps">
+      <h2>Continue Your Journey</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Identify a Plant</h3>
+          <p>Have a photo of an unknown plant? Upload it and let our engine suggest a match.</p>
+          <a href="identify.html" class="button">Go to Identify</a>
+        </article>
+        <article class="card">
+          <h3>Meet the Contributors</h3>
+          <p>See plant photos and comments shared by citizen scientists across Malaysia.</p>
+          <a href="contributor.html" class="button">Go to Contributors</a>
+        </article>
+      </div>
+      <p class="source">
+        Plant list based on the unit's PlantsData document and
+        <a href="https://www.inaturalist.org/taxa/47126-Plantae">iNaturalist</a>.
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Flora Malaysiana &ndash; COS10005 Assignment 1 by [Your Name].
+      Contact: <a href="mailto:[student-id]@students.swinburne.edu.my">[student-id]@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>

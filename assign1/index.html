@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        index.html
+  Author:      [Your Name]
+  Student ID:  [Your Student ID]
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     23 September 2026
+  Description: Home page introducing the Flora Malaysiana citizen science project.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Flora Malaysiana - a citizen science platform for identifying and monitoring Malaysia's endangered, rare and threatened plants.">
+  <meta name="keywords" content="citizen science, Malaysia, plant biodiversity, ERT plants, plant identification">
+  <meta name="author" content="[Your Name]">
+  <title>Flora Malaysiana | Home</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <p id="logo"><a href="index.html">Flora Malaysiana</a></p>
+    <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html" class="current" aria-current="page">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ===== Hero / introduction ===== -->
+    <section id="hero">
+      <h1>Monitoring Malaysia's Plant Biodiversity Together</h1>
+      <p class="lead">
+        Flora Malaysiana brings scientists and everyday nature lovers together to record,
+        identify and protect the plants that make Malaysia one of the richest places on Earth.
+      </p>
+      <figure class="hero-figure">
+        <img src="images/rainforest.jpg" alt="Tall trees rising above the canopy of a Malaysian lowland rainforest">
+        <figcaption>
+          Lowland rainforest in Borneo, home to many endangered, rare and threatened plants.
+          <span class="source">Source: <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Did You Know?</h2>
+      <p>
+        Malaysia is one of about seventeen <strong>megadiverse</strong> countries in the world.
+        Its forests hold thousands of flowering plant species, and many of them are found nowhere else.
+      </p>
+      <p>
+        Learn more about plant records at
+        <a href="https://www.inaturalist.org/taxa/47126-Plantae">iNaturalist</a>.
+      </p>
+    </aside>
+
+    <!-- ===== About the project ===== -->
+    <section id="about">
+      <h2>About the Project</h2>
+      <p>
+        Malaysia is a global biodiversity hotspot, but its plants are also under serious pressure.
+        A growing population and the need for more farmland mean that forests are shrinking, and many
+        species are becoming harder to find. To protect these plants, scientists first need to know
+        where they grow and how their numbers are changing.
+      </p>
+      <p>
+        That is where you come in. <em>Citizen science</em> is a partnership between professional
+        scientists and members of the public. Every photo you share adds another data point, helping
+        researchers track <strong>Endangered, Rare and Threatened (ERT)</strong> plants across the
+        country much faster than they could on their own.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- ===== Key features of the website ===== -->
+    <section id="features">
+      <h2>What You Can Do Here</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Explore</h3>
+          <p>Browse plant families, genera and species like a pocket encyclopedia.</p>
+          <a href="explorer.html" class="button">Start exploring</a>
+        </article>
+        <article class="card">
+          <h3>Identify</h3>
+          <p>Upload a photo to discover a plant's scientific name, common name and care tips.</p>
+          <a href="identify.html" class="button">Identify a plant</a>
+        </article>
+        <article class="card">
+          <h3>Contributors</h3>
+          <p>See the photos and comments shared by our community of plant spotters.</p>
+          <a href="contributor.html" class="button">View gallery</a>
+        </article>
+        <article class="card">
+          <h3>Contribute</h3>
+          <p>Registered users can submit their own plant photos and observations.</p>
+          <a href="contribute.html" class="button">Contribute data</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== How to get involved ===== -->
+    <section id="get-involved">
+      <h2>Getting Started</h2>
+      <ol>
+        <li>Explore the plant families to learn what to look for.</li>
+        <li>Take a clear photo of a plant you find in the wild.</li>
+        <li>Use the Identify page to find out what it is.</li>
+        <li>Share your photo and comments through the contribution form.</li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Flora Malaysiana &ndash; COS10005 Assignment 1 by [Your Name].
+      Contact: <a href="mailto:[student-id]@students.swinburne.edu.my">[student-id]@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>
