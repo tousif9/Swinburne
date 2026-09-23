@@ -229,8 +229,10 @@ figure img {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+/* Family tree image: fill the width but never stretch past its real size (881px) */
 .hero-figure img {
   width: 100%;
+  max-width: 881px;
 }
 
 .feature-figure img {
