@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        contributor.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     24 September 2026
+  Description: Contributor page showing plant photos shared by registered users as cards.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plant photos and comments shared by Pl@netMatrix contributors.">
+  <meta name="keywords" content="contributors, plant photos, citizen science, gallery">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Contributors</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <div class="brand-text">
+      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+    </div>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html" class="current" aria-current="page">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Our Contributors</h1>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Contributor Spotlight</h2>
+      <p>
+        This month's most active contributor shared photos of three different species. Every verified
+        photo helps scientists map where Endangered, Rare and Threatened plants still grow.
+      </p>
+      <p><a href="contribute.html" class="button">Share your photos</a></p>
+    </aside>
+
+    <!-- ===== Introduction ===== -->
+    <section id="contributor-intro">
+      <h2>Photos From the Community</h2>
+      <p>
+        These cards show plant photos uploaded by registered users of Pl@netMatrix. Each card lists the
+        contributor, the plant, their photo and their comments. Our taxonomists check every upload before
+        it is marked as verified.
+      </p>
+      <p class="note">The contributions below are sample entries that show how the gallery will look.</p>
+    </section>
+
+    <!-- ===== Contribution cards ===== -->
+    <section id="contribution-cards">
+      <h2>Latest Contributions</h2>
+      <div class="card-grid">
+        <article class="card contribution">
+          <figure>
+            <img src="images/d-alatus-1.jpg" alt="Tall Dipterocarpus alatus tree with a wide crown">
+            <figcaption>Photo by Aisyah Rahman</figcaption>
+          </figure>
+          <h3><a href="explore3.html#d-alatus"><em>Dipterocarpus alatus</em></a></h3>
+          <p class="contributor-name">Contributor: Aisyah Rahman</p>
+          <p class="comment">"Spotted this giant near a riverbank. The trunk had old resin cuts at the base."</p>
+          <p class="status verified">Verified</p>
+        </article>
+        <article class="card contribution">
+          <figure>
+            <img src="images/c-alba-3.jpg" alt="Bright pink-red Cryptocarya alba fruits on a branch">
+            <figcaption>Photo by Daniel Wong</figcaption>
+          </figure>
+          <h3><a href="explore3.html#c-alba"><em>Cryptocarya alba</em></a></h3>
+          <p class="contributor-name">Contributor: Daniel Wong</p>
+          <p class="comment">"The fruits were such a bright pink that they were impossible to miss."</p>
+          <p class="status verified">Verified</p>
+        </article>
+        <article class="card contribution">
+          <figure>
+            <img src="images/m-glaber-1.jpg" alt="Small Monotes glaber tree in open, grassy woodland">
+            <figcaption>Photo by Priya Nair</figcaption>
+          </figure>
+          <h3><a href="explore3.html#m-glaber"><em>Monotes glaber</em></a></h3>
+          <p class="contributor-name">Contributor: Priya Nair</p>
+          <p class="comment">"Open woodland with trees spaced far apart. The leaves were starting to change colour."</p>
+          <p class="status pending">Pending review</p>
+        </article>
+        <article class="card contribution">
+          <figure>
+            <img src="images/b-costaricensis-5.jpg" alt="Olive-shaped Beilschmiedia costaricensis fruits, green and black">
+            <figcaption>Photo by Jason Lim</figcaption>
+          </figure>
+          <h3><a href="explore3.html#b-costaricensis"><em>Beilschmiedia costaricensis</em></a></h3>
+          <p class="contributor-name">Contributor: Jason Lim</p>
+          <p class="comment">"Found ripe black fruits and green ones on the same branch."</p>
+          <p class="status verified">Verified</p>
+        </article>
+        <article class="card contribution">
+          <figure>
+            <img src="images/d-tuberculatus-4.jpg" alt="Enormous Dipterocarpus tuberculatus leaf seen from below">
+            <figcaption>Photo by Nur Hidayah</figcaption>
+          </figure>
+          <h3><a href="explore3.html#d-tuberculatus"><em>Dipterocarpus tuberculatus</em></a></h3>
+          <p class="contributor-name">Contributor: Nur Hidayah</p>
+          <p class="comment">"This single leaf was wider than my arm span!"</p>
+          <p class="status pending">Pending review</p>
+        </article>
+        <article class="card contribution">
+          <figure>
+            <img src="images/b-berteroana-2.jpg" alt="Young Beilschmiedia berteroana seedling with glossy leaves">
+            <figcaption>Photo by Tousif Akhand</figcaption>
+          </figure>
+          <h3><a href="explore3.html#b-berteroana"><em>Beilschmiedia berteroana</em></a></h3>
+          <p class="contributor-name">Contributor: Tousif Akhand</p>
+          <p class="comment">"A nursery seedling grown for replanting. Great to see this endangered tree being protected."</p>
+          <p class="status verified">Verified</p>
+        </article>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ===== How to contribute ===== -->
+    <section id="how-to-contribute">
+      <h2>How to Become a Contributor</h2>
+      <ol>
+        <li>Register as a Pl@netMatrix user.</li>
+        <li>Take clear photos of the leaves, flowers, fruit or bark.</li>
+        <li>Fill in the <a href="contribute.html">contribution form</a> with the plant's name and your comments.</li>
+        <li>Wait for a taxonomist to verify your upload.</li>
+        <li>See your photo appear on this page.</li>
+      </ol>
+    </section>
+
+    <!-- ===== Status labels ===== -->
+    <section id="status-labels">
+      <h2>What the Labels Mean</h2>
+      <dl>
+        <dt>Verified</dt>
+        <dd>A taxonomist has checked the photo and confirmed the plant's name.</dd>
+        <dt>Pending review</dt>
+        <dd>The photo has been received and is waiting to be checked.</dd>
+      </dl>
+    </section>
+
+    <!-- ===== Leaderboard table ===== -->
+    <section id="leaderboard">
+      <h2>Top Contributors This Month</h2>
+      <table>
+        <caption>Number of photos shared by our most active contributors</caption>
+        <thead>
+          <tr>
+            <th scope="col">Contributor</th>
+            <th scope="col">Photos shared</th>
+            <th scope="col">Species recorded</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Aisyah Rahman</th>
+            <td>18</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row">Jason Lim</th>
+            <td>12</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">Nur Hidayah</th>
+            <td>9</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Want to see your name here? <a href="contribute.html">Contribute your plant photos</a>.</p>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>

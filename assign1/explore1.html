@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        explore1.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     24 September 2026
+  Description: Explorer page for the two featured plant families.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the Dipterocarpaceae and Lauraceae plant families with photos, origins and key features.">
+  <meta name="keywords" content="plant families, Dipterocarpaceae, Lauraceae, Pl@netMatrix">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Families</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <div class="brand-text">
+      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+    </div>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html" class="current" aria-current="page">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main id="page-top">
+    <p class="breadcrumb"><a href="explorer.html">Explorer</a> &rsaquo; Plant Families</p>
+    <h1>Plant Families</h1>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Family Names</h2>
+      <p>
+        Plant family names almost always end in <strong>-aceae</strong>. The first part comes from one
+        important genus in the family: Dipterocarpaceae is named after <em>Dipterocarpus</em>, and
+        Lauraceae after <em>Laurus</em>, the bay laurel used in cooking.
+      </p>
+    </aside>
+
+    <!-- ===== Introduction ===== -->
+    <section id="intro">
+      <h2>About This Page</h2>
+      <p>
+        A plant family is a large group of related plants that share key features, such as the structure of their flowers and fruit. This page introduces the two families featured on Pl@netMatrix. Follow the links in each section to explore their genera and species.
+      </p>
+      <nav class="page-nav" aria-label="On this page">
+        <h3>On this page</h3>
+        <ul>
+        <li><a href="#dipterocarpaceae">Dipterocarpaceae</a></li>
+        <li><a href="#lauraceae">Lauraceae</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- ===== Steps (ordered list) ===== -->
+    <section id="steps">
+      <h2>How to Tell the Two Families Apart</h2>
+      <ol>
+        <li>Look at the fruit: dipterocarps have winged fruits, laurels have fleshy berries.</li>
+        <li>Crush a leaf gently: laurel leaves usually smell spicy or citrusy.</li>
+        <li>Check the bark for sticky, fragrant resin, which is typical of dipterocarps.</li>
+        <li>Look at the flowers: laurel flowers are tiny, with parts in groups of three.</li>
+      </ol>
+    </section>
+
+    <!-- ===== Summary table ===== -->
+    <section id="summary">
+      <h2>At a Glance</h2>
+      <table>
+        <caption>Comparison of the two featured families</caption>
+        <thead>
+          <tr><th scope="col">Family</th><th scope="col">Common name</th><th scope="col">Fruit</th><th scope="col">Featured genera</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Dipterocarpaceae</th><td>Dipterocarp family</td><td>Winged nut</td><td><a href="explore2.html#dipterocarpus"><em>Dipterocarpus</em></a>, <a href="explore2.html#monotes"><em>Monotes</em></a></td></tr>
+          <tr><th scope="row">Lauraceae</th><td>Laurel family</td><td>Fleshy berry</td><td><a href="explore2.html#beilschmiedia"><em>Beilschmiedia</em></a>, <a href="explore2.html#cryptocarya"><em>Cryptocarya</em></a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- ===== One article per plant ===== -->
+    <article class="plant-profile" id="dipterocarpaceae">
+      <h2>Dipterocarpaceae</h2>
+      <p class="plant-common">The dipterocarp family</p>
+        <p>
+          The Dipterocarpaceae are the giants of the Southeast Asian rainforest. In the lowland forests of Malaysia they often make up most of the tallest trees, and some species rise above the canopy to more than 60 metres. The name comes from Greek words meaning "two-winged fruit", because many species produce seeds with long wings that spin like helicopters as they fall.
+        </p>
+        <p>
+          These trees are very valuable for timber, sold under trade names such as meranti and keruing, and many also produce a sticky resin once used for varnish, torches and boat repairs. Heavy logging and forest clearing mean that many dipterocarps are now listed as endangered, rare or threatened.
+        </p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+        <dl>
+          <dt>Common name</dt>
+          <dd>Dipterocarp family</dd>
+          <dt>Order</dt>
+          <dd>Malvales</dd>
+          <dt>Size</dt>
+          <dd>Around 16 genera and several hundred species</dd>
+          <dt>Origin and range</dt>
+          <dd>Tropical Asia, Africa and South America, with the greatest variety in Borneo</dd>
+          <dt>Genera on this site</dt>
+          <dd><a href="explore2.html#dipterocarpus"><em>Dipterocarpus</em></a> and <a href="explore2.html#monotes"><em>Monotes</em></a></dd>
+          <dt>Species on this site</dt>
+          <dd><a href="explore3.html#d-alatus"><em>D. alatus</em></a>, <a href="explore3.html#d-tuberculatus"><em>D. tuberculatus</em></a>, <a href="explore3.html#m-adenophyllus"><em>M. adenophyllus</em></a>, <a href="explore3.html#m-glaber"><em>M. glaber</em></a></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+        <ul>
+          <li>Tall, straight trunks with a crown high in or above the canopy</li>
+          <li>Fragrant resin that oozes from cuts in the bark</li>
+          <li>Fruits with wings formed from enlarged sepals (the outer parts of the flower)</li>
+          <li>Many species flower together only every few years in a "mass flowering" event</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+        <p class="gallery-tip">Select a photo to see it larger.</p>
+        <div class="gallery">
+          <figure>
+            <a href="#view-dipterocarpaceae-1"><img src="images/dipterocarpaceae-1.jpg" alt="Young dipterocarp plant with large, deeply veined leaves on the forest floor"></a>
+            <figcaption>Seedlings wait in the shade of the forest floor for a gap in the canopy.</figcaption>
+          </figure>
+          <figure>
+            <a href="#view-dipterocarpaceae-2"><img src="images/dipterocarpaceae-2.jpg" alt="Huge dipterocarp tree with a broad rounded crown rising above hilly forest"></a>
+            <figcaption>A giant dipterocarp crown standing above the surrounding forest.</figcaption>
+          </figure>
+          <figure>
+            <a href="#view-dipterocarpaceae-3"><img src="images/dipterocarpaceae-3.jpg" alt="Looking up a very tall, straight dipterocarp trunk into the canopy"></a>
+            <figcaption>Tall, straight trunks make dipterocarps valuable timber trees.</figcaption>
+          </figure>
+          <figure>
+            <a href="#view-dipterocarpaceae-4"><img src="images/dipterocarpaceae-4.jpg" alt="Red winged dipterocarp fruits lying on the forest floor beside rust-brown leaves"></a>
+            <figcaption>The winged fruits that give the family its name.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <p class="back-to-top"><a href="#page-top">Back to top</a></p>
+    </article>
+    <article class="plant-profile" id="lauraceae">
+      <h2>Lauraceae</h2>
+      <p class="plant-common">The laurel family</p>
+        <p>
+          The Lauraceae, or laurel family, are aromatic trees and shrubs. Their leaves and bark contain tiny oil cells, so they often smell spicy or citrusy when crushed. Several familiar plants belong to this family, including cinnamon, bay leaf, camphor and avocado.
+        </p>
+        <p>
+          In Malaysian rainforests, laurels form a large part of the middle and upper layers of the forest. Their fruits are rich, oily berries that feed hornbills, pigeons and many other animals, which carry the seeds far from the parent tree. Because many species look very alike, laurels are known as one of the hardest plant families to identify.
+        </p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+        <dl>
+          <dt>Common name</dt>
+          <dd>Laurel family</dd>
+          <dt>Order</dt>
+          <dd>Laurales</dd>
+          <dt>Size</dt>
+          <dd>About 50 genera and between 2,500 and 3,000 species</dd>
+          <dt>Origin and range</dt>
+          <dd>Tropical and warm regions worldwide, especially Southeast Asia and tropical America</dd>
+          <dt>Genera on this site</dt>
+          <dd><a href="explore2.html#beilschmiedia"><em>Beilschmiedia</em></a> and <a href="explore2.html#cryptocarya"><em>Cryptocarya</em></a></dd>
+          <dt>Species on this site</dt>
+          <dd><a href="explore3.html#b-berteroana"><em>B. berteroana</em></a>, <a href="explore3.html#b-costaricensis"><em>B. costaricensis</em></a>, <a href="explore3.html#c-adpressa"><em>C. adpressa</em></a>, <a href="explore3.html#c-alba"><em>C. alba</em></a></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+        <ul>
+          <li>Glossy, leathery leaves that are aromatic when crushed</li>
+          <li>Small green, yellow or cream flowers with parts in groups of three</li>
+          <li>Berry-like fruits, often sitting in a small cup</li>
+          <li>Many species have colourful red or bronze new leaves</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+        <p class="gallery-tip">Select a photo to see it larger.</p>
+        <div class="gallery">
+          <figure>
+            <a href="#view-lauraceae-1"><img src="images/lauraceae-1.jpg" alt="Tall, slender laurel tree seen from below against a blue sky"></a>
+            <figcaption>Laurels grow into tall, slender forest trees.</figcaption>
+          </figure>
+          <figure>
+            <a href="#view-lauraceae-2"><img src="images/lauraceae-2.jpg" alt="Green laurel berries each sitting in a bright red cup on red stalks"></a>
+            <figcaption>The typical laurel fruit: a berry sitting in a coloured cup.</figcaption>
+          </figure>
+          <figure>
+            <a href="#view-lauraceae-3"><img src="images/lauraceae-3.jpg" alt="Deep red young laurel leaves arranged in a star over older green leaves"></a>
+            <figcaption>Bright red new leaves are common in the laurel family.</figcaption>
+          </figure>
+          <figure>
+            <a href="#view-lauraceae-4"><img src="images/lauraceae-4.jpg" alt="Fresh light-green laurel leaves with water drops and fuzzy buds"></a>
+            <figcaption>Soft new growth, similar to that of an avocado seedling.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <p class="back-to-top"><a href="#page-top">Back to top</a></p>
+    </article>
+
+    <!-- ===== Enhancement: CSS-only lightbox views (opened with :target, no JavaScript) ===== -->
+    <div class="lightbox" id="view-dipterocarpaceae-1">
+      <a href="#dipterocarpaceae" class="lightbox-close">Close &times;</a>
+      <img src="images/dipterocarpaceae-1.jpg" alt="Young dipterocarp plant with large, deeply veined leaves on the forest floor">
+      <p>Seedlings wait in the shade of the forest floor for a gap in the canopy.</p>
+    </div>
+    <div class="lightbox" id="view-dipterocarpaceae-2">
+      <a href="#dipterocarpaceae" class="lightbox-close">Close &times;</a>
+      <img src="images/dipterocarpaceae-2.jpg" alt="Huge dipterocarp tree with a broad rounded crown rising above hilly forest">
+      <p>A giant dipterocarp crown standing above the surrounding forest.</p>
+    </div>
+    <div class="lightbox" id="view-dipterocarpaceae-3">
+      <a href="#dipterocarpaceae" class="lightbox-close">Close &times;</a>
+      <img src="images/dipterocarpaceae-3.jpg" alt="Looking up a very tall, straight dipterocarp trunk into the canopy">
+      <p>Tall, straight trunks make dipterocarps valuable timber trees.</p>
+    </div>
+    <div class="lightbox" id="view-dipterocarpaceae-4">
+      <a href="#dipterocarpaceae" class="lightbox-close">Close &times;</a>
+      <img src="images/dipterocarpaceae-4.jpg" alt="Red winged dipterocarp fruits lying on the forest floor beside rust-brown leaves">
+      <p>The winged fruits that give the family its name.</p>
+    </div>
+    <div class="lightbox" id="view-lauraceae-1">
+      <a href="#lauraceae" class="lightbox-close">Close &times;</a>
+      <img src="images/lauraceae-1.jpg" alt="Tall, slender laurel tree seen from below against a blue sky">
+      <p>Laurels grow into tall, slender forest trees.</p>
+    </div>
+    <div class="lightbox" id="view-lauraceae-2">
+      <a href="#lauraceae" class="lightbox-close">Close &times;</a>
+      <img src="images/lauraceae-2.jpg" alt="Green laurel berries each sitting in a bright red cup on red stalks">
+      <p>The typical laurel fruit: a berry sitting in a coloured cup.</p>
+    </div>
+    <div class="lightbox" id="view-lauraceae-3">
+      <a href="#lauraceae" class="lightbox-close">Close &times;</a>
+      <img src="images/lauraceae-3.jpg" alt="Deep red young laurel leaves arranged in a star over older green leaves">
+      <p>Bright red new leaves are common in the laurel family.</p>
+    </div>
+    <div class="lightbox" id="view-lauraceae-4">
+      <a href="#lauraceae" class="lightbox-close">Close &times;</a>
+      <img src="images/lauraceae-4.jpg" alt="Fresh light-green laurel leaves with water drops and fuzzy buds">
+      <p>Soft new growth, similar to that of an avocado seedling.</p>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -630,6 +630,209 @@ details[open] summary {
   margin: 1.5em 0 0.5em;
 }
 
+/* ===== Explorer sub-pages (families, genera, species) ===== */
+.breadcrumb {
+  margin: 0 0 0.5em;
+  font-size: 0.9em;
+}
+
+/* "On this page" jump links */
+.page-nav {
+  margin: 1em 0;
+  padding: 0.8em 1.2em;
+  background-color: #D8F7E3;
+  border-left: 5px solid #5BCBA7;
+  border-radius: 4px;
+}
+
+.page-nav h3 {
+  margin: 0 0 0.4em;
+}
+
+.page-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* One boxed section per plant */
+.plant-profile {
+  clear: both;
+  margin: 2em 0;
+  padding: 1.5em;
+  background-color: #ffffff;
+  border: 2px solid #D8F7E3;
+  border-top: 6px solid #5BCBA7;
+  border-radius: 8px;
+}
+
+.plant-profile h2 {
+  margin-top: 0;
+}
+
+.plant-common {
+  margin-top: -0.4em;
+  font-style: italic;
+  color: #1F6E56;
+}
+
+/* Quick facts shown as a two-column list */
+.plant-facts dl {
+  display: grid;
+  grid-template-columns: minmax(9em, max-content) 1fr;
+  gap: 0.4em 1em;
+}
+
+.plant-facts dd {
+  margin: 0;
+}
+
+.back-to-top {
+  margin: 1em 0 0;
+  font-size: 0.9em;
+  text-align: right;
+}
+
+/* ===== Photo gallery thumbnails ===== */
+.gallery-tip {
+  font-size: 0.9em;
+  color: #555555;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.gallery figure {
+  flex: 1 1 180px;
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery a:hover img,
+.gallery a:focus img {
+  transform: scale(1.04);
+}
+
+/* ===== CSS-only lightbox: hidden until its id is the URL target ===== */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 4vh 5%;
+  text-align: center;
+  background-color: rgba(18, 61, 46, 0.92);
+}
+
+.lightbox:target {
+  display: block;
+}
+
+.lightbox img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 75vh;
+  border: 4px solid #ffffff;
+  border-radius: 6px;
+}
+
+.lightbox p {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.lightbox-close {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.4em 1em;
+  color: #123D2E;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #D8F7E3;
+  border-radius: 4px;
+}
+
+main a.lightbox-close:hover {
+  color: #123D2E;
+  background-color: #A3D9A5;
+}
+
+/* ===== Contributor cards ===== */
+.contribution figure {
+  margin: 0 0 0.8em;
+}
+
+.contribution img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.contributor-name {
+  margin-bottom: 0.4em;
+  font-weight: bold;
+}
+
+.comment {
+  font-style: italic;
+}
+
+/* Verified / pending labels shown as coloured pills */
+.status {
+  display: inline-block;
+  margin: 0;
+  padding: 0.2em 0.8em;
+  font-size: 0.85em;
+  font-weight: bold;
+  border-radius: 1em;
+}
+
+.verified {
+  color: #123D2E;
+  background-color: #5BCBA7;
+}
+
+.pending {
+  color: #5A4300;
+  background-color: #FFE8A3;
+}
+
+.note {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #555555;
+}
+
+/* ===== Enhancements page ===== */
+.enhancement {
+  padding-left: 1em;
+  border-left: 5px solid #A3D9A5;
+}
+
+code {
+  padding: 0 0.25em;
+  font-family: Consolas, "Courier New", monospace;
+  background-color: #D8F7E3;
+  border-radius: 3px;
+}
+
 /* ===== CSS animations ===== */
 /* Page heading and cards fade up gently when a page loads */
 @keyframes fadeUp {
@@ -759,5 +962,24 @@ fieldset {
 
   #profile-photo {
     width: 150px;
+  }
+
+  /* Quick facts stack into a single column */
+  .plant-facts dl {
+    display: block;
+  }
+
+  .plant-facts dd {
+    margin: 0 0 0.6em;
+  }
+
+  .gallery img {
+    height: 150px;
+  }
+
+  /* Wide tables scroll sideways instead of stretching the page */
+  table {
+    display: block;
+    overflow-x: auto;
   }
 }
