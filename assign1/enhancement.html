@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        enhancement.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     24 September 2026
+  Description: Lists each enhancement with what it is, where it is applied and its references.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enhancements made to the Pl@netMatrix website using HTML5 and CSS3.">
+  <meta name="keywords" content="enhancements, CSS lightbox, animations, responsive design">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Enhancements</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <div class="brand-text">
+      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+    </div>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <!-- Hamburger toggle for phones: the checkbox opens and closes the menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">&#9776; Menu</label>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancement.html" class="current" aria-current="page">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Website Enhancements</h1>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Built for Every Visitor</h2>
+      <p>
+        Each enhancement makes Pl@netMatrix easier or more enjoyable to use: photos can be viewed up
+        close, forms give instant feedback, and every page fits comfortably on a phone screen.
+      </p>
+    </aside>
+
+    <section id="enhancements-intro">
+      <h2>Overview</h2>
+      <p>
+        This page lists every enhancement added to Pl@netMatrix beyond the basic requirements. For each
+        one it explains what the enhancement is, where it is applied (with links to see it working) and
+        the references used to learn it. The first four are the main enhancements submitted for marking.
+      </p>
+      <ol>
+        <li><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></li>
+        <li><a href="#enh-fixed-nav">Fixed Navigation Bar</a></li>
+        <li><a href="#enh-gallery">Photo Gallery with Lightbox</a></li>
+        <li><a href="#enh-flip">Flip Cards</a></li>
+        <li><a href="#enh-rating">Page Rating</a></li>
+        <li><a href="#enh-picture-hover">Picture Hover Effect</a></li>
+        <li><a href="#enh-button-hover">Button Hover Effect</a></li>
+        <li><a href="#enh-back-to-top">Back to Top Button</a></li>
+        <li><a href="#enh-video">YouTube Video</a></li>
+        <li><a href="#enh-map">Google Map</a></li>
+        <li><a href="#enh-audio">Music and Audio</a></li>
+        <li><a href="#enh-animations">CSS Animations</a></li>
+        <li><a href="#enh-details">Expandable Care Tips</a></li>
+        <li><a href="#enh-form-feedback">Live Form Feedback</a></li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section id="enh-fluid" class="enhancement">
+      <h2>1. Fluid Layout with Hamburger Menu</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. On phones, the full menu is replaced by a &#9776; Menu button. Tapping it opens and closes the menu using a hidden checkbox and the <code>:checked</code> selector, which keeps small screens tidy.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#main-nav">Menu on every page</a>,
+            <a href="explore3.html">Species page (try it on a phone)</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_rwd_intro.asp">W3Schools: Responsive Web Design</a>,
+            <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">W3Schools: Media Queries</a>,
+            <a href="https://www.w3schools.com/cssref/sel_checked.php">W3Schools: The :checked selector</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-fixed-nav" class="enhancement">
+      <h2>2. Fixed Navigation Bar</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>The menu bar stays pinned to the top of the screen while you scroll, so every page is always one click away, even halfway down the long Species page. It uses <code>position: sticky</code>, and <code>scroll-padding-top</code> stops headings from hiding under the bar when you jump to a section.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore3.html">Species page</a>,
+            <a href="explore2.html">Genera page</a>,
+            <a href="index.html">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_sticky_element.asp">W3Schools: How To: Sticky Element</a>,
+            <a href="https://www.w3schools.com/css/css_positioning.asp">W3Schools: CSS Positioning</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-gallery" class="enhancement">
+      <h2>3. Photo Gallery with Lightbox</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Every family, genus and species has its own photo gallery of 3 to 5 pictures. Selecting a photo opens it full-screen over a dark background with its caption and a Close button. The viewer uses the <code>:target</code> selector and fixed positioning.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore1.html#dipterocarpaceae">Families gallery</a>,
+            <a href="explore2.html#dipterocarpus">Genera gallery</a>,
+            <a href="explore3.html#d-alatus">Species gallery</a>,
+            <a href="explore3.html#view-d-alatus-1">an open lightbox</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_image_gallery.asp">W3Schools: CSS Image Gallery</a>,
+            <a href="https://www.w3schools.com/cssref/sel_target.php">W3Schools: The :target selector</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-flip" class="enhancement">
+      <h2>4. Flip Cards</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Four cards on the home page show a plant photo on the front. Pointing at a card, or reaching its link with the keyboard, turns it over in 3D to reveal a fun fact and a link to that plant's page. It uses <code>perspective</code>, <code>transform: rotateY()</code> and <code>backface-visibility</code>.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#flip-cards">"Meet the Plants" on the home page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_flip_card.asp">W3Schools: How To: Flip Card</a>,
+            <a href="https://www.w3schools.com/css/css3_3dtransforms.asp">W3Schools: CSS 3D Transforms</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-rating" class="enhancement">
+      <h2>5. Page Rating</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Visitors can give the Explorer pages a rating from one to five stars. The stars are radio buttons styled with CSS: hovering lights up every star up to the one under the pointer, and the chosen rating stays highlighted. The rating is sent with the form like any other answer.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explorer.html#rate-page">Explorer</a>,
+            <a href="explore1.html#rate-page">Families</a>,
+            <a href="explore2.html#rate-page">Genera</a>,
+            <a href="explore3.html#rate-page">Species</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/att_input_type_radio.asp">W3Schools: HTML input type="radio"</a>,
+            <a href="https://www.w3schools.com/css/css_combinators.asp">W3Schools: CSS Combinators</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-picture-hover" class="enhancement">
+      <h2>6. Picture Hover Effect</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Pictures react when you point at them. The main images grow slightly and cast a deeper shadow, and gallery thumbnails zoom in, inviting visitors to click. It uses <code>transform: scale()</code> with a smooth <code>transition</code>.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#hero">Family tree on the home page</a>,
+            <a href="explorer.html#categories">Explorer photos</a>,
+            <a href="explore1.html#dipterocarpaceae">gallery thumbnails</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_zoom_hover.asp">W3Schools: How To: Zoom on Hover</a>,
+            <a href="https://www.w3schools.com/css/css3_2dtransforms.asp">W3Schools: CSS 2D Transforms</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-button-hover" class="enhancement">
+      <h2>7. Button Hover Effect</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>All buttons, such as "Start exploring", "Identify" and "Submit contribution", change colour, lift up slightly and gain a shadow when you point at them, so it is clear they can be clicked.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#features">Home page buttons</a>,
+            <a href="contribute.html#contribute-form">form buttons</a>,
+            <a href="profile.html">Email Me button</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css3_buttons.asp">W3Schools: CSS Buttons</a>,
+            <a href="https://www.w3schools.com/css/css3_transitions.asp">W3Schools: CSS Transitions</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-back-to-top" class="enhancement">
+      <h2>8. Back to Top Button</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>A round &#8593; button stays in the bottom-right corner of every page. Selecting it glides smoothly back to the top instead of jumping, which is especially useful on the long Explorer pages. It uses fixed positioning and <code>scroll-behavior: smooth</code>.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore3.html">Species page</a>,
+            <a href="index.html">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">W3Schools: How To: Smooth Scroll</a>,
+            <a href="https://www.w3schools.com/css/css_positioning.asp">W3Schools: CSS Positioning</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-video" class="enhancement">
+      <h2>9. YouTube Video</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>A YouTube video is embedded on the Explorer page so visitors can watch and learn without leaving the site. The player keeps a 16:9 shape on every screen size by using a wrapper box with percentage padding.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explorer.html#video">Explorer page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/html/html_youtube.asp">W3Schools: HTML YouTube Videos</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-map" class="enhancement">
+      <h2>10. Google Map</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>The Identify page embeds a Google Map showing the region where the example plant grows. The map fills the width of the page and fits phone screens.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="identify.html#location-map">Identify page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/tag_iframe.asp">W3Schools: HTML iframe tag</a>,
+            <a href="https://www.w3schools.com/graphics/google_maps_intro.asp">W3Schools: Google Maps</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-audio" class="enhancement">
+      <h2>11. Music and Audio</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>The profile page has a player with a short forest soundscape of running water, wind and birdsong, made for this website. It uses the HTML5 <code>&lt;audio&gt;</code> element with controls and looping.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="profile.html#profile-audio">Profile page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/html/html5_audio.asp">W3Schools: HTML Audio</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-animations" class="enhancement">
+      <h2>12. CSS Animations</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Headings, cards and form sections fade up when a page opens, the tree logo sways like a tree in the wind when you point at it, and the Identify button gently pulses. Visitors who prefer less motion have the animations switched off automatically.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#features">fading cards</a>,
+            <a href="index.html#site-logo">swaying logo</a>,
+            <a href="identify.html#upload">pulsing Identify button</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css3_animations.asp">W3Schools: CSS Animations</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-details" class="enhancement">
+      <h2>13. Expandable Care Tips</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>On the Identify page, the care tips for a result are hidden inside a box that opens and closes with a single click, keeping the result short and tidy. It uses the HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="identify.html#result">Identify page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/tag_details.asp">W3Schools: HTML details tag</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+    <section id="enh-form-feedback" class="enhancement">
+      <h2>14. Live Form Feedback</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>While visitors fill in the forms, each field's border turns red if the entry is not valid yet and green once it is correct, and the section being filled in lights up. It uses the <code>:valid</code>, <code>:invalid</code> and <code>:focus-within</code> selectors.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="contribute.html#contribute-form">Contribution form</a>,
+            <a href="enquiry.html#enquiry-form">Enquiry form</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">W3Schools: CSS Pseudo-classes</a>,
+            <a href="https://www.w3schools.com/html/html_form_attributes.asp">W3Schools: HTML Form Attributes</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+
+    <!-- ===== Summary table ===== -->
+    <section id="enhancement-summary">
+      <h2>Summary</h2>
+      <table>
+        <caption>Where each enhancement can be found</caption>
+        <thead>
+          <tr>
+            <th scope="col">Enhancement</th>
+            <th scope="col">Where it is applied</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></th>
+            <td>Menu on every page, Species page (try it on a phone)</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-fixed-nav">Fixed Navigation Bar</a></th>
+            <td>Species page, Genera page, every other page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-gallery">Photo Gallery with Lightbox</a></th>
+            <td>Families gallery, Genera gallery, Species gallery, an open lightbox</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-flip">Flip Cards</a></th>
+            <td>"Meet the Plants" on the home page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-rating">Page Rating</a></th>
+            <td>Explorer, Families, Genera, Species</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-picture-hover">Picture Hover Effect</a></th>
+            <td>Family tree on the home page, Explorer photos, gallery thumbnails</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-button-hover">Button Hover Effect</a></th>
+            <td>Home page buttons, form buttons, Email Me button</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-back-to-top">Back to Top Button</a></th>
+            <td>Species page, every other page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-video">YouTube Video</a></th>
+            <td>Explorer page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-map">Google Map</a></th>
+            <td>Identify page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-audio">Music and Audio</a></th>
+            <td>Profile page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-animations">CSS Animations</a></th>
+            <td>fading cards, swaying logo, pulsing Identify button</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-details">Expandable Care Tips</a></th>
+            <td>Identify page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-form-feedback">Live Form Feedback</a></th>
+            <td>Contribution form, Enquiry form</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
+</body>
+</html>

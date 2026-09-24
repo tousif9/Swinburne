@@ -30,6 +30,9 @@
 
   <!-- ===== Main navigation (same on every page) ===== -->
   <nav id="main-nav">
+    <!-- Hamburger toggle for phones: the checkbox opens and closes the menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">&#9776; Menu</label>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
@@ -45,7 +48,7 @@
       <li><a href="contribute.html">Contribute</a></li>
       <li><a href="enquiry.html">Enquiry</a></li>
       <li><a href="profile.html">Profile</a></li>
-      <li><a href="enhancements.html">Enhancements</a></li>
+      <li><a href="enhancement.html">Enhancements</a></li>
     </ul>
   </nav>
 
@@ -195,6 +198,18 @@
 
     <hr>
 
+    <!-- ===== Enhancement: embedded YouTube video ===== -->
+    <section id="video">
+      <h2>Watch and Learn</h2>
+      <p>Take a closer look at the plant world in this short video.</p>
+      <div class="video-wrap">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/DRdXFPbPct4" title="YouTube video about plants" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p class="source">Video: <a href="https://www.youtube.com/watch?v=DRdXFPbPct4">YouTube</a></p>
+    </section>
+
     <!-- ===== Links to related pages ===== -->
     <section id="next-steps">
       <h2>Continue Your Journey</h2>
@@ -215,6 +230,30 @@
         <a href="https://www.inaturalist.org/taxa/47126-Plantae">iNaturalist</a>.
       </p>
     </section>
+    <!-- ===== Enhancement: page rating (star radio buttons styled with CSS) ===== -->
+    <section class="page-rating" id="rate-page">
+      <h2>Rate This Page</h2>
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="rating-form">
+        <fieldset>
+          <legend>How useful was this page?</legend>
+          <input type="hidden" name="page" value="Explorer">
+          <div class="stars">
+            <input type="radio" id="star5" name="rating" value="5" required>
+            <label for="star5" title="5 stars">&#9733;<span class="visually-hidden">5 stars</span></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">&#9733;<span class="visually-hidden">4 stars</span></label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">&#9733;<span class="visually-hidden">3 stars</span></label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">&#9733;<span class="visually-hidden">2 stars</span></label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">&#9733;<span class="visually-hidden">1 star</span></label>
+          </div>
+          <input type="submit" value="Send rating">
+        </fieldset>
+      </form>
+    </section>
+
   </main>
 
   <!-- ===== Footer ===== -->
@@ -224,5 +263,7 @@
       Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
     </p>
   </footer>
+  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

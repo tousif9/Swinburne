@@ -18,6 +18,10 @@
 /* ===== Base / page ===== */
 html {
   font-size: 100%;
+  /* Smooth scrolling for "Back to top" and "On this page" links */
+  scroll-behavior: smooth;
+  /* Keeps jumped-to headings visible below the fixed menu bar */
+  scroll-padding-top: 4em;
 }
 
 body {
@@ -70,9 +74,20 @@ body {
 }
 
 /* ===== Main navigation menu ===== */
+/* Menu bar stays fixed at the top of the screen while scrolling */
 #main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   background-color: #A3D9A5;
   border-top: 3px solid #123D2E;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Hamburger toggle is only shown on phones (see media query) */
+.menu-toggle,
+.menu-button {
+  display: none;
 }
 
 #main-nav ul {
@@ -833,6 +848,223 @@ code {
   border-radius: 3px;
 }
 
+/* ===== Enhancement: picture hover effect ===== */
+.hero-figure img,
+.feature-figure img,
+.result-figure img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-figure img:hover,
+.feature-figure img:hover,
+.result-figure img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Enhancement: button hover effect (lift and shadow) ===== */
+.button,
+input[type="submit"],
+input[type="reset"] {
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+.button:focus,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Enhancement: flip cards (home page) ===== */
+.flip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.flip-card {
+  flex: 1 1 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+/* Turns over on hover, or when its link receives keyboard focus */
+.flip-card:hover .flip-inner,
+.flip-card:focus-within .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  backface-visibility: hidden;
+}
+
+.flip-front {
+  background-color: #ffffff;
+  border: 2px solid #A3D9A5;
+}
+
+.flip-front img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.flip-front h3 {
+  margin: 0.5em;
+  text-align: center;
+}
+
+.flip-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2em;
+  color: #123D2E;
+  text-align: center;
+  background-color: #5BCBA7;
+  transform: rotateY(180deg);
+}
+
+.flip-back h3 {
+  color: #123D2E;
+}
+
+.flip-back .button {
+  align-self: center;
+  background-color: #ffffff;
+}
+
+/* ===== Enhancement: back to top button ===== */
+.to-top {
+  position: fixed;
+  right: 1.2em;
+  bottom: 1.2em;
+  z-index: 60;
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #123D2E;
+  text-align: center;
+  text-decoration: none;
+  background-color: #5BCBA7;
+  border: 2px solid #123D2E;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.to-top:hover,
+.to-top:focus {
+  background-color: #A3D9A5;
+  transform: translateY(-3px);
+}
+
+/* ===== Enhancement: star page rating ===== */
+.page-rating {
+  clear: both;
+}
+
+/* Stars are listed 5 to 1 in the HTML and shown reversed, so the
+   general sibling selector (~) can colour every star up to the chosen one */
+.stars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 0.2em;
+  margin-bottom: 0.8em;
+}
+
+.stars input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.stars label {
+  font-size: 2.2em;
+  line-height: 1;
+  color: #C9D6CF;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input:checked ~ label {
+  color: #E0B43C;
+}
+
+.stars label:hover {
+  transform: scale(1.15);
+}
+
+.stars input:focus + label {
+  outline: 2px solid #1F6E56;
+}
+
+.rating-form input[type="submit"] {
+  display: block;
+}
+
+/* ===== Enhancement: embedded YouTube video (keeps a 16:9 shape) ===== */
+.video-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-frame {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border: 3px solid #5BCBA7;
+  border-radius: 6px;
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== Enhancement: audio player (profile page) ===== */
+#profile-audio p {
+  max-width: 40em;
+  margin: 0 auto 1em;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  max-width: 30em;
+  margin: 0 auto 1em;
+}
+
 /* ===== CSS animations ===== */
 /* Page heading and cards fade up gently when a page loads */
 @keyframes fadeUp {
@@ -897,6 +1129,14 @@ fieldset {
   #logo-link:hover #site-logo {
     animation: none;
   }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .flip-inner {
+    transition: none;
+  }
 }
 
 /* ===== Mobile phone layout (screens 700px and narrower) ===== */
@@ -908,6 +1148,40 @@ fieldset {
   #site-logo {
     width: 50px;
     height: 50px;
+  }
+
+  /* Hamburger button replaces the full menu on phones */
+  .menu-button {
+    display: block;
+    padding: 0.8em;
+    font-weight: bold;
+    color: #123D2E;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Checkbox stays hidden but can still be reached with the keyboard */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .menu-toggle:focus + .menu-button {
+    outline: 2px solid #123D2E;
+  }
+
+  #main-nav > ul {
+    display: none;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  /* Menu opens when the hamburger checkbox is ticked */
+  #main-nav .menu-toggle:checked ~ ul {
+    display: block;
   }
 
   /* Stack menu items vertically */
@@ -975,6 +1249,14 @@ fieldset {
 
   .gallery img {
     height: 150px;
+  }
+
+  .flip-card {
+    height: 280px;
+  }
+
+  .flip-front img {
+    height: 210px;
   }
 
   /* Wide tables scroll sideways instead of stretching the page */

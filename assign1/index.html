@@ -30,6 +30,9 @@
 
   <!-- ===== Main navigation (same on every page) ===== -->
   <nav id="main-nav">
+    <!-- Hamburger toggle for phones: the checkbox opens and closes the menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">&#9776; Menu</label>
     <ul>
       <li><a href="index.html" class="current" aria-current="page">Home</a></li>
       <li class="dropdown">
@@ -45,7 +48,7 @@
       <li><a href="contribute.html">Contribute</a></li>
       <li><a href="enquiry.html">Enquiry</a></li>
       <li><a href="profile.html">Profile</a></li>
-      <li><a href="enhancements.html">Enhancements</a></li>
+      <li><a href="enhancement.html">Enhancements</a></li>
     </ul>
   </nav>
 
@@ -124,6 +127,66 @@
       </div>
     </section>
 
+    <!-- ===== Enhancement: flip cards (turn over on hover or keyboard focus) ===== -->
+    <section id="flip-cards">
+      <h2>Meet the Plants</h2>
+      <p>Point at a card, or tab to it with the keyboard, to flip it over and learn more.</p>
+      <div class="flip-grid">
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/dipterocarpaceae-4.jpg" alt="Red winged dipterocarp fruits on the forest floor">
+              <h3>Dipterocarpaceae</h3>
+            </div>
+            <div class="flip-back">
+              <h3>The dipterocarp family</h3>
+              <p>Giant rainforest trees with two-winged fruits that spin like helicopters as they fall.</p>
+              <a href="explore1.html#dipterocarpaceae" class="button">Meet the family</a>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/lauraceae-2.jpg" alt="Green laurel berries sitting in bright red cups">
+              <h3>Lauraceae</h3>
+            </div>
+            <div class="flip-back">
+              <h3>The laurel family</h3>
+              <p>Aromatic trees related to cinnamon and avocado, with berries that feed forest birds.</p>
+              <a href="explore1.html#lauraceae" class="button">Meet the family</a>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/d-tuberculatus-4.jpg" alt="Enormous Dipterocarpus tuberculatus leaf seen from below">
+              <h3><em>Dipterocarpus tuberculatus</em></h3>
+            </div>
+            <div class="flip-back">
+              <h3>Giant-leaf dipterocarp</h3>
+              <p>Its leaves can be wider than your arm span and are used for thatching roofs.</p>
+              <a href="explore3.html#d-tuberculatus" class="button">See the species</a>
+            </div>
+          </div>
+        </article>
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/c-alba-3.jpg" alt="Bright pink-red Cryptocarya alba fruits on a branch">
+              <h3><em>Cryptocarya alba</em></h3>
+            </div>
+            <div class="flip-back">
+              <h3>Peumo</h3>
+              <p>A Chilean tree whose bright pink-red fruits are traditionally eaten after cooking.</p>
+              <a href="explore3.html#c-alba" class="button">See the species</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- ===== How to get involved ===== -->
     <section id="get-involved">
       <h2>Getting Started</h2>
@@ -143,5 +206,7 @@
       Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
     </p>
   </footer>
+  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>
