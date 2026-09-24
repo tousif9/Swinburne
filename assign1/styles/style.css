@@ -249,8 +249,10 @@ figure img {
   max-width: 881px;
 }
 
+/* Explorer photo: never stretch past its real size (493px) */
 .feature-figure img {
   width: 60%;
+  max-width: 493px;
 }
 
 figcaption {
