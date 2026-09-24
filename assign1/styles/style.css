@@ -615,6 +615,17 @@ details[open] summary {
   background-color: #F4FCF7;
 }
 
+.profile-table ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+/* Intro paragraph reads better at a comfortable line length */
+#profile-about p {
+  max-width: 40em;
+  margin: 0 auto 1em;
+}
+
 .email-me {
   margin: 1.5em 0 0.5em;
 }
