@@ -106,7 +106,7 @@ body {
   border-bottom: 3px solid #123D2E;
 }
 
-/* Explorer drop-down (pure CSS, no JavaScript) */
+/* Explorer drop-down (pure CSS) */
 #main-nav .submenu {
   display: none;
   position: absolute;
