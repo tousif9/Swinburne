@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        identify.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     24 September 2026
+  Description: Identify page: upload a plant photo or search by name to see its scientific name, common name, care tips and location.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Identify a plant with Pl@netMatrix: upload a photo or search to find its scientific name, common name, care tips and location.">
+  <meta name="keywords" content="plant identification, upload photo, plant search, care tips, Dipterocarpus alatus">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Identify</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <div class="brand-text">
+      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+    </div>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html" class="current" aria-current="page">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Identify a Plant</h1>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Tips for a Good Photo</h2>
+      <ul>
+        <li>Photograph a single leaf, flower or fruit in sharp focus.</li>
+        <li>Use natural daylight and avoid strong shadows.</li>
+        <li>Include both sides of a leaf if you can; the underside often shows the veins clearly.</li>
+        <li>Never pick or damage a plant that could be endangered.</li>
+      </ul>
+    </aside>
+
+    <!-- ===== Upload a photo to identify ===== -->
+    <section id="upload">
+      <h2>Upload a Photo</h2>
+      <p>
+        Our automatic visual identification engine compares your photo with thousands of records of
+        Endangered, Rare and Threatened (ERT) plants. Choose a clear photo and press
+        <strong>Identify</strong> to see the closest match.
+      </p>
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" enctype="multipart/form-data" class="tool-form">
+        <fieldset>
+          <legend>Plant photo</legend>
+          <label for="plantPhoto">Choose a photo (JPG or PNG)</label>
+          <input type="file" id="plantPhoto" name="plantPhoto" accept="image/png, image/jpeg" required>
+          <input type="submit" value="Identify" class="pulse-button">
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- ===== Search by name ===== -->
+    <section id="search">
+      <h2>Search for Plant Information</h2>
+      <p>Already know part of the name? Search by scientific name, common name, genus or family.</p>
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="search-form">
+        <label for="plantSearch">Plant name</label>
+        <input type="search" id="plantSearch" name="plantSearch" placeholder="e.g. Dipterocarpus alatus" maxlength="40" required>
+        <input type="submit" value="Search">
+      </form>
+    </section>
+
+    <!-- ===== How identification works ===== -->
+    <section id="how-it-works">
+      <h2>How Identification Works</h2>
+      <ol>
+        <li>You upload a photo of a leaf, flower or fruit.</li>
+        <li>The engine measures features such as leaf shape, vein pattern and colour.</li>
+        <li>These features are compared with verified photos in our database.</li>
+        <li>The closest matches are shown with a confidence score.</li>
+        <li>Taxonomists review uncertain results to keep the database accurate.</li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <!-- ===== Example result ===== -->
+    <section id="result">
+      <h2>Example Result</h2>
+      <p>This is what a result looks like after you upload a photo.</p>
+
+      <figure class="result-figure">
+        <img src="images/explorer-plant.png" alt="Uploaded photo of a young dipterocarp plant with one leaf turned over to show its underside">
+        <figcaption>Sample uploaded photo: a young plant from the rainforest floor.</figcaption>
+      </figure>
+
+      <article class="result-card">
+        <h3>Best match: <em>Dipterocarpus alatus</em></h3>
+        <dl>
+          <dt>Scientific name</dt>
+          <dd><em>Dipterocarpus alatus</em> (family Dipterocarpaceae)</dd>
+          <dt>Common names</dt>
+          <dd>Yang na, hairy-leaf apitong</dd>
+          <dt>Main location</dt>
+          <dd>Lowland forests of mainland Southeast Asia, often near rivers, from Myanmar and Thailand to Cambodia, Laos and Vietnam.</dd>
+          <dt>Conservation status</dt>
+          <dd>Listed as threatened because of logging and forest clearing.</dd>
+        </dl>
+
+        <!-- Enhancement: expandable care tips using the HTML5 details element (no JavaScript) -->
+        <details>
+          <summary>Care tips and the right environment</summary>
+          <ul>
+            <li><strong>Light:</strong> young plants like partial shade; older trees need full sun.</li>
+            <li><strong>Soil:</strong> deep, moist and well-drained soil.</li>
+            <li><strong>Climate:</strong> warm tropical lowlands with a wet season.</li>
+            <li><strong>Space:</strong> grows into a very tall canopy tree, so it needs plenty of room.</li>
+          </ul>
+        </details>
+      </article>
+
+      <table>
+        <caption>Other possible matches for the sample photo</caption>
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Scientific name</th>
+            <th scope="col">Family</th>
+            <th scope="col">Match</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><em>Dipterocarpus alatus</em></td>
+            <td>Dipterocarpaceae</td>
+            <td>86%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><em>Dipterocarpus tuberculatus</em></td>
+            <td>Dipterocarpaceae</td>
+            <td>9%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><em>Cryptocarya alba</em></td>
+            <td>Lauraceae</td>
+            <td>3%</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Enhancement: embedded map of the main location ===== -->
+    <section id="location-map">
+      <h2>Where It Grows</h2>
+      <p>The map shows mainland Southeast Asia, the home range of <em>Dipterocarpus alatus</em>.</p>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Cambodia&amp;z=5&amp;output=embed" title="Map of mainland Southeast Asia" loading="lazy"></iframe>
+      </div>
+      <p class="source">Map: <a href="https://www.google.com/maps">Google Maps</a></p>
+    </section>
+
+    <!-- ===== Useful terms ===== -->
+    <section id="identify-terms">
+      <h2>Useful Terms</h2>
+      <dl>
+        <dt>Confidence score</dt>
+        <dd>How closely your photo matches our records, shown as a percentage.</dd>
+        <dt>Taxonomist</dt>
+        <dd>A scientist who names and classifies living things.</dd>
+      </dl>
+      <p>
+        Want to share your photo with other plant spotters? Visit the
+        <a href="contribute.html">contribution form</a> or browse the
+        <a href="explorer.html">Plant Explorer</a>.
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>

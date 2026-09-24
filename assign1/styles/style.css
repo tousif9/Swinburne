@@ -381,6 +381,310 @@ footer a:hover {
   text-decoration: none;
 }
 
+/* ===== Forms (contribute, enquiry, identify) ===== */
+form {
+  max-width: 40em;
+}
+
+fieldset {
+  margin: 0 0 1.5em;
+  padding: 1em 1.5em;
+  border: 2px solid #5BCBA7;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* Highlight the fieldset the user is currently filling in */
+fieldset:focus-within {
+  background-color: #D8F7E3;
+}
+
+legend {
+  padding: 0 0.5em;
+  font-weight: bold;
+  color: #123D2E;
+}
+
+.form-row {
+  margin-bottom: 1em;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+/* Attribute selectors style every text-like field the same way */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="search"],
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em;
+  font: inherit;
+  border: 2px solid #A3D9A5;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1F6E56;
+}
+
+/* Live feedback from HTML5 validation while typing */
+input:focus:invalid,
+textarea:focus:invalid {
+  border-color: #B3261E;
+}
+
+input:focus:valid,
+textarea:focus:valid {
+  border-color: #1F6E56;
+}
+
+/* Radio buttons and checkboxes sit beside their labels */
+.check-row {
+  margin-bottom: 0.6em;
+}
+
+.check-row label {
+  display: inline;
+  margin-left: 0.4em;
+  font-weight: normal;
+}
+
+.form-buttons {
+  margin-top: 1em;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  margin-right: 0.8em;
+  padding: 0.6em 1.4em;
+  font: bold 1em "Trebuchet MS", Verdana, Arial, sans-serif;
+  color: #123D2E;
+  background-color: #5BCBA7;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  background-color: #D8F7E3;
+  border: 2px solid #5BCBA7;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #A3D9A5;
+}
+
+/* ===== Identify page ===== */
+.tool-form input[type="submit"] {
+  margin-top: 0.8em;
+}
+
+/* Search box and button on one line */
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.search-form label {
+  font-weight: bold;
+}
+
+.search-form input[type="search"] {
+  flex: 1 1 15em;
+  width: auto;
+}
+
+.result-figure {
+  float: left;
+  width: 35%;
+  margin: 0 1.5em 1em 0;
+}
+
+.result-card {
+  padding: 1em 1.5em;
+  background-color: #D8F7E3;
+  border-left: 6px solid #5BCBA7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.result-card h3 {
+  margin-top: 0;
+}
+
+details {
+  margin-top: 1em;
+  padding: 0.6em 1em;
+  background-color: #ffffff;
+  border: 2px solid #A3D9A5;
+  border-radius: 4px;
+}
+
+summary {
+  font-weight: bold;
+  color: #1F6E56;
+  cursor: pointer;
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
+}
+
+/* Responsive embedded map */
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 3px solid #5BCBA7;
+  border-radius: 6px;
+}
+
+/* ===== Profile page ===== */
+#profile-page {
+  text-align: center;
+}
+
+/* Hidden heading kept for screen readers and the document outline */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Centres the floated photo on the page */
+.photo-holder {
+  display: table;
+  margin: 0 auto 1em;
+}
+
+#profile-photo {
+  float: left;
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  border: 8px groove #5BCBA7;
+  border-radius: 50%;
+}
+
+#profile-name {
+  margin: 0;
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#student-id {
+  margin: 0.2em 0;
+  font-family: Arial, sans-serif;
+}
+
+#course {
+  color: rgb(31, 110, 86);
+  font-weight: bold;
+}
+
+.profile-table {
+  width: 80%;
+  margin: 1em auto;
+  text-align: left;
+}
+
+.profile-table th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-table td {
+  background-color: #F4FCF7;
+}
+
+.email-me {
+  margin: 1.5em 0 0.5em;
+}
+
+/* ===== CSS animations ===== */
+/* Page heading and cards fade up gently when a page loads */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+.card,
+.result-card,
+fieldset {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+/* Tree logo sways like a tree in the wind on hover */
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+}
+
+#logo-link:hover #site-logo,
+#logo-link:focus #site-logo {
+  animation: sway 1s ease-in-out infinite;
+}
+
+/* Identify button gently pulses to draw attention */
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 203, 167, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(91, 203, 167, 0);
+  }
+}
+
+.pulse-button {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Turn animations off for visitors who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  h1,
+  .card,
+  .result-card,
+  fieldset,
+  .pulse-button,
+  #logo-link:hover #site-logo {
+    animation: none;
+  }
+}
+
 /* ===== Mobile phone layout (screens 700px and narrower) ===== */
 @media screen and (max-width: 700px) {
   #logo {
@@ -429,5 +733,20 @@ footer a:hover {
 
   .feature-figure img {
     max-height: none;
+  }
+
+  /* Identify result photo stacks above the result */
+  .result-figure {
+    float: none;
+    width: auto;
+    margin: 0 0 1em;
+  }
+
+  .profile-table {
+    width: 100%;
+  }
+
+  #profile-photo {
+    width: 150px;
   }
 }

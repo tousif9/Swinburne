@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        profile.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     24 September 2026
+  Description: Personal profile page of the website author.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Profile of Tousif Akhand, creator of the Pl@netMatrix website.">
+  <meta name="keywords" content="Tousif Akhand, profile, student, COS10005">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Profile</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <div class="brand-text">
+      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+    </div>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html" class="current" aria-current="page">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main id="profile-page">
+    <h1>About Me</h1>
+
+    <!-- ===== Photo, name, student number and course ===== -->
+    <section id="profile-intro">
+      <h2 class="visually-hidden">Student details</h2>
+      <!-- Replace images/profile.png with your own photo (keep it under 100 KB) -->
+      <div class="photo-holder">
+        <img src="images/profile.png" alt="Photo of Tousif Akhand" id="profile-photo">
+      </div>
+      <p id="profile-name">Tousif Akhand</p>
+      <p id="student-id">Student number: 105822937</p>
+      <p id="course">[Your course name]</p>
+    </section>
+
+    <!-- ===== Personal information table ===== -->
+    <section id="profile-details">
+      <h2>My Profile</h2>
+      <table class="profile-table">
+        <caption>A little more about me</caption>
+        <thead>
+          <tr>
+            <th scope="col">Topic</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Demographic information</th>
+            <td>[Age, nationality, languages you speak]</td>
+          </tr>
+          <tr>
+            <th scope="row">Hometown</th>
+            <td>[Your hometown and a short description of it]</td>
+          </tr>
+          <tr>
+            <th scope="row">A great achievement</th>
+            <td>[Your greatest achievement so far]</td>
+          </tr>
+          <tr>
+            <th scope="row">Favourite books</th>
+            <td>[Your favourite books]</td>
+          </tr>
+          <tr>
+            <th scope="row">Favourite music</th>
+            <td>[Your favourite music or artists]</td>
+          </tr>
+          <tr>
+            <th scope="row">Favourite movies and games</th>
+            <td>[Your favourite movies and games]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Email button ===== -->
+    <p class="email-me"><a href="mailto:105822937@students.swinburne.edu.my" class="button">Email Me</a></p>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>

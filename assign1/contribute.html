@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        contribute.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     24 September 2026
+  Description: Contribution form for registered users to submit plant photos and observations.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contribute plant photos and observations to the Pl@netMatrix citizen science project.">
+  <meta name="keywords" content="contribute, plant data, citizen science, upload plant photo">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Contribute</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <div class="brand-text">
+      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+    </div>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html" class="current" aria-current="page">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contribute Plant Data</h1>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Before You Submit</h2>
+      <p>
+        Every record helps scientists map where Endangered, Rare and Threatened plants still grow.
+        Please only share photos you took yourself, and never reveal the exact location of a rare
+        plant in your comments.
+      </p>
+    </aside>
+
+    <section id="contribute-intro">
+      <h2>Share Your Observation</h2>
+      <p>
+        Registered users can add their plant photos to the Pl@netMatrix database. Fill in every field
+        below; the form will not send until all the information is complete and in the right format.
+      </p>
+    </section>
+
+    <!-- ===== Contribution form (HTML5 validation, no JavaScript) ===== -->
+    <section id="contribute-form">
+      <h2>Contribution Form</h2>
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+          <legend>About you</legend>
+          <div class="form-row">
+            <label for="contributorName">Name of contributor</label>
+            <input type="text" id="contributorName" name="contributorName" maxlength="25" pattern="[A-Za-z ]+" title="Letters and spaces only, up to 25 characters" placeholder="e.g. Tousif Akhand" required>
+          </div>
+          <div class="form-row">
+            <label for="contributorEmail">Email address</label>
+            <input type="email" id="contributorEmail" name="contributorEmail" placeholder="name@example.com" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About the plant</legend>
+          <div class="form-row">
+            <label for="plantName">Plant's name</label>
+            <input type="text" id="plantName" name="plantName" maxlength="25" pattern="[A-Za-z ]+" title="Letters and spaces only, up to 25 characters" placeholder="e.g. Cryptocarya alba" required>
+          </div>
+          <div class="form-row">
+            <label for="plantFamily">Family</label>
+            <select id="plantFamily" name="plantFamily" required>
+              <option value="">-- Select a family --</option>
+              <option value="Dipterocarpaceae">Dipterocarpaceae</option>
+              <option value="Lauraceae">Lauraceae</option>
+              <option value="Unknown">Not sure</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="dateSeen">Date observed</label>
+            <input type="date" id="dateSeen" name="dateSeen" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Photos and comments</legend>
+          <div class="form-row">
+            <label for="plantPhotos">Photo(s) of the plant</label>
+            <input type="file" id="plantPhotos" name="plantPhotos[]" accept="image/png, image/jpeg" multiple required>
+          </div>
+          <div class="form-row">
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" rows="6" cols="50" placeholder="Where did you see it? What did it look like?" required></textarea>
+          </div>
+          <div class="form-row check-row">
+            <input type="checkbox" id="ownPhoto" name="ownPhoto" value="yes" required>
+            <label for="ownPhoto">I took these photos myself and agree to share them with the project.</label>
+          </div>
+        </fieldset>
+
+        <div class="form-buttons">
+          <input type="submit" value="Submit contribution">
+          <input type="reset" value="Clear form">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>

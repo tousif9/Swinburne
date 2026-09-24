@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        enquiry.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Unit:        COS10005 Web Development - Assignment 1
+  Created:     24 September 2026
+  Description: Enquiry form for questions about plant families, genera and species.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Send an enquiry to Pl@netMatrix about plant families, genera and species.">
+  <meta name="keywords" content="enquiry, contact, plant families, genera, species">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Enquiry</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- ===== Site header ===== -->
+  <header id="site-header">
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <div class="brand-text">
+      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
+    </div>
+  </header>
+
+  <!-- ===== Main navigation (same on every page) ===== -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="explorer.html">Explorer</a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html" class="current" aria-current="page">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="enhancements.html">Enhancements</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Plant Enquiry</h1>
+
+    <!-- ===== Side note (tangential content) ===== -->
+    <aside>
+      <h2>Quick Answers</h2>
+      <p>
+        Many questions about our featured plants are already answered in the
+        <a href="explorer.html">Plant Explorer</a>. For help naming a plant from a photo, try the
+        <a href="identify.html">Identify</a> page first.
+      </p>
+    </aside>
+
+    <section id="enquiry-intro">
+      <h2>Ask Our Team</h2>
+      <p>
+        Have a question about a plant family, genus or species? Send us your enquiry and a member of
+        our team will reply within three working days. All fields are required.
+      </p>
+    </section>
+
+    <!-- ===== Enquiry form (HTML5 validation, no JavaScript) ===== -->
+    <section id="enquiry-form">
+      <h2>Enquiry Form</h2>
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="form-row">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" maxlength="25" pattern="[A-Za-z]+" title="Letters only, up to 25 characters" required>
+          </div>
+          <div class="form-row">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName" maxlength="25" pattern="[A-Za-z]+" title="Letters only, up to 25 characters" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" pattern="[0-9]{9,10}" title="9 or 10 digits, numbers only" placeholder="0123456789" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your enquiry</legend>
+          <div class="form-row">
+            <label for="enquiryTopic">Enquiry about</label>
+            <select id="enquiryTopic" name="enquiryTopic" required>
+              <option value="">-- Select a topic --</option>
+              <optgroup label="Families">
+                <option value="Dipterocarpaceae">Dipterocarpaceae</option>
+                <option value="Lauraceae">Lauraceae</option>
+              </optgroup>
+              <optgroup label="Genera">
+                <option value="Dipterocarpus">Dipterocarpus</option>
+                <option value="Monotes">Monotes</option>
+                <option value="Beilschmiedia">Beilschmiedia</option>
+                <option value="Cryptocarya">Cryptocarya</option>
+              </optgroup>
+              <optgroup label="Services">
+                <option value="Identification">Plant identification</option>
+                <option value="Contribution">Contributing data</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="visitDate">Date you saw the plant</label>
+            <input type="date" id="visitDate" name="visitDate" required>
+          </div>
+          <div class="form-row">
+            <label for="enquiryComments">Comments</label>
+            <textarea id="enquiryComments" name="enquiryComments" rows="6" cols="50" placeholder="Type your question here" required></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>How should we reply?</legend>
+          <div class="check-row">
+            <input type="radio" id="replyEmail" name="replyMethod" value="email" required>
+            <label for="replyEmail">Email</label>
+          </div>
+          <div class="check-row">
+            <input type="radio" id="replyPhone" name="replyMethod" value="phone">
+            <label for="replyPhone">Phone</label>
+          </div>
+          <div class="check-row">
+            <input type="checkbox" id="agree" name="agree" value="yes" required>
+            <label for="agree">I agree that Pl@netMatrix may contact me about this enquiry.</label>
+          </div>
+        </fieldset>
+
+        <div class="form-buttons">
+          <input type="submit" value="Send enquiry">
+          <input type="reset" value="Clear form">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+    </p>
+  </footer>
+</body>
+</html>
