@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-  File:        explorer.html
+  File:        explore.html
   Author:      Tousif Akhand
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
@@ -36,7 +36,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
-        <a href="explorer.html" class="current" aria-current="page">Explorer</a>
+        <a href="explore.html" class="current" aria-current="page">Explorer</a>
         <ul class="submenu">
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -92,6 +92,85 @@
         Southeast Asia, Africa and the Americas, showing how widely these plant groups have spread
         across the tropics and warm parts of the world.
       </p>
+    </section>
+
+    <!-- ===== Link map: family to genus to species ===== -->
+    <section id="link-map">
+      <h2>Follow the Links: Family &rarr; Genus &rarr; Species</h2>
+      <p>
+        This map shows how every plant on Pl@netMatrix is connected. Start at a family, follow the line
+        down to its genera, then down again to its species. Select any box to jump straight to that
+        plant's section.
+      </p>
+      <ul class="tree-key">
+        <li><span class="tree-node node-family">Family</span> <a href="explore1.html">Families page</a></li>
+        <li><span class="tree-node node-genus">Genus</span> <a href="explore2.html">Genera page</a></li>
+        <li><span class="tree-node node-species">Species</span> <a href="explore3.html">Species page</a></li>
+      </ul>
+      <div class="tree">
+        <ul>
+          <li>
+            <span class="tree-node node-root">Plants on Pl@netMatrix</span>
+            <ul>
+          <li>
+            <a href="explore1.html#dipterocarpaceae" class="tree-node node-family"><span class="tree-level">Family</span> Dipterocarpaceae</a>
+            <ul>
+              <li>
+                <a href="explore2.html#dipterocarpus" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Dipterocarpus</em></a>
+                <ul>
+                  <li><a href="explore3.html#d-alatus" class="tree-node node-species"><span class="tree-level">Species</span> <em>D. alatus</em></a></li>
+                  <li><a href="explore3.html#d-tuberculatus" class="tree-node node-species"><span class="tree-level">Species</span> <em>D. tuberculatus</em></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="explore2.html#monotes" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Monotes</em></a>
+                <ul>
+                  <li><a href="explore3.html#m-adenophyllus" class="tree-node node-species"><span class="tree-level">Species</span> <em>M. adenophyllus</em></a></li>
+                  <li><a href="explore3.html#m-glaber" class="tree-node node-species"><span class="tree-level">Species</span> <em>M. glaber</em></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="explore1.html#lauraceae" class="tree-node node-family"><span class="tree-level">Family</span> Lauraceae</a>
+            <ul>
+              <li>
+                <a href="explore2.html#beilschmiedia" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Beilschmiedia</em></a>
+                <ul>
+                  <li><a href="explore3.html#b-berteroana" class="tree-node node-species"><span class="tree-level">Species</span> <em>B. berteroana</em></a></li>
+                  <li><a href="explore3.html#b-costaricensis" class="tree-node node-species"><span class="tree-level">Species</span> <em>B. costaricensis</em></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="explore2.html#cryptocarya" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Cryptocarya</em></a>
+                <ul>
+                  <li><a href="explore3.html#c-adpressa" class="tree-node node-species"><span class="tree-level">Species</span> <em>C. adpressa</em></a></li>
+                  <li><a href="explore3.html#c-alba" class="tree-node node-species"><span class="tree-level">Species</span> <em>C. alba</em></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== The plant family tree ===== -->
+    <section id="family-tree">
+      <h2>Where Our Plants Fit on the Family Tree</h2>
+      <p>
+        All plants share a common ancestor, but they have branched out over millions of years. Both of our
+        featured families are flowering plants. On the tree below, laurels sit on the branch beside
+        <em>Magnolia</em>, while dipterocarps belong with the other dicots, close relatives of mallows and
+        cacao.
+      </p>
+      <figure class="family-tree-figure">
+        <img src="images/FamilyTree.png" alt="Illustrated plant family tree showing algae, mosses, ferns, gymnosperms and flowering plants branching from a common ancestor">
+        <figcaption>
+          The plant family tree: every plant, from green algae to flowering trees, shares a common ancestor.
+        </figcaption>
+      </figure>
     </section>
 
     <!-- ===== Links to the three classification pages ===== -->
