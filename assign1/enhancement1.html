@@ -19,24 +19,68 @@
 </head>
 
 <body>
-  <!-- ===== Site header ===== -->
+  <!-- ===== Site header: menu button, logo, site name and search ===== -->
   <header id="site-header">
+    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
+    <nav class="side-menu" aria-label="All pages">
+      <label for="menu-toggle" class="menu-close">&times; Close</label>
+      <p class="side-title">All pages</p>
+      <ul>
+        <li><a href="explore.html">Explorer</a></li>
+        <li class="side-sub"><a href="explore1.html">Families</a></li>
+        <li class="side-sub"><a href="explore2.html">Genera</a></li>
+        <li class="side-sub"><a href="explore3.html">Species</a></li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contributor.html">Contributors</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="enhancement1.html" class="current" aria-current="page">Enhancements</a></li>
+        <li><a href="acknowledgement.html">Acknowledgements</a></li>
+      </ul>
+    </nav>
+
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
-    <div class="brand-text">
-      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
-      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
-    </div>
+    <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+
+    <!-- Site search with suggestions -->
+    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
+      <datalist id="site-suggestions">
+        <option value="Dipterocarpaceae"></option>
+        <option value="Lauraceae"></option>
+        <option value="Dipterocarpus"></option>
+        <option value="Monotes"></option>
+        <option value="Beilschmiedia"></option>
+        <option value="Cryptocarya"></option>
+        <option value="Dipterocarpus alatus"></option>
+        <option value="Dipterocarpus tuberculatus"></option>
+        <option value="Monotes adenophyllus"></option>
+        <option value="Monotes glaber"></option>
+        <option value="Beilschmiedia berteroana"></option>
+        <option value="Beilschmiedia costaricensis"></option>
+        <option value="Cryptocarya adpressa"></option>
+        <option value="Cryptocarya alba"></option>
+        <option value="Plant families"></option>
+        <option value="Plant genera"></option>
+        <option value="Plant species"></option>
+        <option value="Identify a plant"></option>
+        <option value="Contributors"></option>
+        <option value="Contribution form"></option>
+        <option value="Enquiry form"></option>
+      </datalist>
+      <button type="submit" title="Search">&#128269;<span class="visually-hidden"> Search</span></button>
+    </form>
   </header>
 
   <!-- ===== Main navigation (same on every page) ===== -->
-  <nav id="main-nav">
-    <!-- Hamburger menu: the checkbox opens and closes the menu panel -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-button">&#9776; Menu</label>
+  <nav id="main-nav" aria-label="Main menu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="explore.html">Explorer</a>
+      <li class="has-submenu">
+        <a href="explore.html">Explorer <span class="caret">&#9662;</span></a>
         <ul class="submenu">
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -48,8 +92,6 @@
       <li><a href="contribute.html">Contribute</a></li>
       <li><a href="enquiry.html">Enquiry</a></li>
       <li><a href="profile.html">Profile</a></li>
-      <li><a href="enhancement1.html" class="current" aria-current="page">Enhancements</a></li>
-      <li><a href="acknowledgement.html">Acknowledgements</a></li>
     </ul>
   </nav>
 
@@ -88,6 +130,7 @@
         <li><a href="#enh-details">Expandable Care Tips</a></li>
         <li><a href="#enh-form-feedback">Live Form Feedback</a></li>
         <li><a href="#enh-footer">Site-Map Footer</a></li>
+        <li><a href="#enh-search">Site Search with Suggestions</a></li>
       </ol>
     </section>
 
@@ -97,7 +140,7 @@
       <h2>1. Fluid Layout with Hamburger Menu</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. On every screen size the menu is tucked behind a &#9776; Menu button. Selecting it opens a panel of links that arranges itself into as many columns as fit, using a hidden checkbox, the <code>:checked</code> selector and CSS grid. This keeps every page tidy.</dd>
+        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. The six main pages sit in the menu bar, and the &#9776; button on the left of the logo opens a side menu that slides in from the left with every page on the site. It uses a hidden checkbox, the <code>:checked</code> selector and a CSS <code>transform</code> transition. On phones the search box moves under the logo and the menu links shrink to fit.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#main-nav">Menu on every page</a>,
@@ -368,6 +411,25 @@
       </dl>
     </section>
 
+    <section id="enh-search" class="enhancement">
+      <h2>16. Site Search with Suggestions</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Every page has a search box in the header. As visitors type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element linked to the search box. The rounded box and button are styled with CSS.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#site-header">Header on the home page</a>,
+            <a href="explore.html#site-header">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/tag_datalist.asp">W3Schools: HTML datalist tag</a>,
+            <a href="https://www.w3schools.com/howto/howto_css_search_button.asp">W3Schools: How To - Search Button</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+
     <!-- ===== Summary table ===== -->
     <section id="enhancement-summary">
       <h2>Summary</h2>
@@ -440,6 +502,10 @@
             <th scope="row"><a href="#enh-footer">Site-Map Footer</a></th>
             <td>Home page footer, every other page</td>
           </tr>
+          <tr>
+            <th scope="row"><a href="#enh-search">Site Search with Suggestions</a></th>
+            <td>Header on every page</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -450,7 +516,7 @@
     <div class="footer-brand">
       <a href="index.html"><img src="images/logo.png" alt="Pl@netMatrix tree logo" class="footer-logo"></a>
       <p class="footer-name">Pl@netMatrix</p>
-      <p>Citizen science for Malaysia's plant biodiversity. Every photo helps protect a plant.</p>
+      <p>Every photo helps protect a plant.</p>
     </div>
 
     <nav class="footer-columns" aria-label="Footer site map">

@@ -19,24 +19,68 @@
 </head>
 
 <body>
-  <!-- ===== Site header ===== -->
+  <!-- ===== Site header: menu button, logo, site name and search ===== -->
   <header id="site-header">
+    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
+    <nav class="side-menu" aria-label="All pages">
+      <label for="menu-toggle" class="menu-close">&times; Close</label>
+      <p class="side-title">All pages</p>
+      <ul>
+        <li><a href="explore.html">Explorer</a></li>
+        <li class="side-sub"><a href="explore1.html">Families</a></li>
+        <li class="side-sub"><a href="explore2.html">Genera</a></li>
+        <li class="side-sub"><a href="explore3.html">Species</a></li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contributor.html">Contributors</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="enhancement1.html">Enhancements</a></li>
+        <li><a href="acknowledgement.html" class="current" aria-current="page">Acknowledgements</a></li>
+      </ul>
+    </nav>
+
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
-    <div class="brand-text">
-      <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
-      <p class="tagline">Citizen science for Malaysia's plant biodiversity</p>
-    </div>
+    <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
+
+    <!-- Site search with suggestions -->
+    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
+      <datalist id="site-suggestions">
+        <option value="Dipterocarpaceae"></option>
+        <option value="Lauraceae"></option>
+        <option value="Dipterocarpus"></option>
+        <option value="Monotes"></option>
+        <option value="Beilschmiedia"></option>
+        <option value="Cryptocarya"></option>
+        <option value="Dipterocarpus alatus"></option>
+        <option value="Dipterocarpus tuberculatus"></option>
+        <option value="Monotes adenophyllus"></option>
+        <option value="Monotes glaber"></option>
+        <option value="Beilschmiedia berteroana"></option>
+        <option value="Beilschmiedia costaricensis"></option>
+        <option value="Cryptocarya adpressa"></option>
+        <option value="Cryptocarya alba"></option>
+        <option value="Plant families"></option>
+        <option value="Plant genera"></option>
+        <option value="Plant species"></option>
+        <option value="Identify a plant"></option>
+        <option value="Contributors"></option>
+        <option value="Contribution form"></option>
+        <option value="Enquiry form"></option>
+      </datalist>
+      <button type="submit" title="Search">&#128269;<span class="visually-hidden"> Search</span></button>
+    </form>
   </header>
 
   <!-- ===== Main navigation (same on every page) ===== -->
-  <nav id="main-nav">
-    <!-- Hamburger menu: the checkbox opens and closes the menu panel -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-button">&#9776; Menu</label>
+  <nav id="main-nav" aria-label="Main menu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="explore.html">Explorer</a>
+      <li class="has-submenu">
+        <a href="explore.html">Explorer <span class="caret">&#9662;</span></a>
         <ul class="submenu">
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -48,8 +92,6 @@
       <li><a href="contribute.html">Contribute</a></li>
       <li><a href="enquiry.html">Enquiry</a></li>
       <li><a href="profile.html">Profile</a></li>
-      <li><a href="enhancement1.html">Enhancements</a></li>
-      <li><a href="acknowledgement.html" class="current" aria-current="page">Acknowledgements</a></li>
     </ul>
   </nav>
 
@@ -92,17 +134,17 @@
           <li class="credit-chip thumb-chip">
             <img src="images/family-tree.png" alt="" loading="lazy">
             <span class="credit-name">family-tree.png</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/exp-diptero.png" alt="" loading="lazy">
             <span class="credit-name">exp-diptero.png</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/exp-laurel.png" alt="" loading="lazy">
             <span class="credit-name">exp-laurel.png</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -112,37 +154,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/fam-diptero-1.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-diptero-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-diptero-2.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-diptero-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-diptero-3.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-diptero-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-diptero-4.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-diptero-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-diptero-5.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-diptero-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-diptero-6.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-diptero-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-diptero-7.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-diptero-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -152,37 +194,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/fam-laurel-1.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-laurel-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-laurel-2.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-laurel-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-laurel-3.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-laurel-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-laurel-4.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-laurel-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-laurel-5.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-laurel-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-laurel-6.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-laurel-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/fam-laurel-7.jpg" alt="" loading="lazy">
             <span class="credit-name">fam-laurel-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -192,37 +234,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/gen-diptero-1.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-diptero-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-diptero-2.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-diptero-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-diptero-3.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-diptero-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-diptero-4.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-diptero-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-diptero-5.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-diptero-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-diptero-6.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-diptero-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-diptero-7.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-diptero-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -232,37 +274,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/gen-monotes-1.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-monotes-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-monotes-2.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-monotes-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-monotes-3.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-monotes-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-monotes-4.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-monotes-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-monotes-5.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-monotes-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-monotes-6.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-monotes-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-monotes-7.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-monotes-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -272,37 +314,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/gen-beil-1.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-beil-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-beil-2.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-beil-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-beil-3.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-beil-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-beil-4.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-beil-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-beil-5.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-beil-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-beil-6.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-beil-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-beil-7.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-beil-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -312,37 +354,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/gen-crypto-1.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-crypto-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-crypto-2.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-crypto-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-crypto-3.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-crypto-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-crypto-4.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-crypto-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-crypto-5.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-crypto-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-crypto-6.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-crypto-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/gen-crypto-7.jpg" alt="" loading="lazy">
             <span class="credit-name">gen-crypto-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -352,42 +394,42 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-8.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-8.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alatus-9.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alatus-9.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -397,42 +439,42 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-7.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-tuberc-8.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-tuberc-8.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -442,32 +484,32 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adeno-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adeno-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adeno-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adeno-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adeno-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adeno-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adeno-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adeno-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adeno-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adeno-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adeno-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adeno-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -477,37 +519,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-glaber-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-glaber-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-glaber-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-glaber-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-glaber-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-glaber-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-glaber-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-glaber-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-glaber-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-glaber-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-glaber-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-glaber-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-glaber-7.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-glaber-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -517,32 +559,32 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-berter-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-berter-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-berter-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-berter-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-berter-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-berter-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-berter-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-berter-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-berter-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-berter-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-berter-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-berter-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -552,42 +594,42 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-7.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-costa-8.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-costa-8.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -597,37 +639,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adpressa-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adpressa-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adpressa-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adpressa-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adpressa-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adpressa-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adpressa-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adpressa-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adpressa-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adpressa-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adpressa-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adpressa-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-adpressa-7.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-adpressa-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -637,37 +679,37 @@
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alba-1.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alba-1.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alba-2.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alba-2.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alba-3.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alba-3.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alba-4.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alba-4.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alba-5.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alba-5.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alba-6.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alba-6.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
           <li class="credit-chip thumb-chip">
             <img src="images/sp-alba-7.jpg" alt="" loading="lazy">
             <span class="credit-name">sp-alba-7.jpg</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Source: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
           </li>
         </ul>
       </div>
@@ -751,7 +793,7 @@
           <li class="credit-chip thumb-chip">
             <img src="images/logo.png" alt="" loading="lazy">
             <span class="credit-name">Tree logo (logo.png)</span>
-            <span class="credit-source">Source link to be added</span><!-- SOURCE: replace with <a href="PAGE-URL">Site name</a> -->
+            <span class="credit-source">Designed by Tousif Akhand using Canva</span>
           </li>
         </ul>
       </div>
@@ -759,8 +801,8 @@
         <h3>Symbols <span class="credit-where">&middot; menu, buttons and links</span></h3>
         <ul class="credit-list">
           <li class="credit-chip">
-            <a href="https://www.w3schools.com/html/html_symbols.asp" class="credit-name">&#9776; &#8593; &#9733; &times; &rsaquo;</a>
-            <span class="credit-source">Menu, back to top, rating stars, close and breadcrumb symbols: HTML character codes, no image files</span>
+            <a href="https://www.w3schools.com/html/html_symbols.asp" class="credit-name">&#9776; &#128269; &#8593; &#9733; &times; &rsaquo;</a>
+            <span class="credit-source">Menu, search, back to top, rating stars, close and breadcrumb symbols: HTML character codes, no image files</span>
           </li>
         </ul>
       </div>
@@ -770,11 +812,11 @@
           <li class="credit-chip thumb-chip">
             <img src="styles/images/leaf-bg.png" alt="" loading="lazy">
             <span class="credit-name">leaf-bg.png</span>
-            <span class="credit-source">Leaf background pattern, created for this site</span>
+            <span class="credit-source">Leaf background pattern. Created for this website</span>
           </li>
           <li class="credit-chip">
             <span class="credit-name">forest-sounds.wav</span>
-            <span class="credit-source">Forest soundscape on the Profile page, created for this site</span>
+            <span class="credit-source">Forest soundscape on the Profile page. Created for this website</span>
           </li>
         </ul>
       </div>
@@ -840,7 +882,7 @@
           <tr>
             <th scope="row"><a href="#ack-photos">Photos and pictures</a></th>
             <td>103</td>
-            <td>Plant photo websites (links to be added)</td>
+            <td>iNaturalist, Pl@ntNet</td>
           </tr>
           <tr>
             <th scope="row"><a href="#ack-information">Information</a></th>
@@ -867,7 +909,7 @@
     <div class="footer-brand">
       <a href="index.html"><img src="images/logo.png" alt="Pl@netMatrix tree logo" class="footer-logo"></a>
       <p class="footer-name">Pl@netMatrix</p>
-      <p>Citizen science for Malaysia's plant biodiversity. Every photo helps protect a plant.</p>
+      <p>Every photo helps protect a plant.</p>
     </div>
 
     <nav class="footer-columns" aria-label="Footer site map">

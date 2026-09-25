@@ -34,22 +34,21 @@ body {
   background: #D8F7E3 url("images/leaf-bg.png") repeat;
 }
 
-/* ===== Header / banner ===== */
+/* ===== Header: menu button, logo, site name and search ===== */
 #site-header {
   display: flex;
   align-items: center;
   gap: 1em;
-  padding: 1em 5%;
+  padding: 0.9em 3%;
   color: #123D2E;
-  text-align: left;
   background-color: #5BCBA7;
 }
 
-/* Tree logo on the far left, shown inside a white circle */
+/* Tree logo shown inside a white circle */
 #site-logo {
   display: block;
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
   padding: 4px;
   background-color: #ffffff;
   border: 3px solid #123D2E;
@@ -67,25 +66,9 @@ body {
   text-decoration: none;
 }
 
-.tagline {
-  margin: 0.3em 0 0;
-  font-style: italic;
-  color: #123D2E;
-}
-
-/* ===== Main navigation menu (hamburger on every screen size) ===== */
-/* Menu bar stays fixed at the top of the screen while scrolling */
-#main-nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: #A3D9A5;
-  border-top: 3px solid #123D2E;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Hidden checkbox that remembers whether the menu is open;
-   it stays reachable with the keyboard */
+/* ===== Side menu (hamburger button on the far left) ===== */
+/* Hidden checkbox that remembers whether the side menu is open;
+   it can still be reached with the keyboard */
 .menu-toggle {
   position: absolute;
   width: 1px;
@@ -93,14 +76,15 @@ body {
   opacity: 0;
 }
 
-/* The visible "☰ Menu" button is the checkbox's label */
 .menu-button {
   display: block;
-  padding: 0.8em;
-  font-weight: bold;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  font-size: 1.6em;
   color: #123D2E;
   text-align: center;
-  letter-spacing: 0.05em;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -114,68 +98,183 @@ body {
   outline: 2px solid #123D2E;
 }
 
-/* Menu panel drops down over the page when the checkbox is ticked */
-#main-nav > ul {
-  display: none;
-  position: absolute;
-  top: 100%;
+/* Panel slides in from the left when the checkbox is ticked */
+.side-menu {
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
-  max-height: 75vh;
-  margin: 0;
-  padding: 0.8em 5%;
+  z-index: 200;
+  box-sizing: border-box;
+  width: 280px;
+  max-width: 85vw;
+  height: 100vh;
+  padding: 1em 0;
   overflow-y: auto;
-  list-style: none;
-  text-align: center;
   background-color: #A3D9A5;
-  border-bottom: 3px solid #123D2E;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  border-right: 3px solid #123D2E;
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.3);
+  transform: translateX(-105%);
+  transition: transform 0.35s ease;
 }
 
-#main-nav .menu-toggle:checked ~ ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.3em 1em;
+.menu-toggle:checked ~ .side-menu {
+  transform: translateX(0);
 }
 
-#main-nav ul ul {
+.menu-close {
+  display: inline-block;
+  margin: 0 1em 0.5em;
+  padding: 0.3em 0.8em;
+  font-weight: bold;
+  background-color: #D8F7E3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.side-title {
+  margin: 0.5em 1.2em;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.side-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.side-menu a {
+  display: block;
+  padding: 0.6em 1.2em;
+  font-weight: bold;
+  color: #123D2E;
+  text-decoration: none;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.side-menu .side-sub a {
+  padding-left: 2.4em;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.side-menu a:hover,
+.side-menu a:focus {
+  padding-left: 1.6em;
+  background-color: #D8F7E3;
+}
+
+.side-menu .side-sub a:hover,
+.side-menu .side-sub a:focus {
+  padding-left: 2.8em;
+}
+
+.side-menu a.current {
+  background-color: #D8F7E3;
+  box-shadow: inset 4px 0 0 #123D2E;
+}
+
+/* ===== Site search (right side of the header) ===== */
+.site-search {
+  display: flex;
+  box-sizing: border-box;
+  margin-left: auto;
+  width: 34%;
+  max-width: 380px;
+}
+
+.site-search input[type="search"] {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  padding: 0.55em 0.8em;
+  border: 2px solid #123D2E;
+  border-right: 0;
+  border-radius: 20px 0 0 20px;
+}
+
+.site-search button {
+  padding: 0 0.9em;
+  font-size: 1em;
+  background-color: #D8F7E3;
+  border: 2px solid #123D2E;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.site-search button:hover,
+.site-search button:focus {
+  background-color: #A3D9A5;
+}
+
+/* ===== Main menu bar (six main pages) ===== */
+/* Menu bar stays fixed at the top of the screen while scrolling */
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #A3D9A5;
+  border-top: 3px solid #123D2E;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#main-nav li {
+  position: relative;
+  display: inline-block;
+}
+
 #main-nav a {
   display: block;
-  padding: 0.6em 1em;
+  padding: 0.8em 1.2em;
   color: #123D2E;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 4px;
 }
 
 #main-nav a:hover,
 #main-nav a:focus {
-  color: #123D2E;
   background-color: #D8F7E3;
 }
 
 /* Highlight the page the user is currently on */
 #main-nav a.current {
-  background-color: #D8F7E3;
   box-shadow: inset 0 -3px 0 #123D2E;
 }
 
-/* Explorer sub-links (Families, Genera, Species) sit side by side under Explorer */
-#main-nav .submenu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.caret {
+  font-size: 0.8em;
 }
 
-#main-nav .submenu a {
-  padding: 0.3em 1em;
-  font-size: 0.9em;
-  font-weight: normal;
+/* Explorer drop-down: Families, Genera, Species */
+#main-nav .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 11em;
+  text-align: left;
+  background-color: #A3D9A5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#main-nav .submenu li {
+  display: block;
+}
+
+#main-nav .has-submenu:hover .submenu,
+#main-nav .has-submenu:focus-within .submenu {
+  display: block;
 }
 
 /* ===== Main content area (liquid layout) ===== */
@@ -1552,6 +1651,23 @@ fieldset {
     height: 50px;
   }
 
+  /* Search box moves onto its own row under the logo */
+  #site-header {
+    flex-wrap: wrap;
+  }
+
+  .site-search {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+
+  /* Menu links get smaller so all six fit */
+  #main-nav a {
+    padding: 0.7em 0.6em;
+    font-size: 0.9em;
+  }
+
   main {
     width: 94%;
     margin: 1em auto;
@@ -1568,7 +1684,6 @@ fieldset {
     width: auto;
     margin: 0 0 1em;
   }
-
 
   /* Identify result photo stacks above the result */
   .result-figure {
