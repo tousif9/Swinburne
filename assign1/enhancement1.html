@@ -30,12 +30,12 @@
 
   <!-- ===== Main navigation (same on every page) ===== -->
   <nav id="main-nav">
-    <!-- Hamburger toggle for phones: the checkbox opens and closes the menu -->
+    <!-- Hamburger menu: the checkbox opens and closes the menu panel -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button">&#9776; Menu</label>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
+      <li>
         <a href="explore.html">Explorer</a>
         <ul class="submenu">
           <li><a href="explore1.html">Families</a></li>
@@ -49,6 +49,7 @@
       <li><a href="enquiry.html">Enquiry</a></li>
       <li><a href="profile.html">Profile</a></li>
       <li><a href="enhancement1.html" class="current" aria-current="page">Enhancements</a></li>
+      <li><a href="acknowledgement.html">Acknowledgements</a></li>
     </ul>
   </nav>
 
@@ -86,6 +87,7 @@
         <li><a href="#enh-animations">CSS Animations</a></li>
         <li><a href="#enh-details">Expandable Care Tips</a></li>
         <li><a href="#enh-form-feedback">Live Form Feedback</a></li>
+        <li><a href="#enh-footer">Site-Map Footer</a></li>
       </ol>
     </section>
 
@@ -95,11 +97,11 @@
       <h2>1. Fluid Layout with Hamburger Menu</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. On screens narrower than 900 pixels, such as phones, tablets and small laptop windows, the full menu is replaced by a &#9776; Menu button. Tapping it opens and closes the menu using a hidden checkbox and the <code>:checked</code> selector, which keeps small screens tidy.</dd>
+        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. On every screen size the menu is tucked behind a &#9776; Menu button. Selecting it opens a panel of links that arranges itself into as many columns as fit, using a hidden checkbox, the <code>:checked</code> selector and CSS grid. This keeps every page tidy.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#main-nav">Menu on every page</a>,
-            <a href="explore3.html">Species page (narrow your browser window to see it)</a>
+            <a href="explore3.html">Species page (resize your browser window to see the layout adapt)</a>
         </dd>
         <dt>Reference(s)</dt>
         <dd>
@@ -347,6 +349,25 @@
       </dl>
     </section>
 
+    <section id="enh-footer" class="enhancement">
+      <h2>15. Site-Map Footer</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Every page ends with a footer that works as a site map: the logo and mission, five columns of links to every section of the website, and a bottom bar with contact details, credits and a Back to top link. The columns rearrange themselves to fit the screen with CSS grid, a wavy leaf-edge border is drawn along the top with a <code>radial-gradient</code>, and each link grows an animated underline from the centre when you point at it.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#site-footer">Home page footer</a>,
+            <a href="explore.html#site-footer">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_grid.asp">W3Schools: CSS Grid Layout</a>,
+            <a href="https://www.w3schools.com/css/css3_gradients.asp">W3Schools: CSS Gradients</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+
     <!-- ===== Summary table ===== -->
     <section id="enhancement-summary">
       <h2>Summary</h2>
@@ -361,7 +382,7 @@
         <tbody>
           <tr>
             <th scope="row"><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></th>
-            <td>Menu on every page, Species page (narrow your browser window to see it)</td>
+            <td>Menu on every page, Species page (resize your browser window to see the layout adapt)</td>
           </tr>
           <tr>
             <th scope="row"><a href="#enh-fixed-nav">Fixed Navigation Bar</a></th>
@@ -415,17 +436,79 @@
             <th scope="row"><a href="#enh-form-feedback">Live Form Feedback</a></th>
             <td>Contribution form, Enquiry form</td>
           </tr>
+          <tr>
+            <th scope="row"><a href="#enh-footer">Site-Map Footer</a></th>
+            <td>Home page footer, every other page</td>
+          </tr>
         </tbody>
       </table>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
-  <footer>
-    <p>
-      &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
-      Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
-    </p>
+  <!-- ===== Footer: site map, contact and credits (same on every page) ===== -->
+  <footer id="site-footer">
+    <div class="footer-brand">
+      <a href="index.html"><img src="images/logo.png" alt="Pl@netMatrix tree logo" class="footer-logo"></a>
+      <p class="footer-name">Pl@netMatrix</p>
+      <p>Citizen science for Malaysia's plant biodiversity. Every photo helps protect a plant.</p>
+    </div>
+
+    <nav class="footer-columns" aria-label="Footer site map">
+      <section class="footer-col">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+          <li><a href="explore.html">Explorer home</a></li>
+        </ul>
+      </section>
+      <section class="footer-col">
+        <h2>Identify</h2>
+        <ul>
+          <li><a href="identify.html#upload">Upload a photo</a></li>
+          <li><a href="identify.html#search">Search plants</a></li>
+          <li><a href="identify.html#result">Example result</a></li>
+          <li><a href="identify.html#location-map">Where it grows</a></li>
+        </ul>
+      </section>
+      <section class="footer-col">
+        <h2>Contribute</h2>
+        <ul>
+          <li><a href="contribute.html">Contribution form</a></li>
+          <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
+          <li><a href="contributor.html#how-to-contribute">How to join</a></li>
+        </ul>
+      </section>
+      <section class="footer-col">
+        <h2>Help</h2>
+        <ul>
+          <li><a href="enquiry.html">Enquiry form</a></li>
+          <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
+          <li><a href="identify.html#photo-tips">Photo tips</a></li>
+        </ul>
+      </section>
+      <section class="footer-col">
+        <h2>About</h2>
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="enhancement1.html">Enhancements</a></li>
+          <li><a href="acknowledgement.html">Acknowledgements</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Pl@netMatrix &ndash; COS10005 Assignment 1 by Tousif Akhand.
+        Contact: <a href="mailto:105822937@students.swinburne.edu.my">105822937@students.swinburne.edu.my</a>
+      </p>
+      <p>
+        Plant information: <a href="https://www.inaturalist.org/">iNaturalist</a> &middot;
+        <a href="https://identify.plantnet.org/k-world-flora/families">Pl@ntNet</a>
+        &middot; Last updated: September 2026 &middot; <a href="#site-header">Back to top</a>
+      </p>
+    </div>
   </footer>
   <!-- Back to top button, fixed in the bottom corner of the screen -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>

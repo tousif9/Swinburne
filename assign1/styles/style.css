@@ -73,7 +73,7 @@ body {
   color: #123D2E;
 }
 
-/* ===== Main navigation menu ===== */
+/* ===== Main navigation menu (hamburger on every screen size) ===== */
 /* Menu bar stays fixed at the top of the screen while scrolling */
 #main-nav {
   position: sticky;
@@ -84,30 +84,73 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Hamburger toggle is only shown on phones (see media query) */
-.menu-toggle,
-.menu-button {
-  display: none;
+/* Hidden checkbox that remembers whether the menu is open;
+   it stays reachable with the keyboard */
+.menu-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
-#main-nav ul {
+/* The visible "☰ Menu" button is the checkbox's label */
+.menu-button {
+  display: block;
+  padding: 0.8em;
+  font-weight: bold;
+  color: #123D2E;
+  text-align: center;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover,
+.menu-toggle:focus + .menu-button {
+  background-color: #D8F7E3;
+}
+
+.menu-toggle:focus + .menu-button {
+  outline: 2px solid #123D2E;
+}
+
+/* Menu panel drops down over the page when the checkbox is ticked */
+#main-nav > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 75vh;
+  margin: 0;
+  padding: 0.8em 5%;
+  overflow-y: auto;
+  list-style: none;
+  text-align: center;
+  background-color: #A3D9A5;
+  border-bottom: 3px solid #123D2E;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+#main-nav .menu-toggle:checked ~ ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.3em 1em;
+}
+
+#main-nav ul ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: center;
-}
-
-#main-nav li {
-  position: relative;
-  display: inline-block;
 }
 
 #main-nav a {
   display: block;
-  padding: 0.8em 1em;
+  padding: 0.6em 1em;
   color: #123D2E;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 4px;
 }
 
 #main-nav a:hover,
@@ -118,29 +161,21 @@ body {
 
 /* Highlight the page the user is currently on */
 #main-nav a.current {
-  border-bottom: 3px solid #123D2E;
+  background-color: #D8F7E3;
+  box-shadow: inset 0 -3px 0 #123D2E;
 }
 
-/* Explorer drop-down (pure CSS) */
+/* Explorer sub-links (Families, Genera, Species) sit side by side under Explorer */
 #main-nav .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 10;
-  min-width: 10em;
-  text-align: left;
-  background-color: #A3D9A5;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#main-nav .submenu li {
-  display: block;
-}
-
-#main-nav .dropdown:hover .submenu,
-#main-nav .dropdown:focus-within .submenu {
-  display: block;
+#main-nav .submenu a {
+  padding: 0.3em 1em;
+  font-size: 0.9em;
+  font-weight: normal;
 }
 
 /* ===== Main content area (liquid layout) ===== */
@@ -354,18 +389,32 @@ tbody tr:hover td {
 
 /* ===== Footer: full page width, italic, centred ===== */
 footer {
+  position: relative;
   clear: both;
+  box-sizing: border-box;
   width: 100%;
-  padding: 1.2em 0;
+  margin-top: 3em;
+  padding: 2em 5% 1em;
   color: #123D2E;
   font-style: italic;
   text-align: center;
   background-color: #5BCBA7;
 }
 
+/* Wavy leaf-edge border drawn along the top of the footer */
+footer::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  background: radial-gradient(circle at 18px 18px, #5BCBA7 17px, transparent 18px) repeat-x;
+  background-size: 36px 18px;
+}
+
 footer p {
-  margin: 0;
-  padding: 0 5%;
+  margin: 0 0 0.4em;
 }
 
 footer a {
@@ -373,8 +422,92 @@ footer a {
   font-weight: bold;
 }
 
-footer a:hover {
+/* Brand strip: logo, name and mission */
+.footer-brand {
+  max-width: 34em;
+  margin: 0 auto 1.5em;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+  background-color: #ffffff;
+  border: 2px solid #123D2E;
+  border-radius: 50%;
+}
+
+.footer-name {
+  font: bold 1.5em Georgia, "Times New Roman", serif;
+  letter-spacing: 0.05em;
+}
+
+/* Site-map columns: as many as fit, each at least 150px wide */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5em;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2em 0;
+  border-top: 1px solid rgba(18, 61, 46, 0.3);
+  border-bottom: 1px solid rgba(18, 61, 46, 0.3);
+}
+
+.footer-col h2 {
+  margin: 0 0 0.5em;
+  font-size: 1.05em;
+  font-style: normal;
+  color: #123D2E;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-col li {
+  margin: 0.3em 0;
+}
+
+/* Footer links: an underline grows out from the centre on hover */
+.footer-col a,
+.footer-bottom a {
+  position: relative;
+  font-weight: normal;
   text-decoration: none;
+}
+
+.footer-col a::after,
+.footer-bottom a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #123D2E;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.footer-col a:hover::after,
+.footer-col a:focus::after,
+.footer-bottom a:hover::after,
+.footer-bottom a:focus::after {
+  transform: scaleX(1);
+}
+
+.footer-bottom {
+  padding-top: 1em;
+  font-size: 0.9em;
+}
+
+.footer-bottom a {
+  font-weight: bold;
 }
 
 /* ===== Forms (contribute, enquiry, identify) ===== */
@@ -1238,6 +1371,102 @@ audio {
   margin: 0 auto 1em;
 }
 
+/* ===== Plant galleries: main picture shown twice the size ===== */
+@media screen and (min-width: 701px) {
+  .plant-gallery .gallery figure:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .plant-gallery .gallery figure:first-child img {
+    height: 430px;
+  }
+}
+
+/* Example photos on the Identify page are not links, so no zoom */
+.example-gallery img {
+  border-radius: 6px;
+}
+
+/* ===== Acknowledgements page ===== */
+.ack-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 2em;
+  padding-left: 1.2em;
+}
+
+.ack-section {
+  clear: both;
+}
+
+.credit-group {
+  margin-bottom: 1.5em;
+}
+
+.credit-where {
+  font-size: 0.75em;
+  font-weight: normal;
+  color: #555555;
+}
+
+/* Each credit is a boxed "chip", like a button */
+.credit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.8em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.credit-chip {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  column-gap: 0.7em;
+  padding: 0.5em 0.7em;
+  background-color: #ffffff;
+  border: 2px solid #A3D9A5;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.credit-chip:hover,
+.credit-chip:focus-within {
+  background-color: #D8F7E3;
+  border-color: #5BCBA7;
+  transform: translateY(-2px);
+}
+
+.credit-chip img {
+  grid-row: span 2;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.credit-name {
+  font-weight: bold;
+  color: #123D2E;
+  word-break: break-word;
+}
+
+.credit-source {
+  font-size: 0.85em;
+  color: #555555;
+}
+
+/* Chips with a thumbnail: picture on the left, text on the right */
+.thumb-chip {
+  grid-template-columns: auto 1fr;
+}
+
+.thumb-chip .credit-source {
+  grid-column: 2;
+}
+
 /* ===== CSS animations ===== */
 /* Page heading and cards fade up gently when a page loads */
 @keyframes fadeUp {
@@ -1309,61 +1538,6 @@ fieldset {
 
   .flip-inner {
     transition: none;
-  }
-}
-
-/* ===== Narrow screens (900px and less): hamburger menu ===== */
-@media screen and (max-width: 900px) {
-  /* Hamburger button replaces the full menu on narrow screens */
-  .menu-button {
-    display: block;
-    padding: 0.8em;
-    font-weight: bold;
-    color: #123D2E;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  /* Checkbox stays hidden but can still be reached with the keyboard */
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-  }
-
-  .menu-toggle:focus + .menu-button {
-    outline: 2px solid #123D2E;
-  }
-
-  #main-nav > ul {
-    display: none;
-    max-height: 70vh;
-    overflow-y: auto;
-  }
-
-  /* Menu opens when the hamburger checkbox is ticked */
-  #main-nav .menu-toggle:checked ~ ul {
-    display: block;
-  }
-
-  /* Stack menu items vertically */
-  #main-nav li {
-    display: block;
-  }
-
-  /* Show Explorer sub-links inline instead of as a pop-up */
-  #main-nav .submenu {
-    display: block;
-    position: static;
-    text-align: center;
-    box-shadow: none;
-  }
-
-  #main-nav .submenu a {
-    padding: 0.5em;
-    font-weight: normal;
   }
 }
 
