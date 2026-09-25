@@ -95,11 +95,11 @@
       <h2>1. Fluid Layout with Hamburger Menu</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. On phones, the full menu is replaced by a &#9776; Menu button. Tapping it opens and closes the menu using a hidden checkbox and the <code>:checked</code> selector, which keeps small screens tidy.</dd>
+        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. On screens narrower than 900 pixels, such as phones, tablets and small laptop windows, the full menu is replaced by a &#9776; Menu button. Tapping it opens and closes the menu using a hidden checkbox and the <code>:checked</code> selector, which keeps small screens tidy.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#main-nav">Menu on every page</a>,
-            <a href="explore3.html">Species page (try it on a phone)</a>
+            <a href="explore3.html">Species page (narrow your browser window to see it)</a>
         </dd>
         <dt>Reference(s)</dt>
         <dd>
@@ -133,9 +133,10 @@
       <h2>3. Photo Gallery with Lightbox</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every family, genus and species has its own photo gallery of 3 to 5 pictures. Selecting a photo opens it full-screen over a dark background with its caption and a Close button. The viewer uses the <code>:target</code> selector and fixed positioning.</dd>
+        <dd>The Explore page has a photo gallery, and every family, genus and species has its own gallery of pictures. Selecting a photo opens it full-screen over a dark background with its caption and a Close button. The viewer uses the <code>:target</code> selector and fixed positioning.</dd>
         <dt>Where it is applied</dt>
         <dd>
+            <a href="explore.html#photo-gallery">Explore page gallery</a>,
             <a href="explore1.html#dipterocarpaceae">Families gallery</a>,
             <a href="explore2.html#dipterocarpus">Genera gallery</a>,
             <a href="explore3.html#d-alatus">Species gallery</a>,
@@ -153,10 +154,11 @@
       <h2>4. Flip Cards</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Four cards on the home page show a plant photo on the front. Pointing at a card, or reaching its link with the keyboard, turns it over in 3D to reveal a fun fact and a link to that plant's page. It uses <code>perspective</code>, <code>transform: rotateY()</code> and <code>backface-visibility</code>.</dd>
+        <dd>Flip cards show a plant photo on the front: four on the home page and a gallery of all eight species on the Explore page. Pointing at a card, or reaching its link with the keyboard, turns it over in 3D to reveal a fun fact and a link to that plant's page. It uses <code>perspective</code>, <code>transform: rotateY()</code> and <code>backface-visibility</code>.</dd>
         <dt>Where it is applied</dt>
         <dd>
-            <a href="index.html#flip-cards">"Meet the Plants" on the home page</a>
+            <a href="index.html#flip-cards">"Meet the Plants" on the home page</a>,
+            <a href="explore.html#flip-gallery">Species Flip Gallery on the Explore page</a>
         </dd>
         <dt>Reference(s)</dt>
         <dd>
@@ -195,7 +197,7 @@
         <dd>
             <a href="index.html#hero">Main picture on the home page</a>,
             <a href="explore.html#family-tree">family tree on the Explore page</a>,
-            <a href="explore.html#categories">Explorer photos</a>,
+            <a href="explore.html#photo-gallery">Explore page photo gallery</a>,
             <a href="explore1.html#dipterocarpaceae">gallery thumbnails</a>
         </dd>
         <dt>Reference(s)</dt>
@@ -359,7 +361,7 @@
         <tbody>
           <tr>
             <th scope="row"><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></th>
-            <td>Menu on every page, Species page (try it on a phone)</td>
+            <td>Menu on every page, Species page (narrow your browser window to see it)</td>
           </tr>
           <tr>
             <th scope="row"><a href="#enh-fixed-nav">Fixed Navigation Bar</a></th>
@@ -367,11 +369,11 @@
           </tr>
           <tr>
             <th scope="row"><a href="#enh-gallery">Photo Gallery with Lightbox</a></th>
-            <td>Families gallery, Genera gallery, Species gallery, an open lightbox</td>
+            <td>Explore page gallery, Families gallery, Genera gallery, Species gallery, an open lightbox</td>
           </tr>
           <tr>
             <th scope="row"><a href="#enh-flip">Flip Cards</a></th>
-            <td>"Meet the Plants" on the home page</td>
+            <td>"Meet the Plants" on the home page, Species Flip Gallery on the Explore page</td>
           </tr>
           <tr>
             <th scope="row"><a href="#enh-rating">Page Rating</a></th>
@@ -379,7 +381,7 @@
           </tr>
           <tr>
             <th scope="row"><a href="#enh-picture-hover">Picture Hover Effect</a></th>
-            <td>Main picture on the home page, family tree on the Explore page, Explorer photos, gallery thumbnails</td>
+            <td>Main picture on the home page, family tree and photo gallery on the Explore page, gallery thumbnails</td>
           </tr>
           <tr>
             <th scope="row"><a href="#enh-button-hover">Button Hover Effect</a></th>

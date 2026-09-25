@@ -264,25 +264,6 @@ figure img {
   max-width: 881px;
 }
 
-/* Explorer photos: two figures side by side, wrapping on narrow screens */
-.figure-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
-  clear: both;
-}
-
-.feature-figure {
-  flex: 1 1 280px;
-}
-
-/* Same height for both photos, width follows each photo's shape */
-.feature-figure img {
-  width: auto;
-  max-height: 360px;
-}
-
 figcaption {
   margin-top: 0.5em;
   font-size: 0.9em;
@@ -717,14 +698,14 @@ details[open] summary {
   color: #555555;
 }
 
+/* Even grid: as many 230px-wide columns as fit, all the same size */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 1em;
 }
 
 .gallery figure {
-  flex: 1 1 180px;
   margin: 0;
 }
 
@@ -846,6 +827,56 @@ code {
   font-family: Consolas, "Courier New", monospace;
   background-color: #D8F7E3;
   border-radius: 3px;
+}
+
+/* ===== Explore page: quick action buttons ===== */
+.action-bar {
+  clear: both;
+  margin: 1.5em 0;
+  padding: 1.2em 1.5em;
+  text-align: center;
+  background-color: #D8F7E3;
+  border: 2px solid #5BCBA7;
+  border-radius: 8px;
+}
+
+.action-bar h2 {
+  margin-top: 0;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.button-large {
+  padding: 0.8em 1.8em;
+  font-size: 1.1em;
+}
+
+.button-alt {
+  background-color: #ffffff;
+  border: 2px solid #5BCBA7;
+}
+
+/* ===== Explore page: level cards match the link map colours ===== */
+.level-family {
+  border-top-color: #123D2E;
+}
+
+.level-genus {
+  border-top-color: #5BCBA7;
+}
+
+.level-species {
+  border-top-color: #A3D9A5;
+}
+
+.level-card .tree-level {
+  margin: 0;
+  color: #1F6E56;
 }
 
 /* ===== Explore page: family > genus > species link map ===== */
@@ -992,14 +1023,12 @@ a.tree-node:focus {
 
 /* ===== Enhancement: picture hover effect ===== */
 .hero-figure img,
-.feature-figure img,
 .family-tree-figure img,
 .result-figure img {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .hero-figure img:hover,
-.feature-figure img:hover,
 .family-tree-figure img:hover,
 .result-figure img:hover {
   transform: scale(1.02);
@@ -1023,14 +1052,13 @@ input[type="reset"]:hover {
 
 /* ===== Enhancement: flip cards (home page) ===== */
 .flip-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5em;
 }
 
 .flip-card {
-  flex: 1 1 200px;
-  height: 300px;
+  height: 310px;
   perspective: 1000px;
 }
 
@@ -1069,12 +1097,13 @@ input[type="reset"]:hover {
 .flip-front img {
   display: block;
   width: 100%;
-  height: 230px;
+  height: 220px;
   object-fit: cover;
 }
 
 .flip-front h3 {
   margin: 0.5em;
+  font-size: 1.1em;
   text-align: center;
 }
 
@@ -1283,18 +1312,9 @@ fieldset {
   }
 }
 
-/* ===== Mobile phone layout (screens 700px and narrower) ===== */
-@media screen and (max-width: 700px) {
-  #logo {
-    font-size: 1.5em;
-  }
-
-  #site-logo {
-    width: 50px;
-    height: 50px;
-  }
-
-  /* Hamburger button replaces the full menu on phones */
+/* ===== Narrow screens (900px and less): hamburger menu ===== */
+@media screen and (max-width: 900px) {
+  /* Hamburger button replaces the full menu on narrow screens */
   .menu-button {
     display: block;
     padding: 0.8em;
@@ -1345,6 +1365,18 @@ fieldset {
     padding: 0.5em;
     font-weight: normal;
   }
+}
+
+/* ===== Mobile phone layout (screens 700px and narrower) ===== */
+@media screen and (max-width: 700px) {
+  #logo {
+    font-size: 1.5em;
+  }
+
+  #site-logo {
+    width: 50px;
+    height: 50px;
+  }
 
   main {
     width: 94%;
@@ -1363,9 +1395,6 @@ fieldset {
     margin: 0 0 1em;
   }
 
-  .feature-figure img {
-    max-height: none;
-  }
 
   /* Identify result photo stacks above the result */
   .result-figure {
