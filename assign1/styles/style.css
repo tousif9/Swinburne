@@ -1929,7 +1929,7 @@ fieldset {
     height: 280px;
   }
 
-    /* Link map becomes an indented list on narrow screens */
+  /* Link map becomes an indented list on narrow screens */
   .tree ul {
     display: block;
     padding: 0 0 0 1em;
