@@ -1056,31 +1056,116 @@ code {
 }
 
 /* ===== Home page banner ===== */
-/* Tropical leaf illustration behind the heading and buttons */
+/* Leaf photo with a dark shade on top so the white words stand out */
 .hero-banner {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
+  min-height: 420px;
   margin-bottom: 1.5em;
   padding: 2em 5%;
   text-align: center;
-  background: #1F6E56 url("images/hero-banner.jpg") center / cover no-repeat;
+  background:
+    linear-gradient(rgba(10, 40, 28, 0.55), rgba(10, 40, 28, 0.55)),
+    #1F6E56 url("images/hero-banner.jpg") center / cover no-repeat;
   border-radius: 10px;
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-/* Soft cream panel keeps the text easy to read over the picture */
 .hero-text {
-  max-width: 38em;
-  padding: 1.5em 2em;
-  background-color: rgba(250, 248, 240, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  max-width: 44em;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-text h1 {
   margin-top: 0;
+  color: #ffffff;
+  /* the words animate one by one instead of the whole heading */
+  animation: none;
+}
+
+/* Each word of the heading rises into place, one after another */
+.hero-text .word {
+  display: inline-block;
+  /* "both" keeps each word hidden until its turn, then leaves it in place */
+  animation: wordRise 0.7s ease-out both;
+}
+
+.hero-text .word:nth-child(1) { animation-delay: 0.2s; }
+.hero-text .word:nth-child(2) { animation-delay: 0.5s; }
+.hero-text .word:nth-child(3) { animation-delay: 0.8s; }
+.hero-text .word:nth-child(4) { animation-delay: 1.1s; }
+.hero-text .word:nth-child(5) { animation-delay: 1.4s; }
+
+@keyframes wordRise {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* "Help us ___ Malaysia's plants": the blank keeps changing */
+.hero-rotator {
+  margin: 0 0 0.8em;
+  font: bold 1.5em Georgia, "Times New Roman", serif;
+}
+
+.rotator-words {
+  position: relative;
+  display: inline-block;
+  width: 5.2em;
+  height: 1.3em;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+.rotator-words span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #C8FFE0;
+  text-decoration: underline;
+  text-decoration-color: #5BCBA7;
+  opacity: 0;
+  animation: wordCycle 8s linear infinite both;
+}
+
+/* first word shows even if animations are switched off */
+.rotator-words span:first-child {
+  opacity: 1;
+}
+
+.rotator-words span:nth-child(2) { animation-delay: 2s; }
+.rotator-words span:nth-child(3) { animation-delay: 4s; }
+.rotator-words span:nth-child(4) { animation-delay: 6s; }
+
+/* each word slides up in, waits, then slides up and out */
+@keyframes wordCycle {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  5%,
+  22% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  27%,
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Intro sentence and buttons fade in after the heading */
+.hero-text .lead,
+.hero-buttons {
+  animation: fadeUp 0.8s ease-out 1.9s both;
 }
 
 .hero-buttons {
@@ -1089,6 +1174,8 @@ code {
   justify-content: center;
   gap: 1em;
   margin: 1.2em 0 0;
+  animation-delay: 2.3s;
+  text-shadow: none;
 }
 
 /* ===== Explore page: quick action buttons ===== */
@@ -1663,6 +1750,13 @@ fieldset {
     scroll-behavior: auto;
   }
 
+  .hero-text .word,
+  .hero-text .lead,
+  .hero-buttons,
+  .rotator-words span {
+    animation: none;
+  }
+
   .flip-inner {
     transition: none;
   }
@@ -1711,8 +1805,8 @@ fieldset {
     padding: 1.5em 4%;
   }
 
-  .hero-text {
-    padding: 1em;
+  .hero-rotator {
+    font-size: 1.2em;
   }
 
   /* Aside becomes full width under the content flow */
