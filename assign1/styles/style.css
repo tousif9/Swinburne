@@ -898,12 +898,6 @@ details[open] summary {
   margin: 0;
 }
 
-.back-to-top {
-  margin: 1em 0 0;
-  font-size: 0.9em;
-  text-align: right;
-}
-
 /* ===== Photo gallery thumbnails ===== */
 .gallery-tip {
   font-size: 0.9em;
