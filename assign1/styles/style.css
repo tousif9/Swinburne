@@ -977,6 +977,12 @@ main a.lightbox-close:hover {
 }
 
 /* ===== Contributor cards ===== */
+/* Even grid so a card left alone on the last row keeps the same size */
+#contribution-cards .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
 .contribution figure {
   margin: 0 0 0.8em;
 }
@@ -1009,17 +1015,6 @@ main a.lightbox-close:hover {
 .verified {
   color: #123D2E;
   background-color: #5BCBA7;
-}
-
-.pending {
-  color: #5A4300;
-  background-color: #FFE8A3;
-}
-
-.note {
-  font-size: 0.9em;
-  font-style: italic;
-  color: #555555;
 }
 
 /* ===== Enhancements page ===== */
