@@ -669,13 +669,15 @@ textarea:focus:valid {
   font-weight: normal;
 }
 
+/* Submit on the left, Clear form pushed to the right */
 .form-buttons {
+  display: flex;
+  justify-content: space-between;
   margin-top: 1em;
 }
 
 input[type="submit"],
 input[type="reset"] {
-  margin-right: 0.8em;
   padding: 0.6em 1.4em;
   font: bold 1em "Trebuchet MS", Verdana, Arial, sans-serif;
   color: #123D2E;
