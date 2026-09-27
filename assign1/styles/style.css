@@ -1185,13 +1185,13 @@ code {
   border: 0;
 }
 
-.compare-table thead img {
-  display: block;
-  width: 100%;
-  height: 170px;
-  margin-bottom: 0.5em;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
+/* coloured line under each family name */
+.compare-table thead .compare-diptero {
+  border-bottom: 5px solid #123D2E;
+}
+
+.compare-table thead .compare-laurel {
+  border-bottom: 5px solid #5BCBA7;
 }
 
 .compare-table thead a {
@@ -1205,15 +1205,6 @@ code {
   font-weight: normal;
   font-style: italic;
   color: #555555;
-}
-
-/* coloured line under each family's photo */
-.compare-diptero img {
-  border-bottom: 5px solid #123D2E;
-}
-
-.compare-laurel img {
-  border-bottom: 5px solid #5BCBA7;
 }
 
 .compare-table tbody th {
@@ -1938,11 +1929,7 @@ fieldset {
     height: 280px;
   }
 
-  .compare-table thead img {
-    height: 110px;
-  }
-
-  /* Link map becomes an indented list on narrow screens */
+    /* Link map becomes an indented list on narrow screens */
   .tree ul {
     display: block;
     padding: 0 0 0 1em;
