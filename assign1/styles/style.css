@@ -1164,28 +1164,7 @@ code {
   text-shadow: none;
 }
 
-/* ===== Explore page: quick action buttons ===== */
-.action-bar {
-  clear: both;
-  margin: 1.5em 0;
-  padding: 1.2em 1.5em;
-  text-align: center;
-  background-color: #D8F7E3;
-  border: 2px solid #5BCBA7;
-  border-radius: 8px;
-}
-
-.action-bar h2 {
-  margin-top: 0;
-}
-
-.action-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
-}
-
+/* ===== Large buttons (home page banner) ===== */
 .button-large {
   padding: 0.8em 1.8em;
   font-size: 1.1em;
@@ -1532,30 +1511,6 @@ input[type="reset"]:hover {
 
 .rating-form input[type="submit"] {
   display: block;
-}
-
-/* ===== Enhancement: embedded YouTube video (keeps a 16:9 shape) ===== */
-.video-wrap {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.video-frame {
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  border: 3px solid #5BCBA7;
-  border-radius: 6px;
-}
-
-.video-frame iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 /* ===== Enhancement: audio player (profile page) ===== */
