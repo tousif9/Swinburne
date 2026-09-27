@@ -1175,6 +1175,164 @@ code {
   border: 2px solid #5BCBA7;
 }
 
+/* ===== Explore page: family comparison chart ===== */
+.compare-table {
+  table-layout: fixed;
+}
+
+.compare-table thead td {
+  border: 0;
+  background: none;
+}
+
+.compare-table thead th {
+  width: 40%;
+  padding: 0 0 0.8em;
+  text-align: center;
+  vertical-align: top;
+  background: none;
+  border: 0;
+}
+
+.compare-table thead img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  margin-bottom: 0.5em;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.compare-table thead a {
+  font: bold 1.2em Georgia, "Times New Roman", serif;
+  color: #123D2E;
+}
+
+.compare-common {
+  display: block;
+  font-size: 0.85em;
+  font-weight: normal;
+  font-style: italic;
+  color: #555555;
+}
+
+/* coloured line under each family's photo */
+.compare-diptero img {
+  border-bottom: 5px solid #123D2E;
+}
+
+.compare-laurel img {
+  border-bottom: 5px solid #5BCBA7;
+}
+
+.compare-table tbody th {
+  width: 20%;
+}
+
+.compare-table tbody tr:nth-child(even) td {
+  background-color: #F4FCF7;
+}
+
+/* highlight the whole row being read */
+.compare-table tbody tr:hover th,
+.compare-table tbody tr:hover td {
+  background-color: #FFF6D9;
+}
+
+/* ===== Explore page: family quiz ===== */
+.quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5em;
+}
+
+.quiz-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: #ffffff;
+  border: 2px solid #A3D9A5;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  border-color: #5BCBA7;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.quiz-number {
+  margin: 0 0 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #1F6E56;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quiz-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.quiz-card h3 {
+  margin: 0.7em 0 0.3em;
+  font-size: 1.05em;
+  line-height: 1.4;
+}
+
+.quiz-options {
+  font-style: italic;
+  color: #555555;
+}
+
+.quiz-options span {
+  font-style: normal;
+}
+
+/* answer box sits at the bottom of every card */
+.quiz-card details {
+  margin-top: auto;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+.quiz-card summary {
+  display: inline-block;
+  padding: 0.4em 1em;
+  color: #123D2E;
+  background-color: #D8F7E3;
+  border-radius: 4px;
+  list-style: none;
+}
+
+.quiz-card summary:hover {
+  background-color: #A3D9A5;
+}
+
+.quiz-card details[open] summary {
+  margin-bottom: 0.6em;
+  background-color: #5BCBA7;
+}
+
+.quiz-answer {
+  margin: 0;
+  padding: 0.7em;
+  background-color: #D8F7E3;
+  border-left: 4px solid #5BCBA7;
+  border-radius: 4px;
+  animation: fadeUp 0.4s ease-out;
+}
+
+.quiz-next {
+  margin-top: 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* ===== Explore page: level cards match the link map colours ===== */
 .level-family {
   border-top-color: #123D2E;
@@ -1787,6 +1945,10 @@ fieldset {
 
   .flip-card {
     height: 280px;
+  }
+
+  .compare-table thead img {
+    height: 110px;
   }
 
   /* Link map becomes an indented list on narrow screens */
