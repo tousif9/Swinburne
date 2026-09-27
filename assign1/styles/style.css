@@ -515,24 +515,10 @@ footer a {
   font-weight: bold;
 }
 
-/* Brand strip: logo, name and mission */
+/* Mission line above the link columns */
 .footer-brand {
   max-width: 34em;
   margin: 0 auto 1.5em;
-}
-
-.footer-logo {
-  width: 60px;
-  height: 60px;
-  padding: 3px;
-  background-color: #ffffff;
-  border: 2px solid #123D2E;
-  border-radius: 50%;
-}
-
-.footer-name {
-  font: bold 1.5em Georgia, "Times New Roman", serif;
-  letter-spacing: 0.05em;
 }
 
 /* Site-map columns: as many as fit, each at least 150px wide */
