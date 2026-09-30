@@ -6,7 +6,7 @@
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
   Created:     24 September 2026
-  Description: Lists each enhancement with what it is, where it is applied and its references.
+  Description: List of website enhancements.
 -->
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,9 @@
 </head>
 
 <body>
-  <!-- ===== Site header: menu button, logo, site name and search ===== -->
+  <!-- Header -->
   <header id="site-header">
-    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <!-- Side menu -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
@@ -45,7 +45,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
 
-    <!-- Site search with suggestions -->
+    <!-- Search -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
@@ -76,7 +76,7 @@
     </form>
   </header>
 
-  <!-- ===== Main navigation (same on every page) ===== -->
+  <!-- Main menu -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -98,7 +98,7 @@
   <main>
     <h1>Website Enhancements</h1>
 
-    <!-- ===== Side note (tangential content) ===== -->
+    <!-- Side note -->
     <aside>
       <h2>Built for Every Visitor</h2>
       <p>
@@ -130,6 +130,9 @@
         <li><a href="#enh-form-feedback">Live Form Feedback</a></li>
         <li><a href="#enh-footer">Site-Map Footer</a></li>
         <li><a href="#enh-search">Site Search with Suggestions</a></li>
+        <li><a href="#enh-phone">Phone-Friendly Pages</a></li>
+        <li><a href="#enh-link-map">Link Map Diagram</a></li>
+        <li><a href="#enh-compare">Family Comparison Chart</a></li>
       </ol>
     </section>
 
@@ -139,7 +142,7 @@
       <h2>1. Fluid Layout with Hamburger Menu</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. The six main pages sit in the menu bar, and the &#9776; button on the left of the logo opens a side menu that slides in from the left with every page on the site. It uses a hidden checkbox, the <code>:checked</code> selector and a CSS <code>transform</code> transition. On phones the search box moves under the logo and the menu links shrink to fit.</dd>
+        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. The six main pages sit in the menu bar, and the &#9776; button on the left of the logo opens a side menu that slides in from the left with every page on the site. It uses a hidden checkbox, the <code>:checked</code> selector and a CSS <code>transform</code> transition.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#main-nav">Menu on every page</a>,
@@ -411,7 +414,64 @@
       </dl>
     </section>
 
-    <!-- ===== Summary table ===== -->
+    <section id="enh-phone" class="enhancement">
+      <h2>16. Phone-Friendly Pages</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a media query moves the search box under the logo, slims the menu bar, stacks the quick facts and side notes into one column, and turns the link map into an indented list. Wide tables can be swiped sideways and say so in their caption, the Back to top button gets smaller, and form buttons stretch to be easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones show the right keyboard or a date picker.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="enquiry.html#enquiry-form">Enquiry form (phone keypad for the phone number)</a>,
+            <a href="explore3.html#summary">Species page table</a>,
+            <a href="index.html">every other page (open on a phone, or narrow your browser window)</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">W3Schools: Media Queries</a>,
+            <a href="https://www.w3schools.com/html/html_form_input_types.asp">W3Schools: HTML Input Types</a>,
+            <a href="https://www.w3schools.com/css/css_table_responsive.asp">W3Schools: Responsive Table</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-link-map" class="enhancement">
+      <h2>17. Link Map Diagram</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>The Explore page draws a tree diagram linking both families to their genera and species. It is a plain nested list: the connecting lines are drawn with the <code>::before</code> and <code>::after</code> pseudo-elements, and each box is a link to that plant's section. On phones it turns into an indented list.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore.html#link-map">Explore page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">W3Schools: CSS Pseudo-elements</a>,
+            <a href="https://www.w3schools.com/css/css3_flexbox.asp">W3Schools: CSS Flexbox</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-compare" class="enhancement">
+      <h2>18. Family Comparison Chart</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>A side-by-side chart compares the two families' fruit, leaves, smell, size, seeds, range and uses. Each family has its own colour bar, every second row is shaded with <code>:nth-child(even)</code>, and the row under the pointer lights up so it is easy to read across.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore.html#compare">Explore page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_table.asp">W3Schools: Styling Tables</a>,
+            <a href="https://www.w3schools.com/cssref/sel_nth-child.php">W3Schools: The :nth-child() selector</a>,
+            COS10005 Web Development lectures and tutorials
+        </dd>
+      </dl>
+    </section>
+
+    <!-- Summary table -->
     <section id="enhancement-summary">
       <h2>Summary</h2>
       <table>
@@ -483,12 +543,24 @@
             <th scope="row"><a href="#enh-search">Site Search with Suggestions</a></th>
             <td>Header on every page</td>
           </tr>
+          <tr>
+            <th scope="row"><a href="#enh-phone">Phone-Friendly Pages</a></th>
+            <td>Every page, Enquiry form, Species page table</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-link-map">Link Map Diagram</a></th>
+            <td>Explore page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-compare">Family Comparison Chart</a></th>
+            <td>Explore page</td>
+          </tr>
         </tbody>
       </table>
     </section>
   </main>
 
-  <!-- ===== Footer: site map, contact and credits (same on every page) ===== -->
+  <!-- Footer -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -546,7 +618,7 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <!-- Back to top -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

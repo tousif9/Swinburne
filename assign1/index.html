@@ -6,7 +6,7 @@
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
   Created:     23 September 2026
-  Description: Home page introducing the Pl@netMatrix citizen science project.
+  Description: Home page.
 -->
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,9 @@
 </head>
 
 <body>
-  <!-- ===== Site header: menu button, logo, site name and search ===== -->
+  <!-- Header -->
   <header id="site-header">
-    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <!-- Side menu -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
@@ -45,7 +45,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
 
-    <!-- Site search with suggestions -->
+    <!-- Search -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
@@ -76,7 +76,7 @@
     </form>
   </header>
 
-  <!-- ===== Main navigation (same on every page) ===== -->
+  <!-- Main menu -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -96,8 +96,8 @@
   </nav>
 
   <main>
-    <!-- ===== Hero / introduction ===== -->
-    <!-- Banner: leaf photo with animated words on top -->
+    <!-- Introduction -->
+    <!-- Banner -->
     <section id="hero" class="hero-banner">
       <div class="hero-text">
         <h1>
@@ -107,7 +107,7 @@
           <span class="word">Biodiversity</span>
           <span class="word">Together</span>
         </h1>
-        <!-- Words take turns sliding through this line -->
+        <!-- Changing word -->
         <p class="hero-rotator">
           Help us
           <span class="rotator-words">
@@ -129,7 +129,7 @@
       </div>
     </section>
 
-    <!-- ===== Side note (tangential content) ===== -->
+    <!-- Side note -->
     <aside>
       <h2>Did You Know?</h2>
       <p>
@@ -138,7 +138,7 @@
       </p>
     </aside>
 
-    <!-- ===== About the project ===== -->
+    <!-- About the project -->
     <section id="about">
       <h2>About the Project</h2>
       <p>
@@ -157,7 +157,7 @@
 
     <hr>
 
-    <!-- ===== Key features of the website ===== -->
+    <!-- Key features -->
     <section id="features">
       <h2>What You Can Do Here</h2>
       <div class="card-grid">
@@ -180,7 +180,7 @@
       </div>
     </section>
 
-    <!-- ===== Enhancement: flip cards (turn over on hover or keyboard focus) ===== -->
+    <!-- Flip cards -->
     <section id="flip-cards">
       <h2>Meet the Plants</h2>
       <p>Point at a card, or tab to it with the keyboard, to flip it over and learn more.</p>
@@ -240,7 +240,7 @@
       </div>
     </section>
 
-    <!-- ===== How to get involved ===== -->
+    <!-- Get involved -->
     <section id="get-involved">
       <h2>Getting Started</h2>
       <ol>
@@ -252,7 +252,7 @@
     </section>
   </main>
 
-  <!-- ===== Footer: site map, contact and credits (same on every page) ===== -->
+  <!-- Footer -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -310,7 +310,7 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <!-- Back to top -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

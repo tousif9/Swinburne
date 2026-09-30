@@ -6,7 +6,7 @@
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
   Created:     24 September 2026
-  Description: Identify page: upload a plant photo or search by name to see its scientific name, common name, care tips and location.
+  Description: Identify a plant by photo or name.
 -->
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,9 @@
 </head>
 
 <body>
-  <!-- ===== Site header: menu button, logo, site name and search ===== -->
+  <!-- Header -->
   <header id="site-header">
-    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <!-- Side menu -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
@@ -45,7 +45,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
 
-    <!-- Site search with suggestions -->
+    <!-- Search -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
@@ -76,7 +76,7 @@
     </form>
   </header>
 
-  <!-- ===== Main navigation (same on every page) ===== -->
+  <!-- Main menu -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -98,7 +98,7 @@
   <main>
     <h1>Identify a Plant</h1>
 
-    <!-- ===== Side note (tangential content) ===== -->
+    <!-- Side note -->
     <aside>
       <h2>Tips for a Good Photo</h2>
       <ul>
@@ -109,7 +109,7 @@
       </ul>
     </aside>
 
-    <!-- ===== Upload a photo to identify ===== -->
+    <!-- Upload a photo to identify -->
     <section id="upload">
       <h2>Upload a Photo</h2>
       <p>
@@ -127,7 +127,7 @@
       </form>
     </section>
 
-    <!-- ===== Examples of good photos ===== -->
+    <!-- Examples of good photos -->
     <section id="photo-tips">
       <h2>Examples of Good Photos</h2>
       <p>Clear photos like these give the identification engine the best chance of a correct match.</p>
@@ -147,7 +147,7 @@
       </div>
     </section>
 
-    <!-- ===== Search by name ===== -->
+    <!-- Search by name -->
     <section id="search">
       <h2>Search for Plant Information</h2>
       <p>Already know part of the name? Search by scientific name, common name, genus or family.</p>
@@ -158,7 +158,7 @@
       </form>
     </section>
 
-    <!-- ===== How identification works ===== -->
+    <!-- How identification works -->
     <section id="how-it-works">
       <h2>How Identification Works</h2>
       <ol>
@@ -172,7 +172,7 @@
 
     <hr>
 
-    <!-- ===== Example result ===== -->
+    <!-- Example result -->
     <section id="result">
       <h2>Example Result</h2>
       <p>This is what a result looks like after you upload a photo.</p>
@@ -195,7 +195,7 @@
           <dd>Vulnerable</dd>
         </dl>
 
-        <!-- Enhancement: expandable care tips using the HTML5 details element -->
+        <!-- Care tips -->
         <details>
           <summary>Care tips and the right environment</summary>
           <ul>
@@ -240,7 +240,7 @@
       </table>
     </section>
 
-    <!-- ===== Enhancement: embedded map of the main location ===== -->
+    <!-- Map -->
     <section id="location-map">
       <h2>Where It Grows</h2>
       <p>The map shows South and Southeast Asia, the home range of <em>Dipterocarpus alatus</em>.</p>
@@ -250,7 +250,7 @@
       <p class="source">Map: <a href="https://www.google.com/maps">Google Maps</a></p>
     </section>
 
-    <!-- ===== Useful terms ===== -->
+    <!-- Useful terms -->
     <section id="identify-terms">
       <h2>Useful Terms</h2>
       <dl>
@@ -267,7 +267,7 @@
     </section>
   </main>
 
-  <!-- ===== Footer: site map, contact and credits (same on every page) ===== -->
+  <!-- Footer -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -325,7 +325,7 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <!-- Back to top -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

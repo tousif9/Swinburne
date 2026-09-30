@@ -6,7 +6,7 @@
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
   Created:     23 September 2026
-  Description: Explorer landing page linking to the Families, Genera and Species pages.
+  Description: Explorer landing page.
 -->
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,9 @@
 </head>
 
 <body>
-  <!-- ===== Site header: menu button, logo, site name and search ===== -->
+  <!-- Header -->
   <header id="site-header">
-    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <!-- Side menu -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
@@ -45,7 +45,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
 
-    <!-- Site search with suggestions -->
+    <!-- Search -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
@@ -76,7 +76,7 @@
     </form>
   </header>
 
-  <!-- ===== Main navigation (same on every page) ===== -->
+  <!-- Main menu -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -98,7 +98,7 @@
   <main>
     <h1>Plant Explorer</h1>
 
-    <!-- ===== The plant family tree ===== -->
+    <!-- The plant family tree -->
     <section id="family-tree">
       <h2>Where Our Plants Fit on the Family Tree</h2>
       <p>
@@ -115,7 +115,7 @@
       </figure>
     </section>
 
-    <!-- ===== Side note (tangential content) ===== -->
+    <!-- Side note -->
     <aside>
       <h2>Why Scientific Names?</h2>
       <p>
@@ -129,7 +129,7 @@
       </p>
     </aside>
 
-    <!-- ===== Introduction ===== -->
+    <!-- Introduction -->
     <section id="intro">
       <h2>Discover Malaysia's Forest Plants</h2>
       <p>
@@ -154,7 +154,7 @@
       </p>
     </section>
 
-    <!-- ===== Link map: family to genus to species ===== -->
+    <!-- Link map -->
     <section id="link-map">
       <h2>Follow the Links: Family &rarr; Genus &rarr; Species</h2>
       <p>
@@ -216,7 +216,7 @@
       </div>
     </section>
 
-    <!-- ===== Short description of each level ===== -->
+    <!-- Levels -->
     <section id="levels">
       <h2>Family, Genus and Species</h2>
       <p>
@@ -245,7 +245,7 @@
       </div>
     </section>
 
-    <!-- ===== Enhancement: flip gallery of the eight species ===== -->
+    <!-- Flip gallery -->
     <section id="flip-gallery">
       <h2>Species Flip Gallery</h2>
       <p>Point at a card, or tab to it with the keyboard, to turn it over and meet the species.</p>
@@ -365,7 +365,7 @@
       </div>
     </section>
 
-    <!-- ===== Enhancement: photo gallery with lightbox ===== -->
+    <!-- Photo gallery -->
     <section id="photo-gallery">
       <h2>Photo Gallery</h2>
       <p class="gallery-tip">Select a photo to see it larger.</p>
@@ -405,7 +405,7 @@
       </div>
     </section>
 
-    <!-- ===== How to use the explorer ===== -->
+    <!-- How to use -->
     <section id="how-to">
       <h2>How to Use the Explorer</h2>
       <ol>
@@ -416,7 +416,7 @@
       </ol>
     </section>
 
-    <!-- ===== Key terms ===== -->
+    <!-- Key terms -->
     <section id="terms">
       <h2>Key Terms</h2>
       <dl>
@@ -431,7 +431,7 @@
       </dl>
     </section>
 
-    <!-- ===== Summary table of featured plants ===== -->
+    <!-- Featured plants table -->
     <section id="featured-plants">
       <h2>Plants Featured in the Explorer</h2>
       <table>
@@ -468,7 +468,7 @@
 
     <hr>
 
-    <!-- ===== Family comparison chart ===== -->
+    <!-- Comparison chart -->
     <section id="compare">
       <h2>Compare the Two Families</h2>
       <p>
@@ -535,7 +535,7 @@
       </table>
     </section>
 
-    <!-- ===== Quiz: test yourself on the two families ===== -->
+    <!-- Quiz -->
     <section id="quiz">
       <h2>Which Family Is It?</h2>
       <p>
@@ -610,7 +610,7 @@
       </p>
     </section>
 
-    <!-- ===== Enhancement: page rating (star radio buttons styled with CSS) ===== -->
+    <!-- Star rating -->
     <section class="page-rating" id="rate-page">
       <h2>Rate This Page</h2>
       <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="rating-form">
@@ -634,7 +634,7 @@
       </form>
     </section>
 
-    <!-- ===== Enhancement: lightbox views for the photo gallery (opened with :target) ===== -->
+    <!-- Lightbox views -->
     <div class="lightbox" id="view-exp-1">
       <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
       <img src="images/exp-diptero.png" alt="Young Dipterocarpaceae plant on the forest floor, with one leaf turned over to show its silvery underside">
@@ -677,7 +677,7 @@
     </div>
   </main>
 
-  <!-- ===== Footer: site map, contact and credits (same on every page) ===== -->
+  <!-- Footer -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -735,7 +735,7 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <!-- Back to top -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

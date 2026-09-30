@@ -6,7 +6,7 @@
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
   Created:     25 September 2026
-  Description: Lists every website and source used for photos, information, icons and buttons.
+  Description: Credits for every source used.
 -->
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,9 @@
 </head>
 
 <body>
-  <!-- ===== Site header: menu button, logo, site name and search ===== -->
+  <!-- Header -->
   <header id="site-header">
-    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <!-- Side menu -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
@@ -45,7 +45,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
 
-    <!-- Site search with suggestions -->
+    <!-- Search -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
@@ -76,7 +76,7 @@
     </form>
   </header>
 
-  <!-- ===== Main navigation (same on every page) ===== -->
+  <!-- Main menu -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -98,7 +98,7 @@
   <main>
     <h1>Acknowledgements</h1>
 
-    <!-- ===== Side note (tangential content) ===== -->
+    <!-- Side note -->
     <aside>
       <h2>Why We Credit Sources</h2>
       <p>
@@ -107,24 +107,25 @@
       </p>
     </aside>
 
-    <!-- ===== Introduction and summary ===== -->
+    <!-- Introduction -->
     <section id="ack-intro">
       <h2>Sources Used on This Website</h2>
       <p>
         This page lists every website and source used to build Pl@netMatrix, grouped into photos and
-        pictures, information, icons and buttons. Each group shows where the material appears on the site.
+        pictures, information, icons, buttons and enhancements. Each group shows where the material appears on the site.
       </p>
       <ol class="ack-jump">
         <li><a href="#ack-photos">Photos and pictures</a> (103)</li>
-        <li><a href="#ack-information">Information</a> (7)</li>
+        <li><a href="#ack-information">Information</a> (12)</li>
         <li><a href="#ack-icons">Icons</a> (5)</li>
         <li><a href="#ack-buttons">Buttons</a> (7)</li>
+        <li><a href="#ack-enhancements">Enhancements</a> (21)</li>
       </ol>
     </section>
 
     <hr>
 
-    <!-- ===== 1. Photos and pictures ===== -->
+    <!-- 1. Photos and pictures -->
     <section id="ack-photos" class="ack-section">
       <h2>1. Photos and Pictures</h2>
       <p>Every photo on the website, grouped by the plant or page where it appears.</p>
@@ -725,7 +726,7 @@
       </div>
     </section>
 
-    <!-- ===== 2. Information ===== -->
+    <!-- 2. Information -->
     <section id="ack-information" class="ack-section">
       <h2>2. Information</h2>
       <p>Websites and documents used for the plant facts and page content.</p>
@@ -799,7 +800,7 @@
       </div>
     </section>
 
-    <!-- ===== 3. Icons ===== -->
+    <!-- 3. Icons -->
     <section id="ack-icons" class="ack-section">
       <h2>3. Icons</h2>
       <p>The logo, symbols and other small graphics used around the website.</p>
@@ -843,7 +844,7 @@
       </div>
     </section>
 
-    <!-- ===== 4. Buttons ===== -->
+    <!-- 4. Buttons -->
     <section id="ack-buttons" class="ack-section">
       <h2>4. Buttons</h2>
       <p>How the buttons on the website were made, and the tutorials they are based on.</p>
@@ -887,7 +888,112 @@
       </div>
     </section>
 
-    <!-- ===== Summary table ===== -->
+    <!-- 5. Enhancements -->
+    <section id="ack-enhancements" class="ack-section">
+      <h2>5. Enhancements</h2>
+      <p>Tutorials used to build the features on the <a href="enhancement1.html">Enhancements</a> page.</p>
+      <div class="credit-group">
+        <h3>Layout and phones <span class="credit-where">&middot; every page</span></h3>
+        <ul class="credit-list">
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css_rwd_intro.asp" class="credit-name">W3Schools: Responsive Web Design</a>
+            <span class="credit-source">Fluid layout that fits any screen</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" class="credit-name">W3Schools: Media Queries</a>
+            <span class="credit-source">Phone-friendly layout</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css_table_responsive.asp" class="credit-name">W3Schools: Responsive Table</a>
+            <span class="credit-source">Tables that swipe sideways on phones</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/html/html_form_input_types.asp" class="credit-name">W3Schools: HTML Input Types</a>
+            <span class="credit-source">Phone keyboards and date pickers on the forms</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/howto/howto_css_sticky_element.asp" class="credit-name">W3Schools: Sticky Element</a>
+            <span class="credit-source">Menu bar fixed to the top</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css3_flexbox.asp" class="credit-name">W3Schools: CSS Flexbox</a>
+            <span class="credit-source">Header, menu and link map layout</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css_grid.asp" class="credit-name">W3Schools: CSS Grid Layout</a>
+            <span class="credit-source">Galleries, cards and footer columns</span>
+          </li>
+        </ul>
+      </div>
+      <div class="credit-group">
+        <h3>Pictures and effects <span class="credit-where">&middot; Explore, Families, Genera, Species and Home pages</span></h3>
+        <ul class="credit-list">
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css_image_gallery.asp" class="credit-name">W3Schools: CSS Image Gallery</a>
+            <span class="credit-source">Photo galleries</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/cssref/sel_target.php" class="credit-name">W3Schools: The :target selector</a>
+            <span class="credit-source">Lightbox photo viewer</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css3_3dtransforms.asp" class="credit-name">W3Schools: CSS 3D Transforms</a>
+            <span class="credit-source">Flip cards</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/howto/howto_css_zoom_hover.asp" class="credit-name">W3Schools: Zoom on Hover</a>
+            <span class="credit-source">Picture hover effect</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css3_transitions.asp" class="credit-name">W3Schools: CSS Transitions</a>
+            <span class="credit-source">Button and picture hover effects</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css3_animations.asp" class="credit-name">W3Schools: CSS Animations</a>
+            <span class="credit-source">Banner words, fading cards, swaying logo</span>
+          </li>
+        </ul>
+      </div>
+      <div class="credit-group">
+        <h3>Page features <span class="credit-where">&middot; where each one is used</span></h3>
+        <ul class="credit-list">
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css_pseudo_elements.asp" class="credit-name">W3Schools: CSS Pseudo-elements</a>
+            <span class="credit-source">Link map lines on the Explore page</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/cssref/sel_nth-child.php" class="credit-name">W3Schools: The :nth-child() selector</a>
+            <span class="credit-source">Family comparison chart</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css3_gradients.asp" class="credit-name">W3Schools: CSS Gradients</a>
+            <span class="credit-source">Wavy leaf edge on the footer</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/tags/tag_details.asp" class="credit-name">W3Schools: HTML details tag</a>
+            <span class="credit-source">Care tips and quiz answers</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/tags/tag_datalist.asp" class="credit-name">W3Schools: HTML datalist tag</a>
+            <span class="credit-source">Search suggestions</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" class="credit-name">W3Schools: CSS Pseudo-classes</a>
+            <span class="credit-source">Live form feedback</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/html/html5_audio.asp" class="credit-name">W3Schools: HTML Audio</a>
+            <span class="credit-source">Forest sounds on the Profile page</span>
+          </li>
+          <li class="credit-chip">
+            <a href="https://www.w3schools.com/tags/tag_iframe.asp" class="credit-name">W3Schools: HTML iframe tag</a>
+            <span class="credit-source">Google Map on the Identify page</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Summary table -->
     <section id="ack-summary">
       <h2>Summary</h2>
       <table>
@@ -907,8 +1013,8 @@
           </tr>
           <tr>
             <th scope="row"><a href="#ack-information">Information</a></th>
-            <td>7</td>
-            <td>iNaturalist, Pl@ntNet, unit documents</td>
+            <td>12</td>
+            <td>Wikipedia, Kew, iNaturalist, Pl@ntNet, unit documents</td>
           </tr>
           <tr>
             <th scope="row"><a href="#ack-icons">Icons</a></th>
@@ -920,12 +1026,17 @@
             <td>7</td>
             <td>CSS, W3Schools</td>
           </tr>
+          <tr>
+            <th scope="row"><a href="#ack-enhancements">Enhancements</a></th>
+            <td>21</td>
+            <td>W3Schools</td>
+          </tr>
         </tbody>
       </table>
     </section>
   </main>
 
-  <!-- ===== Footer: site map, contact and credits (same on every page) ===== -->
+  <!-- Footer -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -983,7 +1094,7 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <!-- Back to top -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

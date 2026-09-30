@@ -6,7 +6,7 @@
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
   Created:     24 September 2026
-  Description: Explorer page for the two featured plant families.
+  Description: The two plant families.
 -->
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,9 @@
 </head>
 
 <body>
-  <!-- ===== Site header: menu button, logo, site name and search ===== -->
+  <!-- Header -->
   <header id="site-header">
-    <!-- Side menu: the hidden checkbox opens and closes the panel -->
+    <!-- Side menu -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
@@ -45,7 +45,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
 
-    <!-- Site search with suggestions -->
+    <!-- Search -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
@@ -76,7 +76,7 @@
     </form>
   </header>
 
-  <!-- ===== Main navigation (same on every page) ===== -->
+  <!-- Main menu -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -99,7 +99,7 @@
     <p class="breadcrumb"><a href="explore.html">Explorer</a> &rsaquo; Plant Families</p>
     <h1>Plant Families</h1>
 
-    <!-- ===== Side note (tangential content) ===== -->
+    <!-- Side note -->
     <aside>
       <h2>Family Names</h2>
       <p>
@@ -109,7 +109,7 @@
       </p>
     </aside>
 
-    <!-- ===== Introduction ===== -->
+    <!-- Introduction -->
     <section id="intro">
       <h2>About This Page</h2>
       <p>
@@ -124,7 +124,7 @@
       </nav>
     </section>
 
-    <!-- ===== Steps (ordered list) ===== -->
+    <!-- Steps -->
     <section id="steps">
       <h2>How to Tell the Two Families Apart</h2>
       <ol>
@@ -135,10 +135,10 @@
       </ol>
     </section>
 
-    <!-- ===== Summary table ===== -->
+    <!-- Summary table -->
     <section id="summary">
       <h2>At a Glance</h2>
-      <table>
+      <table class="wide-table">
         <caption>Comparison of the two featured families</caption>
         <thead>
           <tr><th scope="col">Family</th><th scope="col">Common name</th><th scope="col">Fruit</th><th scope="col">Featured genera</th></tr>
@@ -152,7 +152,7 @@
 
     <hr>
 
-    <!-- ===== One article per plant ===== -->
+    <!-- Plant profiles -->
     <article class="plant-profile" id="dipterocarpaceae">
       <h2>Dipterocarpaceae</h2>
       <p class="plant-common">The dipterocarp family</p>
@@ -302,7 +302,7 @@
       </section>
     </article>
 
-    <!-- ===== Enhancement: CSS-only lightbox views (opened with :target) ===== -->
+    <!-- Lightbox views -->
     <div class="lightbox" id="view-dipterocarpaceae-1">
       <a href="#dipterocarpaceae" class="lightbox-close">Close &times;</a>
       <img src="images/fam-diptero-6.jpg" alt="Two-winged dipterocarp fruit hanging from a branch between green leaves" loading="lazy">
@@ -370,7 +370,7 @@
     </div>
   </main>
 
-  <!-- ===== Footer: site map, contact and credits (same on every page) ===== -->
+  <!-- Footer -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -428,7 +428,7 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top button, fixed in the bottom corner of the screen -->
+  <!-- Back to top -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

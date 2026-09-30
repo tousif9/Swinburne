@@ -4,23 +4,17 @@
   Student ID:  105822937
   Unit:        COS10005 Web Development - Assignment 1
   Created:     23 September 2026
-  Description: Shared stylesheet for all Pl@netMatrix pages.
-               Desktop styles first, mobile styles in the media query at the end.
-
-  Colour scheme (change these values to re-theme the site):
-    Mint green         #5BCBA7  - header, footer, buttons, table headings
-    Pale mint          #D8F7E3  - page background, aside, highlights
-    Soft leaf          #A3D9A5  - menu bar, drop-down, row headings
-    Deep teal (text)   #123D2E  - text on the coloured areas above
-    Dark green         #1F6E56  - headings and links on white
+  Description: Shared stylesheet for all pages (phone styles at the end).
+  Colours:     #5BCBA7 mint, #D8F7E3 pale mint, #A3D9A5 leaf,
+               #123D2E deep teal, #1F6E56 dark green
 */
 
-/* ===== Base / page ===== */
+/* Base */
 html {
   font-size: 100%;
-  /* Smooth scrolling for "Back to top" and "On this page" links */
+  /* Smooth jump links */
   scroll-behavior: smooth;
-  /* Keeps jumped-to headings visible below the fixed menu bar */
+  /* Keep headings clear of the menu bar */
   scroll-padding-top: 4em;
 }
 
@@ -30,11 +24,11 @@ body {
   color: #222222;
   font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
   line-height: 1.6;
-  /* Background graphic: leaf pattern, colour used if the image is missing */
+  /* Leaf background, colour as fallback */
   background: #D8F7E3 url("images/leaf-bg.png") repeat;
 }
 
-/* ===== Header: menu button, logo, site name and search ===== */
+/* Header */
 #site-header {
   display: flex;
   align-items: center;
@@ -44,7 +38,7 @@ body {
   background-color: #5BCBA7;
 }
 
-/* Tree logo shown inside a white circle */
+/* Round logo */
 #site-logo {
   display: block;
   width: 64px;
@@ -66,9 +60,8 @@ body {
   text-decoration: none;
 }
 
-/* ===== Side menu (hamburger button on the far left) ===== */
-/* Hidden checkbox that remembers whether the side menu is open;
-   it can still be reached with the keyboard */
+/* Side menu */
+/* Hidden checkbox opens the menu */
 .menu-toggle {
   position: absolute;
   width: 1px;
@@ -98,7 +91,7 @@ body {
   outline: 2px solid #123D2E;
 }
 
-/* Panel slides in from the left when the checkbox is ticked */
+/* Slide in when ticked */
 .side-menu {
   position: fixed;
   top: 0;
@@ -176,7 +169,7 @@ body {
   box-shadow: inset 4px 0 0 #123D2E;
 }
 
-/* ===== Site search (right side of the header) ===== */
+/* Site search */
 .site-search {
   display: flex;
   box-sizing: border-box;
@@ -210,8 +203,8 @@ body {
   background-color: #A3D9A5;
 }
 
-/* ===== Main menu bar (six main pages) ===== */
-/* Menu bar stays fixed at the top of the screen while scrolling */
+/* Menu bar */
+/* Stays at the top */
 #main-nav {
   position: sticky;
   top: 0;
@@ -246,7 +239,7 @@ body {
   background-color: #D8F7E3;
 }
 
-/* Highlight the page the user is currently on */
+/* Current page */
 #main-nav a.current {
   box-shadow: inset 0 -3px 0 #123D2E;
 }
@@ -255,7 +248,7 @@ body {
   font-size: 0.8em;
 }
 
-/* Explorer drop-down: Families, Genera, Species */
+/* Explorer drop-down */
 #main-nav .submenu {
   display: none;
   position: absolute;
@@ -277,7 +270,7 @@ body {
   display: block;
 }
 
-/* ===== Main content area (liquid layout) ===== */
+/* Main content */
 main {
   display: block;
   width: 86%;
@@ -289,16 +282,16 @@ main {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Contain floated aside inside main */
+/* Contain the aside */
 main::after {
   content: "";
   display: block;
   clear: both;
 }
 
-/* ===== Typography ===== */
+/* Typography */
 h1 {
-  /* Shorthand font: style weight size/line-height family */
+  /* Font shorthand */
   font: bold 2.4em/1.2 Georgia, "Times New Roman", serif;
   color: #123D2E;
   margin: 0 0 0.5em;
@@ -344,7 +337,7 @@ hr {
   border-top: 2px dashed #5BCBA7;
 }
 
-/* ===== Aside: 30% viewport width, floats right ===== */
+/* Aside */
 aside {
   float: right;
   width: 30vw;
@@ -360,7 +353,7 @@ aside h2 {
   font-size: 1.3em;
 }
 
-/* ===== Lists ===== */
+/* Lists */
 ol {
   padding-left: 1.5em;
 }
@@ -378,7 +371,7 @@ dl dd {
   margin: 0 0 0.8em 1.5em;
 }
 
-/* ===== Figures and images ===== */
+/* Figures */
 figure {
   margin: 1.5em 0;
   text-align: center;
@@ -399,14 +392,14 @@ figcaption {
   color: #444444;
 }
 
-/* Acknowledgement of image/content sources */
+/* Image credit */
 .source {
   display: block;
   font-size: 0.85em;
   color: #555555;
 }
 
-/* ===== Cards (feature and category links) ===== */
+/* Cards */
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -430,7 +423,7 @@ figcaption {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* Link styled as a button */
+/* Link as a button */
 .button {
   display: inline-block;
   padding: 0.5em 1em;
@@ -447,7 +440,7 @@ main a.button:focus {
   background-color: #A3D9A5;
 }
 
-/* ===== Tables ===== */
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -480,7 +473,7 @@ tbody tr:hover td {
   background-color: #D8F7E3;
 }
 
-/* ===== Footer: full page width, italic, centred ===== */
+/* Footer */
 footer {
   position: relative;
   clear: both;
@@ -494,7 +487,7 @@ footer {
   background-color: #5BCBA7;
 }
 
-/* Wavy leaf-edge border drawn along the top of the footer */
+/* Wavy top edge */
 footer::before {
   content: "";
   position: absolute;
@@ -515,13 +508,13 @@ footer a {
   font-weight: bold;
 }
 
-/* Mission line above the link columns */
+/* Mission line */
 .footer-brand {
   max-width: 34em;
   margin: 0 auto 1.5em;
 }
 
-/* Site-map columns: as many as fit, each at least 150px wide */
+/* Link columns */
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -552,7 +545,7 @@ footer a {
   margin: 0.3em 0;
 }
 
-/* Footer links: an underline grows out from the centre on hover */
+/* Underline grows on hover */
 .footer-col a,
 .footer-bottom a {
   position: relative;
@@ -589,7 +582,7 @@ footer a {
   font-weight: bold;
 }
 
-/* ===== Forms (contribute, enquiry, identify) ===== */
+/* Forms */
 form {
   max-width: 40em;
 }
@@ -602,7 +595,7 @@ fieldset {
   transition: background-color 0.3s ease;
 }
 
-/* Highlight the fieldset the user is currently filling in */
+/* Highlight active fieldset */
 fieldset:focus-within {
   background-color: #D8F7E3;
 }
@@ -623,7 +616,7 @@ legend {
   font-weight: bold;
 }
 
-/* Attribute selectors style every text-like field the same way */
+/* Text-like fields */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -647,7 +640,7 @@ textarea:focus {
   border-color: #1F6E56;
 }
 
-/* Live feedback from HTML5 validation while typing */
+/* Live validation colours */
 input:focus:invalid,
 textarea:focus:invalid {
   border-color: #B3261E;
@@ -658,7 +651,7 @@ textarea:focus:valid {
   border-color: #1F6E56;
 }
 
-/* Radio buttons and checkboxes sit beside their labels */
+/* Radios and checkboxes */
 .check-row {
   margin-bottom: 0.6em;
 }
@@ -669,7 +662,7 @@ textarea:focus:valid {
   font-weight: normal;
 }
 
-/* Submit on the left, Clear form pushed to the right */
+/* Submit left, Clear right */
 .form-buttons {
   display: flex;
   justify-content: space-between;
@@ -697,12 +690,12 @@ input[type="reset"]:hover {
   background-color: #A3D9A5;
 }
 
-/* ===== Identify page ===== */
+/* Identify page */
 .tool-form input[type="submit"] {
   margin-top: 0.8em;
 }
 
-/* Search box and button on one line */
+/* Search on one line */
 .search-form {
   display: flex;
   flex-wrap: wrap;
@@ -755,7 +748,7 @@ details[open] summary {
   margin-bottom: 0.5em;
 }
 
-/* Responsive embedded map */
+/* Responsive map */
 .map-frame iframe {
   display: block;
   width: 100%;
@@ -764,12 +757,12 @@ details[open] summary {
   border-radius: 6px;
 }
 
-/* ===== Profile page ===== */
+/* Profile page */
 #profile-page {
   text-align: center;
 }
 
-/* Hidden heading kept for screen readers and the document outline */
+/* Screen-reader-only heading */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -778,7 +771,7 @@ details[open] summary {
   clip: rect(0 0 0 0);
 }
 
-/* Centres the floated photo on the page */
+/* Centre the photo */
 .photo-holder {
   display: table;
   margin: 0 auto 1em;
@@ -830,7 +823,7 @@ details[open] summary {
   padding-left: 1.2em;
 }
 
-/* Intro paragraph reads better at a comfortable line length */
+/* Readable line length */
 #profile-about p {
   max-width: 40em;
   margin: 0 auto 1em;
@@ -840,13 +833,13 @@ details[open] summary {
   margin: 1.5em 0 0.5em;
 }
 
-/* ===== Explorer sub-pages (families, genera, species) ===== */
+/* Explorer pages */
 .breadcrumb {
   margin: 0 0 0.5em;
   font-size: 0.9em;
 }
 
-/* "On this page" jump links */
+/* Jump links */
 .page-nav {
   margin: 1em 0;
   padding: 0.8em 1.2em;
@@ -868,7 +861,7 @@ details[open] summary {
   list-style: none;
 }
 
-/* One boxed section per plant */
+/* Plant box */
 .plant-profile {
   clear: both;
   margin: 2em 0;
@@ -889,7 +882,7 @@ details[open] summary {
   color: #1F6E56;
 }
 
-/* Quick facts shown as a two-column list */
+/* Two-column facts */
 .plant-facts dl {
   display: grid;
   grid-template-columns: minmax(9em, max-content) 1fr;
@@ -900,13 +893,13 @@ details[open] summary {
   margin: 0;
 }
 
-/* ===== Photo gallery thumbnails ===== */
+/* Gallery */
 .gallery-tip {
   font-size: 0.9em;
   color: #555555;
 }
 
-/* Even grid: as many 230px-wide columns as fit, all the same size */
+/* Even grid */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -929,7 +922,7 @@ details[open] summary {
   transform: scale(1.04);
 }
 
-/* ===== CSS-only lightbox: hidden until its id is the URL target ===== */
+/* Lightbox (:target) */
 .lightbox {
   display: none;
   position: fixed;
@@ -978,8 +971,8 @@ main a.lightbox-close:hover {
   background-color: #A3D9A5;
 }
 
-/* ===== Contributor cards ===== */
-/* Even grid so a card left alone on the last row keeps the same size */
+/* Contributor cards */
+/* Even grid */
 #contribution-cards .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1004,7 +997,7 @@ main a.lightbox-close:hover {
   font-style: italic;
 }
 
-/* Verified / pending labels shown as coloured pills */
+/* Status pills */
 .status {
   display: inline-block;
   margin: 0;
@@ -1019,7 +1012,7 @@ main a.lightbox-close:hover {
   background-color: #5BCBA7;
 }
 
-/* ===== Enhancements page ===== */
+/* Enhancements page */
 .enhancement {
   padding-left: 1em;
   border-left: 5px solid #A3D9A5;
@@ -1032,8 +1025,8 @@ code {
   border-radius: 3px;
 }
 
-/* ===== Home page banner ===== */
-/* Leaf photo with a dark shade on top so the white words stand out */
+/* Home banner */
+/* Photo with dark shade */
 .hero-banner {
   display: flex;
   align-items: center;
@@ -1058,14 +1051,14 @@ code {
 .hero-text h1 {
   margin-top: 0;
   color: #ffffff;
-  /* the words animate one by one instead of the whole heading */
+  /* Animate word by word */
   animation: none;
 }
 
-/* Each word of the heading rises into place, one after another */
+/* Words rise in turn */
 .hero-text .word {
   display: inline-block;
-  /* "both" keeps each word hidden until its turn, then leaves it in place */
+  /* Hidden until its turn */
   animation: wordRise 0.7s ease-out both;
 }
 
@@ -1086,7 +1079,7 @@ code {
   }
 }
 
-/* "Help us ___ Malaysia's plants": the blank keeps changing */
+/* Changing word */
 .hero-rotator {
   margin: 0 0 0.8em;
   font: bold 1.5em Georgia, "Times New Roman", serif;
@@ -1112,7 +1105,7 @@ code {
   animation: wordCycle 8s linear infinite both;
 }
 
-/* first word shows even if animations are switched off */
+/* First word as fallback */
 .rotator-words span:first-child {
   opacity: 1;
 }
@@ -1121,7 +1114,7 @@ code {
 .rotator-words span:nth-child(3) { animation-delay: 4s; }
 .rotator-words span:nth-child(4) { animation-delay: 6s; }
 
-/* each word slides up in, waits, then slides up and out */
+/* Slide in, wait, slide out */
 @keyframes wordCycle {
   0% {
     opacity: 0;
@@ -1139,7 +1132,7 @@ code {
   }
 }
 
-/* Intro sentence and buttons fade in after the heading */
+/* Fade in after heading */
 .hero-text .lead,
 .hero-buttons {
   animation: fadeUp 0.8s ease-out 1.9s both;
@@ -1155,7 +1148,7 @@ code {
   text-shadow: none;
 }
 
-/* ===== Large buttons (home page banner) ===== */
+/* Banner buttons */
 .button-large {
   padding: 0.8em 1.8em;
   font-size: 1.1em;
@@ -1166,7 +1159,7 @@ code {
   border: 2px solid #5BCBA7;
 }
 
-/* ===== Explore page: family comparison chart ===== */
+/* Comparison chart */
 .compare-table {
   table-layout: fixed;
 }
@@ -1185,7 +1178,7 @@ code {
   border: 0;
 }
 
-/* coloured line under each family name */
+/* Family colour bar */
 .compare-table thead .compare-diptero {
   border-bottom: 5px solid #123D2E;
 }
@@ -1215,13 +1208,13 @@ code {
   background-color: #F4FCF7;
 }
 
-/* highlight the whole row being read */
+/* Row highlight */
 .compare-table tbody tr:hover th,
 .compare-table tbody tr:hover td {
   background-color: #FFF6D9;
 }
 
-/* ===== Explore page: family quiz ===== */
+/* Quiz */
 .quiz-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1274,7 +1267,7 @@ code {
   font-style: normal;
 }
 
-/* answer box sits at the bottom of every card */
+/* Answer at the bottom */
 .quiz-card details {
   margin-top: auto;
   padding: 0;
@@ -1315,7 +1308,7 @@ code {
   font-weight: bold;
 }
 
-/* ===== Explore page: level cards match the link map colours ===== */
+/* Level cards */
 .level-family {
   border-top-color: #123D2E;
 }
@@ -1333,8 +1326,8 @@ code {
   color: #1F6E56;
 }
 
-/* ===== Explore page: family > genus > species link map ===== */
-/* Colour key for the three levels */
+/* Link map */
+/* Colour key */
 .tree-key {
   display: flex;
   flex-wrap: wrap;
@@ -1377,7 +1370,7 @@ code {
   padding-top: 0;
 }
 
-/* Connector lines drawn with pseudo-elements */
+/* Connector lines */
 .tree li::before,
 .tree li::after {
   content: "";
@@ -1423,7 +1416,7 @@ code {
   border-left: 2px solid #5BCBA7;
 }
 
-/* Boxes for each level, darkest at the top */
+/* Level boxes */
 .tree-node {
   display: inline-block;
   padding: 0.5em 0.8em;
@@ -1469,13 +1462,13 @@ a.tree-node:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Family tree picture on the Explore page */
+/* Family tree picture */
 .family-tree-figure img {
   width: 100%;
   max-width: 881px;
 }
 
-/* ===== Enhancement: picture hover effect ===== */
+/* Picture hover */
 .family-tree-figure img,
 .result-figure img {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -1487,7 +1480,7 @@ a.tree-node:focus {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Enhancement: button hover effect (lift and shadow) ===== */
+/* Button hover */
 .button,
 input[type="submit"],
 input[type="reset"] {
@@ -1502,7 +1495,7 @@ input[type="reset"]:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== Enhancement: flip cards (home page) ===== */
+/* Flip cards */
 .flip-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -1522,7 +1515,7 @@ input[type="reset"]:hover {
   transform-style: preserve-3d;
 }
 
-/* Turns over on hover, or when its link receives keyboard focus */
+/* Flip on hover or focus */
 .flip-card:hover .flip-inner,
 .flip-card:focus-within .flip-inner {
   transform: rotateY(180deg);
@@ -1579,7 +1572,7 @@ input[type="reset"]:hover {
   background-color: #ffffff;
 }
 
-/* ===== Enhancement: back to top button ===== */
+/* Back to top */
 .to-top {
   position: fixed;
   right: 1.2em;
@@ -1606,13 +1599,12 @@ input[type="reset"]:hover {
   transform: translateY(-3px);
 }
 
-/* ===== Enhancement: star page rating ===== */
+/* Star rating */
 .page-rating {
   clear: both;
 }
 
-/* Stars are listed 5 to 1 in the HTML and shown reversed, so the
-   general sibling selector (~) can colour every star up to the chosen one */
+/* Stars 5 to 1, reversed, so ~ fills the rest */
 .stars {
   display: inline-flex;
   flex-direction: row-reverse;
@@ -1653,7 +1645,7 @@ input[type="reset"]:hover {
   display: block;
 }
 
-/* ===== Enhancement: audio player (profile page) ===== */
+/* Audio player */
 #profile-audio p {
   max-width: 40em;
   margin: 0 auto 1em;
@@ -1666,7 +1658,7 @@ audio {
   margin: 0 auto 1em;
 }
 
-/* ===== Plant galleries: main picture shown twice the size ===== */
+/* First gallery photo larger */
 @media screen and (min-width: 701px) {
   .plant-gallery .gallery figure:first-child {
     grid-column: span 2;
@@ -1678,12 +1670,12 @@ audio {
   }
 }
 
-/* Example photos on the Identify page are not links, so no zoom */
+/* No zoom on Identify examples */
 .example-gallery img {
   border-radius: 6px;
 }
 
-/* ===== Acknowledgements page ===== */
+/* Acknowledgements */
 .ack-jump {
   display: flex;
   flex-wrap: wrap;
@@ -1705,7 +1697,7 @@ audio {
   color: #555555;
 }
 
-/* Each credit is a boxed "chip", like a button */
+/* Credit chip */
 .credit-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -1753,7 +1745,7 @@ audio {
   color: #555555;
 }
 
-/* Chips with a thumbnail: picture on the left, text on the right */
+/* Chip with thumbnail */
 .thumb-chip {
   grid-template-columns: auto 1fr;
 }
@@ -1762,8 +1754,8 @@ audio {
   grid-column: 2;
 }
 
-/* ===== CSS animations ===== */
-/* Page heading and cards fade up gently when a page loads */
+/* Animations */
+/* Fade up on load */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1782,7 +1774,7 @@ fieldset {
   animation: fadeUp 0.8s ease-out both;
 }
 
-/* Tree logo sways like a tree in the wind on hover */
+/* Logo sways on hover */
 @keyframes sway {
   0%,
   100% {
@@ -1801,7 +1793,7 @@ fieldset {
   animation: sway 1s ease-in-out infinite;
 }
 
-/* Identify button gently pulses to draw attention */
+/* Pulsing button */
 @keyframes pulse {
   0%,
   100% {
@@ -1816,7 +1808,7 @@ fieldset {
   animation: pulse 2s ease-in-out infinite;
 }
 
-/* Turn animations off for visitors who prefer less motion */
+/* Less motion */
 @media (prefers-reduced-motion: reduce) {
   h1,
   .card,
@@ -1843,7 +1835,7 @@ fieldset {
   }
 }
 
-/* ===== Mobile phone layout (screens 700px and narrower) ===== */
+/* Phones (700px and narrower) */
 @media screen and (max-width: 700px) {
   #logo {
     font-size: 1.5em;
@@ -1854,7 +1846,7 @@ fieldset {
     height: 50px;
   }
 
-  /* Search box moves onto its own row under the logo */
+  /* Search on its own row */
   #site-header {
     flex-wrap: wrap;
   }
@@ -1865,7 +1857,7 @@ fieldset {
     margin-left: 0;
   }
 
-  /* Menu links get smaller so all six fit */
+  /* Smaller menu links */
   #main-nav a {
     padding: 0.7em 0.6em;
     font-size: 0.9em;
@@ -1890,14 +1882,14 @@ fieldset {
     font-size: 1.2em;
   }
 
-  /* Aside becomes full width under the content flow */
+  /* Full-width aside */
   aside {
     float: none;
     width: auto;
     margin: 0 0 1em;
   }
 
-  /* Identify result photo stacks above the result */
+  /* Stack result photo */
   .result-figure {
     float: none;
     width: auto;
@@ -1912,7 +1904,7 @@ fieldset {
     width: 150px;
   }
 
-  /* Quick facts stack into a single column */
+  /* One-column facts */
   .plant-facts dl {
     display: block;
   }
@@ -1929,7 +1921,7 @@ fieldset {
     height: 280px;
   }
 
-  /* Link map becomes an indented list on narrow screens */
+  /* Link map as a list */
   .tree ul {
     display: block;
     padding: 0 0 0 1em;
@@ -1971,9 +1963,41 @@ fieldset {
     height: 210px;
   }
 
-  /* Wide tables scroll sideways instead of stretching the page */
+  /* Wide tables scroll sideways */
   table {
     display: block;
     overflow-x: auto;
+  }
+
+  /* Swipe hint */
+  .wide-table caption::after {
+    content: " (swipe sideways to see more)";
+    font-weight: normal;
+  }
+
+  /* Smaller cells */
+  th,
+  td {
+    padding: 0.4em 0.45em;
+    font-size: 0.85em;
+  }
+
+  /* Slimmer menu bar */
+  #main-nav a {
+    padding: 0.5em 0.55em;
+  }
+
+  /* Smaller top button */
+  .to-top {
+    right: 0.6em;
+    bottom: 0.6em;
+    font-size: 1em;
+    opacity: 0.85;
+  }
+
+  /* Wider buttons */
+  .form-buttons input {
+    flex: 1;
+    margin: 0 0.3em;
   }
 }
