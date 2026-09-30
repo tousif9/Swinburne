@@ -45,35 +45,42 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html">Pl@netMatrix</a></p>
 
-    <!-- Search -->
-    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
-      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
-      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
-      <datalist id="site-suggestions">
-        <option value="Dipterocarpaceae"></option>
-        <option value="Lauraceae"></option>
-        <option value="Dipterocarpus"></option>
-        <option value="Monotes"></option>
-        <option value="Beilschmiedia"></option>
-        <option value="Cryptocarya"></option>
-        <option value="Dipterocarpus alatus"></option>
-        <option value="Dipterocarpus tuberculatus"></option>
-        <option value="Monotes adenophyllus"></option>
-        <option value="Monotes glaber"></option>
-        <option value="Beilschmiedia berteroana"></option>
-        <option value="Beilschmiedia costaricensis"></option>
-        <option value="Cryptocarya adpressa"></option>
-        <option value="Cryptocarya alba"></option>
-        <option value="Plant families"></option>
-        <option value="Plant genera"></option>
-        <option value="Plant species"></option>
-        <option value="Identify a plant"></option>
-        <option value="Contributors"></option>
-        <option value="Contribution form"></option>
-        <option value="Enquiry form"></option>
-      </datalist>
-      <button type="submit" title="Search">&#128269;<span class="visually-hidden"> Search</span></button>
-    </form>
+    <!-- Find a plant -->
+    <details class="site-search">
+      <summary>&#128269; Find a plant or page</summary>
+      <nav class="find-panel" aria-label="Find a plant or page">
+        <p class="find-group">Families</p>
+        <ul>
+          <li><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a></li>
+          <li><a href="explore1.html#lauraceae">Lauraceae</a></li>
+        </ul>
+        <p class="find-group">Genera</p>
+        <ul>
+          <li><a href="explore2.html#dipterocarpus"><em>Dipterocarpus</em></a></li>
+          <li><a href="explore2.html#monotes"><em>Monotes</em></a></li>
+          <li><a href="explore2.html#beilschmiedia"><em>Beilschmiedia</em></a></li>
+          <li><a href="explore2.html#cryptocarya"><em>Cryptocarya</em></a></li>
+        </ul>
+        <p class="find-group">Species</p>
+        <ul>
+          <li><a href="explore3.html#d-alatus"><em>Dipterocarpus alatus</em></a></li>
+          <li><a href="explore3.html#d-tuberculatus"><em>Dipterocarpus tuberculatus</em></a></li>
+          <li><a href="explore3.html#m-adenophyllus"><em>Monotes adenophyllus</em></a></li>
+          <li><a href="explore3.html#m-glaber"><em>Monotes glaber</em></a></li>
+          <li><a href="explore3.html#b-berteroana"><em>Beilschmiedia berteroana</em></a></li>
+          <li><a href="explore3.html#b-costaricensis"><em>Beilschmiedia costaricensis</em></a></li>
+          <li><a href="explore3.html#c-adpressa"><em>Cryptocarya adpressa</em></a></li>
+          <li><a href="explore3.html#c-alba"><em>Cryptocarya alba</em></a></li>
+        </ul>
+        <p class="find-group">Pages</p>
+        <ul>
+          <li><a href="identify.html">Identify a plant</a></li>
+          <li><a href="contributor.html">Contributors</a></li>
+          <li><a href="contribute.html">Contribution form</a></li>
+          <li><a href="enquiry.html">Enquiry form</a></li>
+        </ul>
+      </nav>
+    </details>
   </header>
 
   <!-- Main menu -->
@@ -129,7 +136,7 @@
         <li><a href="#enh-details">Expandable Care Tips and Quiz Answers</a></li>
         <li><a href="#enh-form-feedback">Live Form Feedback</a></li>
         <li><a href="#enh-footer">Site-Map Footer</a></li>
-        <li><a href="#enh-search">Site Search with Suggestions</a></li>
+        <li><a href="#enh-search">Find a Plant Menu</a></li>
         <li><a href="#enh-phone">Phone-Friendly Pages</a></li>
         <li><a href="#enh-link-map">Link Map Diagram</a></li>
         <li><a href="#enh-compare">Family Comparison Chart</a></li>
@@ -396,10 +403,10 @@
     </section>
 
     <section id="enh-search" class="enhancement">
-      <h2>15. Site Search with Suggestions</h2>
+      <h2>15. Find a Plant Menu</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page has a search box in the header. As visitors type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element linked to the search box. The rounded box and button are styled with CSS.</dd>
+        <dd>Every page has a "Find a plant or page" button in the header. Selecting it opens a drop-down list of all 14 plants, grouped into families, genera and species, plus the main pages, and each one links straight to its section. It uses the HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements, so it works without any scripts, and the list scrolls if it is taller than the screen.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#site-header">Header on the home page</a>,
@@ -407,8 +414,8 @@
         </dd>
         <dt>Reference(s)</dt>
         <dd>
-            <a href="https://www.w3schools.com/tags/tag_datalist.asp">W3Schools: HTML datalist tag</a>,
-            <a href="https://www.w3schools.com/howto/howto_css_search_button.asp">W3Schools: How To - Search Button</a>,
+            <a href="https://www.w3schools.com/tags/tag_details.asp">W3Schools: HTML details tag</a>,
+            <a href="https://www.w3schools.com/css/css_dropdowns.asp">W3Schools: CSS Dropdowns</a>,
             COS10005 Web Development lectures and tutorials
         </dd>
       </dl>
@@ -418,7 +425,7 @@
       <h2>16. Phone-Friendly Pages</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a media query moves the search box under the logo, slims the menu bar, stacks the quick facts and side notes into one column, and turns the link map into an indented list. Wide tables can be swiped sideways and say so in their caption, the Back to top button gets smaller, and form buttons stretch to be easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones show the right keyboard or a date picker.</dd>
+        <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a media query moves the Find a plant menu under the logo, slims the menu bar, stacks the quick facts and side notes into one column, and turns the link map into an indented list. Wide tables can be swiped sideways and say so in their caption, the Back to top button gets smaller, and form buttons stretch to be easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones show the right keyboard or a date picker.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="enquiry.html#enquiry-form">Enquiry form (phone keypad for the phone number)</a>,
@@ -540,7 +547,7 @@
             <td>Home page footer, every other page</td>
           </tr>
           <tr>
-            <th scope="row"><a href="#enh-search">Site Search with Suggestions</a></th>
+            <th scope="row"><a href="#enh-search">Find a Plant Menu</a></th>
             <td>Header on every page</td>
           </tr>
           <tr>

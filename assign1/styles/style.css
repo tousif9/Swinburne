@@ -169,38 +169,84 @@ body {
   box-shadow: inset 4px 0 0 #123D2E;
 }
 
-/* Site search */
+/* Find a plant menu */
 .site-search {
-  display: flex;
-  box-sizing: border-box;
-  margin-left: auto;
-  width: 34%;
-  max-width: 380px;
+  position: relative;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background: none;
+  border: 0;
 }
 
-.site-search input[type="search"] {
-  flex: 1;
-  width: auto;
-  min-width: 0;
-  padding: 0.55em 0.8em;
+.site-search summary {
+  padding: 0.55em 1.1em;
+  font-weight: bold;
+  color: #123D2E;
+  list-style: none;
+  background-color: #FFFFFF;
   border: 2px solid #123D2E;
-  border-right: 0;
-  border-radius: 20px 0 0 20px;
-}
-
-.site-search button {
-  padding: 0 0.9em;
-  font-size: 1em;
-  background-color: #D8F7E3;
-  border: 2px solid #123D2E;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.site-search button:hover,
-.site-search button:focus {
-  background-color: #A3D9A5;
+.site-search summary::after {
+  content: " \25BE";
+}
+
+.site-search[open] summary::after {
+  content: " \25B4";
+}
+
+.site-search summary:hover,
+.site-search summary:focus,
+.site-search[open] summary {
+  margin-bottom: 0;
+  background-color: #D8F7E3;
+}
+
+/* Drop-down list of links */
+.find-panel {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  z-index: 150;
+  box-sizing: border-box;
+  width: 300px;
+  max-height: 70vh;
+  padding: 0.5em 0;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+  border: 2px solid #123D2E;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.find-group {
+  margin: 0.6em 1em 0.2em;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #1F6E56;
+  text-transform: uppercase;
+}
+
+.find-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.find-panel a {
+  display: block;
+  padding: 0.35em 1.2em;
+  color: #123D2E;
+  text-decoration: none;
+}
+
+.find-panel a:hover,
+.find-panel a:focus {
+  background-color: #D8F7E3;
 }
 
 /* Menu bar */
@@ -1846,15 +1892,19 @@ fieldset {
     height: 50px;
   }
 
-  /* Search on its own row */
+  /* Find menu on its own row */
   #site-header {
     flex-wrap: wrap;
   }
 
   .site-search {
     width: 100%;
-    max-width: none;
     margin-left: 0;
+  }
+
+  /* Full-width find menu */
+  .find-panel {
+    width: 100%;
   }
 
   /* Smaller menu links */
