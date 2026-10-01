@@ -383,6 +383,59 @@ main a:hover {
   text-decoration: none;
 }
 
+/* Links in text stand out */
+main p a:not(.button),
+main li a:not(.button):not(.tree-node),
+main dd a,
+main td a,
+main th a,
+main figcaption a {
+  font-weight: bold;
+  color: #0F6B52;
+  text-decoration: underline;
+  text-decoration-color: #5BCBA7;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  border-radius: 3px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+main p a:not(.button):hover,
+main p a:not(.button):focus,
+main li a:not(.button):not(.tree-node):hover,
+main li a:not(.button):not(.tree-node):focus,
+main dd a:hover,
+main dd a:focus,
+main td a:hover,
+main td a:focus,
+main th a:hover,
+main th a:focus,
+main figcaption a:hover,
+main figcaption a:focus {
+  color: #123D2E;
+  background-color: #D8F7E3;
+  text-decoration-color: #123D2E;
+}
+
+/* Arrow on links to another page */
+main p:not(.breadcrumb) a[href$=".html"]:not(.button)::after,
+main p:not(.breadcrumb) a[href*=".html#"]:not(.button)::after,
+main li a[href$=".html"]:not(.button):not(.tree-node)::after,
+main li a[href*=".html#"]:not(.button):not(.tree-node)::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: transform 0.2s ease;
+}
+
+/* Arrow nudges forward on hover */
+main p a:not(.button):hover::after,
+main p a:not(.button):focus::after,
+main li a:not(.button):not(.tree-node):hover::after,
+main li a:not(.button):not(.tree-node):focus::after {
+  transform: translateX(4px);
+}
+
 hr {
   clear: both;
   margin: 2em 0;
