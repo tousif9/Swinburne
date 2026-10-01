@@ -33,26 +33,32 @@ body {
   display: flex;
   align-items: center;
   gap: 1em;
-  padding: 0.9em 3%;
+  padding: 0.55em 8%;
   color: #123D2E;
+  /* Leaves and grid lines over a mint-to-teal fade */
+  background: url("images/header-bg.png") right center / auto 100% no-repeat,
+    linear-gradient(90deg, #5BCBA7 30%, #23807F);
   background-color: #5BCBA7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-/* Round logo */
+/* Oval logo */
 #site-logo {
   display: block;
-  width: 64px;
-  height: 64px;
+  box-sizing: border-box;
+  width: 46px;
+  height: 56px;
   padding: 4px;
+  object-fit: contain;
   background-color: #ffffff;
-  border: 3px solid #123D2E;
+  border: 2px solid #123D2E;
   border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #logo {
   margin: 0;
-  font: bold 2em Georgia, "Times New Roman", serif;
-  letter-spacing: 0.05em;
+  font: bold 1.8em Georgia, "Times New Roman", serif;
 }
 
 #logo a {
@@ -169,38 +175,85 @@ body {
   box-shadow: inset 4px 0 0 #123D2E;
 }
 
-/* Site search */
+/* Site search: white pill, icon left, arrow right */
 .site-search {
+  position: relative;
   display: flex;
   box-sizing: border-box;
   margin-left: auto;
-  width: 34%;
-  max-width: 380px;
+  width: 30%;
+  max-width: 330px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .site-search input[type="search"] {
   flex: 1;
   width: auto;
   min-width: 0;
-  padding: 0.55em 0.8em;
-  border: 2px solid #123D2E;
-  border-right: 0;
-  border-radius: 20px 0 0 20px;
+  padding: 0.6em 2em 0.6em 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0 22px 22px 0;
 }
 
+.site-search input[type="search"]:focus {
+  outline: none;
+}
+
+.site-search:focus-within {
+  box-shadow: 0 0 0 3px #123D2E;
+}
+
+/* Drop-down arrow for the suggestions */
+.site-search::after {
+  content: "\25BE";
+  position: absolute;
+  top: 50%;
+  right: 0.9em;
+  color: #555555;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Magnifier drawn with CSS */
 .site-search button {
-  padding: 0 0.9em;
-  font-size: 1em;
-  background-color: #D8F7E3;
-  border: 2px solid #123D2E;
-  border-radius: 0 20px 20px 0;
+  order: -1;
+  position: relative;
+  width: 2.6em;
+  background: transparent;
+  border: 0;
+  border-radius: 22px 0 0 22px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+}
+
+.site-search button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.9em;
+  width: 0.65em;
+  height: 0.65em;
+  border: 2px solid #3A4A45;
+  border-radius: 50%;
+  transform: translateY(-65%);
+}
+
+.site-search button::after {
+  content: "";
+  position: absolute;
+  top: 58%;
+  left: 1.55em;
+  width: 0.45em;
+  height: 2px;
+  background-color: #3A4A45;
+  transform: rotate(45deg);
 }
 
 .site-search button:hover,
 .site-search button:focus {
-  background-color: #A3D9A5;
+  background-color: #D8F7E3;
 }
 
 /* Menu bar */

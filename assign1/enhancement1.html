@@ -48,7 +48,7 @@
     <!-- Search -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
-      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Search plants..." maxlength="40" required>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
       <datalist id="site-suggestions">
         <option value="Dipterocarpaceae"></option>
         <option value="Lauraceae"></option>
@@ -72,7 +72,7 @@
         <option value="Contribution form"></option>
         <option value="Enquiry form"></option>
       </datalist>
-      <button type="submit" title="Search">&#128269;<span class="visually-hidden"> Search</span></button>
+      <button type="submit" title="Search"><span class="visually-hidden">Search</span></button>
     </form>
   </header>
 
@@ -399,7 +399,7 @@
       <h2>15. Site Search with Suggestions</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page has a search box in the header. As visitors type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element linked to the search box. The rounded box and button are styled with CSS.</dd>
+        <dd>Every page has a search box in the header. As visitors type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element linked to the search box. The search sits in a white rounded box in a header that fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image), and the magnifier and drop-down arrow are drawn with CSS.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#site-header">Header on the home page</a>,
@@ -409,6 +409,7 @@
         <dd>
             <a href="https://www.w3schools.com/tags/tag_datalist.asp">W3Schools: HTML datalist tag</a>,
             <a href="https://www.w3schools.com/howto/howto_css_search_button.asp">W3Schools: How To - Search Button</a>,
+            <a href="https://www.w3schools.com/css/css3_gradients.asp">W3Schools: CSS Gradients</a>,
             COS10005 Web Development lectures and tutorials
         </dd>
       </dl>
