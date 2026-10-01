@@ -1574,6 +1574,69 @@ a.tree-node:focus {
   max-width: 881px;
 }
 
+/* Explore page: Identify and Contributor links */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2em;
+  margin: 1em 0;
+}
+
+main a.quick-link {
+  display: block;
+  padding: 1.4em 1.5em;
+  color: #ffffff;
+  text-decoration: none;
+  background: url("images/header-bg.png") right center / auto 100% no-repeat,
+    linear-gradient(135deg, #5BCBA7, #23807F);
+  background-color: #23807F;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+main a.quick-alt {
+  background: url("images/header-bg.png") right center / auto 100% no-repeat,
+    linear-gradient(135deg, #1F6E56, #123D2E);
+  background-color: #123D2E;
+}
+
+main a.quick-link:hover,
+main a.quick-link:focus {
+  color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.quick-link span {
+  display: block;
+}
+
+.quick-icon {
+  font-size: 2em;
+}
+
+.quick-title {
+  margin: 0.2em 0;
+  font: bold 1.5em Georgia, "Times New Roman", serif;
+}
+
+.quick-link .quick-go {
+  display: inline-block;
+  margin-top: 0.8em;
+  padding: 0.4em 1em;
+  font-weight: bold;
+  color: #123D2E;
+  background-color: #D8F7E3;
+  border-radius: 20px;
+  transition: background-color 0.25s ease;
+}
+
+.quick-link:hover .quick-go,
+.quick-link:focus .quick-go {
+  background-color: #ffffff;
+}
+
 /* Picture hover */
 .family-tree-figure img,
 .result-figure img {
