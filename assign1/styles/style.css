@@ -1094,6 +1094,18 @@ main a.lightbox-close:hover {
   object-fit: cover;
 }
 
+/* Plant name as the photo caption */
+.contribution figcaption {
+  margin-top: 0.8em;
+  text-align: left;
+  font-size: 1em;
+  font-style: normal;
+}
+
+.contribution figcaption h3 {
+  margin: 0;
+}
+
 .contributor-name {
   margin-bottom: 0.4em;
   font-weight: bold;
