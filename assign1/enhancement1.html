@@ -133,6 +133,7 @@
         <li><a href="#enh-phone">Phone-Friendly Pages</a></li>
         <li><a href="#enh-link-map">Link Map Diagram</a></li>
         <li><a href="#enh-compare">Family Comparison Chart</a></li>
+        <li><a href="#enh-brand">Custom Fonts and Branded Header</a></li>
       </ol>
     </section>
 
@@ -316,7 +317,7 @@
       <h2>11. CSS Animations</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>On the home page banner the heading rises in word by word and the line "Help us ___ Malaysia's plants" keeps swapping between explore, identify, record and protect. Elsewhere, headings, cards and form sections fade up when a page opens, the tree logo sways like a tree in the wind when you point at it, and the Identify button gently pulses. Visitors who prefer less motion have the animations switched off automatically.</dd>
+        <dd>On the home page banner the heading rises in word by word and the line "Help us ___ Malaysia's plants" keeps swapping between explore, identify, record and protect. Elsewhere, headings, cards and form sections fade up when a page opens, a soft halo breathes around the logo, the tree logo sways like a tree in the wind when you point at it, and the Identify button gently pulses. Visitors who prefer less motion have the animations switched off automatically.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#hero">animated banner words</a>,
@@ -386,7 +387,7 @@
       <h2>15. Site Search with Suggestions</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page has a search box in the header. As visitors type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element linked to the search box. The search sits in a white rounded box in a header that fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image), and the magnifier and drop-down arrow are drawn with CSS.</dd>
+        <dd>Every page has a search box in the header. As visitors type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element linked to the search box. The search sits in a white rounded box with a mint <strong>Search</strong> button inside it. When you click into it, the box grows wider and gets a mint glow ring, using the <code>:focus-within</code> selector and a <code>transition</code>. The magnifier is drawn with CSS pseudo-elements.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#site-header">Header on the home page</a>,
@@ -451,6 +452,26 @@
         <dd>
             <a href="https://www.w3schools.com/css/css_table.asp">W3Schools: Styling Tables</a>,
             <a href="https://www.w3schools.com/cssref/sel_nth-child.php">W3Schools: The :nth-child() selector</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-brand" class="enhancement">
+      <h2>19. Custom Fonts and Branded Header</h2>
+      <dl>
+        <dt>What it is</dt>
+        <dd>The website uses three free Google Fonts saved inside the site and loaded with <code>@font-face</code>, so they work even without internet: Playfair Display for the site name and page titles, Lora for the other headings and Source Sans 3 for the text. Each has a fallback, such as Georgia or Arial. The header fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image), shows the name in two colours with a mint "@" and the tagline "Explore &middot; Identify &middot; Protect", and ends in a gradient line drawn with the <code>::after</code> pseudo-element.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#site-header">Header on the home page</a>,
+            <a href="explore3.html#d-alatus">headings and text on the Species page</a>,
+            <a href="index.html">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css3_fonts.asp">W3Schools: CSS Web Fonts</a>,
+            <a href="https://www.w3schools.com/css/css3_gradients.asp">W3Schools: CSS Gradients</a>,
+            <a href="https://fonts.google.com/">Google Fonts</a>
         </dd>
       </dl>
     </section>
@@ -538,6 +559,10 @@
           <tr>
             <th scope="row"><a href="#enh-compare">Family Comparison Chart</a></th>
             <td>Explore page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-brand">Custom Fonts and Branded Header</a></th>
+            <td>Header and text on every page</td>
           </tr>
         </tbody>
       </table>
