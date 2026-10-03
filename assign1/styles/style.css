@@ -157,11 +157,46 @@ body {
 /* Tagline under the name */
 .logo-tagline {
   display: block;
-  margin-top: 0.25em;
-  font: 600 0.36em "Source Sans 3", Arial, sans-serif;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  margin-top: 0.3em;
+  font: italic 400 0.45em Lora, Georgia, serif;
+  letter-spacing: 0.04em;
   color: #123D2E;
+}
+
+/* Status badge with a glowing dot */
+.status-badge {
+  display: inline-block;
+  margin-left: 0.7em;
+  padding: 0.3em 0.8em;
+  font: 600 0.34em "Source Sans 3", Arial, sans-serif;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+  color: #123D2E;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.status-badge::before {
+  content: "";
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.5em;
+  vertical-align: 0.05em;
+  background-color: #2FB67C;
+  border-radius: 50%;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(47, 182, 124, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(47, 182, 124, 0);
+  }
 }
 
 #logo a {
@@ -2098,6 +2133,7 @@ fieldset {
   fieldset,
   .pulse-button,
   #site-logo,
+  .status-badge::before,
   #logo-link:hover #site-logo {
     animation: none;
   }
@@ -2136,8 +2172,11 @@ fieldset {
     padding: 0.55em 4%;
   }
 
-  .logo-tagline {
-    letter-spacing: 0.15em;
+  /* Badge drops below the name */
+  .status-badge {
+    display: table;
+    margin: 0.4em 0 0;
+    font-size: 0.45em;
   }
 
   .site-search {
