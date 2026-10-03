@@ -102,17 +102,14 @@
     <aside>
       <h2>Built for Every Visitor</h2>
       <p>
-        Each enhancement makes Pl@netMatrix easier or more enjoyable to use: photos can be viewed up
-        close, forms give instant feedback, and every page fits comfortably on a phone screen.
+        Each of these extras makes Pl@netMatrix easier or more pleasant to use. You can look at photos up close, the forms tell you straight away if something's missing, and every page fits comfortably on a phone.
       </p>
     </aside>
 
     <section id="enhancements-intro">
       <h2>Overview</h2>
       <p>
-        This page lists every enhancement added to Pl@netMatrix beyond the basic requirements. For each
-        one it explains what the enhancement is, where it is applied (with links to see it working) and
-        the references used to learn it. The first four are the main enhancements submitted for marking.
+        Here you'll find every extra feature added to Pl@netMatrix beyond the basic requirements. For each one, you can read what it is, see where it's used (with links so you can try it yourself) and find the tutorials I learned it from. The first four are the main enhancements submitted for marking.
       </p>
       <ol>
         <li><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></li>
@@ -143,7 +140,7 @@
       <h2>1. Fluid Layout with Hamburger Menu</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page uses relative widths, flexible boxes and media queries, so the layout stretches or shrinks to fit any screen. The six main pages sit in the menu bar, and the &#9776; button on the left of the logo opens a side menu that slides in from the left with every page on the site. It uses a hidden checkbox, the <code>:checked</code> selector and a CSS <code>transform</code> transition.</dd>
+        <dd>Every page is built with relative widths, flexible boxes and media queries, so the layout stretches or shrinks to suit any screen. The six main pages sit in the menu bar. The &#9776; button to the left of the logo opens a side menu that slides in from the left and lists every page on the site. It works with a hidden checkbox, the <code>:checked</code> selector and a CSS <code>transform</code> transition.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#main-nav">Menu on every page</a>,
@@ -161,7 +158,7 @@
       <h2>2. Fixed Navigation Bar</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>The menu bar stays pinned to the top of the screen while you scroll, so every page is always one click away, even halfway down the long Species page. It uses <code>position: sticky</code>, and <code>scroll-padding-top</code> stops headings from hiding under the bar when you jump to a section.</dd>
+        <dd>The menu bar stays at the top of the screen as you scroll, so every page is always just one click away, even halfway down the long Species page. It uses <code>position: sticky</code>, and <code>scroll-padding-top</code> makes sure headings don't hide under the bar when you jump to a section.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="explore3.html">Species page</a>,
@@ -179,7 +176,7 @@
       <h2>3. Photo Gallery with Lightbox</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>The Explore page has a photo gallery, and every family, genus and species has its own gallery of pictures. Selecting a photo opens it full-screen over a dark background with its caption and a Close button. The viewer uses the <code>:target</code> selector and fixed positioning.</dd>
+        <dd>The Explore page has a photo gallery, and every family, genus and species has its own set of pictures too. Click a photo and it opens full-screen over a dark background, with its caption and a Close button. The viewer is built with the <code>:target</code> selector and fixed positioning.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="explore.html#photo-gallery">Explore page gallery</a>,
@@ -199,7 +196,7 @@
       <h2>4. Flip Cards</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Flip cards show a plant photo on the front: four on the home page and a gallery of all eight species on the Explore page. Pointing at a card, or reaching its link with the keyboard, turns it over in 3D to reveal a fun fact and a link to that plant's page. It uses <code>perspective</code>, <code>transform: rotateY()</code> and <code>backface-visibility</code>.</dd>
+        <dd>Flip cards show a plant photo on the front. There are four on the home page and one for each of the eight species on the Explore page. Move your mouse over a card, or reach its link with the keyboard, and it turns over in 3D to reveal a fun fact and a link to that plant. It uses <code>perspective</code>, <code>transform: rotateY()</code> and <code>backface-visibility</code>.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#flip-cards">"Meet the Plants" on the home page</a>,
@@ -216,7 +213,7 @@
       <h2>5. Page Rating</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Visitors can give the Explore page a rating from one to five stars. The stars are radio buttons styled with CSS: hovering lights up every star up to the one under the pointer, and the chosen rating stays highlighted. The rating is sent with the form like any other answer.</dd>
+        <dd>Visitors can rate the Explore page from one to five stars. The stars are radio buttons styled with CSS. As you move the mouse along, every star up to the one you're pointing at lights up, and your choice stays highlighted. The rating is then sent just like any other form answer.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="explore.html#rate-page">Explore page</a>
@@ -232,7 +229,7 @@
       <h2>6. Picture Hover Effect</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Pictures react when you point at them. The main images grow slightly and cast a deeper shadow, and gallery thumbnails zoom in, inviting visitors to click. It uses <code>transform: scale()</code> with a smooth <code>transition</code>.</dd>
+        <dd>Pictures respond when you point at them. The main images grow a little and cast a deeper shadow, and gallery thumbnails zoom in, inviting you to click. It uses <code>transform: scale()</code> with a smooth <code>transition</code>.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="explore.html#family-tree">family tree on the Explore page</a>,
@@ -250,7 +247,7 @@
       <h2>7. Button and Link Hover Effects</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>All buttons, such as "Start exploring", "Identify" and "Submit", change colour, lift up slightly and gain a shadow when you point at them, so it is clear they can be clicked. Links inside the text are bold with a thick mint underline, light up when you point at them, and links that open another page end with an arrow that nudges forward. The arrow is added with the <code>::after</code> pseudo-element and attribute selectors such as <code>a[href$=".html"]</code>, so same-page links do not get one.</dd>
+        <dd>Every button, such as "Start exploring", "Identify" and "Submit", changes colour, lifts slightly and gains a shadow when you point at it, so it's obvious you can click it. Links in the text are bold with a thick mint underline and light up when you point at them. Links that take you to another page also end with an arrow that nudges forward. The arrow comes from the <code>::after</code> pseudo-element and attribute selectors such as <code>a[href$=".html"]</code>, so links within the same page don't get one.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#features">Home page buttons</a>,
@@ -269,7 +266,7 @@
       <h2>8. Back to Top Button</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>A round &#8593; button stays in the bottom-right corner of every page. Selecting it glides smoothly back to the top instead of jumping, which is especially useful on the long Explorer pages. It uses fixed positioning and <code>scroll-behavior: smooth</code>.</dd>
+        <dd>A round &#8593; button sits in the bottom-right corner of every page. Click it and the page glides smoothly back to the top instead of jumping, which is especially handy on the long Explorer pages. It uses fixed positioning and <code>scroll-behavior: smooth</code>.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="explore3.html">Species page</a>,
@@ -286,7 +283,7 @@
       <h2>9. Google Map</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>The Identify page embeds a Google Map showing the region where the example plant grows. The map fills the width of the page and fits phone screens.</dd>
+        <dd>The Identify page includes a Google Map showing where the example plant grows. The map stretches to the width of the page and fits neatly on a phone.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="identify.html#location-map">Identify page</a>
@@ -302,7 +299,7 @@
       <h2>10. Music and Audio</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>The profile page has a player with a short forest soundscape of running water, wind and birdsong, made for this website. It uses the HTML5 <code>&lt;audio&gt;</code> element with controls and looping.</dd>
+        <dd>The profile page has a small player with a forest soundscape of running water, wind and birdsong, made especially for this website. It uses the HTML5 <code>&lt;audio&gt;</code> element with controls and looping.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="profile.html#profile-audio">Profile page</a>
@@ -317,7 +314,7 @@
       <h2>11. CSS Animations</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>On the home page banner the heading rises in word by word and the line "Help us ___ Malaysia's plants" keeps swapping between explore, identify, record and protect. Elsewhere, headings, cards and form sections fade up when a page opens, a soft halo breathes around the logo, the tree logo sways like a tree in the wind when you point at it, and the Identify button gently pulses. Visitors who prefer less motion have the animations switched off automatically.</dd>
+        <dd>On the home page banner, the heading rises in one word at a time, and the line "Help us ___ Malaysia's plants" keeps changing between explore, identify, record and protect. Around the rest of the site, headings, cards and form sections fade up gently as a page opens, a soft halo glows around the logo, the tree logo sways like a tree in the wind when you point at it, and the Identify button gently pulses. For anyone who prefers less movement on screen, the animations switch off automatically.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#hero">animated banner words</a>,
@@ -335,7 +332,7 @@
       <h2>12. Expandable Care Tips and Quiz Answers</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>On the Identify page, the care tips for a result are hidden inside a box that opens and closes with a single click, keeping the result short and tidy. It uses the HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</dd>
+        <dd>On the Identify page, the care tips sit inside a box that opens and closes with one click, so the result stays short and tidy. The quiz answers on the Explore page work the same way. Both use the HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="identify.html#result">Identify page</a>,
@@ -351,7 +348,7 @@
       <h2>13. Live Form Feedback</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>While visitors fill in the forms, each field's border turns red if the entry is not valid yet and green once it is correct, and the section being filled in lights up. It uses the <code>:valid</code>, <code>:invalid</code> and <code>:focus-within</code> selectors.</dd>
+        <dd>As you fill in a form, each field's border turns red while the entry isn't right yet and green once it is, and the section you're working on lights up. It uses the <code>:valid</code>, <code>:invalid</code> and <code>:focus-within</code> selectors.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="contribute.html#contribute-form">Contribution form</a>,
@@ -369,7 +366,7 @@
       <h2>14. Site-Map Footer</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page ends with a footer that works as a site map: the logo and mission, five columns of links to every section of the website, and a bottom bar with contact details, credits and a Back to top link. The columns rearrange themselves to fit the screen with CSS grid, a wavy leaf-edge border is drawn along the top with a <code>radial-gradient</code>, and each link grows an animated underline from the centre when you point at it.</dd>
+        <dd>Every page ends with a footer that doubles as a site map. It has our mission line, five columns of links to every part of the website, and a bottom bar with contact details, credits and a Back to top link. CSS grid lets the columns rearrange themselves to fit the screen, a wavy leaf-edge border along the top is drawn with a <code>radial-gradient</code>, and each link grows an animated underline from the centre when you point at it.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#site-footer">Home page footer</a>,
@@ -387,7 +384,7 @@
       <h2>15. Site Search with Suggestions</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page has a search box in the header. As visitors type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element linked to the search box. The search sits in a white rounded box with a mint <strong>Search</strong> button inside it. When you click into it, the box grows wider and gets a mint glow ring, using the <code>:focus-within</code> selector and a <code>transition</code>. The magnifier is drawn with CSS pseudo-elements.</dd>
+        <dd>Every page has a search box in the header. As you type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element. The search sits in a white rounded box with a mint <strong>Search</strong> button inside. Click into it and the box widens and glows mint, thanks to the <code>:focus-within</code> selector and a <code>transition</code>. Even the magnifier is drawn with CSS pseudo-elements.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#site-header">Header on the home page</a>,
@@ -406,7 +403,7 @@
       <h2>16. Phone-Friendly Pages</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a media query moves the search box under the logo, slims the menu bar, stacks the quick facts and side notes into one column, and turns the link map into an indented list. Wide tables can be swiped sideways and say so in their caption, the Back to top button gets smaller, and form buttons stretch to be easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones show the right keyboard or a date picker.</dd>
+        <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a media query moves the search box below the logo, slims down the menu bar, stacks the quick facts and side notes into one column, and turns the link map into a simple indented list. Wide tables can be swiped sideways, and their caption tells you so. The Back to top button gets smaller, and form buttons stretch out so they're easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones bring up the right keyboard or a date picker.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="enquiry.html#enquiry-form">Enquiry form (phone keypad for the phone number)</a>,
@@ -426,7 +423,7 @@
       <h2>17. Link Map Diagram</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>The Explore page draws a tree diagram linking both families to their genera and species. It is a plain nested list: the connecting lines are drawn with the <code>::before</code> and <code>::after</code> pseudo-elements, and each box is a link to that plant's section. On phones it turns into an indented list.</dd>
+        <dd>The Explore page draws a tree diagram linking both families to their genera and species. Behind the scenes it's just a nested list. The connecting lines are drawn with the <code>::before</code> and <code>::after</code> pseudo-elements, and each box links to that plant's section. On a phone it becomes a simple indented list.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="explore.html#link-map">Explore page</a>
@@ -443,7 +440,7 @@
       <h2>18. Family Comparison Chart</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>A side-by-side chart compares the two families' fruit, leaves, smell, size, seeds, range and uses. Each family has its own colour bar, every second row is shaded with <code>:nth-child(even)</code>, and the row under the pointer lights up so it is easy to read across.</dd>
+        <dd>A side-by-side chart compares the two families: their fruit, leaves, smell, size, seeds, range and uses. Each family has its own colour bar, every second row is shaded using <code>:nth-child(even)</code>, and the row you're pointing at lights up so it's easy to read across.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="explore.html#compare">Explore page</a>
@@ -460,7 +457,7 @@
       <h2>19. Custom Fonts and Branded Header</h2>
       <dl>
         <dt>What it is</dt>
-        <dd>The website uses three free Google Fonts saved inside the site and loaded with <code>@font-face</code>, so they work even without internet: Playfair Display for the site name and page titles, Lora for the other headings and Source Sans 3 for the text. Each has a fallback, such as Georgia or Arial. The header fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image), shows the name in two colours with a mint "@", a "Family &middot; Genera &middot; Species" pill that links to the Explorer, and the slogan "Know it. Name it. Save it.", and ends in a gradient line drawn with the <code>::after</code> pseudo-element.</dd>
+        <dd>The website uses three free Google Fonts, saved inside the site and loaded with <code>@font-face</code> so they work even without an internet connection. Playfair Display is used for the site name and page titles, Lora for the other headings and Source Sans 3 for the main text. Each one has a backup, such as Georgia or Arial, just in case. The header fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image). It shows the name in two colours with a mint "@", a "Family &middot; Genera &middot; Species" pill that links to the Explorer, and the slogan "Know it. Name it. Save it." A gradient line, drawn with the <code>::after</code> pseudo-element, finishes it off along the bottom.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#site-header">Header on the home page</a>,
