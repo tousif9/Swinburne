@@ -9,6 +9,63 @@
                #123D2E deep teal, #1F6E56 dark green
 */
 
+/* Fonts (Google Fonts, saved in styles/fonts) */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/playfair-display-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/lora-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 600;
+  src: url("fonts/lora-latin-600-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/lora-latin-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/source-sans-3-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/source-sans-3-latin-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/source-sans-3-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/source-sans-3-latin-700-normal.woff2") format("woff2");
+}
+
 /* Base */
 html {
   font-size: 100%;
@@ -22,7 +79,8 @@ body {
   margin: 0;
   padding: 0;
   color: #222222;
-  font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+  font-family: "Source Sans 3", "Trebuchet MS", Arial, sans-serif;
+  font-size: 1.05em;
   line-height: 1.6;
   /* Leaf background, colour as fallback */
   background: #D8F7E3 url("images/leaf-bg.png") repeat;
@@ -40,6 +98,18 @@ body {
     linear-gradient(90deg, #5BCBA7 30%, #23807F);
   background-color: #5BCBA7;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+/* Gradient bottom edge */
+#site-header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #D8F7E3, #5BCBA7 40%, #123D2E);
 }
 
 /* Oval logo */
@@ -54,11 +124,44 @@ body {
   border: 2px solid #123D2E;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Logo halo breathes in and out */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(216, 247, 227, 0.2), 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(216, 247, 227, 0.55), 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
 }
 
 #logo {
   margin: 0;
-  font: bold 1.8em Georgia, "Times New Roman", serif;
+  font: bold 1.9em/1.1 "Playfair Display", Georgia, serif;
+}
+
+/* Two-tone name with a mint @ */
+.logo-matrix {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(18, 61, 46, 0.6);
+}
+
+.logo-at {
+  color: #D8F7E3;
+  text-shadow: 0 1px 3px rgba(18, 61, 46, 0.6);
+}
+
+/* Tagline under the name */
+.logo-tagline {
+  display: block;
+  margin-top: 0.25em;
+  font: 600 0.36em "Source Sans 3", Arial, sans-serif;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #123D2E;
 }
 
 #logo a {
@@ -175,85 +278,83 @@ body {
   box-shadow: inset 4px 0 0 #123D2E;
 }
 
-/* Site search: white pill, icon left, arrow right */
+/* Site search: white pill, icon left, button right */
 .site-search {
   position: relative;
   display: flex;
+  align-items: center;
   box-sizing: border-box;
   margin-left: auto;
   width: 30%;
-  max-width: 330px;
+  max-width: 340px;
+  padding: 0.25em;
   background-color: #ffffff;
-  border-radius: 22px;
+  border-radius: 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease, max-width 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Grows and glows mint while typing */
+.site-search:focus-within {
+  width: 36%;
+  max-width: 420px;
+  box-shadow: 0 0 0 3px #5BCBA7, 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .site-search input[type="search"] {
   flex: 1;
   width: auto;
   min-width: 0;
-  padding: 0.6em 2em 0.6em 0;
+  padding: 0.4em 0.5em 0.4em 2.2em;
   background: transparent;
   border: 0;
-  border-radius: 0 22px 22px 0;
 }
 
 .site-search input[type="search"]:focus {
   outline: none;
 }
 
-.site-search:focus-within {
-  box-shadow: 0 0 0 3px #123D2E;
-}
-
-/* Drop-down arrow for the suggestions */
-.site-search::after {
-  content: "\25BE";
-  position: absolute;
-  top: 50%;
-  right: 0.9em;
-  color: #555555;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
 /* Magnifier drawn with CSS */
-.site-search button {
-  order: -1;
-  position: relative;
-  width: 2.6em;
-  background: transparent;
-  border: 0;
-  border-radius: 22px 0 0 22px;
-  cursor: pointer;
-}
-
-.site-search button::before {
+.site-search::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0.9em;
-  width: 0.65em;
-  height: 0.65em;
+  left: 0.95em;
+  width: 0.6em;
+  height: 0.6em;
   border: 2px solid #3A4A45;
   border-radius: 50%;
   transform: translateY(-65%);
+  pointer-events: none;
 }
 
-.site-search button::after {
+.site-search::after {
   content: "";
   position: absolute;
-  top: 58%;
+  top: 57%;
   left: 1.55em;
-  width: 0.45em;
+  width: 0.42em;
   height: 2px;
   background-color: #3A4A45;
   transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* Mint Search button inside the box */
+.site-search button {
+  padding: 0.45em 1.1em;
+  font: bold 0.95em "Source Sans 3", Arial, sans-serif;
+  color: #123D2E;
+  background-color: #5BCBA7;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
 .site-search button:hover,
 .site-search button:focus {
-  background-color: #D8F7E3;
+  background-color: #A3D9A5;
 }
 
 /* Menu bar */
@@ -263,7 +364,6 @@ body {
   top: 0;
   z-index: 50;
   background-color: #A3D9A5;
-  border-top: 3px solid #123D2E;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
@@ -345,14 +445,15 @@ main::after {
 /* Typography */
 h1 {
   /* Font shorthand */
-  font: bold 2.4em/1.2 Georgia, "Times New Roman", serif;
+  font: bold 2.4em/1.2 "Playfair Display", Georgia, serif;
   color: #123D2E;
   margin: 0 0 0.5em;
 }
 
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Lora, Georgia, serif;
+  font-weight: 600;
   color: #1F6E56;
 }
 
@@ -778,7 +879,7 @@ textarea:focus:valid {
 input[type="submit"],
 input[type="reset"] {
   padding: 0.6em 1.4em;
-  font: bold 1em "Trebuchet MS", Verdana, Arial, sans-serif;
+  font: bold 1em "Source Sans 3", "Trebuchet MS", Arial, sans-serif;
   color: #123D2E;
   background-color: #5BCBA7;
   border: 0;
@@ -1200,7 +1301,7 @@ code {
 /* Changing word */
 .hero-rotator {
   margin: 0 0 0.8em;
-  font: bold 1.5em Georgia, "Times New Roman", serif;
+  font: bold 1.5em "Playfair Display", Georgia, serif;
 }
 
 .rotator-words {
@@ -1306,7 +1407,7 @@ code {
 }
 
 .compare-table thead a {
-  font: bold 1.2em Georgia, "Times New Roman", serif;
+  font: 600 1.2em Lora, Georgia, serif;
   color: #123D2E;
 }
 
@@ -1630,7 +1731,7 @@ main a.quick-link:focus {
 
 .quick-title {
   margin: 0.2em 0;
-  font: bold 1.5em Georgia, "Times New Roman", serif;
+  font: bold 1.5em "Playfair Display", Georgia, serif;
 }
 
 .quick-link .quick-go {
@@ -1996,6 +2097,7 @@ fieldset {
   .result-card,
   fieldset,
   .pulse-button,
+  #site-logo,
   #logo-link:hover #site-logo {
     animation: none;
   }
@@ -2030,12 +2132,23 @@ fieldset {
   /* Search on its own row */
   #site-header {
     flex-wrap: wrap;
+    gap: 0.6em;
+    padding: 0.55em 4%;
+  }
+
+  .logo-tagline {
+    letter-spacing: 0.15em;
   }
 
   .site-search {
     width: 100%;
     max-width: none;
     margin-left: 0;
+  }
+
+  .site-search:focus-within {
+    width: 100%;
+    max-width: none;
   }
 
   /* Smaller menu links */
