@@ -627,6 +627,19 @@ figcaption {
   color: #555555;
 }
 
+/* Banner credit sits under the banner */
+.hero-credit {
+  margin: 0.3em 0 1em;
+  text-align: right;
+}
+
+/* Credit under a gallery */
+.gallery + .source,
+.flip-grid + .source,
+.quiz-grid + .source {
+  margin-top: 0.4em;
+}
+
 /* Cards */
 .card-grid {
   display: flex;
