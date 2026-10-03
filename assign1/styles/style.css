@@ -1034,6 +1034,12 @@ details[open] summary {
   text-align: center;
 }
 
+#profile-tagline {
+  margin: 0.2em 0;
+  font-style: italic;
+  color: #444444;
+}
+
 #student-id {
   margin: 0.2em 0;
   font-family: Arial, sans-serif;
