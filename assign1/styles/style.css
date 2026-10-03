@@ -163,40 +163,26 @@ body {
   color: #123D2E;
 }
 
-/* Status badge with a glowing dot */
-.status-badge {
+/* Stats pill linking to the Explorer */
+#logo a.stats-pill {
   display: inline-block;
   margin-left: 0.7em;
   padding: 0.3em 0.8em;
   font: 600 0.34em "Source Sans 3", Arial, sans-serif;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   vertical-align: middle;
   color: #123D2E;
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-.status-badge::before {
-  content: "";
-  display: inline-block;
-  width: 0.7em;
-  height: 0.7em;
-  margin-right: 0.5em;
-  vertical-align: 0.05em;
-  background-color: #2FB67C;
-  border-radius: 50%;
-  animation: blink 2s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(47, 182, 124, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 5px rgba(47, 182, 124, 0);
-  }
+#logo a.stats-pill:hover,
+#logo a.stats-pill:focus {
+  background-color: #D8F7E3;
+  transform: translateY(-2px);
 }
 
 #logo a {
@@ -2133,7 +2119,6 @@ fieldset {
   fieldset,
   .pulse-button,
   #site-logo,
-  .status-badge::before,
   #logo-link:hover #site-logo {
     animation: none;
   }
@@ -2173,7 +2158,7 @@ fieldset {
   }
 
   /* Badge drops below the name */
-  .status-badge {
+  #logo a.stats-pill {
     display: table;
     margin: 0.4em 0 0;
     font-size: 0.45em;
