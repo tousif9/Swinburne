@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  File:        profile.html
-  Author:      Tousif Akhand
-  Student ID:  105822937
-  Created:     24 September 2026
-  Description: Author profile.
--->
+<!-- ========================================================== -->
+<!--                        profile.html                        -->
+<!--                       Author profile                       -->
+<!--                                                            -->
+<!--     Written by Tousif Akhand  ·  Student ID 105822937      -->
+<!--                Started on 24 September 2026                -->
+<!-- ========================================================== -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,14 +19,15 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!--           Top of the page: logo, name and search           -->
   <header id="site-header">
-    <!-- Side menu -->
+    <!--            Side menu, opened with the ☰ button             -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
       <label for="menu-toggle" class="menu-close">&times; Close</label>
       <p class="side-title">All pages</p>
+
       <ul>
         <li><a href="explore.html">Explorer</a></li>
         <li class="side-sub"><a href="explore1.html">Families</a></li>
@@ -44,7 +46,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><a href="explore.html" class="stats-pill">&#127793; Family &middot; Genera &middot; Species</a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
 
-    <!-- Search -->
+    <!--             Search box with plant suggestions              -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
@@ -71,11 +73,12 @@
         <option value="Contribution form"></option>
         <option value="Enquiry form"></option>
       </datalist>
+
       <button type="submit">Search</button>
     </form>
   </header>
 
-  <!-- Main menu -->
+  <!--                       Main menu bar                        -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -97,21 +100,27 @@
   <main id="profile-page">
     <h1>About Me</h1>
 
-    <!-- Student details -->
+    <!--                         My details                         -->
     <section id="profile-intro">
       <h2 class="visually-hidden">Student details</h2>
+
       <div class="photo-holder">
         <img src="images/profile.png" alt="Photo of Tousif Akhand" id="profile-photo">
       </div>
+
       <p id="profile-name">Tousif Akhand</p>
+
       <p id="profile-tagline">Bangladeshi &middot; Bachelor of ICT student at Swinburne University of Technology Sarawak</p>
+
       <p id="student-id">Student number: 105822937</p>
+
       <p id="course">Course: BA - ICT</p>
     </section>
 
-    <!-- Short introduction -->
+    <!--                     A little about me                      -->
     <section id="profile-about">
       <h2>Hello There!</h2>
+
       <p>
         Hi, I'm Tousif, an ICT student from Dhaka, now studying in Kuching. I'm building my skills in
         data science, web development and object-oriented programming, and I enjoy turning coursework
@@ -119,9 +128,10 @@
       </p>
     </section>
 
-    <!-- Profile table -->
+    <!--                       More about me                        -->
     <section id="profile-details">
       <h2>My Profile</h2>
+
       <table class="profile-table">
         <caption>A little more about me</caption>
         <thead>
@@ -192,24 +202,26 @@
       </table>
     </section>
 
-    <!-- Audio player -->
+    <!--                    Sounds of the forest                    -->
     <section id="profile-audio">
       <h2>Sounds of the Forest</h2>
+
       <p>
         Living in Kuching means waking up to birdsong. Press play to hear a short forest soundscape of
         running water, wind and birds, made especially for this website.
       </p>
+
       <audio controls loop preload="none">
         <source src="audio/forest-sounds.wav" type="audio/wav">
         Your browser does not support the audio player.
       </audio>
     </section>
 
-    <!-- Email button -->
+    <!--                      Send me an email                      -->
     <p class="email-me"><a href="mailto:105822937@students.swinburne.edu.my" class="button">Email Me</a></p>
   </main>
 
-  <!-- Footer -->
+  <!--                  Footer with quick links                   -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -218,6 +230,7 @@
     <nav class="footer-columns" aria-label="Footer site map">
       <section class="footer-col">
         <h2>Explore</h2>
+
         <ul>
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -225,8 +238,10 @@
           <li><a href="explore.html">Explorer home</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Identify</h2>
+
         <ul>
           <li><a href="identify.html#upload">Upload a photo</a></li>
           <li><a href="identify.html#search">Search plants</a></li>
@@ -234,24 +249,30 @@
           <li><a href="identify.html#location-map">Where it grows</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Contribute</h2>
+
         <ul>
           <li><a href="contribute.html">Contribution form</a></li>
           <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
           <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Help</h2>
+
         <ul>
           <li><a href="enquiry.html">Enquiry form</a></li>
           <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
           <li><a href="identify.html#photo-tips">Photo tips</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>About</h2>
+
         <ul>
           <li><a href="profile.html">Profile</a></li>
           <li><a href="enhancement1.html">Enhancements</a></li>
@@ -267,7 +288,8 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top -->
+
+  <!--             Button that jumps back to the top              -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

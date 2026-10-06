@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  File:        identify.html
-  Author:      Tousif Akhand
-  Student ID:  105822937
-  Created:     24 September 2026
-  Description: Identify a plant by photo or name.
--->
+<!-- ========================================================== -->
+<!--                       identify.html                        -->
+<!--             Identify a plant by photo or name              -->
+<!--                                                            -->
+<!--     Written by Tousif Akhand  ·  Student ID 105822937      -->
+<!--                Started on 24 September 2026                -->
+<!-- ========================================================== -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,14 +19,15 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!--           Top of the page: logo, name and search           -->
   <header id="site-header">
-    <!-- Side menu -->
+    <!--            Side menu, opened with the ☰ button             -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
       <label for="menu-toggle" class="menu-close">&times; Close</label>
       <p class="side-title">All pages</p>
+
       <ul>
         <li><a href="explore.html">Explorer</a></li>
         <li class="side-sub"><a href="explore1.html">Families</a></li>
@@ -44,7 +46,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><a href="explore.html" class="stats-pill">&#127793; Family &middot; Genera &middot; Species</a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
 
-    <!-- Search -->
+    <!--             Search box with plant suggestions              -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
@@ -71,11 +73,12 @@
         <option value="Contribution form"></option>
         <option value="Enquiry form"></option>
       </datalist>
+
       <button type="submit">Search</button>
     </form>
   </header>
 
-  <!-- Main menu -->
+  <!--                       Main menu bar                        -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -97,9 +100,10 @@
   <main>
     <h1>Identify a Plant</h1>
 
-    <!-- Side note -->
+    <!--                     A short side note                      -->
     <aside>
       <h2>Tips for a Good Photo</h2>
+
       <ul>
         <li>Photograph one leaf, flower or fruit at a time, and keep it in sharp focus.</li>
         <li>Use natural daylight and try to avoid strong shadows.</li>
@@ -108,12 +112,14 @@
       </ul>
     </aside>
 
-    <!-- Upload a photo to identify -->
+    <!--           Upload a photo to find out what it is            -->
     <section id="upload">
       <h2>Upload a Photo</h2>
+
       <p>
         Our identification tool compares your photo with thousands of records of Endangered, Rare and Threatened (ERT) plants. Just choose a clear photo and press <strong>Identify</strong> to see the closest match.
       </p>
+
       <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" enctype="multipart/form-data" class="tool-form">
         <fieldset>
           <legend>Plant photo</legend>
@@ -124,31 +130,41 @@
       </form>
     </section>
 
-    <!-- Examples of good photos -->
+    <!--                What a good photo looks like                -->
     <section id="photo-tips">
       <h2>Examples of Good Photos</h2>
+
       <p>Clear photos like these give the tool the best chance of getting it right.</p>
+
       <div class="gallery example-gallery">
         <figure>
           <img src="images/gen-crypto-5.jpg" alt="Hand holding a leaf to show its pale underside and fine veins" loading="lazy">
+
           <figcaption><strong>Leaf underside:</strong> hold the leaf flat so the veins come out sharp.</figcaption>
         </figure>
+
         <figure>
           <img src="images/sp-alatus-6.jpg" alt="Single dried winged fruit on a plain blue background" loading="lazy">
+
           <figcaption><strong>Fruit:</strong> a plain background makes the shape easy to see.</figcaption>
         </figure>
+
         <figure>
           <img src="images/sp-adeno-5.jpg" alt="Sharp close-up of an open flower beside its buds" loading="lazy">
+
           <figcaption><strong>Flower:</strong> get in close and keep the flower in focus.</figcaption>
         </figure>
       </div>
+
       <p class="source">Photos: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
     </section>
 
-    <!-- Search by name -->
+    <!--                 Or look a plant up by name                 -->
     <section id="search">
       <h2>Search for Plant Information</h2>
+
       <p>Already know part of the name? You can search by scientific name, common name, genus or family.</p>
+
       <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="search-form">
         <label for="plantSearch">Plant name</label>
         <input type="search" id="plantSearch" name="plantSearch" placeholder="e.g. Dipterocarpus alatus" maxlength="40" required>
@@ -156,9 +172,10 @@
       </form>
     </section>
 
-    <!-- How identification works -->
+    <!--               How identifying a plant works                -->
     <section id="how-it-works">
       <h2>How Identification Works</h2>
+
       <ol>
         <li>You upload a photo of a leaf, flower or fruit.</li>
         <li>The tool looks at features such as leaf shape, vein pattern and colour.</li>
@@ -170,18 +187,21 @@
 
     <hr>
 
-    <!-- Example result -->
+    <!--                  What a result looks like                  -->
     <section id="result">
       <h2>Example Result</h2>
+
       <p>Here's what you'll see after you upload a photo.</p>
 
       <figure class="result-figure">
         <img src="images/sp-alatus-3.jpg" alt="Uploaded photo of star-shaped flowers, some fresh green and some faded pink-brown">
+
         <figcaption>Example photo: flowers photographed by a visitor.<span class="source">Photo: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span></figcaption>
       </figure>
 
       <article class="result-card">
         <h3>Best match: <em>Dipterocarpus alatus</em></h3>
+
         <dl>
           <dt>Scientific name</dt>
           <dd><em>Dipterocarpus alatus</em> (family Dipterocarpaceae)</dd>
@@ -193,9 +213,10 @@
           <dd>Vulnerable</dd>
         </dl>
 
-        <!-- Care tips -->
+        <!--                  Looking after the plant                   -->
         <details>
           <summary>Care tips and the right environment</summary>
+
           <ul>
             <li><strong>Water:</strong> copes with flooding, but not with strong wind or fire.</li>
             <li><strong>Soil:</strong> moist, well-drained soil.</li>
@@ -238,32 +259,37 @@
       </table>
     </section>
 
-    <!-- Map -->
+    <!--                  Where these plants grow                   -->
     <section id="location-map">
       <h2>Where It Grows</h2>
+
       <p>This map shows South and Southeast Asia, where <em>Dipterocarpus alatus</em> grows naturally.</p>
+
       <div class="map-frame">
         <iframe src="https://maps.google.com/maps?q=Myanmar&amp;z=4&amp;output=embed" title="Map of South and Southeast Asia" loading="lazy"></iframe>
       </div>
+
       <p class="source">Map: <a href="https://www.google.com/maps">Google Maps</a></p>
     </section>
 
-    <!-- Useful terms -->
+    <!--                     A few useful words                     -->
     <section id="identify-terms">
       <h2>Useful Terms</h2>
+
       <dl>
         <dt>Confidence score</dt>
         <dd>How closely your photo matches our records, shown as a percentage.</dd>
         <dt>Taxonomist</dt>
         <dd>A scientist who names living things and sorts them into groups.</dd>
       </dl>
+
       <p>
         Would you like to share your photo with other plant spotters? Head to the <a href="contribute.html">contribution form</a>, or browse the <a href="explore.html">Plant Explorer</a>.
       </p>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!--                  Footer with quick links                   -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -272,6 +298,7 @@
     <nav class="footer-columns" aria-label="Footer site map">
       <section class="footer-col">
         <h2>Explore</h2>
+
         <ul>
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -279,8 +306,10 @@
           <li><a href="explore.html">Explorer home</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Identify</h2>
+
         <ul>
           <li><a href="identify.html#upload">Upload a photo</a></li>
           <li><a href="identify.html#search">Search plants</a></li>
@@ -288,24 +317,30 @@
           <li><a href="identify.html#location-map">Where it grows</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Contribute</h2>
+
         <ul>
           <li><a href="contribute.html">Contribution form</a></li>
           <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
           <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Help</h2>
+
         <ul>
           <li><a href="enquiry.html">Enquiry form</a></li>
           <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
           <li><a href="identify.html#photo-tips">Photo tips</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>About</h2>
+
         <ul>
           <li><a href="profile.html">Profile</a></li>
           <li><a href="enhancement1.html">Enhancements</a></li>
@@ -321,7 +356,8 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top -->
+
+  <!--             Button that jumps back to the top              -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

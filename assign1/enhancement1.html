@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  File:        enhancement1.html
-  Author:      Tousif Akhand
-  Student ID:  105822937
-  Created:     24 September 2026
-  Description: List of website enhancements.
--->
+<!-- ========================================================== -->
+<!--                     enhancement1.html                      -->
+<!--                List of website enhancements                -->
+<!--                                                            -->
+<!--     Written by Tousif Akhand  ·  Student ID 105822937      -->
+<!--                Started on 24 September 2026                -->
+<!-- ========================================================== -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,14 +19,15 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!--           Top of the page: logo, name and search           -->
   <header id="site-header">
-    <!-- Side menu -->
+    <!--            Side menu, opened with the ☰ button             -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
       <label for="menu-toggle" class="menu-close">&times; Close</label>
       <p class="side-title">All pages</p>
+
       <ul>
         <li><a href="explore.html">Explorer</a></li>
         <li class="side-sub"><a href="explore1.html">Families</a></li>
@@ -44,7 +46,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><a href="explore.html" class="stats-pill">&#127793; Family &middot; Genera &middot; Species</a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
 
-    <!-- Search -->
+    <!--             Search box with plant suggestions              -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
@@ -71,11 +73,12 @@
         <option value="Contribution form"></option>
         <option value="Enquiry form"></option>
       </datalist>
+
       <button type="submit">Search</button>
     </form>
   </header>
 
-  <!-- Main menu -->
+  <!--                       Main menu bar                        -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -97,9 +100,10 @@
   <main>
     <h1>Website Enhancements</h1>
 
-    <!-- Side note -->
+    <!--                     A short side note                      -->
     <aside>
       <h2>Built for Every Visitor</h2>
+
       <p>
         Each of these extras makes Pl@netMatrix easier or more pleasant to use. You can look at photos up close, the forms tell you straight away if something's missing, and every page fits comfortably on a phone.
       </p>
@@ -107,9 +111,11 @@
 
     <section id="enhancements-intro">
       <h2>Overview</h2>
+
       <p>
         Here you'll find every extra feature added to Pl@netMatrix beyond the basic requirements. For each one, you can read what it is, see where it's used (with links so you can try it yourself) and find the tutorials I learned it from. The first four are the main enhancements submitted for marking.
       </p>
+
       <ol>
         <li><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></li>
         <li><a href="#enh-fixed-nav">Fixed Navigation Bar</a></li>
@@ -137,6 +143,7 @@
 
     <section id="enh-fluid" class="enhancement">
       <h2>1. Fluid Layout with Hamburger Menu</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Every page is built with relative widths, flexible boxes and media queries, so the layout stretches or shrinks to suit any screen. The six main pages sit in the menu bar. The &#9776; button to the left of the logo opens a side menu that slides in from the left and lists every page on the site. It works with a hidden checkbox, the <code>:checked</code> selector and a CSS <code>transform</code> transition.</dd>
@@ -153,8 +160,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-fixed-nav" class="enhancement">
       <h2>2. Fixed Navigation Bar</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>The menu bar stays at the top of the screen as you scroll, so every page is always just one click away, even halfway down the long Species page. It uses <code>position: sticky</code>, and <code>scroll-padding-top</code> makes sure headings don't hide under the bar when you jump to a section.</dd>
@@ -171,8 +180,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-gallery" class="enhancement">
       <h2>3. Photo Gallery with Lightbox</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>The Explore page has a photo gallery, and every family, genus and species has its own set of pictures too. Click a photo and it opens full-screen over a dark background, with its caption and a Close button. The viewer is built with the <code>:target</code> selector and fixed positioning.</dd>
@@ -191,8 +202,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-flip" class="enhancement">
       <h2>4. Flip Cards</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Flip cards show a plant photo on the front. There are four on the home page and one for each of the eight species on the Explore page. Move your mouse over a card, or reach its link with the keyboard, and it turns over in 3D to reveal a fun fact and a link to that plant. It uses <code>perspective</code>, <code>transform: rotateY()</code> and <code>backface-visibility</code>.</dd>
@@ -208,8 +221,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-rating" class="enhancement">
       <h2>5. Page Rating</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Visitors can rate the Explore page from one to five stars. The stars are radio buttons styled with CSS. As you move the mouse along, every star up to the one you're pointing at lights up, and your choice stays highlighted. The rating is then sent just like any other form answer.</dd>
@@ -224,8 +239,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-picture-hover" class="enhancement">
       <h2>6. Picture Hover Effect</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Pictures respond when you point at them. The main images grow a little and cast a deeper shadow, and gallery thumbnails zoom in, inviting you to click. It uses <code>transform: scale()</code> with a smooth <code>transition</code>.</dd>
@@ -242,8 +259,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-button-hover" class="enhancement">
       <h2>7. Button and Link Hover Effects</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Every button, such as "Start exploring", "Identify" and "Submit", changes colour, lifts slightly and gains a shadow when you point at it, so it's obvious you can click it. Links in the text are bold with a thick mint underline and light up when you point at them. Links that take you to another page also end with an arrow that nudges forward. The arrow comes from the <code>::after</code> pseudo-element and attribute selectors such as <code>a[href$=".html"]</code>, so links within the same page don't get one.</dd>
@@ -261,8 +280,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-back-to-top" class="enhancement">
       <h2>8. Back to Top Button</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>A round &#8593; button sits in the bottom-right corner of every page. Click it and the page glides smoothly back to the top instead of jumping, which is especially handy on the long Explorer pages. It uses fixed positioning and <code>scroll-behavior: smooth</code>.</dd>
@@ -278,8 +299,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-map" class="enhancement">
       <h2>9. Google Map</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>The Identify page includes a Google Map showing where the example plant grows. The map stretches to the width of the page and fits neatly on a phone.</dd>
@@ -294,8 +317,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-audio" class="enhancement">
       <h2>10. Music and Audio</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>The profile page has a small player with a forest soundscape of running water, wind and birdsong, made especially for this website. It uses the HTML5 <code>&lt;audio&gt;</code> element with controls and looping.</dd>
@@ -309,8 +334,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-animations" class="enhancement">
       <h2>11. CSS Animations</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>On the home page banner, the heading rises in one word at a time, and the line "Help us ___ Malaysia's plants" keeps changing between explore, identify, record and protect. Around the rest of the site, headings, cards and form sections fade up gently as a page opens, a soft halo glows around the logo, the tree logo sways like a tree in the wind when you point at it, and the Identify button gently pulses. For anyone who prefers less movement on screen, the animations switch off automatically.</dd>
@@ -327,8 +354,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-details" class="enhancement">
       <h2>12. Expandable Care Tips and Quiz Answers</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>On the Identify page, the care tips sit inside a box that opens and closes with one click, so the result stays short and tidy. The quiz answers on the Explore page work the same way. Both use the HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</dd>
@@ -343,8 +372,10 @@
         </dd>
       </dl>
     </section>
+
     <section id="enh-form-feedback" class="enhancement">
       <h2>13. Live Form Feedback</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>As you fill in a form, each field's border turns red while the entry isn't right yet and green once it is, and the section you're working on lights up. It uses the <code>:valid</code>, <code>:invalid</code> and <code>:focus-within</code> selectors.</dd>
@@ -363,6 +394,7 @@
 
     <section id="enh-footer" class="enhancement">
       <h2>14. Site-Map Footer</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Every page ends with a footer that doubles as a site map. It has our mission line, five columns of links to every part of the website, and a bottom bar with contact details, credits and a Back to top link. CSS grid lets the columns rearrange themselves to fit the screen, a wavy leaf-edge border along the top is drawn with a <code>radial-gradient</code>, and each link grows an animated underline from the centre when you point at it.</dd>
@@ -381,6 +413,7 @@
 
     <section id="enh-search" class="enhancement">
       <h2>15. Site Search with Suggestions</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Every page has a search box in the header. As you type, it suggests plant names and pages, such as <em>Cryptocarya alba</em> or "Contribution form", using the HTML5 <code>&lt;datalist&gt;</code> element. The search sits in a white rounded box with a mint <strong>Search</strong> button inside. Click into it and the box widens and glows mint, thanks to the <code>:focus-within</code> selector and a <code>transition</code>. Even the magnifier is drawn with CSS pseudo-elements.</dd>
@@ -400,6 +433,7 @@
 
     <section id="enh-phone" class="enhancement">
       <h2>16. Phone-Friendly Pages</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a media query moves the search box below the logo, slims down the menu bar, stacks the quick facts and side notes into one column, and turns the link map into a simple indented list. Wide tables can be swiped sideways, and their caption tells you so. The Back to top button gets smaller, and form buttons stretch out so they're easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones bring up the right keyboard or a date picker.</dd>
@@ -420,6 +454,7 @@
 
     <section id="enh-link-map" class="enhancement">
       <h2>17. Link Map Diagram</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>The Explore page draws a tree diagram linking both families to their genera and species. Behind the scenes it's just a nested list. The connecting lines are drawn with the <code>::before</code> and <code>::after</code> pseudo-elements, and each box links to that plant's section. On a phone it becomes a simple indented list.</dd>
@@ -437,6 +472,7 @@
 
     <section id="enh-compare" class="enhancement">
       <h2>18. Family Comparison Chart</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>A side-by-side chart compares the two families: their fruit, leaves, smell, size, seeds, range and uses. Each family has its own colour bar, every second row is shaded using <code>:nth-child(even)</code>, and the row you're pointing at lights up so it's easy to read across.</dd>
@@ -454,6 +490,7 @@
 
     <section id="enh-brand" class="enhancement">
       <h2>19. Custom Fonts and Branded Header</h2>
+
       <dl>
         <dt>What it is</dt>
         <dd>The website uses three free Google Fonts, saved inside the site and loaded with <code>@font-face</code> so they work even without an internet connection. Playfair Display is used for the site name and page titles, Lora for the other headings and Source Sans 3 for the main text. Each one has a backup, such as Georgia or Arial, just in case. The header fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image). It shows the name in two colours with a mint "@", a "Family &middot; Genera &middot; Species" pill that links to the Explorer, and the slogan "Know it. Name it. Save it." A gradient line, drawn with the <code>::after</code> pseudo-element, finishes it off along the bottom.</dd>
@@ -472,9 +509,10 @@
       </dl>
     </section>
 
-    <!-- Summary table -->
+    <!--                 All the extras at a glance                 -->
     <section id="enhancement-summary">
       <h2>Summary</h2>
+
       <table>
         <caption>Where each enhancement can be found</caption>
         <thead>
@@ -565,7 +603,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!--                  Footer with quick links                   -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -574,6 +612,7 @@
     <nav class="footer-columns" aria-label="Footer site map">
       <section class="footer-col">
         <h2>Explore</h2>
+
         <ul>
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -581,8 +620,10 @@
           <li><a href="explore.html">Explorer home</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Identify</h2>
+
         <ul>
           <li><a href="identify.html#upload">Upload a photo</a></li>
           <li><a href="identify.html#search">Search plants</a></li>
@@ -590,24 +631,30 @@
           <li><a href="identify.html#location-map">Where it grows</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Contribute</h2>
+
         <ul>
           <li><a href="contribute.html">Contribution form</a></li>
           <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
           <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Help</h2>
+
         <ul>
           <li><a href="enquiry.html">Enquiry form</a></li>
           <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
           <li><a href="identify.html#photo-tips">Photo tips</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>About</h2>
+
         <ul>
           <li><a href="profile.html">Profile</a></li>
           <li><a href="enhancement1.html">Enhancements</a></li>
@@ -623,7 +670,8 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top -->
+
+  <!--             Button that jumps back to the top              -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

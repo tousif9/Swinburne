@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  File:        enquiry.html
-  Author:      Tousif Akhand
-  Student ID:  105822937
-  Created:     24 September 2026
-  Description: Enquiry form.
--->
+<!-- ========================================================== -->
+<!--                        enquiry.html                        -->
+<!--                        Enquiry form                        -->
+<!--                                                            -->
+<!--     Written by Tousif Akhand  ·  Student ID 105822937      -->
+<!--                Started on 24 September 2026                -->
+<!-- ========================================================== -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,14 +19,15 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!--           Top of the page: logo, name and search           -->
   <header id="site-header">
-    <!-- Side menu -->
+    <!--            Side menu, opened with the ☰ button             -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
       <label for="menu-toggle" class="menu-close">&times; Close</label>
       <p class="side-title">All pages</p>
+
       <ul>
         <li><a href="explore.html">Explorer</a></li>
         <li class="side-sub"><a href="explore1.html">Families</a></li>
@@ -44,7 +46,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><a href="explore.html" class="stats-pill">&#127793; Family &middot; Genera &middot; Species</a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
 
-    <!-- Search -->
+    <!--             Search box with plant suggestions              -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
@@ -71,11 +73,12 @@
         <option value="Contribution form"></option>
         <option value="Enquiry form"></option>
       </datalist>
+
       <button type="submit">Search</button>
     </form>
   </header>
 
-  <!-- Main menu -->
+  <!--                       Main menu bar                        -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -97,28 +100,33 @@
   <main>
     <h1>Plant Enquiry</h1>
 
-    <!-- Side note -->
+    <!--                     A short side note                      -->
     <aside>
       <h2>Quick Answers</h2>
+
       <p>
         You may find your answer already waiting in the <a href="explore.html">Plant Explorer</a>. And if you'd like help naming a plant from a photo, the <a href="identify.html">Identify</a> page is a good place to start.
       </p>
+
       <figure>
         <img src="images/gen-diptero-2.jpg" alt="Hand holding a dry two-winged Dipterocarpus fruit" loading="lazy">
+
         <figcaption>Found something like this? Ask us about it.<span class="source">Photo: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></span></figcaption>
       </figure>
     </aside>
 
     <section id="enquiry-intro">
       <h2>Ask Our Team</h2>
+
       <p>
         Have a question about a plant family, genus or species? Send it to us, and someone from our team will get back to you within three working days. Please fill in every field.
       </p>
     </section>
 
-    <!-- Enquiry form -->
+    <!--                      The enquiry form                      -->
     <section id="enquiry-form">
       <h2>Enquiry Form</h2>
+
       <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
         <fieldset>
@@ -127,14 +135,17 @@
             <label for="firstName">First name</label>
             <input type="text" id="firstName" name="firstName" maxlength="25" pattern="[A-Za-z]+" title="Letters only, up to 25 characters" required>
           </div>
+
           <div class="form-row">
             <label for="lastName">Last name</label>
             <input type="text" id="lastName" name="lastName" maxlength="25" pattern="[A-Za-z]+" title="Letters only, up to 25 characters" required>
           </div>
+
           <div class="form-row">
             <label for="email">Email address</label>
             <input type="email" id="email" name="email" placeholder="name@example.com" required>
           </div>
+
           <div class="form-row">
             <label for="phone">Phone number</label>
             <input type="tel" id="phone" name="phone" maxlength="10" pattern="[0-9]{9,10}" title="9 or 10 digits, numbers only" placeholder="####-####-####" required>
@@ -173,10 +184,12 @@
               </optgroup>
             </select>
           </div>
+
           <div class="form-row">
             <label for="visitDate">Date you saw the plant</label>
             <input type="date" id="visitDate" name="visitDate" required>
           </div>
+
           <div class="form-row">
             <label for="enquiryComments">Comments</label>
             <textarea id="enquiryComments" name="enquiryComments" rows="6" cols="50" placeholder="Type your question here" required></textarea>
@@ -189,10 +202,12 @@
             <input type="radio" id="replyEmail" name="replyMethod" value="email" required>
             <label for="replyEmail">Email</label>
           </div>
+
           <div class="check-row">
             <input type="radio" id="replyPhone" name="replyMethod" value="phone">
             <label for="replyPhone">Phone</label>
           </div>
+
           <div class="check-row">
             <input type="checkbox" id="agree" name="agree" value="yes" required>
             <label for="agree">I agree that Pl@netMatrix may contact me about this enquiry.</label>
@@ -207,7 +222,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!--                  Footer with quick links                   -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -216,6 +231,7 @@
     <nav class="footer-columns" aria-label="Footer site map">
       <section class="footer-col">
         <h2>Explore</h2>
+
         <ul>
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -223,8 +239,10 @@
           <li><a href="explore.html">Explorer home</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Identify</h2>
+
         <ul>
           <li><a href="identify.html#upload">Upload a photo</a></li>
           <li><a href="identify.html#search">Search plants</a></li>
@@ -232,24 +250,30 @@
           <li><a href="identify.html#location-map">Where it grows</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Contribute</h2>
+
         <ul>
           <li><a href="contribute.html">Contribution form</a></li>
           <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
           <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Help</h2>
+
         <ul>
           <li><a href="enquiry.html">Enquiry form</a></li>
           <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
           <li><a href="identify.html#photo-tips">Photo tips</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>About</h2>
+
         <ul>
           <li><a href="profile.html">Profile</a></li>
           <li><a href="enhancement1.html">Enhancements</a></li>
@@ -265,7 +289,8 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top -->
+
+  <!--             Button that jumps back to the top              -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>

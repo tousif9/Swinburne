@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  File:        contributor.html
-  Author:      Tousif Akhand
-  Student ID:  105822937
-  Created:     24 September 2026
-  Description: Photos shared by contributors.
--->
+<!-- ========================================================== -->
+<!--                      contributor.html                      -->
+<!--               Photos shared by contributors                -->
+<!--                                                            -->
+<!--     Written by Tousif Akhand  ·  Student ID 105822937      -->
+<!--                Started on 24 September 2026                -->
+<!-- ========================================================== -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,14 +19,15 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!--           Top of the page: logo, name and search           -->
   <header id="site-header">
-    <!-- Side menu -->
+    <!--            Side menu, opened with the ☰ button             -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
     <nav class="side-menu" aria-label="All pages">
       <label for="menu-toggle" class="menu-close">&times; Close</label>
       <p class="side-title">All pages</p>
+
       <ul>
         <li><a href="explore.html">Explorer</a></li>
         <li class="side-sub"><a href="explore1.html">Families</a></li>
@@ -44,7 +46,7 @@
     <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
     <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><a href="explore.html" class="stats-pill">&#127793; Family &middot; Genera &middot; Species</a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
 
-    <!-- Search -->
+    <!--             Search box with plant suggestions              -->
     <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
       <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
       <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
@@ -71,11 +73,12 @@
         <option value="Contribution form"></option>
         <option value="Enquiry form"></option>
       </datalist>
+
       <button type="submit">Search</button>
     </form>
   </header>
 
-  <!-- Main menu -->
+  <!--                       Main menu bar                        -->
   <nav id="main-nav" aria-label="Main menu">
     <ul>
       <li class="has-submenu">
@@ -97,106 +100,154 @@
   <main>
     <h1>Our Contributors</h1>
 
-    <!-- Side note -->
+    <!--                     A short side note                      -->
     <aside>
       <h2>Why Every Photo Counts</h2>
+
       <p>
         Every checked photo is a record of where a plant was growing. Put together, these records help scientists map where Endangered, Rare and Threatened plants are holding on and where they're disappearing.
       </p>
+
       <p><a href="contribute.html" class="button">Share your photos</a></p>
     </aside>
 
-    <!-- Introduction -->
+    <!--                      A quick welcome                       -->
     <section id="contributor-intro">
       <h2>Photos From the Community</h2>
+
       <p>
         These cards show plant photos shared by the iNaturalist and Pl@ntNet communities. Each one tells you who shared it, which plant it is and a little about what the photo shows. Every photo has been checked, and the plant's name confirmed.
       </p>
     </section>
 
-    <!-- Contribution cards -->
+    <!--               Photos shared by our spotters                -->
     <section id="contribution-cards">
       <h2>Latest Contributions</h2>
+
       <div class="card-grid">
         <article class="card contribution">
           <figure>
             <img src="images/sp-alatus-9.jpg" alt="Tall forest trees seen from below against a blue sky" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#d-alatus"><em>Dipterocarpus alatus</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> Looking up into the canopy, where the tallest trees spread their branches above the rest of the forest.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/fam-diptero-7.jpg" alt="Two freshly fallen fruits with pink and orange wings" loading="lazy">
+
             <figcaption><h3><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae fruits</a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> Freshly fallen winged fruits. The wings slow their fall, giving the wind time to carry the seed away.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/sp-alba-6.jpg" alt="Twisted grey branch with rounded light-green leaves" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#c-alba"><em>Cryptocarya alba</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> An old, twisted branch among rounded, slightly wavy leaves.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/sp-glaber-2.jpg" alt="Fallen oval leaf patched with brown, green and yellow" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#m-glaber"><em>Monotes glaber</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> A smooth, hairless leaf that fell in the dry season, changing colour as it dried.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/sp-costa-6.jpg" alt="Single large green oblong fruit below glossy leaves" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#b-costaricensis"><em>Beilschmiedia costaricensis</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> A single ripening fruit, shaped like a tiny avocado.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/sp-tuberc-4.jpg" alt="Enormous leaf seen from below" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#d-tuberculatus"><em>Dipterocarpus tuberculatus</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> One huge leaf seen from below, its edges turning orange before it drops.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/sp-alatus-8.jpg" alt="Two dried winged fruits on a white surface" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#d-alatus"><em>Dipterocarpus alatus</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> Two dried fruits, each with the two long wings that give the family its name.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/sp-adpressa-7.jpg" alt="Branch with grey-green leaves and a ripe fruit" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#c-adpressa"><em>Cryptocarya adpressa</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> A single dark, ripe fruit among grey-green leaves in shady forest.</p>
+
           <p class="status verified">Verified</p>
         </article>
+
         <article class="card contribution">
           <figure>
             <img src="images/sp-berter-2.jpg" alt="Young seedling with glossy leaves and a bronze new shoot" loading="lazy">
+
             <figcaption><h3><a href="explore3.html#b-berteroana"><em>Beilschmiedia berteroana</em></a></h3></figcaption>
           </figure>
+
           <p class="contributor-name">Contributor: iNaturalist / Pl@ntNet community</p>
+
           <p class="comment"><strong>Note:</strong> A young seedling with a bronze new shoot, grown to help this endangered tree make a comeback.</p>
+
           <p class="status verified">Verified</p>
         </article>
       </div>
@@ -204,9 +255,10 @@
 
     <hr>
 
-    <!-- Photo journey -->
+    <!--             From photo to record, step by step             -->
     <section id="photo-journey">
       <h2>How a Photo Reaches This Gallery</h2>
+
       <ol>
         <li>A plant spotter photographs a plant in the wild.</li>
         <li>They upload it to iNaturalist or Pl@ntNet.</li>
@@ -216,9 +268,10 @@
       </ol>
     </section>
 
-    <!-- Sources -->
+    <!--                 Where the photos come from                 -->
     <section id="photo-sources">
       <h2>Where Our Photos Come From</h2>
+
       <dl>
         <dt><a href="https://www.inaturalist.org/">iNaturalist</a></dt>
         <dd>A worldwide community where people share photos of plants and animals, and other members help name them.</dd>
@@ -229,9 +282,10 @@
       </dl>
     </section>
 
-    <!-- Gallery summary -->
+    <!--                   The gallery in numbers                   -->
     <section id="gallery-summary">
       <h2>Photos in This Gallery</h2>
+
       <table>
         <caption>Number of photos in this gallery, shared by contributors of iNaturalist / Pl@ntNet</caption>
         <thead>
@@ -254,11 +308,12 @@
           </tr>
         </tbody>
       </table>
+
       <p>Got a photo of your own? <a href="contribute.html">Share your plant photos with us</a>.</p>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!--                  Footer with quick links                   -->
   <footer id="site-footer">
     <div class="footer-brand">
       <p>Every photo helps protect a plant.</p>
@@ -267,6 +322,7 @@
     <nav class="footer-columns" aria-label="Footer site map">
       <section class="footer-col">
         <h2>Explore</h2>
+
         <ul>
           <li><a href="explore1.html">Families</a></li>
           <li><a href="explore2.html">Genera</a></li>
@@ -274,8 +330,10 @@
           <li><a href="explore.html">Explorer home</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Identify</h2>
+
         <ul>
           <li><a href="identify.html#upload">Upload a photo</a></li>
           <li><a href="identify.html#search">Search plants</a></li>
@@ -283,24 +341,30 @@
           <li><a href="identify.html#location-map">Where it grows</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Contribute</h2>
+
         <ul>
           <li><a href="contribute.html">Contribution form</a></li>
           <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
           <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>Help</h2>
+
         <ul>
           <li><a href="enquiry.html">Enquiry form</a></li>
           <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
           <li><a href="identify.html#photo-tips">Photo tips</a></li>
         </ul>
       </section>
+
       <section class="footer-col">
         <h2>About</h2>
+
         <ul>
           <li><a href="profile.html">Profile</a></li>
           <li><a href="enhancement1.html">Enhancements</a></li>
@@ -316,7 +380,8 @@
       </p>
     </div>
   </footer>
-  <!-- Back to top -->
+
+  <!--             Button that jumps back to the top              -->
   <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
 </body>
 </html>
