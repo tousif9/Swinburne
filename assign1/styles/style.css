@@ -1966,19 +1966,6 @@ input[type="reset"]:hover {
   display: block;
 }
 
-/*                        Audio player                        */
-#profile-audio p {
-  max-width: 40em;
-  margin: 0 auto 1em;
-}
-
-audio {
-  display: block;
-  width: 100%;
-  max-width: 30em;
-  margin: 0 auto 1em;
-}
-
 /*             The first gallery photo is bigger              */
 @media screen and (min-width: 701px) {
   .plant-gallery .gallery figure:first-child {
