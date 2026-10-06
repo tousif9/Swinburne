@@ -8,7 +8,10 @@
                #123D2E deep teal, #1F6E56 dark green
 */
 
+
 /*Fonts from Google Fonts, kept in styles/fonts*/
+
+
 @font-face {
   font-family: "Playfair Display";
   font-style: normal;
@@ -65,12 +68,23 @@
   src: url("fonts/source-sans-3-latin-700-normal.woff2") format("woff2");
 }
 
+
 /*The basics for every page*/
+
+
 html {
   font-size: 100%;
+
+
   /*Glide smoothly to links on the same page*/
+
+
   scroll-behavior: smooth;
+
+
   /*Stop headings hiding under the menu bar*/
+
+
   scroll-padding-top: 4em;
 }
 
@@ -81,18 +95,29 @@ body {
   font-family: "Source Sans 3", "Trebuchet MS", Arial, sans-serif;
   font-size: 1.05em;
   line-height: 1.6;
+
+
   /*Leaf pattern, with plain mint if it fails*/
+
+
   background: #D8F7E3 url("images/leaf-bg.png") repeat;
 }
 
+
 /*Top of the page*/
+
+
 #site-header {
   display: flex;
   align-items: center;
   gap: 1em;
   padding: 0.55em 8%;
   color: #123D2E;
+
+
   /*Leaves and grid lines over a mint-to-teal fade*/
+
+
   background: url("images/header-bg.png") right center / auto 100% no-repeat,
     linear-gradient(90deg, #5BCBA7 30%, #23807F);
   background-color: #5BCBA7;
@@ -100,7 +125,10 @@ body {
   position: relative;
 }
 
+
 /*A soft coloured line along the bottom*/
+
+
 #site-header::after {
   content: "";
   position: absolute;
@@ -111,7 +139,10 @@ body {
   background: linear-gradient(90deg, #D8F7E3, #5BCBA7 40%, #123D2E);
 }
 
+
 /*The oval logo*/
+
+
 #site-logo {
   display: block;
   box-sizing: border-box;
@@ -126,7 +157,10 @@ body {
   animation: glow 3s ease-in-out infinite;
 }
 
+
 /*The glow around the logo gently pulses*/
+
+
 @keyframes glow {
   0%,
   100% {
@@ -142,7 +176,10 @@ body {
   font: bold 1.9em/1.1 "Playfair Display", Georgia, serif;
 }
 
+
 /*The site name in two colours, with a mint @*/
+
+
 .logo-matrix {
   color: #ffffff;
   text-shadow: 0 1px 3px rgba(18, 61, 46, 0.6);
@@ -153,7 +190,10 @@ body {
   text-shadow: 0 1px 3px rgba(18, 61, 46, 0.6);
 }
 
+
 /*The little slogan under the name*/
+
+
 .logo-tagline {
   display: block;
   margin-top: 0.3em;
@@ -162,7 +202,10 @@ body {
   color: #123D2E;
 }
 
+
 /*The Family · Genera · Species pill*/
+
+
 #logo a.stats-pill {
   display: inline-block;
   margin-left: 0.7em;
@@ -189,8 +232,13 @@ body {
   text-decoration: none;
 }
 
+
 /*Side menu*/
+
+
 /*A hidden tick box opens and closes it*/
+
+
 .menu-toggle {
   position: absolute;
   width: 1px;
@@ -220,7 +268,10 @@ body {
   outline: 2px solid #123D2E;
 }
 
+
 /*Slides in once the box is ticked*/
+
+
 .side-menu {
   position: fixed;
   top: 0;
@@ -298,7 +349,10 @@ body {
   box-shadow: inset 4px 0 0 #123D2E;
 }
 
+
 /*Search box: rounded, icon left, button right*/
+
+
 .site-search {
   position: relative;
   display: flex;
@@ -314,7 +368,10 @@ body {
   transition: width 0.3s ease, max-width 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 /*Gets wider and glows while you type*/
+
+
 .site-search:focus-within {
   width: 36%;
   max-width: 420px;
@@ -334,7 +391,10 @@ body {
   outline: none;
 }
 
+
 /*The magnifying glass, drawn with CSS*/
+
+
 .site-search::before {
   content: "";
   position: absolute;
@@ -360,7 +420,10 @@ body {
   pointer-events: none;
 }
 
+
 /*The Search button sitting inside the box*/
+
+
 .site-search button {
   padding: 0.45em 1.1em;
   font: bold 0.95em "Source Sans 3", Arial, sans-serif;
@@ -377,8 +440,13 @@ body {
   background-color: #A3D9A5;
 }
 
+
 /*Main menu bar*/
+
+
 /*Stays at the top as you scroll*/
+
+
 #main-nav {
   position: sticky;
   top: 0;
@@ -412,7 +480,10 @@ body {
   background-color: #D8F7E3;
 }
 
+
 /*Underline the page you are on*/
+
+
 #main-nav a.current {
   box-shadow: inset 0 -3px 0 #123D2E;
 }
@@ -421,7 +492,10 @@ body {
   font-size: 0.8em;
 }
 
+
 /*The Explorer drop-down list*/
+
+
 #main-nav .submenu {
   display: none;
   position: absolute;
@@ -443,7 +517,10 @@ body {
   display: block;
 }
 
+
 /*The main white content area*/
+
+
 main {
   display: block;
   width: 86%;
@@ -455,16 +532,26 @@ main {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
+
 /*Keep the floating side note inside*/
+
+
 main::after {
   content: "";
   display: block;
   clear: both;
 }
 
+
 /*Headings and text*/
+
+
 h1 {
+
+
   /*Several font settings in one line*/
+
+
   font: bold 2.4em/1.2 "Playfair Display", Georgia, serif;
   color: #123D2E;
   margin: 0 0 0.5em;
@@ -504,7 +591,10 @@ main a:hover {
   text-decoration: none;
 }
 
+
 /*Make links in the text easy to spot*/
+
+
 main p a:not(.button),
 main li a:not(.button):not(.tree-node),
 main dd a,
@@ -538,7 +628,10 @@ main figcaption a:focus {
   text-decoration-color: #123D2E;
 }
 
+
 /*A small arrow on links to other pages*/
+
+
 main p:not(.breadcrumb) a[href$=".html"]:not(.button)::after,
 main p:not(.breadcrumb) a[href*=".html#"]:not(.button)::after,
 main li a[href$=".html"]:not(.button):not(.tree-node)::after,
@@ -549,7 +642,10 @@ main li a[href*=".html#"]:not(.button):not(.tree-node)::after {
   transition: transform 0.2s ease;
 }
 
+
 /*The arrow moves forward on hover*/
+
+
 main p a:not(.button):hover::after,
 main p a:not(.button):focus::after,
 main li a:not(.button):not(.tree-node):hover::after,
@@ -564,7 +660,10 @@ hr {
   border-top: 2px dashed #5BCBA7;
 }
 
+
 /*Side notes*/
+
+
 aside {
   float: right;
   width: 30vw;
@@ -580,7 +679,10 @@ aside h2 {
   font-size: 1.3em;
 }
 
+
 /*Lists*/
+
+
 ol {
   padding-left: 1.5em;
 }
@@ -598,7 +700,10 @@ dl dd {
   margin: 0 0 0.8em 1.5em;
 }
 
+
 /*Pictures and captions*/
+
+
 figure {
   margin: 1.5em 0;
   text-align: center;
@@ -619,27 +724,39 @@ figcaption {
   color: #444444;
 }
 
+
 /*Small photo credits*/
+
+
 .source {
   display: block;
   font-size: 0.85em;
   color: #555555;
 }
 
+
 /*The banner credit sits just below it*/
+
+
 .hero-credit {
   margin: 0.3em 0 1em;
   text-align: right;
 }
 
+
 /*The credit line under a gallery*/
+
+
 .gallery + .source,
 .flip-grid + .source,
 .quiz-grid + .source {
   margin-top: 0.4em;
 }
 
+
 /*Cards*/
+
+
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -663,7 +780,10 @@ figcaption {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
+
 /*Links that look like buttons*/
+
+
 .button {
   display: inline-block;
   padding: 0.5em 1em;
@@ -680,7 +800,10 @@ main a.button:focus {
   background-color: #A3D9A5;
 }
 
+
 /*Tables*/
+
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -713,7 +836,10 @@ tbody tr:hover td {
   background-color: #D8F7E3;
 }
 
+
 /*Footer*/
+
+
 footer {
   position: relative;
   clear: both;
@@ -727,7 +853,10 @@ footer {
   background-color: #5BCBA7;
 }
 
+
 /*A wavy edge along the top*/
+
+
 footer::before {
   content: "";
   position: absolute;
@@ -748,13 +877,19 @@ footer a {
   font-weight: bold;
 }
 
+
 /*The short line about our mission*/
+
+
 .footer-brand {
   max-width: 34em;
   margin: 0 auto 1.5em;
 }
 
+
 /*Columns of quick links*/
+
+
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -785,7 +920,10 @@ footer a {
   margin: 0.3em 0;
 }
 
+
 /*The underline grows on hover*/
+
+
 .footer-col a,
 .footer-bottom a {
   position: relative;
@@ -822,7 +960,10 @@ footer a {
   font-weight: bold;
 }
 
+
 /*Forms*/
+
+
 form {
   max-width: 40em;
 }
@@ -835,7 +976,10 @@ fieldset {
   transition: background-color 0.3s ease;
 }
 
+
 /*Light up the part you are filling in*/
+
+
 fieldset:focus-within {
   background-color: #D8F7E3;
 }
@@ -856,7 +1000,10 @@ legend {
   font-weight: bold;
 }
 
+
 /*Boxes you type into*/
+
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -880,7 +1027,10 @@ textarea:focus {
   border-color: #1F6E56;
 }
 
+
 /*Red or green as you type*/
+
+
 input:focus:invalid,
 textarea:focus:invalid {
   border-color: #B3261E;
@@ -891,7 +1041,10 @@ textarea:focus:valid {
   border-color: #1F6E56;
 }
 
+
 /*Round and square tick boxes*/
+
+
 .check-row {
   margin-bottom: 0.6em;
 }
@@ -902,7 +1055,10 @@ textarea:focus:valid {
   font-weight: normal;
 }
 
+
 /*Submit on the left, Clear on the right*/
+
+
 .form-buttons {
   display: flex;
   justify-content: space-between;
@@ -930,12 +1086,18 @@ input[type="reset"]:hover {
   background-color: #A3D9A5;
 }
 
+
 /*Identify page*/
+
+
 .tool-form input[type="submit"] {
   margin-top: 0.8em;
 }
 
+
 /*Keep the name search on one line*/
+
+
 .search-form {
   display: flex;
   flex-wrap: wrap;
@@ -988,7 +1150,10 @@ details[open] summary {
   margin-bottom: 0.5em;
 }
 
+
 /*A map that fits any screen*/
+
+
 .map-frame iframe {
   display: block;
   width: 100%;
@@ -997,12 +1162,18 @@ details[open] summary {
   border-radius: 6px;
 }
 
+
 /*Profile page*/
+
+
 #profile-page {
   text-align: center;
 }
 
+
 /*A heading only screen readers announce*/
+
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1011,7 +1182,10 @@ details[open] summary {
   clip: rect(0 0 0 0);
 }
 
+
 /*Put my photo in the middle*/
+
+
 .photo-holder {
   display: table;
   margin: 0 auto 1em;
@@ -1069,7 +1243,10 @@ details[open] summary {
   padding-left: 1.2em;
 }
 
+
 /*Keep lines short enough to read easily*/
+
+
 #profile-about p {
   max-width: 40em;
   margin: 0 auto 1em;
@@ -1079,13 +1256,19 @@ details[open] summary {
   margin: 1.5em 0 0.5em;
 }
 
+
 /*Explorer pages*/
+
+
 .breadcrumb {
   margin: 0 0 0.5em;
   font-size: 0.9em;
 }
 
+
 /*The "On this page" links*/
+
+
 .page-nav {
   margin: 1em 0;
   padding: 0.8em 1.2em;
@@ -1107,7 +1290,10 @@ details[open] summary {
   list-style: none;
 }
 
+
 /*The box around each plant*/
+
+
 .plant-profile {
   clear: both;
   margin: 2em 0;
@@ -1128,7 +1314,10 @@ details[open] summary {
   color: #1F6E56;
 }
 
+
 /*Quick facts in two columns*/
+
+
 .plant-facts dl {
   display: grid;
   grid-template-columns: minmax(9em, max-content) 1fr;
@@ -1139,13 +1328,19 @@ details[open] summary {
   margin: 0;
 }
 
+
 /*Photo gallery*/
+
+
 .gallery-tip {
   font-size: 0.9em;
   color: #555555;
 }
 
+
 /*Photos in a neat, even grid*/
+
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -1168,7 +1363,10 @@ details[open] summary {
   transform: scale(1.04);
 }
 
+
 /*Full-size photo viewer (uses :target)*/
+
+
 .lightbox {
   display: none;
   position: fixed;
@@ -1217,8 +1415,13 @@ main a.lightbox-close:hover {
   background-color: #A3D9A5;
 }
 
+
 /*Contributor cards*/
+
+
 /*Photos in a neat, even grid*/
+
+
 #contribution-cards .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1234,7 +1437,10 @@ main a.lightbox-close:hover {
   object-fit: cover;
 }
 
+
 /*The plant name under each photo*/
+
+
 .contribution figcaption {
   margin-top: 0.8em;
   text-align: left;
@@ -1255,7 +1461,10 @@ main a.lightbox-close:hover {
   font-style: italic;
 }
 
+
 /*Small status labels*/
+
+
 .status {
   display: inline-block;
   margin: 0;
@@ -1270,7 +1479,10 @@ main a.lightbox-close:hover {
   background-color: #5BCBA7;
 }
 
+
 /*Enhancements page*/
+
+
 .enhancement {
   padding-left: 1em;
   border-left: 5px solid #A3D9A5;
@@ -1283,8 +1495,13 @@ code {
   border-radius: 3px;
 }
 
+
 /*Home page banner*/
+
+
 /*Photo with a dark shade so the words stand out*/
+
+
 .hero-banner {
   display: flex;
   align-items: center;
@@ -1309,14 +1526,25 @@ code {
 .hero-text h1 {
   margin-top: 0;
   color: #ffffff;
+
+
   /*The words appear one at a time*/
+
+
   animation: none;
 }
 
+
 /*Each word rises into place in turn*/
+
+
 .hero-text .word {
   display: inline-block;
+
+
   /*Hidden until it is its turn*/
+
+
   animation: wordRise 0.7s ease-out both;
 }
 
@@ -1337,7 +1565,10 @@ code {
   }
 }
 
+
 /*The word that keeps changing*/
+
+
 .hero-rotator {
   margin: 0 0 0.8em;
   font: bold 1.5em "Playfair Display", Georgia, serif;
@@ -1363,7 +1594,10 @@ code {
   animation: wordCycle 8s linear infinite both;
 }
 
+
 /*Show the first word if animation is off*/
+
+
 .rotator-words span:first-child {
   opacity: 1;
 }
@@ -1372,7 +1606,10 @@ code {
 .rotator-words span:nth-child(3) { animation-delay: 4s; }
 .rotator-words span:nth-child(4) { animation-delay: 6s; }
 
+
 /*Slide in, wait a moment, slide out*/
+
+
 @keyframes wordCycle {
   0% {
     opacity: 0;
@@ -1390,7 +1627,10 @@ code {
   }
 }
 
+
 /*Fades in after the heading*/
+
+
 .hero-text .lead,
 .hero-buttons {
   animation: fadeUp 0.8s ease-out 1.9s both;
@@ -1406,7 +1646,10 @@ code {
   text-shadow: none;
 }
 
+
 /*Buttons on the banner*/
+
+
 .button-large {
   padding: 0.8em 1.8em;
   font-size: 1.1em;
@@ -1417,7 +1660,10 @@ code {
   border: 2px solid #5BCBA7;
 }
 
+
 /*Family comparison chart*/
+
+
 .compare-table {
   table-layout: fixed;
 }
@@ -1436,7 +1682,10 @@ code {
   border: 0;
 }
 
+
 /*A coloured bar for each family*/
+
+
 .compare-table thead .compare-diptero {
   border-bottom: 5px solid #123D2E;
 }
@@ -1466,13 +1715,19 @@ code {
   background-color: #F4FCF7;
 }
 
+
 /*Light up a row on hover*/
+
+
 .compare-table tbody tr:hover th,
 .compare-table tbody tr:hover td {
   background-color: #FFF6D9;
 }
 
+
 /*Quiz*/
+
+
 .quiz-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1525,7 +1780,10 @@ code {
   font-style: normal;
 }
 
+
 /*The answer opens at the bottom*/
+
+
 .quiz-card details {
   margin-top: auto;
   padding: 0;
@@ -1566,7 +1824,10 @@ code {
   font-weight: bold;
 }
 
+
 /*Family, genus and species cards*/
+
+
 .level-family {
   border-top-color: #123D2E;
 }
@@ -1584,8 +1845,13 @@ code {
   color: #1F6E56;
 }
 
+
 /*Link map*/
+
+
 /*The colour key*/
+
+
 .tree-key {
   display: flex;
   flex-wrap: wrap;
@@ -1628,7 +1894,10 @@ code {
   padding-top: 0;
 }
 
+
 /*Lines joining the boxes*/
+
+
 .tree li::before,
 .tree li::after {
   content: "";
@@ -1674,7 +1943,10 @@ code {
   border-left: 2px solid #5BCBA7;
 }
 
+
 /*The boxes for each level*/
+
+
 .tree-node {
   display: inline-block;
   padding: 0.5em 0.8em;
@@ -1720,13 +1992,19 @@ a.tree-node:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+
 /*The family tree picture*/
+
+
 .family-tree-figure img {
   width: 100%;
   max-width: 881px;
 }
 
+
 /*Found a plant? Links to Identify and Contributors*/
+
+
 .quick-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1789,7 +2067,10 @@ main a.quick-link:focus {
   background-color: #ffffff;
 }
 
+
 /*Pictures lift a little on hover*/
+
+
 .family-tree-figure img,
 .result-figure img {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -1801,7 +2082,10 @@ main a.quick-link:focus {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+
 /*Buttons change colour on hover*/
+
+
 .button,
 input[type="submit"],
 input[type="reset"] {
@@ -1816,7 +2100,10 @@ input[type="reset"]:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+
 /*Flip cards*/
+
+
 .flip-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -1836,7 +2123,10 @@ input[type="reset"]:hover {
   transform-style: preserve-3d;
 }
 
+
 /*Turn over on hover or keyboard focus*/
+
+
 .flip-card:hover .flip-inner,
 .flip-card:focus-within .flip-inner {
   transform: rotateY(180deg);
@@ -1893,7 +2183,10 @@ input[type="reset"]:hover {
   background-color: #ffffff;
 }
 
+
 /*Back to top button*/
+
+
 .to-top {
   position: fixed;
   right: 1.2em;
@@ -1920,12 +2213,18 @@ input[type="reset"]:hover {
   transform: translateY(-3px);
 }
 
+
 /*Star rating*/
+
+
 .page-rating {
   clear: both;
 }
 
+
 /*Stars run 5 to 1 and are flipped, so ~ can fill the rest*/
+
+
 .stars {
   display: inline-flex;
   flex-direction: row-reverse;
@@ -1966,7 +2265,10 @@ input[type="reset"]:hover {
   display: block;
 }
 
+
 /*The first gallery photo is bigger*/
+
+
 @media screen and (min-width: 701px) {
   .plant-gallery .gallery figure:first-child {
     grid-column: span 2;
@@ -1978,12 +2280,18 @@ input[type="reset"]:hover {
   }
 }
 
+
 /*No zoom on the Identify example photos*/
+
+
 .example-gallery img {
   border-radius: 6px;
 }
 
+
 /*Acknowledgements page*/
+
+
 .ack-jump {
   display: flex;
   flex-wrap: wrap;
@@ -2005,7 +2313,10 @@ input[type="reset"]:hover {
   color: #555555;
 }
 
+
 /*Each credit as a small rounded chip*/
+
+
 .credit-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -2053,7 +2364,10 @@ input[type="reset"]:hover {
   color: #555555;
 }
 
+
 /*A chip with a little picture*/
+
+
 .thumb-chip {
   grid-template-columns: auto 1fr;
 }
@@ -2062,8 +2376,13 @@ input[type="reset"]:hover {
   grid-column: 2;
 }
 
+
 /*Animations*/
+
+
 /*Content fades up as the page loads*/
+
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -2082,7 +2401,10 @@ fieldset {
   animation: fadeUp 0.8s ease-out both;
 }
 
+
 /*The logo sways a little on hover*/
+
+
 @keyframes sway {
   0%,
   100% {
@@ -2101,7 +2423,10 @@ fieldset {
   animation: sway 1s ease-in-out infinite;
 }
 
+
 /*A gently pulsing button*/
+
+
 @keyframes pulse {
   0%,
   100% {
@@ -2116,7 +2441,10 @@ fieldset {
   animation: pulse 2s ease-in-out infinite;
 }
 
+
 /*Less movement for anyone who prefers it*/
+
+
 @media (prefers-reduced-motion: reduce) {
   h1,
   .card,
@@ -2144,7 +2472,10 @@ fieldset {
   }
 }
 
+
 /*Phones (700px wide and narrower)*/
+
+
 @media screen and (max-width: 700px) {
   #logo {
     font-size: 1.5em;
@@ -2155,14 +2486,20 @@ fieldset {
     height: 50px;
   }
 
+
   /*Search box gets its own row*/
+
+
   #site-header {
     flex-wrap: wrap;
     gap: 0.6em;
     padding: 0.55em 4%;
   }
 
+
   /*The pill drops below the name*/
+
+
   #logo a.stats-pill {
     display: table;
     margin: 0.4em 0 0;
@@ -2180,7 +2517,10 @@ fieldset {
     max-width: none;
   }
 
+
   /*Smaller menu links*/
+
+
   #main-nav a {
     padding: 0.7em 0.6em;
     font-size: 0.9em;
@@ -2205,14 +2545,20 @@ fieldset {
     font-size: 1.2em;
   }
 
+
   /*Side notes use the full width*/
+
+
   aside {
     float: none;
     width: auto;
     margin: 0 0 1em;
   }
 
+
   /*Result photo sits above the text*/
+
+
   .result-figure {
     float: none;
     width: auto;
@@ -2227,7 +2573,10 @@ fieldset {
     width: 150px;
   }
 
+
   /*Quick facts in one column*/
+
+
   .plant-facts dl {
     display: block;
   }
@@ -2244,7 +2593,10 @@ fieldset {
     height: 280px;
   }
 
+
   /*Link map becomes a simple list*/
+
+
   .tree ul {
     display: block;
     padding: 0 0 0 1em;
@@ -2286,31 +2638,46 @@ fieldset {
     height: 210px;
   }
 
+
   /*Wide tables scroll sideways*/
+
+
   table {
     display: block;
     overflow-x: auto;
   }
 
+
   /*A hint to swipe the table*/
+
+
   .wide-table caption::after {
     content: " (swipe sideways to see more)";
     font-weight: normal;
   }
 
+
   /*Smaller table cells*/
+
+
   th,
   td {
     padding: 0.4em 0.45em;
     font-size: 0.85em;
   }
 
+
   /*A slimmer menu bar*/
+
+
   #main-nav a {
     padding: 0.5em 0.55em;
   }
 
+
   /*A smaller Back to top button*/
+
+
   .to-top {
     right: 0.6em;
     bottom: 0.6em;
@@ -2318,7 +2685,10 @@ fieldset {
     opacity: 0.85;
   }
 
+
   /*Wider buttons that are easy to tap*/
+
+
   .form-buttons input {
     flex: 1;
     margin: 0 0.3em;
