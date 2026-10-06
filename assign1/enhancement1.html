@@ -15,6 +15,7 @@
   <meta name="author" content="Tousif Akhand">
   <title>Pl@netMatrix | Enhancements</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 700px)">
 </head>
 
 <body>
@@ -435,7 +436,7 @@
 
       <dl>
         <dt>What it is</dt>
-        <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a media query moves the search box below the logo, slims down the menu bar, stacks the quick facts and side notes into one column, and turns the link map into a simple indented list. Wide tables can be swiped sideways, and their caption tells you so. The Back to top button gets smaller, and form buttons stretch out so they're easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones bring up the right keyboard or a date picker.</dd>
+        <dd>Every page is easy to use on a phone. On screens 700px wide or narrower, a separate phone stylesheet, <code>mobile.css</code>, moves the search box below the logo, slims down the menu bar, stacks the quick facts and side notes into one column, and turns the link map into a simple indented list. Wide tables can be swiped sideways, and their caption tells you so. The Back to top button gets smaller, and form buttons stretch out so they're easy to tap. The forms also use <code>type="email"</code>, <code>type="tel"</code> and <code>type="date"</code>, so phones bring up the right keyboard or a date picker.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="enquiry.html#enquiry-form">Enquiry form (phone keypad for the phone number)</a>,
@@ -492,7 +493,7 @@
 
       <dl>
         <dt>What it is</dt>
-        <dd>The website uses three free Google Fonts, saved inside the site and loaded with <code>@font-face</code> so they work even without an internet connection. Playfair Display is used for the site name and page titles, Lora for the other headings and Source Sans 3 for the main text. Each one has a backup, such as Georgia or Arial, just in case. The header fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image). It shows the name in two colours with a mint "@", a "Family &middot; Genera &middot; Species" pill that links to the Explorer, and the slogan "Know it. Name it. Save it." A gradient line, drawn with the <code>::after</code> pseudo-element, finishes it off along the bottom.</dd>
+        <dd>The website uses three free Google Fonts, linked to the stylesheet with <code>@import</code>. Playfair Display is used for the site name and page titles, Lora for the other headings and Source Sans 3 for the main text. Each one has a backup, such as Georgia or Arial, just in case. The header fades from mint to teal behind faint leaves and grid lines (a <code>linear-gradient</code> under a background image). It shows the name in two colours with a mint "@", a "Family &middot; Genera &middot; Species" pill that links to the Explorer, and the slogan "Know it. Name it. Save it." A gradient line, drawn with the <code>::after</code> pseudo-element, finishes it off along the bottom.</dd>
         <dt>Where it is applied</dt>
         <dd>
             <a href="index.html#site-header">Header on the home page</a>,
@@ -501,7 +502,7 @@
         </dd>
         <dt>Reference(s)</dt>
         <dd>
-            <a href="https://www.w3schools.com/css/css3_fonts.asp">W3Schools: CSS Web Fonts</a>,
+            <a href="https://www.w3schools.com/css/css_font_google.asp">W3Schools: CSS Google Fonts</a>,
             <a href="https://www.w3schools.com/css/css3_gradients.asp">W3Schools: CSS Gradients</a>,
             <a href="https://fonts.google.com/">Google Fonts</a>
         </dd>

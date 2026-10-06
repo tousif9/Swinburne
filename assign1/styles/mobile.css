@@ -1,0 +1,229 @@
+/*
+  File:        mobile.css
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Created:     23 September 2026
+  Description: Phone stylesheet for all pages, used on screens 700px wide
+               and narrower. Loaded after style.css so these rules win.
+*/
+
+
+/*Phones (700px wide and narrower)*/
+
+
+#logo {
+  font-size: 1.5em;
+}
+
+#site-logo {
+  width: 50px;
+  height: 50px;
+}
+
+
+/*Search box gets its own row*/
+
+
+#site-header {
+  flex-wrap: wrap;
+  gap: 0.6em;
+  padding: 0.55em 4%;
+}
+
+
+/*The pill drops below the name*/
+
+
+#logo a.stats-pill {
+  display: table;
+  margin: 0.4em 0 0;
+  font-size: 0.45em;
+}
+
+.site-search {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+}
+
+.site-search:focus-within {
+  width: 100%;
+  max-width: none;
+}
+
+
+/*Smaller menu links*/
+
+
+#main-nav a {
+  padding: 0.7em 0.6em;
+  font-size: 0.9em;
+}
+
+main {
+  width: 94%;
+  margin: 1em auto;
+  padding: 1em 3%;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+.hero-banner {
+  min-height: 300px;
+  padding: 1.5em 4%;
+}
+
+.hero-rotator {
+  font-size: 1.2em;
+}
+
+
+/*Side notes use the full width*/
+
+
+aside {
+  float: none;
+  width: auto;
+  margin: 0 0 1em;
+}
+
+
+/*Result photo sits above the text*/
+
+
+.result-figure {
+  float: none;
+  width: auto;
+  margin: 0 0 1em;
+}
+
+.profile-table {
+  width: 100%;
+}
+
+#profile-photo {
+  width: 150px;
+}
+
+
+/*Quick facts in one column*/
+
+
+.plant-facts dl {
+  display: block;
+}
+
+.plant-facts dd {
+  margin: 0 0 0.6em;
+}
+
+.gallery img {
+  height: 150px;
+}
+
+.flip-card {
+  height: 280px;
+}
+
+
+/*Link map becomes a simple list*/
+
+
+.tree ul {
+  display: block;
+  padding: 0 0 0 1em;
+}
+
+.tree > ul {
+  padding-left: 0;
+}
+
+.tree ul ul {
+  margin-left: 0.6em;
+  border-left: 2px solid #5BCBA7;
+}
+
+.tree ul ul::before,
+.tree li::after {
+  display: none;
+}
+
+.tree li {
+  padding: 0.4em 0 0 1em;
+  text-align: left;
+}
+
+.tree li::before,
+.tree li:first-child::before,
+.tree li:last-child::before {
+  top: 1.4em;
+  left: 0;
+  right: auto;
+  width: 0.8em;
+  height: 0;
+  border: 0;
+  border-top: 2px solid #5BCBA7;
+  border-radius: 0;
+}
+
+.flip-front img {
+  height: 210px;
+}
+
+
+/*Wide tables scroll sideways*/
+
+
+table {
+  display: block;
+  overflow-x: auto;
+}
+
+
+/*A hint to swipe the table*/
+
+
+.wide-table caption::after {
+  content: " (swipe sideways to see more)";
+  font-weight: normal;
+}
+
+
+/*Smaller table cells*/
+
+
+th,
+td {
+  padding: 0.4em 0.45em;
+  font-size: 0.85em;
+}
+
+
+/*A slimmer menu bar*/
+
+
+#main-nav a {
+  padding: 0.5em 0.55em;
+}
+
+
+/*A smaller Back to top button*/
+
+
+.to-top {
+  right: 0.6em;
+  bottom: 0.6em;
+  font-size: 1em;
+  opacity: 0.85;
+}
+
+
+/*Wider buttons that are easy to tap*/
+
+
+.form-buttons input {
+  flex: 1;
+  margin: 0 0.3em;
+}
