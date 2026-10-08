@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File:        regform.html
+  Author:      Tousif Akhand
+  Student ID:  105822937
+  Description: Lab 6 - Registration form with responsive CSS.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Development Registration Form</title>
+  <!--
+  <link href="desktop.css" rel="stylesheet" media="screen and (min-width:768px)" />
+  <link href="mobile.css" rel="stylesheet" media="screen and (max-width:480px)" />
+  -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <form id="regform" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+    <h1>Registration Form</h1>
+    <h2>Account Information</h2>
+    <p>
+      <label for="userid">User ID</label>
+      <input type="text" id="userid" name="userid">
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+    </p>
+    <p>
+      <label for="retypepassword">Retype Password</label>
+      <input type="password" id="retypepassword" name="retypepassword">
+    </p>
+    <h2>User Information</h2>
+    <p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+    </p>
+    <p>Gender
+      <input type="radio" id="male" name="gender" value="male" class="radio">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" class="radio">
+      <label for="female">Female</label>
+    </p>
+    <div class="submit">
+      <input type="submit" value="Test Register" class="button">
+    </div>
+  </form>
+</body>
+</html>

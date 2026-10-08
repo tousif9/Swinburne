@@ -1,0 +1,36 @@
+body {
+  color: blue;
+}
+
+form {
+  font-size: 150%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+input {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.radio {
+  width: 15%;
+}
+
+.submit {
+  text-align: center;
+}
+
+.button {
+  width: 40%;
+}
