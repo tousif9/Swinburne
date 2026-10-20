@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/local/playfair-display-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://fonts.gstatic.com/local/lora-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://fonts.gstatic.com/local/lora-latin-600-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/local/lora-latin-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/local/source-sans-3-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/local/source-sans-3-latin-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://fonts.gstatic.com/local/source-sans-3-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/local/source-sans-3-latin-700-normal.woff2") format("woff2");
+}

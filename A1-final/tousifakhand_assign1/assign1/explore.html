@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<!--
+  FILE NAME   : explore.html
+  AUTHOR      : TOUSIF AKHAND
+  STUDENT ID  : 105822937
+  UNIT        : COS10005 WEB DEVELOPMENT - ASSIGNMENT 1
+  DESCRIPTION : EXPLORER PAGE - LINKS TO THE FAMILIES, GENERA AND SPECIES PAGES
+-->
+
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Malaysian plants by family, genus and species with Pl@netMatrix.">
+  <meta name="keywords" content="plant explorer, Dipterocarpaceae, Lauraceae, Dipterocarpus, Monotes, Beilschmiedia, Cryptocarya">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Explorer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400;1,600&amp;family=Playfair+Display:wght@700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+
+
+  <header id="site-header">
+
+
+    <!-- SIDE MENU WILL COME OUT WHEN THE HAMBURGER BUTTON IS CLICKED -->
+
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
+    <nav class="side-menu" aria-label="All pages">
+      <label for="menu-toggle" class="menu-close">&times; Close</label>
+      <p class="side-title">All pages</p>
+
+      <ul>
+        <li><a href="explore.html" class="current" aria-current="page">Explorer</a></li>
+        <li class="side-sub"><a href="explore1.html">Families</a></li>
+        <li class="side-sub"><a href="explore2.html">Genera</a></li>
+        <li class="side-sub"><a href="explore3.html">Species</a></li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contributor.html">Contributors</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="enhancement1.html">Enhancements</a></li>
+        <li><a href="acknowledgement.html">Acknowledgements</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
+
+
+    <!--SEARCH BAR AT THE TOP RIGHT-->
+
+
+    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
+      <datalist id="site-suggestions">
+        <option value="Dipterocarpaceae"></option>
+        <option value="Lauraceae"></option>
+        <option value="Dipterocarpus"></option>
+        <option value="Monotes"></option>
+        <option value="Beilschmiedia"></option>
+        <option value="Cryptocarya"></option>
+        <option value="Dipterocarpus alatus"></option>
+        <option value="Dipterocarpus tuberculatus"></option>
+        <option value="Monotes adenophyllus"></option>
+        <option value="Monotes glaber"></option>
+        <option value="Beilschmiedia berteroana"></option>
+        <option value="Beilschmiedia costaricensis"></option>
+        <option value="Cryptocarya adpressa"></option>
+        <option value="Cryptocarya alba"></option>
+        <option value="Plant families"></option>
+        <option value="Plant genera"></option>
+        <option value="Plant species"></option>
+        <option value="Identify a plant"></option>
+        <option value="Contributors"></option>
+        <option value="Contribution form"></option>
+        <option value="Enquiry form"></option>
+      </datalist>
+
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+
+  <!--MAIN MENU-->
+
+
+  <nav id="main-nav" aria-label="Main menu">
+    <ul>
+      <li class="has-submenu">
+        <a href="explore.html" class="current" aria-current="page">Explorer <span class="caret">&#9662;</span></a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Plant Explorer</h1>
+
+
+    <!--HOW THE PLANTS FIT IN THE FAMILY TREE-->
+
+
+    <section id="family-tree">
+      <h2>Where Our Plants Fit on the Family Tree</h2>
+
+      <p>
+        All the plants on Earth descended from a common ancestor, and have spread out in all directions over millions of years. Both of our families are flowering plants. The laurels are located on the branch next to <em>Magnolia</em>, and the dipterocarps grow with the other dicots, which are close relatives of mallows and cacao, on the tree below.
+      </p>
+
+      <figure class="family-tree-figure">
+        <img src="images/family-tree.png" alt="Illustrated plant family tree showing algae, mosses, ferns, gymnosperms and flowering plants branching from a common ancestor">
+
+        <figcaption>
+          The plant family tree: every plant has a common ancestor from green algae to flowering trees.
+          <span class="source">Image: <a href="https://serc.carleton.edu/integrate/teaching_materials/food_supply/student_materials/805">SERC, Carleton College</a></span>
+        </figcaption>
+      </figure>
+    </section>
+
+
+    <!--SIDE NOTE FOR THE READER-->
+
+
+    <aside>
+      <h2>Why Scientific Names?</h2>
+
+      <p>
+        Everyday names change from place to place. The same tree may have an English name, local Iban name and Malay name. However, a <strong>scientific name</strong> is the same throughout the world allowing scientists to know that they are referring to the same plant.
+      </p>
+
+      <p>
+        They are in <em>italics</em>, genus first, species second, e.g. <em>Dipterocarpus alatus</em>.
+      </p>
+    </aside>
+
+
+    <!--INTRODUCTION REGARDING THIS PAGE-->
+
+
+    <section id="intro">
+      <h2>Discover Malaysia's Forest Plants</h2>
+
+      <p>
+        Imagine the Explorer to be a miniature plant dictionary! Scientists classify all living plants into categories, which become increasingly more specific. We will discuss three of these levels here: <strong>families</strong>, <strong>genera</strong> and <strong>species</strong>. They are all interconnected, and you can begin with an entire family and then reduce it to its genera and species, or you can start with a particular species and increase it to an entire family.
+      </p>
+
+      <p>
+        I've picked two plant families that are common in Malaysian forests. Many of the giant rainforest trees that provide valuable timber and form the rainforest canopy belong to the <em>Dipterocarpaceae</em> family. The <em>Lauraceae</em> (laurel) family consists of aromatic trees and shrubs, many of which have spice-scented leaves and bark. It is the family of the cinnamon, bay leaf and avocado. Unfortunately, some species of both families are now on the brink of extinction, are rare or threatened.
+      </p>
+
+      <p>
+        Both families extend far beyond Malaysia, as well. The genera and species you will find here are from Southeast Asia, Africa and the Americas, thus providing an indication of the range of distribution of these plants throughout the tropics and other warm regions of the world.
+      </p>
+
+      <p>To get the most out of the Explorer, follow these steps:</p>
+
+      <ol>
+        <li>Start on the <a href="explore1.html">Families page</a> to learn the main features of each family.</li>
+        <li>Move on to the <a href="explore2.html">Genera page</a> to see the smaller groups inside each family.</li>
+        <li>Finish on the <a href="explore3.html">Species page</a> to meet each plant, with photos and where it grows.</li>
+        <li>Found one of these plants? Use the <a href="identify.html">Identify page</a> to check it.</li>
+      </ol>
+    </section>
+
+
+    <!--THE CONNECTION OF THE PLANTS WITH EACH OTHER-->
+
+
+    <section id="link-map">
+      <h2>Follow the Links: Family &rarr; Genus &rarr; Species</h2>
+
+      <p>
+        This map illustrates how all the plants on Pl@netMatrix fit together. Begin with a family, and trace the line down to its genera, and again down to its species. To jump directly to that plant, click on any of the boxes.
+      </p>
+
+      <ul class="tree-key">
+        <li><span class="tree-node node-family">Family</span> <a href="explore1.html">Families page</a></li>
+        <li><span class="tree-node node-genus">Genus</span> <a href="explore2.html">Genera page</a></li>
+        <li><span class="tree-node node-species">Species</span> <a href="explore3.html">Species page</a></li>
+      </ul>
+
+      <div class="tree">
+        <ul>
+          <li>
+            <span class="tree-node node-root">Plants on Pl@netMatrix</span>
+            <ul>
+          <li>
+            <a href="explore1.html#dipterocarpaceae" class="tree-node node-family"><span class="tree-level">Family</span> Dipterocarpaceae</a>
+            <ul>
+              <li>
+                <a href="explore2.html#dipterocarpus" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Dipterocarpus</em></a>
+                <ul>
+                  <li><a href="explore3.html#d-alatus" class="tree-node node-species"><span class="tree-level">Species</span> <em>D. alatus</em></a></li>
+                  <li><a href="explore3.html#d-tuberculatus" class="tree-node node-species"><span class="tree-level">Species</span> <em>D. tuberculatus</em></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="explore2.html#monotes" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Monotes</em></a>
+                <ul>
+                  <li><a href="explore3.html#m-adenophyllus" class="tree-node node-species"><span class="tree-level">Species</span> <em>M. adenophyllus</em></a></li>
+                  <li><a href="explore3.html#m-glaber" class="tree-node node-species"><span class="tree-level">Species</span> <em>M. glaber</em></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="explore1.html#lauraceae" class="tree-node node-family"><span class="tree-level">Family</span> Lauraceae</a>
+            <ul>
+              <li>
+                <a href="explore2.html#beilschmiedia" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Beilschmiedia</em></a>
+                <ul>
+                  <li><a href="explore3.html#b-berteroana" class="tree-node node-species"><span class="tree-level">Species</span> <em>B. berteroana</em></a></li>
+                  <li><a href="explore3.html#b-costaricensis" class="tree-node node-species"><span class="tree-level">Species</span> <em>B. costaricensis</em></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="explore2.html#cryptocarya" class="tree-node node-genus"><span class="tree-level">Genus</span> <em>Cryptocarya</em></a>
+                <ul>
+                  <li><a href="explore3.html#c-adpressa" class="tree-node node-species"><span class="tree-level">Species</span> <em>C. adpressa</em></a></li>
+                  <li><a href="explore3.html#c-alba" class="tree-node node-species"><span class="tree-level">Species</span> <em>C. alba</em></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!--MEANING OF FAMILY GENUS AND SPECIES-->
+
+
+    <section id="levels">
+      <h2>Family, Genus and Species</h2>
+
+      <p>
+        Plant taxonomy: scientists sort plants into levels, from general to specific. We use 3 of them, and each has its own page.
+      </p>
+
+      <div class="card-grid">
+        <article class="card level-card level-family">
+          <p class="tree-level">Level 1 &middot; broadest</p>
+
+          <h3>Family</h3>
+
+          <p>A large group of plants that share some similar characteristics like shape of flowers and fruits. For example, <em>Dipterocarpaceae</em>.</p>
+
+          <a href="explore1.html" class="button">View 2 families</a>
+        </article>
+
+        <article class="card level-card level-genus">
+          <p class="tree-level">Level 2</p>
+
+          <h3>Genus</h3>
+
+          <p>A smaller group of close family members within a family. The first part of a scientific name is always the name of its genus. For example, <em>Dipterocarpus</em>.</p>
+
+          <a href="explore2.html" class="button">View 4 genera</a>
+        </article>
+
+        <article class="card level-card level-species">
+          <p class="tree-level">Level 3 &middot; most specific</p>
+
+          <h3>Species</h3>
+
+          <p>One particular kind of plant. The two names are combined into one, the genus and the species. Such as <em>Dipterocarpus alatus</em>.</p>
+
+          <a href="explore3.html" class="button">View 8 species</a>
+        </article>
+      </div>
+    </section>
+
+
+    <!--LINKS TO IDENTIFY AND CONTRIBUTORS PAGE IF SOMEONE FINDS A PLANT-->
+
+
+    <section id="quick-links">
+      <h2>Found a Plant?</h2>
+
+      <p>After browsing, these two pages let you assign a name to a plant you've found, or view what others have shared.</p>
+
+      <div class="quick-links">
+        <a href="identify.html" class="quick-link">
+          <span class="quick-icon">&#128247;</span>
+          <span class="quick-title">Identify a Plant</span>
+          <span class="quick-text">Upload a photo or search by name to find out what it is.</span>
+          <span class="quick-go">Go to Identify &rarr;</span>
+        </a>
+        <a href="contributor.html" class="quick-link quick-alt">
+          <span class="quick-icon">&#127807;</span>
+          <span class="quick-title">Contributors' Photos</span>
+          <span class="quick-text">Browse plants shared by other spotters, or add your own.</span>
+          <span class="quick-go">Go to Contributors &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+
+    <!--FLIPPING CARDS-->
+
+
+    <section id="flip-gallery">
+      <h2>Species Flip Gallery</h2>
+
+      <p>Hover over a card (or use Tab to navigate to a card) and it will flip over to introduce the species.</p>
+
+      <div class="flip-grid">
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-alatus-5.jpg" alt="Three fresh Dipterocarpus alatus fruits with red wings and ribbed green nuts">
+
+              <h3><em>Dipterocarpus alatus</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>Resin tree</h3>
+
+              <p><strong>Native to:</strong> South and Southeast Asia</p>
+
+              <p>A large tree growing along rivers, tapped for its oily resin.</p>
+
+              <a href="explore3.html#d-alatus" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-tuberc-6.jpg" alt="Pink two-winged Dipterocarpus tuberculatus fruits hanging from corky branches">
+
+              <h3><em>Dipterocarpus tuberculatus</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>Gurjun tree</h3>
+
+              <p><strong>Native to:</strong> Bangladesh and mainland Southeast Asia</p>
+
+              <p>Its foliage is used to wrap items and thatch huts.</p>
+
+              <a href="explore3.html#d-tuberculatus" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-adeno-4.jpg" alt="Large rounded wrinkled Monotes adenophyllus leaf with a small flower cluster">
+
+              <h3><em>Monotes adenophyllus</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>No common name</h3>
+
+              <p><strong>Native to:</strong> South-central Africa</p>
+
+              <p>A shrub or small tree of miombo woodland and savanna.</p>
+
+              <a href="explore3.html#m-adenophyllus" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-glaber-6.jpg" alt="Orange-brown winged Monotes glaber fruit on a leafy shoot">
+
+              <h3><em>Monotes glaber</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>No common name</h3>
+
+              <p><strong>Native to:</strong> South-central Africa</p>
+
+              <p>A small tree, commonly found in miombo woodland on sandy soil.</p>
+
+              <a href="explore3.html#m-glaber" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-berter-6.jpg" alt="Whole Beilschmiedia berteroana tree with a pale trunk and dense rounded crown">
+
+              <h3><em>Beilschmiedia berteroana</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>Southern acorn tree</h3>
+
+              <p><strong>Native to:</strong> Chile</p>
+
+              <p>A threatened, frost-resistant tree with sweet, edible fruit.</p>
+
+              <a href="explore3.html#b-berteroana" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-costa-8.jpg" alt="Three large green oblong Beilschmiedia costaricensis fruits hanging from a curved branch">
+
+              <h3><em>Beilschmiedia costaricensis</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>No common name</h3>
+
+              <p><strong>Native to:</strong> Central America</p>
+
+              <p>An evergreen tree of the misty highland forests.</p>
+
+              <a href="explore3.html#b-costaricensis" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-adpressa-6.jpg" alt="Grey-green oval Cryptocarya adpressa leaves with a dark ripe round fruit">
+
+              <h3><em>Cryptocarya adpressa</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>No common name</h3>
+
+              <p><strong>Native to:</strong> New Caledonia</p>
+
+              <p>Botanists only described it for the first time in 2016.</p>
+
+              <a href="explore3.html#c-adpressa" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/sp-alba-3.jpg" alt="Bright red round Cryptocarya alba fruits on a branch">
+
+              <h3><em>Cryptocarya alba</em></h3>
+            </div>
+
+            <div class="flip-back">
+              <h3>Peumo</h3>
+
+              <p><strong>Native to:</strong> Central Chile</p>
+
+              <p>Pungently scented leaves and edible red berries.</p>
+
+              <a href="explore3.html#c-alba" class="button">See species</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="source">Photos: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+    </section>
+
+
+    <!--PHOTOS TAKEN IN THE FIELD-->
+
+
+    <section id="photo-gallery">
+      <h2>Photo Gallery</h2>
+
+      <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+      <div class="gallery">
+        <figure>
+          <a href="#view-exp-1"><img src="images/exp-diptero.png" alt="Young Dipterocarpaceae plant on the forest floor, with one leaf turned over to show its silvery underside"></a>
+          <figcaption><strong>Dipterocarpaceae:</strong> a young plant on the rainforest floor, with straight, evenly spaced leaf veins.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="#view-exp-2"><img src="images/exp-laurel.png" alt="Clusters of small creamy-white Lauraceae flowers against large green leaves"></a>
+          <figcaption><strong>Lauraceae:</strong> minute, whitish flowers in branched clusters.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="#view-exp-3"><img src="images/fam-diptero-6.jpg" alt="Two-winged dipterocarp fruit hanging from a branch between green leaves"></a>
+          <figcaption><strong>Family:</strong> winged dipterocarp fruit on the tree.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="#view-exp-4"><img src="images/fam-laurel-5.jpg" alt="Two green laurel fruits sitting in small cups, with white flowers behind"></a>
+          <figcaption><strong>Family:</strong> laurel fruits in small cups.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="#view-exp-5"><img src="images/gen-diptero-2.jpg" alt="Hand holding a dry brown Dipterocarpus fruit with two long wings"></a>
+          <figcaption><strong>Genus:</strong> the two-winged fruit of <em>Dipterocarpus</em>.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="#view-exp-6"><img src="images/gen-monotes-4.jpg" alt="Monotes fruit with five roughly equal papery wings held in a hand"></a>
+          <figcaption><strong>Genus:</strong> the five-winged fruit of <em>Monotes</em>.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="#view-exp-7"><img src="images/gen-beil-4.jpg" alt="Two plum-like Beilschmiedia fruits, one reddish and one dark purple"></a>
+          <figcaption><strong>Genus:</strong> olive-shaped fruit of <em>Beilschmiedia</em>.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="#view-exp-8"><img src="images/gen-crypto-2.jpg" alt="Green olive-shaped Cryptocarya fruit hanging from a branch"></a>
+          <figcaption><strong>Genus:</strong> the "hidden nut" fruit of <em>Cryptocarya</em>.</figcaption>
+        </figure>
+      </div>
+
+      <p class="source">Photos: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+    </section>
+
+
+    <!--USEFUL WORDS WHEN TALKING ABOUT PLANTS-->
+
+
+    <section id="terms">
+      <h2>Key Terms</h2>
+
+      <dl>
+        <dt>Scientific name</dt>
+        <dd>The scientific name of a species that consists of two parts (genus and species), which are italicized, e.g., <em>Cryptocarya alba</em>. It is the same in all languages.</dd>
+        <dt>Native range</dt>
+        <dd>The region where a plant is found growing wild, in its natural habitat.</dd>
+        <dt>Taxonomist</dt>
+        <dd>A scientist that names and classifies plants in families, genera and species.</dd>
+        <dt>ERT</dt>
+        <dd>Endangered, Rare and Threatened: the plants this project wants to keep an eye on.</dd>
+      </dl>
+    </section>
+
+
+    <!--PLANTS THAT ARE SHOWN IN THIS WEBSITE-->
+
+
+    <section id="featured-plants">
+      <h2>Plants Featured in the Explorer</h2>
+
+      <table>
+        <caption>Families, genera and species covered on this site</caption>
+        <thead>
+          <tr>
+            <th scope="col">Family</th>
+            <th scope="col">Genus</th>
+            <th scope="col">Species</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Dipterocarpaceae</th>
+            <td><em>Dipterocarpus</em></td>
+            <td><em>Dipterocarpus alatus</em>, <em>Dipterocarpus tuberculatus</em></td>
+          </tr>
+          <tr>
+            <td><em>Monotes</em></td>
+            <td><em>Monotes adenophyllus</em>, <em>Monotes glaber</em></td>
+          </tr>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Lauraceae</th>
+            <td><em>Beilschmiedia</em></td>
+            <td><em>Beilschmiedia berteroana</em>, <em>Beilschmiedia costaricensis</em></td>
+          </tr>
+          <tr>
+            <td><em>Cryptocarya</em></td>
+            <td><em>Cryptocarya adpressa</em>, <em>Cryptocarya alba</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+
+    <!--SHORT QUIZ TO TEST YOURSELF-->
+
+
+    <section id="quiz">
+      <h2>Which Family Is It?</h2>
+
+      <p>
+        Are you ready to self-test? Take a look at each picture, guess and then click on <strong>Show answer</strong> to check if you are correct.
+      </p>
+
+      <div class="quiz-grid">
+        <article class="quiz-card">
+          <p class="quiz-number">Question 1 of 6</p>
+
+          <img src="images/gen-diptero-2.jpg" alt="A dry brown fruit with two long wings held in a hand" loading="lazy">
+
+          <h3>This fruit has two long papery wings. Which family does it come from?</h3>
+
+          <p class="quiz-options">Dipterocarpaceae <span>or</span> Lauraceae?</p>
+
+          <details>
+            <summary>Show answer</summary>
+
+            <p class="quiz-answer"><strong>Dipterocarpaceae.</strong> The meaning of the family name refers to "two-winged fruit", and it spins like a helicopter as it drops. <a href="explore1.html#dipterocarpaceae">Find out more</a></p>
+          </details>
+        </article>
+
+        <article class="quiz-card">
+          <p class="quiz-number">Question 2 of 6</p>
+
+          <img src="images/fam-laurel-2.jpg" alt="Green berries sitting in bright red cups on red stalks" loading="lazy">
+
+          <h3>These berries sit in little red cups. Which family?</h3>
+
+          <p class="quiz-options">Dipterocarpaceae <span>or</span> Lauraceae?</p>
+
+          <details>
+            <summary>Show answer</summary>
+
+            <p class="quiz-answer"><strong>Lauraceae.</strong> One of the easiest ways to identify a laurel is a fleshy berry nestled in a small cup. <a href="explore1.html#lauraceae">Find out more</a></p>
+          </details>
+        </article>
+
+        <article class="quiz-card">
+          <p class="quiz-number">Question 3 of 6</p>
+
+          <img src="images/gen-monotes-4.jpg" alt="A fruit with five papery wings held in a hand" loading="lazy">
+
+          <h3>This fruit has five wings, not two. Is it still a dipterocarp?</h3>
+
+          <p class="quiz-options">Dipterocarpaceae <span>or</span> Lauraceae?</p>
+
+          <details>
+            <summary>Show answer</summary>
+
+            <p class="quiz-answer"><strong>Yes, Dipterocarpaceae.</strong> It's a <em>Monotes</em>, a dipterocarp of Africa, and all five wings are approximately equal in size. <a href="explore2.html#monotes">Find out more</a></p>
+          </details>
+        </article>
+
+        <article class="quiz-card">
+          <p class="quiz-number">Question 4 of 6</p>
+
+          <img src="images/gen-crypto-5.jpg" alt="A leaf held up to show its pale blue-green underside" loading="lazy">
+
+          <h3>This leaf is glossy on top and pale blue-green underneath. Which family?</h3>
+
+          <p class="quiz-options">Dipterocarpaceae <span>or</span> Lauraceae?</p>
+
+          <details>
+            <summary>Show answer</summary>
+
+            <p class="quiz-answer"><strong>Lauraceae.</strong> The leaf is from a <em>Cryptocarya</em>, one of our laurel genera. <a href="explore2.html#cryptocarya">Find out more</a></p>
+          </details>
+        </article>
+
+        <article class="quiz-card">
+          <p class="quiz-number">Question 5 of 6</p>
+
+          <img src="images/sp-tuberc-8.jpg" alt="A young plant with enormous glossy leaves" loading="lazy">
+
+          <h3>Even this young plant has leaves bigger than a dinner plate. Which family?</h3>
+
+          <p class="quiz-options">Dipterocarpaceae <span>or</span> Lauraceae?</p>
+
+          <details>
+            <summary>Show answer</summary>
+
+            <p class="quiz-answer"><strong>Dipterocarpaceae.</strong> This is <em>Dipterocarpus tuberculatus</em>. Its leaves are utilized in Cambodia for wrapping articles and for covering huts. <a href="explore3.html#d-tuberculatus">Find out more</a></p>
+          </details>
+        </article>
+
+        <article class="quiz-card">
+          <p class="quiz-number">Question 6 of 6</p>
+
+          <img src="images/fam-laurel-7.jpg" alt="Glossy leaves with three main veins running from the base" loading="lazy">
+
+          <h3>Each leaf has three main veins starting from its base. Which family?</h3>
+
+          <p class="quiz-options">Dipterocarpaceae <span>or</span> Lauraceae?</p>
+
+          <details>
+            <summary>Show answer</summary>
+
+            <p class="quiz-answer"><strong>Lauraceae.</strong> Cinnamon-type laurels typically have 3 main veins that originate from the base. <a href="explore1.html#lauraceae">Find out more</a></p>
+          </details>
+        </article>
+      </div>
+
+      <p class="source">Photos: <a href="https://www.inaturalist.org/">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+
+      <p class="quiz-next">
+        Come across one of these in the wild? <a href="contributor.html">See other plant spotters' finds</a> or <a href="identify.html">identify it from a photo</a>.
+      </p>
+    </section>
+
+
+    <!--RATING OF THE PAGE BY THE VISITORS-->
+
+
+    <section class="page-rating" id="rate-page">
+      <h2>Rate This Page</h2>
+
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="rating-form">
+        <fieldset>
+          <legend>How useful was this page?</legend>
+          <input type="hidden" name="page" value="Explorer">
+          <div class="stars">
+            <input type="radio" id="star5" name="rating" value="5" required>
+            <label for="star5" title="5 stars">&#9733;<span class="visually-hidden">5 stars</span></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">&#9733;<span class="visually-hidden">4 stars</span></label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">&#9733;<span class="visually-hidden">3 stars</span></label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">&#9733;<span class="visually-hidden">2 stars</span></label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">&#9733;<span class="visually-hidden">1 star</span></label>
+          </div>
+          <input type="submit" value="Send rating">
+        </fieldset>
+      </form>
+    </section>
+
+
+    <!--THE PHOTOS IN A LARGER VERSION-->
+
+
+    <div class="lightbox" id="view-exp-1">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/exp-diptero.png" alt="Young Dipterocarpaceae plant on the forest floor, with one leaf turned over to show its silvery underside">
+
+      <p>Dipterocarpaceae: a young plant on the rainforest floor, with straight, evenly spaced leaf veins.</p>
+    </div>
+
+    <div class="lightbox" id="view-exp-2">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/exp-laurel.png" alt="Clusters of small creamy-white Lauraceae flowers against large green leaves">
+
+      <p>Lauraceae: minute, whitish flowers in branched clusters.</p>
+    </div>
+
+    <div class="lightbox" id="view-exp-3">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/fam-diptero-6.jpg" alt="Two-winged dipterocarp fruit hanging from a branch between green leaves">
+
+      <p>Family: winged dipterocarp fruit on the tree.</p>
+    </div>
+
+    <div class="lightbox" id="view-exp-4">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/fam-laurel-5.jpg" alt="Two green laurel fruits sitting in small cups, with white flowers behind">
+
+      <p>Family: laurel fruits in small cups.</p>
+    </div>
+
+    <div class="lightbox" id="view-exp-5">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-2.jpg" alt="Hand holding a dry brown Dipterocarpus fruit with two long wings">
+
+      <p>Genus: the two-winged fruit of Dipterocarpus.</p>
+    </div>
+
+    <div class="lightbox" id="view-exp-6">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-4.jpg" alt="Monotes fruit with five roughly equal papery wings held in a hand">
+
+      <p>Genus: the five-winged fruit of Monotes.</p>
+    </div>
+
+    <div class="lightbox" id="view-exp-7">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-4.jpg" alt="Two plum-like Beilschmiedia fruits, one reddish and one dark purple">
+
+      <p>Genus: olive-shaped fruit of Beilschmiedia.</p>
+    </div>
+
+    <div class="lightbox" id="view-exp-8">
+      <a href="#photo-gallery" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-2.jpg" alt="Green olive-shaped Cryptocarya fruit hanging from a branch">
+
+      <p>Genus: the "hidden nut" fruit of Cryptocarya.</p>
+    </div>
+  </main>
+
+
+  <!--FOOTER WITH LINKS IN EVERY PAGES-->
+
+
+  <footer id="site-footer">
+    <div class="footer-brand">
+      <p>Every photo helps protect a plant.</p>
+    </div>
+
+    <nav class="footer-columns" aria-label="Footer site map">
+      <section class="footer-col">
+        <h2>Explore</h2>
+
+        <ul>
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+          <li><a href="explore.html">Explorer home</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Identify</h2>
+
+        <ul>
+          <li><a href="identify.html#upload">Upload a photo</a></li>
+          <li><a href="identify.html#search">Search plants</a></li>
+          <li><a href="identify.html#result">Example result</a></li>
+          <li><a href="identify.html#location-map">Where it grows</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Contribute</h2>
+
+        <ul>
+          <li><a href="contribute.html">Contribution form</a></li>
+          <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
+          <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Help</h2>
+
+        <ul>
+          <li><a href="enquiry.html">Enquiry form</a></li>
+          <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
+          <li><a href="identify.html#photo-tips">Photo tips</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>About</h2>
+
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="enhancement1.html">Enhancements</a></li>
+          <li><a href="acknowledgement.html">Acknowledgements</a></li>
+          <li><a href="https://www.youtube.com/watch?v=HgLriGj2HF4">Video presentation</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Pl@netMatrix &middot; Built by Tousif Akhand
+        &middot; <a href="#site-header">Back to top</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- BACK TO THE TOP ON THE BOTTOM RIGHT CORNER -->
+
+
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
+</body>
+</html>

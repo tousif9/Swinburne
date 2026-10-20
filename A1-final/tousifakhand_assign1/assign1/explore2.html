@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+<!--
+  FILE NAME   : explore2.html
+  AUTHOR      : TOUSIF AKHAND
+  STUDENT ID  : 105822937
+  UNIT        : COS10005 WEB DEVELOPMENT - ASSIGNMENT 1
+  DESCRIPTION : GENERA PAGE - TWO GENERA FROM EACH FAMILY
+-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the genera Dipterocarpus, Monotes, Beilschmiedia and Cryptocarya with photos and key features.">
+  <meta name="keywords" content="plant genera, Dipterocarpus, Monotes, Beilschmiedia, Cryptocarya">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Genera</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400;1,600&amp;family=Playfair+Display:wght@700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+
+
+  <header id="site-header">
+
+
+    <!-- SIDE MENU WILL COME OUT WHEN THE HAMBURGER BUTTON IS CLICKED -->
+
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
+    <nav class="side-menu" aria-label="All pages">
+      <label for="menu-toggle" class="menu-close">&times; Close</label>
+      <p class="side-title">All pages</p>
+
+      <ul>
+        <li><a href="explore.html">Explorer</a></li>
+        <li class="side-sub"><a href="explore1.html">Families</a></li>
+        <li class="side-sub"><a href="explore2.html" class="current" aria-current="page">Genera</a></li>
+        <li class="side-sub"><a href="explore3.html">Species</a></li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contributor.html">Contributors</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="enhancement1.html">Enhancements</a></li>
+        <li><a href="acknowledgement.html">Acknowledgements</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
+
+
+    <!--SEARCH BAR AT THE TOP RIGHT-->
+
+
+    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
+      <datalist id="site-suggestions">
+        <option value="Dipterocarpaceae"></option>
+        <option value="Lauraceae"></option>
+        <option value="Dipterocarpus"></option>
+        <option value="Monotes"></option>
+        <option value="Beilschmiedia"></option>
+        <option value="Cryptocarya"></option>
+        <option value="Dipterocarpus alatus"></option>
+        <option value="Dipterocarpus tuberculatus"></option>
+        <option value="Monotes adenophyllus"></option>
+        <option value="Monotes glaber"></option>
+        <option value="Beilschmiedia berteroana"></option>
+        <option value="Beilschmiedia costaricensis"></option>
+        <option value="Cryptocarya adpressa"></option>
+        <option value="Cryptocarya alba"></option>
+        <option value="Plant families"></option>
+        <option value="Plant genera"></option>
+        <option value="Plant species"></option>
+        <option value="Identify a plant"></option>
+        <option value="Contributors"></option>
+        <option value="Contribution form"></option>
+        <option value="Enquiry form"></option>
+      </datalist>
+
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+
+  <!--MAIN MENU-->
+
+
+  <nav id="main-nav" aria-label="Main menu">
+    <ul>
+      <li class="has-submenu">
+        <a href="explore.html" class="current">Explorer <span class="caret">&#9662;</span></a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html" class="current" aria-current="page">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="breadcrumb"><a href="explore.html">Explorer</a> &rsaquo; Plant Genera</p>
+
+    <h1>Plant Genera</h1>
+
+
+    <!--SIDE NOTE FOR THE READER-->
+
+
+    <aside>
+      <h2>Named After People</h2>
+
+      <p>
+        Many genus names come from scientists. For instance, <em>Beilschmiedia</em> is named for Carl Traugott Beilschmied, a German botanist. Others just describe the plant: <em>Dipterocarpus</em> means "two-winged fruit" and <em>Cryptocarya</em> "hidden nut".
+      </p>
+    </aside>
+
+
+    <!--INTRODUCTION REGARDING THIS PAGE-->
+
+
+    <section id="intro">
+      <h2>About This Page</h2>
+
+      <p>
+        A genus is a smaller group of closely related organisms within a family (more than one are called genera). The first part of a scientific name is always its name and is in italics with a capital letter. Below you'll find two genera from each of our two families.
+      </p>
+
+      <nav class="page-nav" aria-label="On this page">
+        <h3>On this page</h3>
+
+        <ul>
+        <li><a href="#dipterocarpus"><em>Dipterocarpus</em></a></li>
+        <li><a href="#monotes"><em>Monotes</em></a></li>
+        <li><a href="#beilschmiedia"><em>Beilschmiedia</em></a></li>
+        <li><a href="#cryptocarya"><em>Cryptocarya</em></a></li>
+        </ul>
+      </nav>
+    </section>
+
+
+    <!--PROCESS OF READING THE PAGE HOW IT WORKS-->
+
+
+    <section id="steps">
+      <h2>Four Questions to Identify the Genus</h2>
+
+      <ol>
+        <li>What is the plant's family?</li>
+        <li>Are there wings on the fruit? If so, count them. Two long wings lead to <em>Dipterocarpus</em>, five equal wings lead to <em>Monotes</em>.</li>
+        <li>If the fruit is fleshy, is it embedded in the petal-like parts of the flower in the early stages? If so, it is most likely <em>Cryptocarya</em>.</li>
+        <li>The fruit: is it a big green ball or a dark purple, waxy plum? If so it is probably <em>Beilschmiedia</em>.</li>
+      </ol>
+    </section>
+
+
+    <!--SUMMARIZATION OF ALL THE GENERA-->
+
+
+    <section id="summary">
+      <h2>At a Glance</h2>
+
+      <table class="wide-table">
+        <caption>The four featured genera</caption>
+        <thead>
+          <tr><th scope="col">Genus</th><th scope="col">Family</th><th scope="col">Approx. species</th><th scope="col">Main region</th><th scope="col">Featured species</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><em>Dipterocarpus</em></th><td><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a></td><td>70</td><td>South and Southeast Asia</td><td><a href="explore3.html#d-alatus"><em>D. alatus</em></a>, <a href="explore3.html#d-tuberculatus"><em>D. tuberculatus</em></a></td></tr>
+          <tr><th scope="row"><em>Monotes</em></th><td><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a></td><td>23</td><td>Tropical Africa, Madagascar</td><td><a href="explore3.html#m-adenophyllus"><em>M. adenophyllus</em></a>, <a href="explore3.html#m-glaber"><em>M. glaber</em></a></td></tr>
+          <tr><th scope="row"><em>Beilschmiedia</em></th><td><a href="explore1.html#lauraceae">Lauraceae</a></td><td>267</td><td>Tropics worldwide</td><td><a href="explore3.html#b-berteroana"><em>B. berteroana</em></a>, <a href="explore3.html#b-costaricensis"><em>B. costaricensis</em></a></td></tr>
+          <tr><th scope="row"><em>Cryptocarya</em></th><td><a href="explore1.html#lauraceae">Lauraceae</a></td><td>360</td><td>Tropics and subtropics</td><td><a href="explore3.html#c-adpressa"><em>C. adpressa</em></a>, <a href="explore3.html#c-alba"><em>C. alba</em></a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+
+    <!--CONTENTS OF THE FOUR GENERA-->
+
+
+    <article class="plant-profile" id="dipterocarpus">
+      <h2><em>Dipterocarpus</em></h2>
+
+      <p class="plant-common">Keruing</p>
+
+        <p>
+          The whole dipterocarp family is named for <em>Dipterocarpus</em>, Greek for "two-winged fruit". With about 70 species, it's the third-largest genus in the family. It is widely distributed throughout South and South-East Asia, ranging from Sri Lanka and India to the Philippines, and is an important component of dipterocarp forests. Borneo is the most varied with a number of species found nowhere else, including the "Sarawak keruing", <em>Dipterocarpus sarawakensis</em>.
+        </p>
+
+        <p>
+          Keruing trees provide keruing timber, plywood and a resin-rich oil called gurjun, kanyin or keruing oil, and a few are also utilized as traditional herbal medicines. The oldest fossil of dipterocarp belongs to this genus as well. It's of Indian origin and dates from the very late Cretaceous.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Dipterocarpus">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Family</dt>
+          <dd><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a></dd>
+          <dt>Common name</dt>
+          <dd>Keruing (timber), gurjun (oil)</dd>
+          <dt>Size</dt>
+          <dd>About 70 species, 65 of them currently accepted</dd>
+          <dt>Origin and range</dt>
+          <dd>South and Southeast Asia, from Sri Lanka and India to the Philippines, mainly concentrated in Borneo</dd>
+          <dt>Name meaning</dt>
+          <dd>Greek for "two-winged fruit"</dd>
+          <dt>Species on this site</dt>
+          <dd><a href="explore3.html#d-alatus"><em>D. alatus</em></a> and <a href="explore3.html#d-tuberculatus"><em>D. tuberculatus</em></a></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>Fruit with two long wings</li>
+          <li>Trees with tall trunks, from which a resinous oil can be extracted.</li>
+          <li>Found all over South and Southeast Asia, with the majority of the species in Borneo</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-dipterocarpus-1"><img src="images/gen-diptero-2.jpg" alt="Hand holding a dry brown Dipterocarpus fruit with two long wings" loading="lazy"></a>
+            <figcaption>The two-winged fruit that the genus is named after.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-dipterocarpus-2"><img src="images/gen-diptero-1.jpg" alt="Close-up of grey, rough, flaky Dipterocarpus bark" loading="lazy"></a>
+            <figcaption>Keruing oil can be extracted from the thick bark.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-dipterocarpus-3"><img src="images/gen-diptero-3.jpg" alt="Large oval Dipterocarpus leaves with deep straight veins in the forest" loading="lazy"></a>
+            <figcaption>Big leaves with straight parallel side veins.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-dipterocarpus-4"><img src="images/gen-diptero-4.jpg" alt="Dipterocarpus trunk with reddish bark patched with pale lichen" loading="lazy"></a>
+            <figcaption>Older trunk with lichen-patched bark</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-dipterocarpus-5"><img src="images/gen-diptero-5.jpg" alt="Close-up of the base of a dried Dipterocarpus fruit, showing its folded wings" loading="lazy"></a>
+            <figcaption>At the juncture of the two long wings with the nut.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-dipterocarpus-6"><img src="images/gen-diptero-6.jpg" alt="Large oval Dipterocarpus leaves with straight veins, backlit against the sky" loading="lazy"></a>
+            <figcaption>Large leaves shining in the sun.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-dipterocarpus-7"><img src="images/gen-diptero-7.jpg" alt="One huge fallen Dipterocarpus leaf with deep parallel ribs on the forest floor" loading="lazy"></a>
+            <figcaption>One leaf can be as big as a dinner plate.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Dipterocarpus">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="monotes">
+      <h2><em>Monotes</em></h2>
+
+      <p class="plant-common">No common name</p>
+
+        <p>
+          <em>Monotes</em> is a genus of flowering plants of the family Dipterocarpaceae. Its name means "unity" or "uniqueness" because at the time of its naming it was the only genus of dipterocarp in Africa. Twenty-three species are now accepted. They are mostly of the Zambezian zone of south-central Africa, with one, <em>Monotes madagascariensis</em>, extending to Madagascar.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Monotes">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Family</dt>
+          <dd><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a></dd>
+          <dt>Size</dt>
+          <dd>23 accepted species</dd>
+          <dt>Origin and range</dt>
+          <dd>Tropical Africa, centred on the Zambezian region, and Madagascar</dd>
+          <dt>Name meaning</dt>
+          <dd>"Unity" or "uniqueness", as it was once the only African dipterocarp genus</dd>
+          <dt>Species on this site</dt>
+          <dd><a href="explore3.html#m-adenophyllus"><em>M. adenophyllus</em></a> and <a href="explore3.html#m-glaber"><em>M. glaber</em></a></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>An African dipterocarp, occurring primarily in the Zambezian region</li>
+          <li>Just one species, <em>Monotes madagascariensis</em>, is known to grow in Madagascar</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-monotes-1"><img src="images/gen-monotes-4.jpg" alt="Monotes fruit with five roughly equal papery wings held in a hand" loading="lazy"></a>
+            <figcaption>Monotes is distinguished by its fruit which has five wings.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-monotes-2"><img src="images/gen-monotes-1.jpg" alt="Broad, rounded Monotes leaf with a net of fine veins" loading="lazy"></a>
+            <figcaption>Broad rounded leaves (very different from Dipterocarpus).</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-monotes-3"><img src="images/gen-monotes-2.jpg" alt="Creamy-white Monotes flowers with long thread-like stamens and green buds" loading="lazy"></a>
+            <figcaption>Clusters of creamy flowers with long stamens.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-monotes-4"><img src="images/gen-monotes-3.jpg" alt="Branch of a Monotes tree with rough, cracked grey-brown bark" loading="lazy"></a>
+            <figcaption>The tree's rough, cracked bark allows it to withstand grass fires.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-monotes-5"><img src="images/gen-monotes-5.jpg" alt="Young Monotes plant with broad oval leaves growing beside rocks" loading="lazy"></a>
+            <figcaption>A young plant growing in dry, rocky soil.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-monotes-6"><img src="images/gen-monotes-6.jpg" alt="Monotes branch with many orange-brown winged fruits against a grey sky" loading="lazy"></a>
+            <figcaption>Winged fruits on a branch.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-monotes-7"><img src="images/gen-monotes-7.jpg" alt="Large rounded Monotes leaves with a reddish winged fruit against a blue sky" loading="lazy"></a>
+            <figcaption>Broad, rounded leaves and a maturing fruit.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Monotes">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="beilschmiedia">
+      <h2><em>Beilschmiedia</em></h2>
+
+      <p class="plant-common">No common name for the whole genus</p>
+
+        <p>
+          <em>Beilschmiedia</em> is a large genus (267 accepted species) of trees and shrubs belonging to the laurel family. Most grow in the tropics; a few grow in cooler regions. They are found all over tropical Asia, Africa, Madagascar, Australia, New Zealand and North, Central and South America, including the Caribbean. They are more tolerant of a variety of climates than most other laurels. Many are found in cloud forest and tropical rainforest, most of them in Asia and Southeast Asia, some in drier areas such as the Mediterranean. Some of them, like the Chilean bellotos <em>B. berteroana</em> and <em>B. miersii</em>, are even frost hardy and are commonly planted in the colder countries.
+        </p>
+
+        <p>
+          The leaves are dark green, coriaceous, and have sunken veins. The new leaves emerge red and the young twigs are clothed in fine reddish-brown hairs. The bark can be smooth or rough, and is brown. The flowers are small and greenish to cream and grow in upright clusters. The fruits contain one seed each and vary in size from very large green balls to dark purple, plum-like fruits covered with a waxy film. Many of them are eaten by birds, which spread the seeds. In New Zealand, the taraire's seeds are too large to be swallowed and carried by any birds except the native pigeon. Valuable timber is provided by some species, and the seeds of <em>B. bancroftii</em> were an Aboriginal food.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Beilschmiedia">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Family</dt>
+          <dd><a href="explore1.html#lauraceae">Lauraceae</a></dd>
+          <dt>Common names</dt>
+          <dd>None for the genus; taraire and tawa (New Zealand) and belloto (Chile) are names of single species</dd>
+          <dt>Size</dt>
+          <dd>267 accepted species</dd>
+          <dt>Origin and range</dt>
+          <dd>Tropical Asia, Africa, Madagascar, Australia, New Zealand, North, Central and South America and the Caribbean</dd>
+          <dt>Type species</dt>
+          <dd><em>B. roxburghiana</em> (Himalayas to southern China, Indochina and Peninsular Malaysia)</dd>
+          <dt>Uses</dt>
+          <dd>Valuable timber; seeds of <em>B. bancroftii</em> eaten by Aboriginal Australians; frost-hardy species grown in gardens</dd>
+          <dt>Species on this site</dt>
+          <dd><a href="explore3.html#b-berteroana"><em>B. berteroana</em></a> and <a href="explore3.html#b-costaricensis"><em>B. costaricensis</em></a></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>Dark green, coriaceous leaves with sunken veins, in pairs or one at a time depending on the species</li>
+          <li>New leaves and young twigs are reddish and covered with fine reddish-brown hairs.</li>
+          <li>Small greenish to cream flowers in upright clusters at the junction of leaves and stem</li>
+          <li>From large green balls to waxy dark purple plums, one-seeded fruits.</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-beilschmiedia-1"><img src="images/gen-beil-4.jpg" alt="Two plum-like Beilschmiedia fruits, one reddish and one dark purple" loading="lazy"></a>
+            <figcaption>Fleshy, olive-shaped fruits, no cup.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-beilschmiedia-2"><img src="images/gen-beil-1.jpg" alt="Dense evergreen Beilschmiedia crown of dark and light green leaves" loading="lazy"></a>
+            <figcaption>A thick evergreen crown.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-beilschmiedia-3"><img src="images/gen-beil-2.jpg" alt="Glossy oval yellow-green Beilschmiedia leaves in close-up" loading="lazy"></a>
+            <figcaption>Smooth shiny laurel-shaped leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-beilschmiedia-4"><img src="images/gen-beil-3.jpg" alt="Branched cluster of tiny greenish Beilschmiedia flowers on a leaf" loading="lazy"></a>
+            <figcaption>Small flowers in a branched cluster.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-beilschmiedia-5"><img src="images/gen-beil-5.jpg" alt="Thick Beilschmiedia trunk with a flared base and patchy orange, green and brown bark" loading="lazy"></a>
+            <figcaption>A big tree trunk in the rainforest with markings on the bark.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-beilschmiedia-6"><img src="images/gen-beil-6.jpg" alt="Long glossy bright-green Beilschmiedia leaves with a gloved hand for scale" loading="lazy"></a>
+            <figcaption>Long, shiny evergreen leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-beilschmiedia-7"><img src="images/gen-beil-7.jpg" alt="Green Beilschmiedia stems with leaves in opposite pairs" loading="lazy"></a>
+            <figcaption>Leaves growing in opposite pairs.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Beilschmiedia">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="cryptocarya">
+      <h2><em>Cryptocarya</em></h2>
+
+      <p class="plant-common">No common name</p>
+
+        <p>
+          About 360 species of <em>Cryptocarya</em> belong to the laurel family. They are mostly trees and a few shrubs, and are found in various parts of South America, southern Africa, Madagascar, south and south-east Asia, Japan, New Guinea and Australia. The genus was first described by the botanist Robert Brown, in 1810. Its name, meaning 'hidden nut', comes from the fact that the fruit is enclosed within parts of the flower. DNA analysis has identified its closest relatives to be <em>Beilschmiedia</em>, <em>Potameia</em> and <em>Endiandra</em>.
+        </p>
+
+        <p>
+          The leaves usually grow one at a time along the branches on short stalks, with veins branching out from a central rib. Small flowers are grouped at the tips of the branches. Each has 6 petal-like parts (called tepals) and 9 stamens arranged in two rows, and contains both male and female parts. The fruit is fleshy, oval to round in shape and contains a single seed. There are some species which are also beneficial to humans. Ravensara oil from <em>C. agathophylla</em> from eastern Madagascar is marketed for its use in aromatherapy in Europe and America, while leaves of <em>C. woodii</em> found at prehistoric sites in Africa were probably used as an insect repellent.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Cryptocarya">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Family</dt>
+          <dd><a href="explore1.html#lauraceae">Lauraceae</a></dd>
+          <dt>Size</dt>
+          <dd>About 360 species</dd>
+          <dt>Origin and range</dt>
+          <dd>South America, southern Africa, Madagascar, South and Southeast Asia, Japan, New Guinea and Australia</dd>
+          <dt>Name meaning</dt>
+          <dd>"Hidden nut", as the fruit is hidden by the tepals</dd>
+          <dt>First described</dt>
+          <dd>Robert Brown, 1810</dd>
+          <dt>Closest relatives</dt>
+          <dd><em>Beilschmiedia</em>, <em>Potameia</em> and <em>Endiandra</em></dd>
+          <dt>Uses</dt>
+          <dd>Ravensara oil for aromatherapy (<em>C. agathophylla</em>); insect control in the past (<em>C. woodii</em>)</dd>
+          <dt>Species on this site</dt>
+          <dd><a href="explore3.html#c-adpressa"><em>C. adpressa</em></a> and <a href="explore3.html#c-alba"><em>C. alba</em></a></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>Leaves typically borne singly on short stalks, with veins branching from a midrib</li>
+          <li>Flowers small; tepals 6 petal-like; stamens 9 in 2 series; clustered near the tips of the branches.</li>
+          <li>Fleshy, oval to round fruit, containing only one seed, concealed by the tepals when young.</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-cryptocarya-1"><img src="images/gen-crypto-2.jpg" alt="Green olive-shaped Cryptocarya fruit hanging from a branch" loading="lazy"></a>
+            <figcaption>The "hidden nut" fruit.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-cryptocarya-2"><img src="images/gen-crypto-1.jpg" alt="Two Cryptocarya leaves showing a glossy dark top and a pale blue-green underside" loading="lazy"></a>
+            <figcaption>Shiny above, light blue-green below.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-cryptocarya-3"><img src="images/gen-crypto-3.jpg" alt="Looking up into a leafy Cryptocarya crown against the sky" loading="lazy"></a>
+            <figcaption>Leafy crown viewed from below.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-cryptocarya-4"><img src="images/gen-crypto-4.jpg" alt="Hand holding a red young Cryptocarya leaf beside a green leaf with a pale underside" loading="lazy"></a>
+            <figcaption>New growth that is red next to an older leaf.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-cryptocarya-5"><img src="images/gen-crypto-5.jpg" alt="Hand holding a Cryptocarya leaf, showing its pale blue-green underside" loading="lazy"></a>
+            <figcaption>In Cryptocarya it is common to have a pale underside.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-cryptocarya-6"><img src="images/gen-crypto-6.jpg" alt="Cluster of deep-red young Cryptocarya leaves hanging from a stem" loading="lazy"></a>
+            <figcaption>A flush of new deep red foliage.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-cryptocarya-7"><img src="images/gen-crypto-7.jpg" alt="Young Cryptocarya tree with red new shoots in rainforest" loading="lazy"></a>
+            <figcaption>Young tree in a rainforest.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Cryptocarya">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+
+    <!--THE PHOTOS IN A LARGER VERSION-->
+
+
+    <div class="lightbox" id="view-dipterocarpus-1">
+      <a href="#dipterocarpus" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-2.jpg" alt="Hand holding a dry brown Dipterocarpus fruit with two long wings" loading="lazy">
+
+      <p>The two-winged fruit that the genus is named after.</p>
+    </div>
+
+    <div class="lightbox" id="view-dipterocarpus-2">
+      <a href="#dipterocarpus" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-1.jpg" alt="Close-up of grey, rough, flaky Dipterocarpus bark" loading="lazy">
+
+      <p>Keruing oil can be extracted from the thick bark.</p>
+    </div>
+
+    <div class="lightbox" id="view-dipterocarpus-3">
+      <a href="#dipterocarpus" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-3.jpg" alt="Large oval Dipterocarpus leaves with deep straight veins in the forest" loading="lazy">
+
+      <p>Big leaves with straight parallel side veins.</p>
+    </div>
+
+    <div class="lightbox" id="view-dipterocarpus-4">
+      <a href="#dipterocarpus" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-4.jpg" alt="Dipterocarpus trunk with reddish bark patched with pale lichen" loading="lazy">
+
+      <p>Older trunk with lichen-patched bark</p>
+    </div>
+
+    <div class="lightbox" id="view-dipterocarpus-5">
+      <a href="#dipterocarpus" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-5.jpg" alt="Close-up of the base of a dried Dipterocarpus fruit, showing its folded wings" loading="lazy">
+
+      <p>At the juncture of the two long wings with the nut.</p>
+    </div>
+
+    <div class="lightbox" id="view-dipterocarpus-6">
+      <a href="#dipterocarpus" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-6.jpg" alt="Large oval Dipterocarpus leaves with straight veins, backlit against the sky" loading="lazy">
+
+      <p>Large leaves shining in the sun.</p>
+    </div>
+
+    <div class="lightbox" id="view-dipterocarpus-7">
+      <a href="#dipterocarpus" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-diptero-7.jpg" alt="One huge fallen Dipterocarpus leaf with deep parallel ribs on the forest floor" loading="lazy">
+
+      <p>One leaf can be as big as a dinner plate.</p>
+    </div>
+
+    <div class="lightbox" id="view-monotes-1">
+      <a href="#monotes" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-4.jpg" alt="Monotes fruit with five roughly equal papery wings held in a hand" loading="lazy">
+
+      <p>Monotes is distinguished by its fruit which has five wings.</p>
+    </div>
+
+    <div class="lightbox" id="view-monotes-2">
+      <a href="#monotes" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-1.jpg" alt="Broad, rounded Monotes leaf with a net of fine veins" loading="lazy">
+
+      <p>Broad rounded leaves (very different from Dipterocarpus).</p>
+    </div>
+
+    <div class="lightbox" id="view-monotes-3">
+      <a href="#monotes" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-2.jpg" alt="Creamy-white Monotes flowers with long thread-like stamens and green buds" loading="lazy">
+
+      <p>Clusters of creamy flowers with long stamens.</p>
+    </div>
+
+    <div class="lightbox" id="view-monotes-4">
+      <a href="#monotes" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-3.jpg" alt="Branch of a Monotes tree with rough, cracked grey-brown bark" loading="lazy">
+
+      <p>The tree's rough, cracked bark allows it to withstand grass fires.</p>
+    </div>
+
+    <div class="lightbox" id="view-monotes-5">
+      <a href="#monotes" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-5.jpg" alt="Young Monotes plant with broad oval leaves growing beside rocks" loading="lazy">
+
+      <p>A young plant growing in dry, rocky soil.</p>
+    </div>
+
+    <div class="lightbox" id="view-monotes-6">
+      <a href="#monotes" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-6.jpg" alt="Monotes branch with many orange-brown winged fruits against a grey sky" loading="lazy">
+
+      <p>Winged fruits on a branch.</p>
+    </div>
+
+    <div class="lightbox" id="view-monotes-7">
+      <a href="#monotes" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-monotes-7.jpg" alt="Large rounded Monotes leaves with a reddish winged fruit against a blue sky" loading="lazy">
+
+      <p>Broad, rounded leaves and a maturing fruit.</p>
+    </div>
+
+    <div class="lightbox" id="view-beilschmiedia-1">
+      <a href="#beilschmiedia" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-4.jpg" alt="Two plum-like Beilschmiedia fruits, one reddish and one dark purple" loading="lazy">
+
+      <p>Fleshy, olive-shaped fruits, no cup.</p>
+    </div>
+
+    <div class="lightbox" id="view-beilschmiedia-2">
+      <a href="#beilschmiedia" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-1.jpg" alt="Dense evergreen Beilschmiedia crown of dark and light green leaves" loading="lazy">
+
+      <p>A thick evergreen crown.</p>
+    </div>
+
+    <div class="lightbox" id="view-beilschmiedia-3">
+      <a href="#beilschmiedia" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-2.jpg" alt="Glossy oval yellow-green Beilschmiedia leaves in close-up" loading="lazy">
+
+      <p>Smooth shiny laurel-shaped leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-beilschmiedia-4">
+      <a href="#beilschmiedia" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-3.jpg" alt="Branched cluster of tiny greenish Beilschmiedia flowers on a leaf" loading="lazy">
+
+      <p>Small flowers in a branched cluster.</p>
+    </div>
+
+    <div class="lightbox" id="view-beilschmiedia-5">
+      <a href="#beilschmiedia" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-5.jpg" alt="Thick Beilschmiedia trunk with a flared base and patchy orange, green and brown bark" loading="lazy">
+
+      <p>A big tree trunk in the rainforest with markings on the bark.</p>
+    </div>
+
+    <div class="lightbox" id="view-beilschmiedia-6">
+      <a href="#beilschmiedia" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-6.jpg" alt="Long glossy bright-green Beilschmiedia leaves with a gloved hand for scale" loading="lazy">
+
+      <p>Long, shiny evergreen leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-beilschmiedia-7">
+      <a href="#beilschmiedia" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-beil-7.jpg" alt="Green Beilschmiedia stems with leaves in opposite pairs" loading="lazy">
+
+      <p>Leaves growing in opposite pairs.</p>
+    </div>
+
+    <div class="lightbox" id="view-cryptocarya-1">
+      <a href="#cryptocarya" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-2.jpg" alt="Green olive-shaped Cryptocarya fruit hanging from a branch" loading="lazy">
+
+      <p>The "hidden nut" fruit.</p>
+    </div>
+
+    <div class="lightbox" id="view-cryptocarya-2">
+      <a href="#cryptocarya" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-1.jpg" alt="Two Cryptocarya leaves showing a glossy dark top and a pale blue-green underside" loading="lazy">
+
+      <p>Shiny above, light blue-green below.</p>
+    </div>
+
+    <div class="lightbox" id="view-cryptocarya-3">
+      <a href="#cryptocarya" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-3.jpg" alt="Looking up into a leafy Cryptocarya crown against the sky" loading="lazy">
+
+      <p>Leafy crown viewed from below.</p>
+    </div>
+
+    <div class="lightbox" id="view-cryptocarya-4">
+      <a href="#cryptocarya" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-4.jpg" alt="Hand holding a red young Cryptocarya leaf beside a green leaf with a pale underside" loading="lazy">
+
+      <p>New growth that is red next to an older leaf.</p>
+    </div>
+
+    <div class="lightbox" id="view-cryptocarya-5">
+      <a href="#cryptocarya" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-5.jpg" alt="Hand holding a Cryptocarya leaf, showing its pale blue-green underside" loading="lazy">
+
+      <p>In Cryptocarya it is common to have a pale underside.</p>
+    </div>
+
+    <div class="lightbox" id="view-cryptocarya-6">
+      <a href="#cryptocarya" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-6.jpg" alt="Cluster of deep-red young Cryptocarya leaves hanging from a stem" loading="lazy">
+
+      <p>A flush of new deep red foliage.</p>
+    </div>
+
+    <div class="lightbox" id="view-cryptocarya-7">
+      <a href="#cryptocarya" class="lightbox-close">Close &times;</a>
+      <img src="images/gen-crypto-7.jpg" alt="Young Cryptocarya tree with red new shoots in rainforest" loading="lazy">
+
+      <p>Young tree in a rainforest.</p>
+    </div>
+
+    <!-- LINKING THE PAGES TO MOVE FROM FAMILY GENERA AND SPECIES -->
+
+
+    <nav class="explore-pager" aria-label="Explorer pages">
+      <ol class="step-list">
+        <li><a href="explore1.html"><span class="step-num">1</span> Families</a></li>
+        <li><a href="explore2.html" aria-current="page"><span class="step-num">2</span> Genera</a></li>
+        <li><a href="explore3.html"><span class="step-num">3</span> Species</a></li>
+      </ol>
+    </nav>
+  </main>
+
+
+  <!--FOOTER WITH LINKS IN EVERY PAGES-->
+
+
+  <footer id="site-footer">
+    <div class="footer-brand">
+      <p>Every photo helps protect a plant.</p>
+    </div>
+
+    <nav class="footer-columns" aria-label="Footer site map">
+      <section class="footer-col">
+        <h2>Explore</h2>
+
+        <ul>
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+          <li><a href="explore.html">Explorer home</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Identify</h2>
+
+        <ul>
+          <li><a href="identify.html#upload">Upload a photo</a></li>
+          <li><a href="identify.html#search">Search plants</a></li>
+          <li><a href="identify.html#result">Example result</a></li>
+          <li><a href="identify.html#location-map">Where it grows</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Contribute</h2>
+
+        <ul>
+          <li><a href="contribute.html">Contribution form</a></li>
+          <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
+          <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Help</h2>
+
+        <ul>
+          <li><a href="enquiry.html">Enquiry form</a></li>
+          <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
+          <li><a href="identify.html#photo-tips">Photo tips</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>About</h2>
+
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="enhancement1.html">Enhancements</a></li>
+          <li><a href="acknowledgement.html">Acknowledgements</a></li>
+          <li><a href="https://www.youtube.com/watch?v=HgLriGj2HF4">Video presentation</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Pl@netMatrix &middot; Built by Tousif Akhand
+        &middot; <a href="#site-header">Back to top</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- BACK TO THE TOP ON THE BOTTOM RIGHT CORNER -->
+
+
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
+</body>
+</html>

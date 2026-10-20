@@ -1,0 +1,466 @@
+<!doctype html>
+
+<!--
+  FILE NAME   : identify.html
+  AUTHOR      : TOUSIF AKHAND
+  STUDENT ID  : 105822937
+  UNIT        : COS10005 WEB DEVELOPMENT - ASSIGNMENT 1
+  DESCRIPTION : IDENTIFY PAGE - UPLOAD A PHOTO OR SEARCH TO FIND OUT WHAT THE PLANT IS
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Identify a plant with Pl@netMatrix: upload a photo or search to find its scientific name, common name, care tips and location.">
+  <meta name="keywords" content="plant identification, upload photo">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Identify</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400;1,600&amp;family=Playfair+Display:wght@700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+
+  <header id="site-header">
+    <!-- SIDE MENU WILL COME OUT WHEN THE HAMBURGER BUTTON IS CLICKED -->
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden">
+        Menu</span></label>
+    <nav class="side-menu" aria-label="All pages">
+      <label for="menu-toggle" class="menu-close">&times; Close</label>
+      <p class="side-title">All pages</p>
+
+      <ul>
+        <li><a href="explore.html">Explorer</a></li>
+        <li class="side-sub"><a href="explore1.html">Families</a></li>
+        <li class="side-sub"><a href="explore2.html">Genera</a></li>
+        <li class="side-sub"><a href="explore3.html">Species</a></li>
+        <li>
+          <a href="identify.html" class="current" aria-current="page">Identify</a>
+        </li>
+        <li><a href="contributor.html">Contributors</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="enhancement1.html">Enhancements</a></li>
+        <li><a href="acknowledgement.html">Acknowledgements</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <p id="logo">
+      <a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span
+          class="logo-matrix">Matrix</span></a><span class="logo-tagline">Know it. Name it. Save it.</span>
+    </p>
+
+    <!--SEARCH BAR AT THE TOP RIGHT-->
+
+    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page"
+        maxlength="40" required>
+      <datalist id="site-suggestions">
+        <option value="Dipterocarpaceae"></option>
+        <option value="Lauraceae"></option>
+        <option value="Dipterocarpus"></option>
+        <option value="Monotes"></option>
+        <option value="Beilschmiedia"></option>
+        <option value="Cryptocarya"></option>
+        <option value="Dipterocarpus alatus"></option>
+        <option value="Dipterocarpus tuberculatus"></option>
+        <option value="Monotes adenophyllus"></option>
+        <option value="Monotes glaber"></option>
+        <option value="Beilschmiedia berteroana"></option>
+        <option value="Beilschmiedia costaricensis"></option>
+        <option value="Cryptocarya adpressa"></option>
+        <option value="Cryptocarya alba"></option>
+        <option value="Plant families"></option>
+        <option value="Plant genera"></option>
+        <option value="Plant species"></option>
+        <option value="Identify a plant"></option>
+        <option value="Contributors"></option>
+        <option value="Contribution form"></option>
+        <option value="Enquiry form"></option>
+      </datalist>
+
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <!--MAIN MENU-->
+
+  <nav id="main-nav" aria-label="Main menu">
+    <ul>
+      <li class="has-submenu">
+        <a href="explore.html">Explorer <span class="caret">&#9662;</span></a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="identify.html" class="current" aria-current="page">Identify</a>
+      </li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Identify a Plant</h1>
+
+    <!-- SIDE NOTE REGARDING GOOD PHOTO -->
+
+    <aside>
+      <h2>Tips for a Good Photo</h2>
+
+      <ul>
+        <li>
+          Take photos of one leaf, flower or fruit at a time, and keep it in
+          sharp focus.
+        </li>
+        <li>Make use of natural light and avoid extreme lighting effects.</li>
+        <li>
+          If you can, take both sides of a leaf. Often the veins are more
+          prominent on the underside.
+        </li>
+        <li>Please never pick or damage a plant that might be endangered.</li>
+      </ul>
+    </aside>
+
+    <!-- 3 STEPS - TAKE PICS, UPLOAD IT AND SEE WHAT IT IS -->
+
+    <section id="upload">
+      <h2>Upload a Photo</h2>
+
+      <p>
+        Our identification tool matches your photo with thousands of records
+        of Endangered, Rare and Threatened (ERT) plants. Simply select a good
+        image and hit <strong>Identify</strong> to find the closest match.
+      </p>
+
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" enctype="multipart/form-data"
+        class="tool-form">
+        <fieldset>
+          <legend>Plant photo</legend>
+          <label for="plantPhoto">Choose a photo (JPG or PNG)</label>
+          <input type="file" id="plantPhoto" name="plantPhoto" accept="image/png, image/jpeg" required>
+          <input type="submit" value="Identify" class="pulse-button">
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- TIPS REGARDING HOW SOMEONE CAN GET A GOOD PHOTO -->
+
+    <section id="photo-tips">
+      <h2>Examples of Good Photos</h2>
+
+      <p>
+        Clear photos like these give the tool its best chance of getting it
+        right.
+      </p>
+
+      <div class="gallery example-gallery">
+        <figure>
+          <img src="images/gen-crypto-5.jpg" alt="Hand holding a leaf to show its pale underside and fine veins"
+            loading="lazy">
+
+          <figcaption>
+            <strong>Leaf underside:</strong> place the leaf flat so the veins
+            are sharp.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/sp-alatus-6.jpg" alt="Single dried winged fruit on a plain blue background" loading="lazy">
+
+          <figcaption>
+            <strong>Fruit:</strong> the shape is clearly visible against a
+            plain background.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/sp-adeno-5.jpg" alt="Sharp close-up of an open flower beside its buds" loading="lazy">
+
+          <figcaption>
+            <strong>Flower:</strong> move close to the flower and keep it in
+            focus.
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="source">
+        Photos: <a href="https://www.inaturalist.org/">iNaturalist</a> /
+        <a href="https://identify.plantnet.org/">Pl@ntNet</a>
+      </p>
+    </section>
+
+    <!--SEARCHING INFORMATIONS OF THE PLANTS-->
+
+    <section id="search">
+      <h2>Search for Plant Information</h2>
+
+      <p>
+        Remember part of the name? You can search by scientific name, common
+        name, genus or family.
+      </p>
+
+      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="search-form">
+        <label for="plantSearch">Plant name</label>
+        <input type="search" id="plantSearch" name="plantSearch" placeholder="e.g. Dipterocarpus alatus" maxlength="40"
+          required>
+        <input type="submit" value="Search">
+      </form>
+    </section>
+
+    <!--WORKING PROCEDURE OF PLANT IDENTIFICATION-->
+
+    <section id="how-it-works">
+      <h2>How Identification Works</h2>
+
+      <ol>
+        <li>You upload a picture of a leaf, flower or fruit.</li>
+        <li>
+          The tool considers characteristics like leaf shape, vein pattern and
+          colour.
+        </li>
+        <li>It checks them against our records of checked photos.</li>
+        <li>
+          You will see the closest matches, with a score indicating how
+          certain the tool is.
+        </li>
+        <li>
+          Any questionable results are reviewed by plant experts to ensure
+          accurate records.
+        </li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <!--RESULT AFTER THE IDENTIFICATION PROCESS-->
+
+    <section id="result">
+      <h2>Example Result</h2>
+
+      <p>This is what you'll find once you upload a picture.</p>
+
+      <figure class="result-figure">
+        <img src="images/sp-alatus-3.jpg"
+          alt="Uploaded photo of star-shaped flowers, some fresh green and some faded pink-brown">
+
+        <figcaption>
+          Example photo: a visitor's photo of flowers.<span class="source">Photo: <a
+              href="https://www.inaturalist.org/">iNaturalist</a> /
+            <a href="https://identify.plantnet.org/">Pl@ntNet</a></span>
+        </figcaption>
+      </figure>
+
+      <article class="result-card">
+        <h3>Best match: <em>Dipterocarpus alatus</em></h3>
+
+        <dl>
+          <dt>Scientific name</dt>
+          <dd><em>Dipterocarpus alatus</em> (family Dipterocarpaceae)</dd>
+          <dt>Common name</dt>
+          <dd>Resin tree</dd>
+          <dt>Main location</dt>
+          <dd>
+            Evergreen and semi-evergreen lowland forest, often along rivers,
+            from West Bengal and Bangladesh through Myanmar, Thailand, Laos,
+            Cambodia, Vietnam and the Philippines, and also Sri Lanka and the
+            Andaman Islands.
+          </dd>
+          <dt>Conservation status</dt>
+          <dd>Vulnerable</dd>
+        </dl>
+
+        <!--TIPS OF LOOKING AFTER PLANTS-->
+
+        <details>
+          <summary>Care tips and the right environment</summary>
+
+          <ul>
+            <li>
+              <strong>Water:</strong> copes with flooding, but not with strong
+              wind or fire.
+            </li>
+            <li><strong>Soil:</strong> moist, well-drained soil.</li>
+            <li>
+              <strong>Climate:</strong> humid tropical lowlands, valleys and
+              foothills.
+            </li>
+            <li>
+              <strong>Space:</strong> needs plenty of space – grows 30 to 60
+              metres tall.
+            </li>
+          </ul>
+        </details>
+      </article>
+
+      <table>
+        <caption>
+          Other possible matches for the sample photo
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Scientific name</th>
+            <th scope="col">Family</th>
+            <th scope="col">Match</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><em>Dipterocarpus alatus</em></td>
+            <td>Dipterocarpaceae</td>
+            <td>86%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><em>Dipterocarpus tuberculatus</em></td>
+            <td>Dipterocarpaceae</td>
+            <td>9%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><em>Cryptocarya alba</em></td>
+            <td>Lauraceae</td>
+            <td>3%</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!--LOCATION OF THE PLANTS THAT ONE WANTS TO FIND-->
+
+    <section id="location-map">
+      <h2>Where It Grows</h2>
+
+      <p>
+        This map shows South and Southeast Asia, where
+        <em>Dipterocarpus alatus</em> grows naturally.
+      </p>
+
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Myanmar&amp;z=4&amp;output=embed"
+          title="Map of South and Southeast Asia" loading="lazy"></iframe>
+      </div>
+
+      <p class="source">
+        Map: <a href="https://www.google.com/maps">Google Maps</a>
+      </p>
+    </section>
+
+    <!--USEFUL WORDS WHEN TALKING ABOUT PLANTS-->
+
+    <section id="identify-terms">
+      <h2>Useful Terms</h2>
+
+      <dl>
+        <dt>Confidence score</dt>
+        <dd>How close your photo is to our records, as a percentage.</dd>
+        <dt>Taxonomist</dt>
+        <dd>A scientist who classifies and names organisms.</dd>
+      </dl>
+
+      <p>
+        Do you want to share your picture with other plant spotters? Go to the
+        <a href="contribute.html">contribution form</a>, or explore the
+        <a href="explore.html">Plant Explorer</a>.
+      </p>
+    </section>
+  </main>
+
+  <!--FOOTER WITH LINKS IN EVERY PAGES-->
+
+  <footer id="site-footer">
+    <div class="footer-brand">
+      <p>Every photo helps protect a plant.</p>
+    </div>
+
+    <nav class="footer-columns" aria-label="Footer site map">
+      <section class="footer-col">
+        <h2>Explore</h2>
+
+        <ul>
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+          <li><a href="explore.html">Explorer home</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Identify</h2>
+
+        <ul>
+          <li><a href="identify.html#upload">Upload a photo</a></li>
+          <li><a href="identify.html#search">Search plants</a></li>
+          <li><a href="identify.html#result">Example result</a></li>
+          <li><a href="identify.html#location-map">Where it grows</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Contribute</h2>
+
+        <ul>
+          <li><a href="contribute.html">Contribution form</a></li>
+          <li>
+            <a href="contributor.html#contribution-cards">Contributor gallery</a>
+          </li>
+          <li>
+            <a href="contributor.html#photo-journey">How photos arrive</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Help</h2>
+
+        <ul>
+          <li><a href="enquiry.html">Enquiry form</a></li>
+          <li>
+            <a href="mailto:105822937@students.swinburne.edu.my">Email us</a>
+          </li>
+          <li><a href="identify.html#photo-tips">Photo tips</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>About</h2>
+
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="enhancement1.html">Enhancements</a></li>
+          <li><a href="acknowledgement.html">Acknowledgements</a></li>
+          <li><a href="https://www.youtube.com/watch?v=HgLriGj2HF4">Video presentation</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Pl@netMatrix &middot; Built by Tousif Akhand &middot;
+        <a href="#site-header">Back to top</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- BACK TO THE TOP ON THE BOTTOM RIGHT CORNER -->
+
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
+</body>
+
+</html>

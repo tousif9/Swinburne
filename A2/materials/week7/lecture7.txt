@@ -1,0 +1,88 @@
+===== PAGE 1
+COS10005 – Web Development 
+Lecture 7 – JavaScript (Basic) 
+ 
+In this session, simple JavaScript will be introduced. 
+You may follow the instructions below, to format the HTML with the appropriate elements. 
+Let’s start! 
+1. Please open the prepared HTML file (Java_html_RAW.HTML) in the zip folder. 
+2. Insert an External JavaScript file link under the comment in HTML: 
+ 
+External JavaScript file link statement:  <script src="lect7_html.js"></script> 
+3. Now open a new notepad++ and save the file as “lect7_html.js”.  The file name has to be same 
+as External JavaScript file link statement:  <script src="lect7_html.js"></script> 
+ 
+HTML  
+4. Insert a heading style inside the body tag.  
+<h1>Input and Output using JavaScript</h1> 
+ 
+5. Working on the first link to JavaScript.  This script is to ‘activate’ the JavaScript to work on the 
+functions. 
+<p>    
+<strong id="clickme" >Click me</strong> - to run 'prompt' and display 'alert'  
+</p> 
+ 
+6. This statement is to display the message from JavaScript after the process. 
+<p><span id="mymessage"></span></p>   
+ 
+ 
+ 
+ 
+
+===== PAGE 2
+COS10005 – Web Development 
+Lecture 7 – JavaScript (Basic) 
+ 
+JavaScript 
+7. Following is the comments method used in JavaScript file.  Please insert the following 
+comments. 
+/* Filename: lect7_html.js 
+   Purpose : demonstrate javascript alerts   
+   Target html: lect5_html_io.htm 
+   Author: Your Name 
+   Date written: today date 
+*/ 
+/* getInputInfo retrieves text from the HTML text box then calls displayAlert */ 
+//"use strict"; 
+ 
+8. Calling the first function name init() by using window.load. 
+window.onload = init;      //note: no brackets after function name. 
+ 
+9. Create the first function name init(). 
+function init() { 
+ 
+} 
+  
+10. Inside this function, create a variable (var) which refer to the HTML file (object in HTML). 
+var clickme = document.getElementById("clickme");     //object in HTML 
+ 
+11. Response from HTML after visitor click the text ‘clickme’. Insie this function, it calls another 
+function by using “clickme.onclick: getInputInfor” 
+clickme.onclick = getInputInfo;   
+ 
+12. Create the second function name getInputInfor(). 
+function getInputInfo() { 
+ 
+} 
+ 
+===== PAGE 3
+COS10005 – Web Development 
+Lecture 7 – JavaScript (Basic) 
+ 
+13. Create a local variable to use inside this function. 
+var myString;      //declare local variables 
+ 
+14. The following statement is to prompt a window dialogue for user to key in.  The input will be 
+stored in the variable name myString. 
+myString = prompt("Enter the string", "The string"); 
+ 
+15. Alert statement is used to display an alert box with message and a OK button. 
+alert("Your output: " + myString); 
+ 
+16. Use a DOM method to return the element that has the ID attribute with the specified value.    
+outputMessage = document.getElementById("mymessage"); //placeholder for display text 
+ 
+17. Lastly is to write the string to html page. 
+outputMessage.textContent="Your output: " + myString; //write string to html page 
+ 
+ 

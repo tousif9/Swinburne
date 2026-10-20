@@ -1,0 +1,117 @@
+===== PAGE 1
+COS10005 – Wed Development 
+Lecture 8 – JavaScript  
+ 
+In this session, JavaScript will be introduced. 
+You may follow the instructions below, to format the HTML and JavaScript with the appropriate 
+elements. 
+Let’s start! 
+1. Please open the prepared HTML file (Java_Raw.HTML) in the zip folder. 
+2. Insert an External JavaScript file link under the comment in HTML: 
+ 
+ 
+ 
+ 
+ 
+External JavaScript file link statement:  <script src="L8Demo1.js"></script> 
+3. Now open a new notepad++ and save the file as “L8Demo1.js”.  The file name has to be same as 
+External JavaScript file link statement:  <script src=" L8Demo1.js"></script> 
+ 
+JavaScript 
+4. Working on 2 inputs (string).   “+” the concatenation symbol is used to join 2 strings together.  
+Alert is used to prompt/display the result. 
+function example1() { 
+  name1 = prompt ("Enter a name1"); 
+  name2 = prompt ("Enter a name2"); 
+  alert (name1 + name2); 
+} 
+ 
+5. To access the output, insert the calling function statement below.  First create a function to call 
+another function. 
+ 
+function init(){ 
+ 
+} 
+window.onload = init; 
+ 
+6. Inside function init(), insert this statement: example1(); to call function example1() above. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 2
+COS10005 – Wed Development 
+Lecture 8 – JavaScript  
+ 
+7. Working on parameters.  The function has 2 parameters which will receive 2 values from the 
+calling function. 
+function showName(name1, name2) { 
+alert (name1+name2); 
+} 
+ 
+8.  To access the output, insert:  showName(“Web”, “Page”);  inside function init()and remark (//) 
+the previous function call. 
+ 
+9. Working on calculation from parameters passing.  
+function averageNumbers(a, b, c) { 
+  sum = a + b + c; 
+  result = sum / 3; 
+  return result; 
+} 
+ 
+10. Now insert an alert statement to prompt/display the result and remark (//) the previous 
+function call. 
+alert(averageNumbers(12,34,63)); 
+ 
+11. The function below is created for another 3 functions for demo purposes.  Functions: scope1(), 
+scope2() and scope3() will create later. 
+function testScope() { 
+  var localVariable; 
+ 
+localVariable = "Changed"; 
+   globalVariable = "Changed"; 
+} 
+ 
+ 
+12. Scope 1 
+ 
+function scope1() { 
+globalVariable = "Original"; 
+localVariable = "Original"; 
+testScope(); 
+alert (globalVariable + " " + localVariable); 
+} 
+ 
+13. To access the output, insert:  scope1();  inside function init()and remark (//) the previous 
+function call. 
+ 
+ 
+ 
+===== PAGE 3
+COS10005 – Wed Development 
+Lecture 8 – JavaScript  
+ 
+14. Scope 2 
+function scope2() { 
+testScope(); 
+alert (globalVariable + " " + localVariable); 
+} 
+ 
+ 
+15. To access the output, insert:  scope2();  inside function init()and remark (//) the previous 
+function call. 
+ 
+ 
+16. Scope 3 
+function scope3() { 
+testScope(); 
+alert (globalVariable); 
+} 
+ 
+ 
+17.  To access the output, insert:  scope3();  inside function init()and remark (//) the previous 
+function call. 
+ 

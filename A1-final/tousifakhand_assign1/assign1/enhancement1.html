@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<!--
+  FILE NAME   : enhancement1.html
+  AUTHOR      : TOUSIF AKHAND
+  STUDENT ID  : 105822937
+  UNIT        : COS10005 WEB DEVELOPMENT - ASSIGNMENT 1
+  DESCRIPTION : ENHANCEMENTS PAGE - LIST OF THE EXTRA FEATURES AND WHERE THEY ARE USED
+-->
+
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enhancements made to the Pl@netMatrix website using HTML5 and CSS3.">
+  <meta name="keywords" content="enhancements, CSS lightbox, animations, responsive design">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Enhancements</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400;1,600&amp;family=Playfair+Display:wght@700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+
+
+  <header id="site-header">
+
+
+    <!-- SIDE MENU WILL COME OUT WHEN THE HAMBURGER BUTTON IS CLICKED -->
+
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
+    <nav class="side-menu" aria-label="All pages">
+      <label for="menu-toggle" class="menu-close">&times; Close</label>
+      <p class="side-title">All pages</p>
+
+      <ul>
+        <li><a href="explore.html">Explorer</a></li>
+        <li class="side-sub"><a href="explore1.html">Families</a></li>
+        <li class="side-sub"><a href="explore2.html">Genera</a></li>
+        <li class="side-sub"><a href="explore3.html">Species</a></li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contributor.html">Contributors</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="enhancement1.html" class="current" aria-current="page">Enhancements</a></li>
+        <li><a href="acknowledgement.html">Acknowledgements</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
+
+
+    <!--SEARCH BAR AT THE TOP RIGHT-->
+
+
+    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
+      <datalist id="site-suggestions">
+        <option value="Dipterocarpaceae"></option>
+        <option value="Lauraceae"></option>
+        <option value="Dipterocarpus"></option>
+        <option value="Monotes"></option>
+        <option value="Beilschmiedia"></option>
+        <option value="Cryptocarya"></option>
+        <option value="Dipterocarpus alatus"></option>
+        <option value="Dipterocarpus tuberculatus"></option>
+        <option value="Monotes adenophyllus"></option>
+        <option value="Monotes glaber"></option>
+        <option value="Beilschmiedia berteroana"></option>
+        <option value="Beilschmiedia costaricensis"></option>
+        <option value="Cryptocarya adpressa"></option>
+        <option value="Cryptocarya alba"></option>
+        <option value="Plant families"></option>
+        <option value="Plant genera"></option>
+        <option value="Plant species"></option>
+        <option value="Identify a plant"></option>
+        <option value="Contributors"></option>
+        <option value="Contribution form"></option>
+        <option value="Enquiry form"></option>
+      </datalist>
+
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+
+  <!--MAIN MENU-->
+
+
+  <nav id="main-nav" aria-label="Main menu">
+    <ul>
+      <li class="has-submenu">
+        <a href="explore.html">Explorer <span class="caret">&#9662;</span></a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Website Enhancements</h1>
+
+
+    <!--SIDE NOTE FOR THE READER-->
+
+
+    <aside>
+      <h2>Built for Every Visitor</h2>
+
+      <p>
+        All of these add-ons facilitate or improve the use of Pl@netMatrix. Photos are easy to view up close, forms let you know straight away if something is missing, and all pages are easy to navigate around.
+      </p>
+    </aside>
+
+    <section id="enhancements-intro">
+      <h2>Overview</h2>
+
+      <p>
+        This is where you'll discover all of the additional functionality that Pl@netMatrix provides above and beyond what is strictly necessary. For each of them, you can read what it is, where it is used (with links so you can try it yourself) and the tutorials I learned it from. The first four are the main enhancements submitted for marking.
+      </p>
+
+      <ol>
+        <li><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></li>
+        <li><a href="#enh-fixed-nav">Fixed Navigation Bar</a></li>
+        <li><a href="#enh-gallery">Photo Gallery with Lightbox</a></li>
+        <li><a href="#enh-flip">Flip Cards</a></li>
+        <li><a href="#enh-rating">Page Rating</a></li>
+        <li><a href="#enh-picture-hover">Picture Hover Effect</a></li>
+        <li><a href="#enh-button-hover">Button and Link Hover Effects</a></li>
+        <li><a href="#enh-back-to-top">Back to Top Button</a></li>
+        <li><a href="#enh-map">Google Map</a></li>
+        <li><a href="#enh-animations">CSS Animations</a></li>
+        <li><a href="#enh-details">Expandable Care Tips and Quiz Answers</a></li>
+        <li><a href="#enh-form-feedback">Live Form Feedback</a></li>
+        <li><a href="#enh-footer">Site-Map Footer</a></li>
+        <li><a href="#enh-search">Site Search with Suggestions</a></li>
+        <li><a href="#enh-link-map">Link Map Diagram</a></li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <section id="enh-fluid" class="enhancement">
+      <h2>1. Fluid Layout with Hamburger Menu</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>Each page is designed using relative widths, flexible boxes and media queries ensuring it stretches or shrinks to fit any screen. The six main pages are located in the menu bar. The side menu, which slides in from the left and lists all of the pages in the site, is opened by clicking the ☰ button to the left of the logo. It is built with a hidden checkbox, the <code>:checked</code> selector and a CSS <code>transform</code> transition.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#main-nav">Menu on every page</a>,
+            <a href="explore3.html">Species page (resize your browser window to see the layout adapt)</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_rwd_intro.asp">W3Schools: Responsive Web Design</a>,
+            <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">W3Schools: Media Queries</a>,
+            <a href="https://www.w3schools.com/cssref/sel_checked.php">W3Schools: The :checked selector</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-fixed-nav" class="enhancement">
+      <h2>2. Fixed Navigation Bar</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>As you scroll, the menu bar remains at the top of the screen, making each page accessible at all times, even halfway down the long Species page. It's based on <code>position: sticky</code>, with <code>scroll-padding-top</code> ensuring that headings don't get obscured beneath the bar when jumping to a section.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore3.html">Species page</a>,
+            <a href="explore2.html">Genera page</a>,
+            <a href="index.html">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_sticky_element.asp">W3Schools: How To: Sticky Element</a>,
+            <a href="https://www.w3schools.com/css/css_positioning.asp">W3Schools: CSS Positioning</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-gallery" class="enhancement">
+      <h2>3. Photo Gallery with Lightbox</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>The Explore page features a photo gallery, and each family, genus and species also features a gallery of photos. Tap on any image and it will pop up and display the image full-screen with the caption and a Close button on a dark background. The <code>:target</code> selector and fixed positioning are used to build the viewer.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore.html#photo-gallery">Explore page gallery</a>,
+            <a href="explore1.html#dipterocarpaceae">Families gallery</a>,
+            <a href="explore2.html#dipterocarpus">Genera gallery</a>,
+            <a href="explore3.html#d-alatus">Species gallery</a>,
+            <a href="explore3.html#view-d-alatus-1">an open lightbox</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_image_gallery.asp">W3Schools: CSS Image Gallery</a>,
+            <a href="https://www.w3schools.com/cssref/sel_target.php">W3Schools: The :target selector</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-flip" class="enhancement">
+      <h2>4. Flip Cards</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>The front of flip cards displays a photograph of a plant. There are four on the home page, and one for each of the eight species on the Explore page. Hover over each card (or tab to it with the keyboard) to see it flip over in 3D, showing a fun fact and a link to that plant. It uses <code>perspective</code>, <code>transform: rotateY()</code> and <code>backface-visibility</code>.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#flip-cards">"Meet the Plants" on the home page</a>,
+            <a href="explore.html#flip-gallery">Species Flip Gallery on the Explore page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_flip_card.asp">W3Schools: How To: Flip Card</a>,
+            <a href="https://www.w3schools.com/css/css3_3dtransforms.asp">W3Schools: CSS 3D Transforms</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-rating" class="enhancement">
+      <h2>5. Page Rating</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>The Explore page can be rated by visitors from 1 to 5 stars. The stars are radio buttons styled using CSS. Move the mouse along and every star up to the one you're pointing at will glow, and your selection will remain highlighted. The rating is then sent just like any other form answer.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore.html#rate-page">Explore page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/att_input_type_radio.asp">W3Schools: HTML input type="radio"</a>,
+            <a href="https://www.w3schools.com/css/css_combinators.asp">W3Schools: CSS Combinators</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-picture-hover" class="enhancement">
+      <h2>6. Picture Hover Effect</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>Pictures react to pointing. The main photos get a little bigger and cast a deeper shadow, and the gallery thumbnails zoom in, so you're more inclined to click them. It applies <code>transform: scale()</code> with a smooth <code>transition</code>.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore.html#family-tree">family tree on the Explore page</a>,
+            <a href="explore.html#photo-gallery">Explore page photo gallery</a>,
+            <a href="explore1.html#dipterocarpaceae">gallery thumbnails</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_zoom_hover.asp">W3Schools: How To: Zoom on Hover</a>,
+            <a href="https://www.w3schools.com/css/css3_2dtransforms.asp">W3Schools: CSS 2D Transforms</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-button-hover" class="enhancement">
+      <h2>7. Button and Link Hover Effects</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>Every button, such as "Start exploring", "Identify" and "Submit", changes colour when hovered over, lifts slightly and casts a shadow, making it clear to the user that they can click it. Links in the text are bold with a thick mint underline, and they light up when hovered over. Links that go to another page also have an arrow that pushes forward at the end of the link. The arrow comes from the <code>::after</code> pseudo-element and attribute selectors like <code>a[href$=".html"]</code>, so links within the same page don't get one.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#features">Home page buttons</a>,
+            <a href="contribute.html#contribute-form">form buttons</a>,
+            <a href="profile.html">Email Me button</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css3_buttons.asp">W3Schools: CSS Buttons</a>,
+            <a href="https://www.w3schools.com/css/css3_transitions.asp">W3Schools: CSS Transitions</a>,
+            <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">W3Schools: CSS Attribute Selectors</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-back-to-top" class="enhancement">
+      <h2>8. Back to Top Button</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>At the bottom right of each page there is a round ↑ button. Clicking it takes you smoothly back to the top of the page without the jump, which is great on the long Explorer pages. It's based on fixed positioning and <code>scroll-behavior: smooth</code>.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore3.html">Species page</a>,
+            <a href="index.html">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">W3Schools: How To: Smooth Scroll</a>,
+            <a href="https://www.w3schools.com/css/css_positioning.asp">W3Schools: CSS Positioning</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-map" class="enhancement">
+      <h2>9. Google Map</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>The Identify page contains a Google Map showing where the example plant is found. This map is full-width.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="identify.html#location-map">Identify page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/tag_iframe.asp">W3Schools: HTML iframe tag</a>,
+            <a href="https://www.w3schools.com/graphics/google_maps_intro.asp">W3Schools: Google Maps</a>
+        </dd>
+      </dl>
+    </section>
+
+
+    <section id="enh-animations" class="enhancement">
+      <h2>10. CSS Animations</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>In the home page banner, the heading rises in one word at a time and the line "Help us ___ Malaysia's plants" alternates between explore, identify, record and protect. Elsewhere, headings, cards and form sections fade in softly as a page loads, there's a soft glow around the logo, the tree logo sways like a tree in the wind when you hover over it, and the Identify button pulses softly. The animations switch off automatically for anyone who prefers less movement.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#hero">animated banner words</a>,
+            <a href="index.html#features">fading cards</a>,
+            <a href="index.html#site-logo">swaying logo</a>,
+            <a href="identify.html#upload">pulsing Identify button</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css3_animations.asp">W3Schools: CSS Animations</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-details" class="enhancement">
+      <h2>11. Expandable Care Tips and Quiz Answers</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>Care tips are contained in the Identify page in a box, which can be opened and closed with a single click leaving the result short and tidy. The quiz answers on the Explore page work the same way. Both employ the HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="identify.html#result">Identify page</a>,
+            <a href="explore.html#quiz">quiz answers on the Explore page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/tag_details.asp">W3Schools: HTML details tag</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-form-feedback" class="enhancement">
+      <h2>12. Live Form Feedback</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>The section of a form you're working on lights up, and the borders of each field turn red when the entered text isn't correct and green when it is. It leverages the <code>:valid</code>, <code>:invalid</code> and <code>:focus-within</code> selectors.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="contribute.html#contribute-form">Contribution form</a>,
+            <a href="enquiry.html#enquiry-form">Enquiry form</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">W3Schools: CSS Pseudo-classes</a>,
+            <a href="https://www.w3schools.com/html/html_form_attributes.asp">W3Schools: HTML Form Attributes</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-footer" class="enhancement">
+      <h2>13. Site-Map Footer</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>Each page includes a footer which acts as a site map. It has our mission line, five columns of links to each part of the website and a bottom bar with contact information, credits and a Back to top link. Each link develops an animated underline from the centre when hovered over, a wavy leaf-edge border on top is created using a <code>radial-gradient</code> and the columns rearrange themselves to fit the screen using CSS grid.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#site-footer">Home page footer</a>,
+            <a href="explore.html#site-footer">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_grid.asp">W3Schools: CSS Grid Layout</a>,
+            <a href="https://www.w3schools.com/css/css3_gradients.asp">W3Schools: CSS Gradients</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-search" class="enhancement">
+      <h2>14. Site Search with Suggestions</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>Every page has a search box in the header. As you type, it suggests plant names and pages, e.g. <em>Cryptocarya alba</em> or "Contribution form", based on the HTML5 <code>&lt;datalist&gt;</code> element. The search is in a white rounded box with a mint <strong>Search</strong> button inside. Click into it, and it grows and shines mint thanks to a <code>transition</code> and the <code>:focus-within</code> selector. Even the magnifier is drawn using CSS pseudo-elements.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="index.html#site-header">Header on the home page</a>,
+            <a href="explore.html#site-header">every other page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/tags/tag_datalist.asp">W3Schools: HTML datalist tag</a>,
+            <a href="https://www.w3schools.com/howto/howto_css_search_button.asp">W3Schools: How To - Search Button</a>,
+            <a href="https://www.w3schools.com/css/css3_gradients.asp">W3Schools: CSS Gradients</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="enh-link-map" class="enhancement">
+      <h2>15. Link Map Diagram</h2>
+
+      <dl>
+        <dt>What it is</dt>
+        <dd>A tree diagram on the Explore page connects both families with their genera and species. Under the covers it's simply a nested list. The connecting lines are created with the pseudo-elements <code>::before</code> and <code>::after</code> and each box links to that plant's section.</dd>
+        <dt>Where it is applied</dt>
+        <dd>
+            <a href="explore.html#link-map">Explore page</a>
+        </dd>
+        <dt>Reference(s)</dt>
+        <dd>
+            <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">W3Schools: CSS Pseudo-elements</a>,
+            <a href="https://www.w3schools.com/css/css3_flexbox.asp">W3Schools: CSS Flexbox</a>
+        </dd>
+      </dl>
+    </section>
+
+
+    <!--SUMMARY OF ALL THE ENHANCEMENTS-->
+
+
+    <section id="enhancement-summary">
+      <h2>Summary</h2>
+
+      <table>
+        <caption>Where each enhancement can be found</caption>
+        <thead>
+          <tr>
+            <th scope="col">Enhancement</th>
+            <th scope="col">Where it is applied</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="#enh-fluid">Fluid Layout with Hamburger Menu</a></th>
+            <td>Menu on every page, Species page (resize your browser window to see the layout adapt)</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-fixed-nav">Fixed Navigation Bar</a></th>
+            <td>Species page, Genera page, every other page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-gallery">Photo Gallery with Lightbox</a></th>
+            <td>Explore page gallery, Families gallery, Genera gallery, Species gallery, an open lightbox</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-flip">Flip Cards</a></th>
+            <td>"Meet the Plants" on the home page, Species Flip Gallery on the Explore page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-rating">Page Rating</a></th>
+            <td>Explore page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-picture-hover">Picture Hover Effect</a></th>
+            <td>Family tree and photo gallery on the Explore page, gallery thumbnails</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-button-hover">Button and Link Hover Effects</a></th>
+            <td>Home page buttons, form buttons, Email Me button, links in the text on every page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-back-to-top">Back to Top Button</a></th>
+            <td>Species page, every other page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-map">Google Map</a></th>
+            <td>Identify page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-animations">CSS Animations</a></th>
+            <td>fading cards, swaying logo, pulsing Identify button</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-details">Expandable Care Tips and Quiz Answers</a></th>
+            <td>Identify page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-form-feedback">Live Form Feedback</a></th>
+            <td>Contribution form, Enquiry form</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-footer">Site-Map Footer</a></th>
+            <td>Home page footer, every other page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-search">Site Search with Suggestions</a></th>
+            <td>Header on every page</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="#enh-link-map">Link Map Diagram</a></th>
+            <td>Explore page</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+
+  <!--FOOTER WITH LINKS IN EVERY PAGES-->
+
+
+  <footer id="site-footer">
+    <div class="footer-brand">
+      <p>Every photo helps protect a plant.</p>
+    </div>
+
+    <nav class="footer-columns" aria-label="Footer site map">
+      <section class="footer-col">
+        <h2>Explore</h2>
+
+        <ul>
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+          <li><a href="explore.html">Explorer home</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Identify</h2>
+
+        <ul>
+          <li><a href="identify.html#upload">Upload a photo</a></li>
+          <li><a href="identify.html#search">Search plants</a></li>
+          <li><a href="identify.html#result">Example result</a></li>
+          <li><a href="identify.html#location-map">Where it grows</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Contribute</h2>
+
+        <ul>
+          <li><a href="contribute.html">Contribution form</a></li>
+          <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
+          <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Help</h2>
+
+        <ul>
+          <li><a href="enquiry.html">Enquiry form</a></li>
+          <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
+          <li><a href="identify.html#photo-tips">Photo tips</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>About</h2>
+
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="enhancement1.html">Enhancements</a></li>
+          <li><a href="acknowledgement.html">Acknowledgements</a></li>
+          <li><a href="https://www.youtube.com/watch?v=HgLriGj2HF4">Video presentation</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Pl@netMatrix &middot; Built by Tousif Akhand
+        &middot; <a href="#site-header">Back to top</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- BACK TO THE TOP ON THE BOTTOM RIGHT CORNER -->
+
+
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
+</body>
+</html>

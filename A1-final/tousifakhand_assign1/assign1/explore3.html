@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+
+<!--
+  FILE NAME   : explore3.html
+  AUTHOR      : TOUSIF AKHAND
+  STUDENT ID  : 105822937
+  UNIT        : COS10005 WEB DEVELOPMENT - ASSIGNMENT 1
+  DESCRIPTION : SPECIES PAGE - TWO SPECIES FROM EACH GENUS
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore eight plant species with photos, origins and identification tips.">
+  <meta name="keywords" content="plant species">
+  <meta name="author" content="Tousif Akhand">
+  <title>Pl@netMatrix | Species</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400;1,600&amp;family=Playfair+Display:wght@700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+
+
+  <header id="site-header">
+
+
+    <!-- SIDE MENU WILL COME OUT WHEN THE HAMBURGER BUTTON IS CLICKED -->
+
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button" title="Open the menu">&#9776;<span class="visually-hidden"> Menu</span></label>
+    <nav class="side-menu" aria-label="All pages">
+      <label for="menu-toggle" class="menu-close">&times; Close</label>
+      <p class="side-title">All pages</p>
+
+      <ul>
+        <li><a href="explore.html">Explorer</a></li>
+        <li class="side-sub"><a href="explore1.html">Families</a></li>
+        <li class="side-sub"><a href="explore2.html">Genera</a></li>
+        <li class="side-sub"><a href="explore3.html" class="current" aria-current="page">Species</a></li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contributor.html">Contributors</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="enhancement1.html">Enhancements</a></li>
+        <li><a href="acknowledgement.html">Acknowledgements</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" id="logo-link"><img src="images/logo.png" alt="Pl@netMatrix tree logo" id="site-logo"></a>
+    <p id="logo"><a href="index.html"><span class="logo-planet">Pl<span class="logo-at">@</span>net</span><span class="logo-matrix">Matrix</span></a><span class="logo-tagline">Know it. Name it. Save it.</span></p>
+
+
+    <!--SEARCH BAR AT THE TOP RIGHT-->
+
+
+    <form class="site-search" action="https://mercury.swin.edu.au/it000000/formtest.php" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search Pl@netMatrix</label>
+      <input type="search" id="site-search-input" name="q" list="site-suggestions" placeholder="Find a plant or page" maxlength="40" required>
+      <datalist id="site-suggestions">
+        <option value="Dipterocarpaceae"></option>
+        <option value="Lauraceae"></option>
+        <option value="Dipterocarpus"></option>
+        <option value="Monotes"></option>
+        <option value="Beilschmiedia"></option>
+        <option value="Cryptocarya"></option>
+        <option value="Dipterocarpus alatus"></option>
+        <option value="Dipterocarpus tuberculatus"></option>
+        <option value="Monotes adenophyllus"></option>
+        <option value="Monotes glaber"></option>
+        <option value="Beilschmiedia berteroana"></option>
+        <option value="Beilschmiedia costaricensis"></option>
+        <option value="Cryptocarya adpressa"></option>
+        <option value="Cryptocarya alba"></option>
+        <option value="Plant families"></option>
+        <option value="Plant genera"></option>
+        <option value="Plant species"></option>
+        <option value="Identify a plant"></option>
+        <option value="Contributors"></option>
+        <option value="Contribution form"></option>
+        <option value="Enquiry form"></option>
+      </datalist>
+
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+
+  <!--MAIN MENU-->
+
+
+  <nav id="main-nav" aria-label="Main menu">
+    <ul>
+      <li class="has-submenu">
+        <a href="explore.html" class="current">Explorer <span class="caret">&#9662;</span></a>
+        <ul class="submenu">
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html" class="current" aria-current="page">Species</a></li>
+        </ul>
+      </li>
+      <li><a href="identify.html">Identify</a></li>
+      <li><a href="contributor.html">Contributors</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="breadcrumb"><a href="explore.html">Explorer</a> &rsaquo; Plant Species</p>
+
+    <h1>Plant Species</h1>
+
+
+    <!--SIDE NOTE FOR THE READER-->
+
+
+    <aside>
+      <h2>Protecting Species</h2>
+
+      <p>
+        On a global list, known as the IUCN Red List, scientists monitor the threat status of each species. Some of the plants on this page are under threat from logging and farming. Each image you submit using <a href="contribute.html">our contribution form</a> helps highlight where they are still found.
+      </p>
+    </aside>
+
+
+    <!--INTRODUCTION REGARDING THIS PAGE-->
+
+
+    <section id="intro">
+      <h2>About This Page</h2>
+
+      <p>
+        A species is one particular kind of plant. It has a two-part scientific name with genus first followed by a species name which may describe the plant or location of its occurrence. Now you can discover two species of each of our four genera, with photographs, where each comes from and how to identify it.
+      </p>
+
+      <nav class="page-nav" aria-label="On this page">
+        <h3>On this page</h3>
+
+        <ul>
+        <li><a href="#d-alatus"><em>Dipterocarpus alatus</em></a></li>
+        <li><a href="#d-tuberculatus"><em>Dipterocarpus tuberculatus</em></a></li>
+        <li><a href="#m-adenophyllus"><em>Monotes adenophyllus</em></a></li>
+        <li><a href="#m-glaber"><em>Monotes glaber</em></a></li>
+        <li><a href="#b-berteroana"><em>Beilschmiedia berteroana</em></a></li>
+        <li><a href="#b-costaricensis"><em>Beilschmiedia costaricensis</em></a></li>
+        <li><a href="#c-adpressa"><em>Cryptocarya adpressa</em></a></li>
+        <li><a href="#c-alba"><em>Cryptocarya alba</em></a></li>
+        </ul>
+      </nav>
+    </section>
+
+
+    <!--PROCESS OF READING THE PAGE HOW IT WORKS-->
+
+
+    <section id="steps">
+      <h2>How to Identify a Species in the Field</h2>
+
+      <ol>
+        <li>Start by working out the family and genus, using the <a href="explore1.html">Families</a> and <a href="explore2.html">Genera</a> pages.</li>
+        <li>Note the leaves: size, shape and hairiness.</li>
+        <li>See if there are any flowers or fruit to be found. They are the surest of clues.</li>
+        <li>Record its location since many species are found in only one area.</li>
+        <li>Upload your photo on the <a href="identify.html">Identify</a> page to check your answer.</li>
+      </ol>
+    </section>
+
+
+    <!--SUMMARIZATION OF ALL THE SPECIES-->
+
+
+    <section id="summary">
+      <h2>At a Glance</h2>
+
+      <table class="wide-table">
+        <caption>The eight featured species</caption>
+        <thead>
+          <tr><th scope="col">Species</th><th scope="col">Genus</th><th scope="col">Family</th><th scope="col">Native to</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><a href="#d-alatus"><em>Dipterocarpus alatus</em></a></th><td><a href="explore2.html#dipterocarpus"><em>Dipterocarpus</em></a></td><td>Dipterocarpaceae</td><td>South and Southeast Asia</td></tr>
+          <tr><th scope="row"><a href="#d-tuberculatus"><em>Dipterocarpus tuberculatus</em></a></th><td><a href="explore2.html#dipterocarpus"><em>Dipterocarpus</em></a></td><td>Dipterocarpaceae</td><td>Bangladesh and mainland Southeast Asia</td></tr>
+          <tr><th scope="row"><a href="#m-adenophyllus"><em>Monotes adenophyllus</em></a></th><td><a href="explore2.html#monotes"><em>Monotes</em></a></td><td>Dipterocarpaceae</td><td>South-central Africa</td></tr>
+          <tr><th scope="row"><a href="#m-glaber"><em>Monotes glaber</em></a></th><td><a href="explore2.html#monotes"><em>Monotes</em></a></td><td>Dipterocarpaceae</td><td>South-central Africa</td></tr>
+          <tr><th scope="row"><a href="#b-berteroana"><em>Beilschmiedia berteroana</em></a></th><td><a href="explore2.html#beilschmiedia"><em>Beilschmiedia</em></a></td><td>Lauraceae</td><td>Chile</td></tr>
+          <tr><th scope="row"><a href="#b-costaricensis"><em>Beilschmiedia costaricensis</em></a></th><td><a href="explore2.html#beilschmiedia"><em>Beilschmiedia</em></a></td><td>Lauraceae</td><td>Central America</td></tr>
+          <tr><th scope="row"><a href="#c-adpressa"><em>Cryptocarya adpressa</em></a></th><td><a href="explore2.html#cryptocarya"><em>Cryptocarya</em></a></td><td>Lauraceae</td><td>New Caledonia</td></tr>
+          <tr><th scope="row"><a href="#c-alba"><em>Cryptocarya alba</em></a></th><td><a href="explore2.html#cryptocarya"><em>Cryptocarya</em></a></td><td>Lauraceae</td><td>Central Chile</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+
+    <!--CONTENTS OF THE EIGHT SPECIES-->
+
+
+    <article class="plant-profile" id="d-alatus">
+      <h2><em>Dipterocarpus alatus</em></h2>
+
+      <p class="plant-common">Resin tree</p>
+
+        <p>
+          The resin tree <em>Dipterocarpus alatus</em> is a large tropical tree, 30 to 60 metres tall. It occurs, sometimes in groups, in tropical Asia in thick evergreen and semi-evergreen lowland forest and along river-banks. It prefers moist soil with good drainage and will withstand flooding, but not strong winds or fire. Its flowers are pollinated by insects and its fruit matures from March through April and the winged seeds are dispersed by the wind.
+        </p>
+
+        <p>
+          People have relied on this tree for a long time. Its wood is used for timber, and its resin is extracted for lacquer, boat sealing and traditional medicine. Mixed with beeswax, the resin is also used to dress ulcers. Young trees' bark is used as a traditional remedy for liver disease and rheumatism. The tree is now listed as Vulnerable, and is one of the primary trees being planted to restore forest cover around the Dong Nai River and Cat Tien National Park in Vietnam.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Dipterocarpus_alatus">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a> &rsaquo; <a href="explore2.html#dipterocarpus"><em>Dipterocarpus</em></a></dd>
+          <dt>Common name</dt>
+          <dd>Resin tree</dd>
+          <dt>Height</dt>
+          <dd>30 to 60 metres</dd>
+          <dt>Origin and range</dt>
+          <dd>West Bengal and Bangladesh through Myanmar, Thailand, Laos, Cambodia, Vietnam and the Philippines; also Sri Lanka and the Andaman Islands</dd>
+          <dt>Habitat</dt>
+          <dd>Evergreen and semi-evergreen lowland forest, often along rivers, on alluvial, granite or basalt ground</dd>
+          <dt>Fruit and seeds</dt>
+          <dd>Fruits ripen March to April; insect pollinated; seeds spread by wind</dd>
+          <dt>Conservation status</dt>
+          <dd>Vulnerable</dd>
+          <dt>Uses</dt>
+          <dd>Timber, resin (lacquer, boat sealing, medicine) and bark for traditional medicine</dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>A large tree, 30-60 metres in height, sometimes forming groups along the banks of rivers.</li>
+          <li>Seeds are wind dispersed and fruit matures during March-April.</li>
+          <li>Lacquer obtained from oily resin from the trunks</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-d-alatus-1"><img src="images/sp-alatus-5.jpg" alt="Three fresh Dipterocarpus alatus fruits with red wings and ribbed green nuts" loading="lazy"></a>
+            <figcaption>Fresh fruit, with red wings and ribbed nuts.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-alatus-2"><img src="images/sp-alatus-1.jpg" alt="Tall Dipterocarpus alatus tree with smooth pale trunks and a wide crown against the sky" loading="lazy"></a>
+            <figcaption>A mature tree with its wide crown.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-alatus-3"><img src="images/sp-alatus-2.jpg" alt="Dipterocarpus alatus leaves with parallel side veins and small pale-yellow flowers" loading="lazy"></a>
+            <figcaption>Straight side veins on leaves, and small flowers.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-alatus-4"><img src="images/sp-alatus-3.jpg" alt="Star-shaped Dipterocarpus alatus flowers, some green and some pink-brown" loading="lazy"></a>
+            <figcaption>Close-up of flowers</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-alatus-5"><img src="images/sp-alatus-4.jpg" alt="Looking up the trunk of Dipterocarpus alatus into its leafy crown" loading="lazy"></a>
+            <figcaption>Trunk and branches from below.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-alatus-6"><img src="images/sp-alatus-6.jpg" alt="Dried orange Dipterocarpus alatus fruit with two long wings" loading="lazy"></a>
+            <figcaption>A dried fruit with its two long wings.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-alatus-7"><img src="images/sp-alatus-8.jpg" alt="Two dried Dipterocarpus alatus fruits on a white surface" loading="lazy"></a>
+            <figcaption>Two winged dried fruits.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Dipterocarpus+alatus">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="d-tuberculatus">
+      <h2><em>Dipterocarpus tuberculatus</em></h2>
+
+      <p class="plant-common">Gurjun tree (Khmer: khl&ocirc;ng)</p>
+
+        <p>
+          <em>Dipterocarpus tuberculatus</em> is called the gurjun tree in India and khlông in Cambodia. The plant is a dipterocarp, native to Bangladesh, Myanmar, Thailand, Cambodia, Laos and Vietnam. It grows in open lowland forest and is 5 - 25 metres tall, preferring an altitude of up to about 800 - 1000 metres above sea level.
+        </p>
+
+        <p>
+          Numerous uses are made of this tree. It is used for its oil and wood in India and neighbouring countries. In Cambodia, the leaves serve to wrap goods, and the weatherproof wood is used for beams, boards and construction of boats; the roots are also utilized in traditional medicines to assist the healing of broken bones. It is also a source of firewood in some areas of Kampong Chhnang province.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Dipterocarpus_tuberculatus">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a> &rsaquo; <a href="explore2.html#dipterocarpus"><em>Dipterocarpus</em></a></dd>
+          <dt>Common names</dt>
+          <dd>Gurjun tree, khl&ocirc;ng (Khmer)</dd>
+          <dt>Height</dt>
+          <dd>5 to 25 metres</dd>
+          <dt>Origin and range</dt>
+          <dd>Bangladesh, Myanmar, Thailand, Cambodia, Laos and Vietnam</dd>
+          <dt>Habitat</dt>
+          <dd>Open plains forest, up to 800 to 1,000 metres</dd>
+          <dt>Uses</dt>
+          <dd>Oil and wood (Indian subcontinent); leaves for wrapping and roofing, wood for beams, boards and boats, roots for medicine, and firewood (Cambodia)</dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>A small to medium sized tree 5 - 25 metres in height in open plains forest</li>
+          <li>Leaves which are locally used for wrapping and for covering huts.</li>
+          <li>Weather-resistant wood, made into beams, boards and boats</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-d-tuberculatus-1"><img src="images/sp-tuberc-6.jpg" alt="Pink two-winged Dipterocarpus tuberculatus fruits hanging from corky branches" loading="lazy"></a>
+            <figcaption>Fruits are pink, winged and borne on thick corky branches.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-tuberculatus-2"><img src="images/sp-tuberc-1.jpg" alt="Slim Dipterocarpus tuberculatus trunk with rough bark in open forest with dry leaves on the ground" loading="lazy"></a>
+            <figcaption>Open dry forest with litter on the ground.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-tuberculatus-3"><img src="images/sp-tuberc-2.jpg" alt="Huge broad Dipterocarpus tuberculatus leaves with straight side veins in sunlight" loading="lazy"></a>
+            <figcaption>Large sized leaves that are used for thatching.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-tuberculatus-4"><img src="images/sp-tuberc-3.jpg" alt="Dipterocarpus tuberculatus trunk rising into large spreading leaves against the sky" loading="lazy"></a>
+            <figcaption>The spreading crown and trunk.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-tuberculatus-5"><img src="images/sp-tuberc-4.jpg" alt="Looking up at one enormous Dipterocarpus tuberculatus leaf, with some leaves turning orange" loading="lazy"></a>
+            <figcaption>Some leaves can be nearly as wide as a person's arm span.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-tuberculatus-6"><img src="images/sp-tuberc-5.jpg" alt="Pink Dipterocarpus tuberculatus flowers and young fruits among huge leaves" loading="lazy"></a>
+            <figcaption>Giant leaves, pink flowers and young fruits.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-tuberculatus-7"><img src="images/sp-tuberc-7.jpg" alt="Bright red furry Dipterocarpus tuberculatus leaf bud on a dry hillside" loading="lazy"></a>
+            <figcaption>Leaf bud that is red with fur and covers new leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-d-tuberculatus-8"><img src="images/sp-tuberc-8.jpg" alt="Young Dipterocarpus tuberculatus plant with enormous glossy leaves" loading="lazy"></a>
+            <figcaption>Even young plants have enormous leaves.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Dipterocarpus+tuberculatus">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="m-adenophyllus">
+      <h2><em>Monotes adenophyllus</em></h2>
+
+      <p class="plant-common">No common name</p>
+
+        <p>
+          <em>Monotes adenophyllus</em> is a dipterocarp species found in south-central Africa and is a shrub or small tree. It is found in western and south-western Tanzania, northern Zambia, the southern Democratic Republic of the Congo and northern Angola. Most grow to around 4-8 metres tall, with a few reaching 12 metres.
+        </p>
+
+        <p>
+          Search for it in miombo woodland and in bushy and/or wooded savanna, usually at 840-1500 m, on shallow, rocky or iron rich soils (also called lateritic soil). Three forms are recognised by botanists. Var. <em>adenophyllus</em> is widely distributed throughout the range, var. <em>homblei</em> is from Tanzania, northern Zambia, the southern DR Congo and northern Angola, and f. <em>albidus</em> is only known from the southern DR Congo.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Monotes_adenophyllus">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a> &rsaquo; <a href="explore2.html#monotes"><em>Monotes</em></a></dd>
+          <dt>Meaning of the name</dt>
+          <dd><em>adenophyllus</em> means "gland leaf" (Greek)</dd>
+          <dt>Height</dt>
+          <dd>A shrub or small tree, 4 to 8 metres (up to 12 metres)</dd>
+          <dt>Origin and range</dt>
+          <dd>Western and southwestern Tanzania, northern Zambia, southern DR Congo and northern Angola</dd>
+          <dt>Habitat</dt>
+          <dd>Miombo woodland and wooded savanna on shallow rocky or lateritic soils, 840 to 1,500 metres</dd>
+          <dt>Varieties</dt>
+          <dd>var. <em>adenophyllus</em>, var. <em>homblei</em> and f. <em>albidus</em></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>A shrub or small tree, typically 4-8 m high, of woodland or savanna.</li>
+          <li>Commonly found on shallow rocky or reddish iron-rich soils</li>
+          <li>Found between 840 and 1,500 metres above sea level</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-m-adenophyllus-1"><img src="images/sp-adeno-4.jpg" alt="Large rounded wrinkled Monotes adenophyllus leaf with a small flower cluster" loading="lazy"></a>
+            <figcaption>A leaf that is rounded and wrinkled with a notched base.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-adenophyllus-2"><img src="images/sp-adeno-1.jpg" alt="Forked Monotes adenophyllus trunk with pale, blocky, cracked bark" loading="lazy"></a>
+            <figcaption>Blocky, light-colored bark on a forked trunk.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-adenophyllus-3"><img src="images/sp-adeno-2.jpg" alt="Rounded Monotes adenophyllus leaves with a wrinkled, net-like surface" loading="lazy"></a>
+            <figcaption>Wrinkled leaves with rounded shapes.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-adenophyllus-4"><img src="images/sp-adeno-3.jpg" alt="Pale-yellow Monotes adenophyllus flowers with fluffy stamens and furry buds on a branch" loading="lazy"></a>
+            <figcaption>Flowers and furry buds.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-adenophyllus-5"><img src="images/sp-adeno-5.jpg" alt="Open Monotes adenophyllus flower with long white stamens beside furry buds" loading="lazy"></a>
+            <figcaption>An open flower next to furry buds.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-adenophyllus-6"><img src="images/sp-adeno-6.jpg" alt="Close-up of a Monotes adenophyllus flower with white stamens tipped in orange pollen" loading="lazy"></a>
+            <figcaption>Stamens which are orange with pollen at the tip.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Monotes+adenophyllus">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="m-glaber">
+      <h2><em>Monotes glaber</em></h2>
+
+      <p class="plant-common">No common name</p>
+
+        <p>
+          <em>Monotes glaber</em> is a dipterocarp species of south-central Africa. It occurs from the southern Democratic Republic of the Congo through Angola, Zambia and Zimbabwe to northern Botswana. A small tree, 3-10 m tall, which is common in miombo woodland on sandy soil. It was described by botanist Thomas Archibald Sprague in 1909. Its name <em>glaber</em> in Latin means "smooth" or "hairless".
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Monotes_glaber">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#dipterocarpaceae">Dipterocarpaceae</a> &rsaquo; <a href="explore2.html#monotes"><em>Monotes</em></a></dd>
+          <dt>Meaning of the name</dt>
+          <dd><em>glaber</em> means "smooth" or "hairless" (Latin)</dd>
+          <dt>Height</dt>
+          <dd>3 to 10 metres</dd>
+          <dt>Origin and range</dt>
+          <dd>Southern DR Congo, Angola, Zambia, Zimbabwe and northern Botswana</dd>
+          <dt>Habitat</dt>
+          <dd>Miombo woodland on sandy soil; widespread</dd>
+          <dt>First described</dt>
+          <dd>Thomas Archibald Sprague, 1909</dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>Small tree 3-10 metres high commonly found in miombo woodland on sandy soil.</li>
+          <li>Occurs throughout the region from the southern DR Congo to northern Botswana</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-m-glaber-1"><img src="images/sp-glaber-6.jpg" alt="Orange-brown winged Monotes glaber fruit on a leafy shoot" loading="lazy"></a>
+            <figcaption>A winged fruit on a shoot with leaf blades.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-glaber-2"><img src="images/sp-glaber-1.jpg" alt="Small Monotes glaber tree standing in open, grassy woodland under a blue sky" loading="lazy"></a>
+            <figcaption>Open, grassy woodland where it grows.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-glaber-3"><img src="images/sp-glaber-2.jpg" alt="Fallen oval Monotes glaber leaf patched with brown, green and yellow" loading="lazy"></a>
+            <figcaption>A leaf that is smooth and hairless.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-glaber-4"><img src="images/sp-glaber-3.jpg" alt="Monotes glaber leaves turning green, yellow and red-brown on twiggy branches" loading="lazy"></a>
+            <figcaption>Dry season colour change of leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-glaber-5"><img src="images/sp-glaber-4.jpg" alt="Sunlit smooth oval Monotes glaber leaves, some turning yellow" loading="lazy"></a>
+            <figcaption>In the sun, smooth hairless leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-glaber-6"><img src="images/sp-glaber-5.jpg" alt="Multi-stemmed dark Monotes glaber trunk in dry grass" loading="lazy"></a>
+            <figcaption>In dry woodland, a multi-stemmed, rough trunk.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-m-glaber-7"><img src="images/sp-glaber-7.jpg" alt="Monotes glaber canopy with a cluster of brown winged fruits against blue sky" loading="lazy"></a>
+            <figcaption>Fruits among leaves turning colour.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Monotes+glaber">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="b-berteroana">
+      <h2><em>Beilschmiedia berteroana</em></h2>
+
+      <p class="plant-common">Southern acorn tree (Spanish: belloto del sur)</p>
+
+        <p>
+          <em>Beilschmiedia berteroana</em> (southern acorn tree or belloto del sur) is a threatened evergreen tree which grows naturally only in Chile, around 35-37°S. It can reach heights of 30 metres, with a trunk up to a metre wide and grey bark which is cut by long vertical fissures. Its glossy green, oval leaves are 3 to 7.5 cm long, grow in pairs or nearly in pairs, and are bluish-grey underneath. In July and August it bears clusters of greenish-yellow flowers. A single seed is in a green fruit 1.5-2 cm in diameter, tipped with a small point.
+        </p>
+
+        <p>
+          This tree is able to grow at elevations as high as 1800 metres above sea level, and is more frost tolerant than most of its tropical relatives. It can be seen in Chile in the La Campana National Park where it grows alongside the endangered Chilean wine palm. Its sweet fruit is eaten by local people; its bark was formerly used to tan hides and its handsome tough wood is very useful. Its flowers are the source of honey for bees and it is planted as a garden tree in Chile and occasionally Spain.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Beilschmiedia_berteroana">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#lauraceae">Lauraceae</a> &rsaquo; <a href="explore2.html#beilschmiedia"><em>Beilschmiedia</em></a></dd>
+          <dt>Common name</dt>
+          <dd>Southern acorn tree, belloto del sur</dd>
+          <dt>Height</dt>
+          <dd>Up to 30 metres, with a trunk up to 1 metre wide</dd>
+          <dt>Origin and range</dt>
+          <dd>Endemic to Chile, 35 to 37 degrees south</dd>
+          <dt>Habitat</dt>
+          <dd>Up to 1,800 metres; for example La Campana National Park, with the Chilean wine palm</dd>
+          <dt>Flowering</dt>
+          <dd>July to August</dd>
+          <dt>Conservation status</dt>
+          <dd>Threatened</dd>
+          <dt>Uses</dt>
+          <dd>Edible sweet fruit, bark for tanning leather, hard decorative wood, honey and ornamental planting; frost tolerant (USDA zone 9b)</dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>Grey bark and long vertical cracks; straight trunk</li>
+          <li>Glossy green oval leaves, 3 to 7.5 cm long, in (or nearly in) pairs, pale bluish-grey below.</li>
+          <li>Small greenish-yellow flowers in clusters 5-6cm long.</li>
+          <li>Round green fruit, 1.5-2 cm, bearing small point at tip.</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-b-berteroana-1"><img src="images/sp-berter-6.jpg" alt="Whole Beilschmiedia berteroana tree with a pale trunk and dense rounded crown" loading="lazy"></a>
+            <figcaption>A whole tree grown for conservation purposes.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-berteroana-2"><img src="images/sp-berter-1.jpg" alt="Smooth pale Beilschmiedia berteroana trunks splitting into several stems in a garden" loading="lazy"></a>
+            <figcaption>Smooth bark and a number of trunks.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-berteroana-3"><img src="images/sp-berter-2.jpg" alt="Young Beilschmiedia berteroana seedling with glossy leaves and a bronze new shoot" loading="lazy"></a>
+            <figcaption>Seedling raised in a nursery for replanting.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-berteroana-4"><img src="images/sp-berter-3.jpg" alt="Glossy oval Beilschmiedia berteroana leaves with a cluster of tiny yellow-green flowers" loading="lazy"></a>
+            <figcaption>Leaves and flower clusters.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-berteroana-5"><img src="images/sp-berter-4.jpg" alt="Dense bush of dark Beilschmiedia berteroana leaves with pale undersides" loading="lazy"></a>
+            <figcaption>Dense evergreen leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-berteroana-6"><img src="images/sp-berter-5.jpg" alt="Wet glossy oval Beilschmiedia berteroana leaves on a branch" loading="lazy"></a>
+            <figcaption>Foliage shiny after rain.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Beilschmiedia+berteroana">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="b-costaricensis">
+      <h2><em>Beilschmiedia costaricensis</em></h2>
+
+      <p class="plant-common">No common name</p>
+
+        <p>
+          <em>Beilschmiedia costaricensis</em> is an evergreen tree that belongs to the laurel family and is named after Costa Rica. It lives in the highland forests of Central America where it is misty and humid, and where it rains often and it is cooler than in the lowlands. It is typically a medium to large tree that grows to the upper level of the forest.
+        </p>
+
+        <p>
+          It has simple leaves, one per node. These are thick and leathery and aid the tree in retaining water. The flowers are small and plain and insects are the primary agents for transport of pollen between flowers. One seed is contained in each fruit. The fruit is eaten by birds and mammals and seed is dropped elsewhere to start young trees. Bark is smooth on young trees, rough and cracked on older trees. Few publications exist on the use of this tree and it is not commonly grown elsewhere than in its home forests.
+        </p>
+
+        <p class="source">Source: <a href="https://eplantai.com/plant/beilschmiedia-costaricensis">ePlant AI</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#lauraceae">Lauraceae</a> &rsaquo; tribe Cryptocaryeae &rsaquo; <a href="explore2.html#beilschmiedia"><em>Beilschmiedia</em></a></dd>
+          <dt>Height</dt>
+          <dd>A medium to large evergreen tree</dd>
+          <dt>Origin and range</dt>
+          <dd>Central America, especially Costa Rica; the name means "of Costa Rica"</dd>
+          <dt>Habitat</dt>
+          <dd>Humid montane and cloud forest, at middle to high elevations</dd>
+          <dt>Seed dispersal</dt>
+          <dd>Birds and mammals eat the one-seeded fruits</dd>
+          <dt>Uses</dt>
+          <dd>Few uses are known; rarely cultivated</dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>The evergreen leaves are simple, coriaceous, alternate and solitary.</li>
+          <li>Small, plain flowers</li>
+          <li>One-seeded fruits eaten by birds and mammals</li>
+          <li>Bark smooth when young, becoming rough and cracked with age</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-b-costaricensis-1"><img src="images/sp-costa-8.jpg" alt="Three large green oblong Beilschmiedia costaricensis fruits hanging from a curved branch" loading="lazy"></a>
+            <figcaption>Three fruits that look like little avocados.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-costaricensis-2"><img src="images/sp-costa-1.jpg" alt="Long branching cluster of tiny round Beilschmiedia costaricensis flower buds over a dark leaf" loading="lazy"></a>
+            <figcaption>Flower buds in branching clusters.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-costaricensis-3"><img src="images/sp-costa-2.jpg" alt="Glossy oval Beilschmiedia costaricensis leaves in a ring, covered in moss and lichen" loading="lazy"></a>
+            <figcaption>Mossy leaves in a wet forest.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-costaricensis-4"><img src="images/sp-costa-3.jpg" alt="Another branching Beilschmiedia costaricensis flower cluster over a leaf" loading="lazy"></a>
+            <figcaption>Flower cluster set against a leaf.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-costaricensis-5"><img src="images/sp-costa-4.jpg" alt="Green Beilschmiedia costaricensis stem with leaf stalks" loading="lazy"></a>
+            <figcaption>Leaf stalks on a green stem.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-costaricensis-6"><img src="images/sp-costa-5.jpg" alt="Olive-shaped Beilschmiedia costaricensis fruits, green and black, on a branch held in a hand" loading="lazy"></a>
+            <figcaption>Little avocado-looking fruits.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-costaricensis-7"><img src="images/sp-costa-6.jpg" alt="Single large green oblong Beilschmiedia costaricensis fruit below glossy leaves" loading="lazy"></a>
+            <figcaption>One ripening fruit.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-b-costaricensis-8"><img src="images/sp-costa-7.jpg" alt="Ring of glossy pointed Beilschmiedia costaricensis leaves" loading="lazy"></a>
+            <figcaption>Leaves clustered in a whorl at the tip of a stem.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Beilschmiedia+costaricensis">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="c-adpressa">
+      <h2><em>Cryptocarya adpressa</em></h2>
+
+      <p class="plant-common">No common name (described in 2016)</p>
+
+        <p>
+          <em>Cryptocarya adpressa</em> is a species of evergreen tree in the laurel family. It grows only on New Caledonia, a group of islands in the south-west Pacific, and is a fairly new discovery: the botanists Jérôme Munzinger and Gordon McPherson first described it officially in 2016. It grows in dense, humid tropical forest and can reach a height of 6-25 metres. It has a trunk of 15 to 20 centimetres in diameter, and the bark is brown, slightly rough to nearly smooth.
+        </p>
+
+        <p>
+          Its leaves are small, with feather-like veins radiating from a central vein. Its distinguishing feature, compared with its relatives <em>Cryptocarya leptospermoides</em> and <em>Cryptocarya gracilis</em>, is the indumentum of fine hairs on the clusters of flowers. These hairs remain in place and pressed against the surface, hence the name – <em>adpressa</em>, which is Latin for "pressed close".
+        </p>
+
+        <p class="source">Source: <a href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77159775-1">Plants of the World Online (Kew)</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#lauraceae">Lauraceae</a> &rsaquo; <a href="explore2.html#cryptocarya"><em>Cryptocarya</em></a></dd>
+          <dt>Meaning of the name</dt>
+          <dd><em>adpressa</em> means "pressed close", after the flat-lying hairs on its flower clusters</dd>
+          <dt>Height</dt>
+          <dd>6 to 25 metres, with a trunk 15 to 20 cm across</dd>
+          <dt>Origin and range</dt>
+          <dd>Endemic to New Caledonia</dd>
+          <dt>Habitat</dt>
+          <dd>Dense, humid tropical forest</dd>
+          <dt>First described</dt>
+          <dd>Munzinger and McPherson, 2016</dd>
+          <dt>Close relatives</dt>
+          <dd><em>C. leptospermoides</em> and <em>C. gracilis</em></dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>Evergreen tree, 6 to 25 metres, with a trunk 15 to 20 cm across</li>
+          <li>Brown bark, slightly rough to almost smooth</li>
+          <li>Small leaves with feather-like veins.</li>
+          <li>Flower clusters covered in hairs pressed flat against the surface</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-c-adpressa-1"><img src="images/sp-adpressa-6.jpg" alt="Grey-green oval Cryptocarya adpressa leaves with a dark ripe round fruit" loading="lazy"></a>
+            <figcaption>Dark, ripe fruit among grey-green leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-adpressa-2"><img src="images/sp-adpressa-1.jpg" alt="Bright yellow-green Cryptocarya adpressa leaves with small clusters of green buds" loading="lazy"></a>
+            <figcaption>New leaves with clusters of buds.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-adpressa-3"><img src="images/sp-adpressa-2.jpg" alt="Close-up of tiny pale-yellow Cryptocarya adpressa flowers on a green stalk" loading="lazy"></a>
+            <figcaption>The tiny flowers.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-adpressa-4"><img src="images/sp-adpressa-3.jpg" alt="Round, blotchy green Cryptocarya adpressa fruits among leaves in misty forest" loading="lazy"></a>
+            <figcaption>In the misty forest there are round fruits.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-adpressa-5"><img src="images/sp-adpressa-4.jpg" alt="Shrubby Cryptocarya adpressa branch with dark oval leaves and yellow new growth" loading="lazy"></a>
+            <figcaption>Its understorey shrub habit.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-adpressa-6"><img src="images/sp-adpressa-5.jpg" alt="Cryptocarya adpressa trunk with a small patch of bark cut away to show orange wood" loading="lazy"></a>
+            <figcaption>A small bark cut shows the orange wood.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Cryptocarya+adpressa">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+    <article class="plant-profile" id="c-alba">
+      <h2><em>Cryptocarya alba</em></h2>
+
+      <p class="plant-common">Peumo, Chilean acorn</p>
+
+        <p>
+          <em>Cryptocarya alba</em>, known as peumo or the Chilean acorn, is an evergreen tree in central Chile. It is happy in wet or dry places, grows as high as 1500 metres above sea level, and lives with the endangered Chilean wine palm. It can grow to 20 metres in height, having a straight trunk up to a metre wide with greyish bark. The branches are thick and growing from the centre of the tree, with thin twigs hanging at the ends.
+        </p>
+
+        <p>
+          Its egg-shaped leaves are between 2.5 and 8.5 centimetres long, wavy and have a strong scent. Its small yellowish-green flowers appear in clusters from November to January and its red berries (also known as peumos) are edible. The fruits are fairly large and the seeds germinate readily. The hard wood withstands wetness, and the bark is used for tanning and to produce an orange dye. Peumo has also been used for ornamental purposes and as a source of fruit and has performed well when planted in northern California and in Spain.
+        </p>
+
+        <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Cryptocarya_alba">Wikipedia</a></p>
+
+      <section class="plant-facts">
+        <h3>Quick facts</h3>
+
+        <dl>
+          <dt>Classification</dt>
+          <dd><a href="explore1.html#lauraceae">Lauraceae</a> &rsaquo; <a href="explore2.html#cryptocarya"><em>Cryptocarya</em></a></dd>
+          <dt>Common name</dt>
+          <dd>Peumo, Chilean acorn</dd>
+          <dt>Height</dt>
+          <dd>Up to 20 metres, with a trunk up to 1 metre wide</dd>
+          <dt>Origin and range</dt>
+          <dd>Central Chile, 33 to 40 degrees south, as far as the northern Los Lagos Region</dd>
+          <dt>Habitat</dt>
+          <dd>Wet and dry sites up to 1,500 metres; grows with the Chilean wine palm</dd>
+          <dt>Flowering</dt>
+          <dd>November to January</dd>
+          <dt>Uses</dt>
+          <dd>Edible red fruit, hard moisture-resistant wood, bark for tanning and orange dye, ornamental tree</dd>
+        </dl>
+      </section>
+
+      <section class="plant-features">
+        <h3>How to recognise it</h3>
+
+        <ul>
+          <li>Strongly scented, egg-shaped leaves 2.5 to 8.5 cm long, with wavy margins.</li>
+          <li>Thick, erect central stems from which thin downhanging branches grow.</li>
+          <li>Clusters of greenish-yellow flowers that are succeeded by edible red berries</li>
+        </ul>
+      </section>
+
+      <section class="plant-gallery">
+        <h3>Photo gallery</h3>
+
+        <p class="gallery-tip">Click on any of the photos to view them in full size.</p>
+
+        <div class="gallery">
+          <figure>
+            <a href="#view-c-alba-1"><img src="images/sp-alba-3.jpg" alt="Bright red round Cryptocarya alba fruits on a branch" loading="lazy"></a>
+            <figcaption>The red fruits.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-alba-2"><img src="images/sp-alba-1.jpg" alt="Dense rounded Cryptocarya alba crown covered in pale flower clusters" loading="lazy"></a>
+            <figcaption>The entire tree in bloom.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-alba-3"><img src="images/sp-alba-2.jpg" alt="Large branching clusters of tiny cream Cryptocarya alba buds among dark leaves" loading="lazy"></a>
+            <figcaption>Cream flower buds in clusters.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-alba-4"><img src="images/sp-alba-4.jpg" alt="Grey-green Cryptocarya alba leaves with pale whitish undersides" loading="lazy"></a>
+            <figcaption>Pale undersides on leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-alba-5"><img src="images/sp-alba-5.jpg" alt="Glossy, slightly wavy Cryptocarya alba leaves in sunlight" loading="lazy"></a>
+            <figcaption>In the sun, the leaves are a glossy green.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-alba-6"><img src="images/sp-alba-6.jpg" alt="Twisted grey Cryptocarya alba branch with rounded light-green leaves" loading="lazy"></a>
+            <figcaption>Twisted branch among rounded leaves.</figcaption>
+          </figure>
+
+          <figure>
+            <a href="#view-c-alba-7"><img src="images/sp-alba-7.jpg" alt="Rounded glossy Cryptocarya alba leaves with clusters of yellow-green flower buds" loading="lazy"></a>
+            <figcaption>Flower bud clusters among shiny leaves.</figcaption>
+          </figure>
+        </div>
+
+        <p class="source">Photos: <a href="https://www.inaturalist.org/taxa/search?q=Cryptocarya+alba">iNaturalist</a> / <a href="https://identify.plantnet.org/">Pl@ntNet</a></p>
+      </section>
+    </article>
+
+
+    <!--THE PHOTOS IN A LARGER VERSION-->
+
+
+    <div class="lightbox" id="view-d-alatus-1">
+      <a href="#d-alatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alatus-5.jpg" alt="Three fresh Dipterocarpus alatus fruits with red wings and ribbed green nuts" loading="lazy">
+
+      <p>Fresh fruit, with red wings and ribbed nuts.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-alatus-2">
+      <a href="#d-alatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alatus-1.jpg" alt="Tall Dipterocarpus alatus tree with smooth pale trunks and a wide crown against the sky" loading="lazy">
+
+      <p>A mature tree with its wide crown.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-alatus-3">
+      <a href="#d-alatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alatus-2.jpg" alt="Dipterocarpus alatus leaves with parallel side veins and small pale-yellow flowers" loading="lazy">
+
+      <p>Straight side veins on leaves, and small flowers.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-alatus-4">
+      <a href="#d-alatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alatus-3.jpg" alt="Star-shaped Dipterocarpus alatus flowers, some green and some pink-brown" loading="lazy">
+
+      <p>Close-up of flowers</p>
+    </div>
+
+    <div class="lightbox" id="view-d-alatus-5">
+      <a href="#d-alatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alatus-4.jpg" alt="Looking up the trunk of Dipterocarpus alatus into its leafy crown" loading="lazy">
+
+      <p>Trunk and branches from below.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-alatus-6">
+      <a href="#d-alatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alatus-6.jpg" alt="Dried orange Dipterocarpus alatus fruit with two long wings" loading="lazy">
+
+      <p>A dried fruit with its two long wings.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-alatus-7">
+      <a href="#d-alatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alatus-8.jpg" alt="Two dried Dipterocarpus alatus fruits on a white surface" loading="lazy">
+
+      <p>Two winged dried fruits.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-1">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-6.jpg" alt="Pink two-winged Dipterocarpus tuberculatus fruits hanging from corky branches" loading="lazy">
+
+      <p>Fruits are pink, winged and borne on thick corky branches.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-2">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-1.jpg" alt="Slim Dipterocarpus tuberculatus trunk with rough bark in open forest with dry leaves on the ground" loading="lazy">
+
+      <p>Open dry forest with litter on the ground.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-3">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-2.jpg" alt="Huge broad Dipterocarpus tuberculatus leaves with straight side veins in sunlight" loading="lazy">
+
+      <p>Large sized leaves that are used for thatching.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-4">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-3.jpg" alt="Dipterocarpus tuberculatus trunk rising into large spreading leaves against the sky" loading="lazy">
+
+      <p>The spreading crown and trunk.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-5">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-4.jpg" alt="Looking up at one enormous Dipterocarpus tuberculatus leaf, with some leaves turning orange" loading="lazy">
+
+      <p>Some leaves can be nearly as wide as a person's arm span.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-6">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-5.jpg" alt="Pink Dipterocarpus tuberculatus flowers and young fruits among huge leaves" loading="lazy">
+
+      <p>Giant leaves, pink flowers and young fruits.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-7">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-7.jpg" alt="Bright red furry Dipterocarpus tuberculatus leaf bud on a dry hillside" loading="lazy">
+
+      <p>Leaf bud that is red with fur and covers new leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-d-tuberculatus-8">
+      <a href="#d-tuberculatus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-tuberc-8.jpg" alt="Young Dipterocarpus tuberculatus plant with enormous glossy leaves" loading="lazy">
+
+      <p>Even young plants have enormous leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-adenophyllus-1">
+      <a href="#m-adenophyllus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adeno-4.jpg" alt="Large rounded wrinkled Monotes adenophyllus leaf with a small flower cluster" loading="lazy">
+
+      <p>A leaf that is rounded and wrinkled with a notched base.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-adenophyllus-2">
+      <a href="#m-adenophyllus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adeno-1.jpg" alt="Forked Monotes adenophyllus trunk with pale, blocky, cracked bark" loading="lazy">
+
+      <p>Blocky, light-colored bark on a forked trunk.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-adenophyllus-3">
+      <a href="#m-adenophyllus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adeno-2.jpg" alt="Rounded Monotes adenophyllus leaves with a wrinkled, net-like surface" loading="lazy">
+
+      <p>Wrinkled leaves with rounded shapes.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-adenophyllus-4">
+      <a href="#m-adenophyllus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adeno-3.jpg" alt="Pale-yellow Monotes adenophyllus flowers with fluffy stamens and furry buds on a branch" loading="lazy">
+
+      <p>Flowers and furry buds.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-adenophyllus-5">
+      <a href="#m-adenophyllus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adeno-5.jpg" alt="Open Monotes adenophyllus flower with long white stamens beside furry buds" loading="lazy">
+
+      <p>An open flower next to furry buds.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-adenophyllus-6">
+      <a href="#m-adenophyllus" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adeno-6.jpg" alt="Close-up of a Monotes adenophyllus flower with white stamens tipped in orange pollen" loading="lazy">
+
+      <p>Stamens which are orange with pollen at the tip.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-glaber-1">
+      <a href="#m-glaber" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-glaber-6.jpg" alt="Orange-brown winged Monotes glaber fruit on a leafy shoot" loading="lazy">
+
+      <p>A winged fruit on a shoot with leaf blades.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-glaber-2">
+      <a href="#m-glaber" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-glaber-1.jpg" alt="Small Monotes glaber tree standing in open, grassy woodland under a blue sky" loading="lazy">
+
+      <p>Open, grassy woodland where it grows.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-glaber-3">
+      <a href="#m-glaber" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-glaber-2.jpg" alt="Fallen oval Monotes glaber leaf patched with brown, green and yellow" loading="lazy">
+
+      <p>A leaf that is smooth and hairless.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-glaber-4">
+      <a href="#m-glaber" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-glaber-3.jpg" alt="Monotes glaber leaves turning green, yellow and red-brown on twiggy branches" loading="lazy">
+
+      <p>Dry season colour change of leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-glaber-5">
+      <a href="#m-glaber" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-glaber-4.jpg" alt="Sunlit smooth oval Monotes glaber leaves, some turning yellow" loading="lazy">
+
+      <p>In the sun, smooth hairless leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-glaber-6">
+      <a href="#m-glaber" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-glaber-5.jpg" alt="Multi-stemmed dark Monotes glaber trunk in dry grass" loading="lazy">
+
+      <p>In dry woodland, a multi-stemmed, rough trunk.</p>
+    </div>
+
+    <div class="lightbox" id="view-m-glaber-7">
+      <a href="#m-glaber" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-glaber-7.jpg" alt="Monotes glaber canopy with a cluster of brown winged fruits against blue sky" loading="lazy">
+
+      <p>Fruits among leaves turning colour.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-berteroana-1">
+      <a href="#b-berteroana" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-berter-6.jpg" alt="Whole Beilschmiedia berteroana tree with a pale trunk and dense rounded crown" loading="lazy">
+
+      <p>A whole tree grown for conservation purposes.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-berteroana-2">
+      <a href="#b-berteroana" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-berter-1.jpg" alt="Smooth pale Beilschmiedia berteroana trunks splitting into several stems in a garden" loading="lazy">
+
+      <p>Smooth bark and a number of trunks.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-berteroana-3">
+      <a href="#b-berteroana" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-berter-2.jpg" alt="Young Beilschmiedia berteroana seedling with glossy leaves and a bronze new shoot" loading="lazy">
+
+      <p>Seedling raised in a nursery for replanting.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-berteroana-4">
+      <a href="#b-berteroana" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-berter-3.jpg" alt="Glossy oval Beilschmiedia berteroana leaves with a cluster of tiny yellow-green flowers" loading="lazy">
+
+      <p>Leaves and flower clusters.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-berteroana-5">
+      <a href="#b-berteroana" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-berter-4.jpg" alt="Dense bush of dark Beilschmiedia berteroana leaves with pale undersides" loading="lazy">
+
+      <p>Dense evergreen leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-berteroana-6">
+      <a href="#b-berteroana" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-berter-5.jpg" alt="Wet glossy oval Beilschmiedia berteroana leaves on a branch" loading="lazy">
+
+      <p>Foliage shiny after rain.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-1">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-8.jpg" alt="Three large green oblong Beilschmiedia costaricensis fruits hanging from a curved branch" loading="lazy">
+
+      <p>Three fruits that look like little avocados.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-2">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-1.jpg" alt="Long branching cluster of tiny round Beilschmiedia costaricensis flower buds over a dark leaf" loading="lazy">
+
+      <p>Flower buds in branching clusters.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-3">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-2.jpg" alt="Glossy oval Beilschmiedia costaricensis leaves in a ring, covered in moss and lichen" loading="lazy">
+
+      <p>Mossy leaves in a wet forest.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-4">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-3.jpg" alt="Another branching Beilschmiedia costaricensis flower cluster over a leaf" loading="lazy">
+
+      <p>Flower cluster set against a leaf.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-5">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-4.jpg" alt="Green Beilschmiedia costaricensis stem with leaf stalks" loading="lazy">
+
+      <p>Leaf stalks on a green stem.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-6">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-5.jpg" alt="Olive-shaped Beilschmiedia costaricensis fruits, green and black, on a branch held in a hand" loading="lazy">
+
+      <p>Little avocado-looking fruits.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-7">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-6.jpg" alt="Single large green oblong Beilschmiedia costaricensis fruit below glossy leaves" loading="lazy">
+
+      <p>One ripening fruit.</p>
+    </div>
+
+    <div class="lightbox" id="view-b-costaricensis-8">
+      <a href="#b-costaricensis" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-costa-7.jpg" alt="Ring of glossy pointed Beilschmiedia costaricensis leaves" loading="lazy">
+
+      <p>Leaves clustered in a whorl at the tip of a stem.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-adpressa-1">
+      <a href="#c-adpressa" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adpressa-6.jpg" alt="Grey-green oval Cryptocarya adpressa leaves with a dark ripe round fruit" loading="lazy">
+
+      <p>Dark, ripe fruit among grey-green leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-adpressa-2">
+      <a href="#c-adpressa" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adpressa-1.jpg" alt="Bright yellow-green Cryptocarya adpressa leaves with small clusters of green buds" loading="lazy">
+
+      <p>New leaves with clusters of buds.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-adpressa-3">
+      <a href="#c-adpressa" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adpressa-2.jpg" alt="Close-up of tiny pale-yellow Cryptocarya adpressa flowers on a green stalk" loading="lazy">
+
+      <p>The tiny flowers.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-adpressa-4">
+      <a href="#c-adpressa" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adpressa-3.jpg" alt="Round, blotchy green Cryptocarya adpressa fruits among leaves in misty forest" loading="lazy">
+
+      <p>In the misty forest there are round fruits.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-adpressa-5">
+      <a href="#c-adpressa" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adpressa-4.jpg" alt="Shrubby Cryptocarya adpressa branch with dark oval leaves and yellow new growth" loading="lazy">
+
+      <p>Its understorey shrub habit.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-adpressa-6">
+      <a href="#c-adpressa" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-adpressa-5.jpg" alt="Cryptocarya adpressa trunk with a small patch of bark cut away to show orange wood" loading="lazy">
+
+      <p>A small bark cut shows the orange wood.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-alba-1">
+      <a href="#c-alba" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alba-3.jpg" alt="Bright red round Cryptocarya alba fruits on a branch" loading="lazy">
+
+      <p>The red fruits.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-alba-2">
+      <a href="#c-alba" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alba-1.jpg" alt="Dense rounded Cryptocarya alba crown covered in pale flower clusters" loading="lazy">
+
+      <p>The entire tree in bloom.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-alba-3">
+      <a href="#c-alba" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alba-2.jpg" alt="Large branching clusters of tiny cream Cryptocarya alba buds among dark leaves" loading="lazy">
+
+      <p>Cream flower buds in clusters.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-alba-4">
+      <a href="#c-alba" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alba-4.jpg" alt="Grey-green Cryptocarya alba leaves with pale whitish undersides" loading="lazy">
+
+      <p>Pale undersides on leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-alba-5">
+      <a href="#c-alba" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alba-5.jpg" alt="Glossy, slightly wavy Cryptocarya alba leaves in sunlight" loading="lazy">
+
+      <p>In the sun, the leaves are a glossy green.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-alba-6">
+      <a href="#c-alba" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alba-6.jpg" alt="Twisted grey Cryptocarya alba branch with rounded light-green leaves" loading="lazy">
+
+      <p>Twisted branch among rounded leaves.</p>
+    </div>
+
+    <div class="lightbox" id="view-c-alba-7">
+      <a href="#c-alba" class="lightbox-close">Close &times;</a>
+      <img src="images/sp-alba-7.jpg" alt="Rounded glossy Cryptocarya alba leaves with clusters of yellow-green flower buds" loading="lazy">
+
+      <p>Flower bud clusters among shiny leaves.</p>
+    </div>
+
+    <!-- LINKING THE PAGES TO MOVE FROM FAMILY GENERA AND SPECIES -->
+
+
+    <nav class="explore-pager" aria-label="Explorer pages">
+      <ol class="step-list">
+        <li><a href="explore1.html"><span class="step-num">1</span> Families</a></li>
+        <li><a href="explore2.html"><span class="step-num">2</span> Genera</a></li>
+        <li><a href="explore3.html" aria-current="page"><span class="step-num">3</span> Species</a></li>
+      </ol>
+    </nav>
+  </main>
+
+
+  <!--FOOTER WITH LINKS IN EVERY PAGES-->
+
+
+  <footer id="site-footer">
+    <div class="footer-brand">
+      <p>Every photo helps protect a plant.</p>
+    </div>
+
+    <nav class="footer-columns" aria-label="Footer site map">
+      <section class="footer-col">
+        <h2>Explore</h2>
+
+        <ul>
+          <li><a href="explore1.html">Families</a></li>
+          <li><a href="explore2.html">Genera</a></li>
+          <li><a href="explore3.html">Species</a></li>
+          <li><a href="explore.html">Explorer home</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Identify</h2>
+
+        <ul>
+          <li><a href="identify.html#upload">Upload a photo</a></li>
+          <li><a href="identify.html#search">Search plants</a></li>
+          <li><a href="identify.html#result">Example result</a></li>
+          <li><a href="identify.html#location-map">Where it grows</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Contribute</h2>
+
+        <ul>
+          <li><a href="contribute.html">Contribution form</a></li>
+          <li><a href="contributor.html#contribution-cards">Contributor gallery</a></li>
+          <li><a href="contributor.html#photo-journey">How photos arrive</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>Help</h2>
+
+        <ul>
+          <li><a href="enquiry.html">Enquiry form</a></li>
+          <li><a href="mailto:105822937@students.swinburne.edu.my">Email us</a></li>
+          <li><a href="identify.html#photo-tips">Photo tips</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h2>About</h2>
+
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="enhancement1.html">Enhancements</a></li>
+          <li><a href="acknowledgement.html">Acknowledgements</a></li>
+          <li><a href="https://www.youtube.com/watch?v=HgLriGj2HF4">Video presentation</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Pl@netMatrix &middot; Built by Tousif Akhand
+        &middot; <a href="#site-header">Back to top</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- BACK TO THE TOP ON THE BOTTOM RIGHT CORNER -->
+
+
+  <a href="#site-header" class="to-top" title="Back to top">&#8593;<span class="visually-hidden"> Back to top</span></a>
+</body>
+</html>
